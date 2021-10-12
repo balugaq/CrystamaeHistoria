@@ -12,7 +12,7 @@ import java.util.List;
 public class TestSpell extends SubCommand {
 
     public TestSpell() {
-        super("cast", "Casts the selected spell", true);
+        super("cast", "施展选定的法术", true);
     }
 
     @Override

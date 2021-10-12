@@ -29,8 +29,8 @@ public class Machines {
                 "CRY_CHRONICLER_PANEL_1",
                 new ItemStack(Material.DEEPSLATE_TILE_SLAB),
                 ThemeType.MECHANISM,
-                "Chronicler Panel",
-                "The chronicler panel will draw out",
+                "记录者",
+                "记录者将会在一段时间后",
                 "the stories contained within a given",
                 "block over time."
             ),

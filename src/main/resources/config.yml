@@ -1,7 +1,7 @@
-auto-update: true
+auto-update: false
 messages:
   spells:
-    teleport_no_suitable_location: "No suitable place to teleport to"
+    teleport_no_suitable_location: "没有可以传送的位置"
 stories:
   common:
     1:

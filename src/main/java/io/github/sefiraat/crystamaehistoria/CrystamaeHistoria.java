@@ -35,7 +35,7 @@ public class CrystamaeHistoria extends AbstractAddon {
     private ActiveStorage activeStorage;
 
     public CrystamaeHistoria() {
-        super("Sefiraat", "CrystamaeHistoria", "master", "auto-update");
+        super("ybw0014", "CrystamaeHistoria-CN", "master", "auto-update");
     }
 
     public static CrystamaeHistoria inst() {
@@ -114,7 +114,8 @@ public class CrystamaeHistoria extends AbstractAddon {
         instance = this;
 
         getLogger().info("########################################");
-        getLogger().info("    Crystamae Historia - By Sefiraat    ");
+        getLogger().info("     Crystamae Historia  水晶编年史       ");
+        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 
         this.keys = new Keys();

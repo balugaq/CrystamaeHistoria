@@ -80,7 +80,7 @@ public class Story {
             l.add(TextComponent.toLegacyText(line));
         }
         if (author != null) {
-            l.add(ThemeType.NOTICE.getChatColor() + "Author : " + author);
+            l.add(ThemeType.NOTICE.getChatColor() + "作者: " + author);
         }
         return l;
     }
