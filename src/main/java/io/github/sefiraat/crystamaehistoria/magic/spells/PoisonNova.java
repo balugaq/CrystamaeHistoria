@@ -5,12 +5,15 @@ import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import io.github.sefiraat.crystamaehistoria.magic.wrappers.MagicProjectile;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class PoisonNova extends Spell {
@@ -59,5 +62,27 @@ public class PoisonNova extends Spell {
     @ParametersAreNonnullByDefault
     public void afterProjectileHit(CastInformation castInformation) {
         displayParticleEffect(castInformation.getMainTarget(), Particle.CRIMSON_SPORE, 1.0, 10);
+    }
+
+    @Nonnull
+    @Override
+    public String getId() {
+        return "POISON_NOVA";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "Summons a nova of poisonous bullets that",
+            "tear through enemies and cause them to",
+            "get sick."
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.SLIME_BALL;
     }
 }

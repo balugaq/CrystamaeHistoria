@@ -4,13 +4,13 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.stories.BlockTier;
-import io.github.sefiraat.crystamaehistoria.stories.PersistentStoryDataType;
 import io.github.sefiraat.crystamaehistoria.stories.StoriedBlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
 import io.github.sefiraat.crystamaehistoria.stories.Story;
-import io.github.sefiraat.crystamaehistoria.stories.StoryList;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryChances;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.DataTypeMethods;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.PersistentStoriesDataType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
 import lombok.experimental.UtilityClass;
 import org.apache.commons.lang.Validate;
@@ -32,8 +32,6 @@ import java.util.stream.Collectors;
 
 @UtilityClass
 public class StoryUtils {
-
-    // TODO Garbage - move to methods within Story
 
     /**
      * Returns true if the block is able to have stories (is in the map)
@@ -77,7 +75,7 @@ public class StoryUtils {
      */
     @ParametersAreNonnullByDefault
     public static boolean isStoried(ItemStack itemStack) {
-        return PersistentDataAPI.hasBoolean(itemStack.getItemMeta(), CrystamaeHistoria.getKeys().getPdcIsStoried());
+        return PersistentDataAPI.hasBoolean(itemStack.getItemMeta(), Keys.PDC_IS_STORIED);
     }
 
     /**
@@ -88,14 +86,14 @@ public class StoryUtils {
     @ParametersAreNonnullByDefault
     public static void makeStoried(ItemStack itemStack) {
         ItemMeta itemMeta = itemStack.getItemMeta();
-        PersistentDataAPI.setBoolean(itemMeta, CrystamaeHistoria.getKeys().getPdcIsStoried(), true);
+        PersistentDataAPI.setBoolean(itemMeta, Keys.PDC_IS_STORIED, true);
         setStoryLimits(itemMeta, getStoryLimits(itemStack));
         itemStack.setItemMeta(itemMeta);
     }
 
     /**
      * Returns true if the has been storied. This does not mean that is HAS
-     * sotries, only that it has started to be processed byu a chronicler
+     * stories, only that it has started to be processed byu a chronicler
      *
      * @param itemStack The {@link ItemStack} to check
      * @return true if has previously been chronicled at any point
@@ -103,7 +101,7 @@ public class StoryUtils {
     @Nonnull
     @ParametersAreNonnullByDefault
     public static JsonObject getStoryLimits(ItemStack itemStack) {
-        return PersistentDataAPI.getJsonObject(itemStack.getItemMeta(), CrystamaeHistoria.getKeys().getPdcPotentialStories(), getInitialStoryLimits(itemStack));
+        return PersistentDataAPI.getJsonObject(itemStack.getItemMeta(), Keys.PDC_POTENTIAL_STORIES, getInitialStoryLimits(itemStack));
     }
 
     /**
@@ -114,7 +112,7 @@ public class StoryUtils {
      */
     @ParametersAreNonnullByDefault
     private static void setStoryLimits(ItemMeta itemMeta, JsonObject jsonObject) {
-        PersistentDataAPI.setJsonObject(itemMeta, CrystamaeHistoria.getKeys().getPdcPotentialStories(), jsonObject);
+        PersistentDataAPI.setJsonObject(itemMeta, Keys.PDC_POTENTIAL_STORIES, jsonObject);
     }
 
     /**
@@ -134,7 +132,7 @@ public class StoryUtils {
      */
     @ParametersAreNonnullByDefault
     public static int getStoryAmount(ItemMeta itemMeta) {
-        return PersistentDataAPI.getInt(itemMeta, CrystamaeHistoria.getKeys().getPdcCurrentNumberOfStories(), 0);
+        return PersistentDataAPI.getInt(itemMeta, Keys.PDC_CURRENT_NUMBER_OF_STORIES, 0);
     }
 
     /**
@@ -146,7 +144,7 @@ public class StoryUtils {
     @ParametersAreNonnullByDefault
     public static void setStoryAmount(ItemStack itemStack, int amount) {
         ItemMeta itemMeta = itemStack.getItemMeta();
-        PersistentDataAPI.setInt(itemMeta, CrystamaeHistoria.getKeys().getPdcCurrentNumberOfStories(), amount);
+        PersistentDataAPI.setInt(itemMeta, Keys.PDC_CURRENT_NUMBER_OF_STORIES, amount);
         if (amount >= getMaxStoryAmount(itemStack)) {
             itemMeta.addEnchant(Enchantment.LUCK, 1, true);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -231,12 +229,12 @@ public class StoryUtils {
     public static void requestUniqueStory(ItemStack itemstack) {
         final StoriesManager m = CrystamaeHistoria.getStoriesManager();
         final StoriedBlockDefinition s = m.getStoriedBlockDefinitionMap().get(itemstack.getType());
-        Story unique = s.getArchetypeHistoria();
+        Story unique = s.getUnique();
         applyStory(itemstack, unique);
     }
 
     @ParametersAreNonnullByDefault
-    public static void addStory(ItemStack itemStack, List<StoryType> p, Map<Integer, Story> storyList) {
+    public static void addStory(ItemStack itemStack, List<StoryType> p, Map<String, Story> storyList) {
         final StoryType st = p.get(ThreadLocalRandom.current().nextInt(0, p.size()));
         final List<Story> availableStories = storyList.values().stream().filter(t -> t.getType() == st).collect(Collectors.toList());
         final Story story = availableStories.get(ThreadLocalRandom.current().nextInt(0, availableStories.size()));
@@ -245,9 +243,9 @@ public class StoryUtils {
     }
 
     @ParametersAreNonnullByDefault
-    public static @Nullable
-    List<Story> getAllStories(ItemStack itemStack) {
-        return itemStack.getItemMeta().getPersistentDataContainer().get(CrystamaeHistoria.getKeys().getPdcStories(), PersistentStoryDataType.TYPE);
+    @Nullable
+    public static List<Story> getAllStories(ItemStack itemStack) {
+        return DataTypeMethods.getCustom(itemStack.getItemMeta(), Keys.PDC_STORIES, PersistentStoriesDataType.TYPE);
     }
 
     @ParametersAreNonnullByDefault
@@ -258,7 +256,7 @@ public class StoryUtils {
             storyList = new ArrayList<>();
         }
         storyList.add(story);
-        im.getPersistentDataContainer().set(CrystamaeHistoria.getKeys().getPdcStories(), PersistentStoryDataType.TYPE, storyList);
+        DataTypeMethods.setCustom(im, Keys.PDC_STORIES, PersistentStoriesDataType.TYPE, storyList);
         itemStack.setItemMeta(im);
     }
 
@@ -268,10 +266,8 @@ public class StoryUtils {
         final List<Story> storyList = getAllStories(itemStack);
         Validate.notNull(storyList, "No storyList found when trying to remove.");
         storyList.remove(story);
-        im.getPersistentDataContainer().set(CrystamaeHistoria.getKeys().getPdcStories(), PersistentStoryDataType.TYPE, storyList);
+        DataTypeMethods.setCustom(im, Keys.PDC_STORIES, PersistentStoriesDataType.TYPE, storyList);
         itemStack.setItemMeta(im);
         return storyList.size();
     }
-
-
 }

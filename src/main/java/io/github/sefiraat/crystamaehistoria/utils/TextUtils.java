@@ -1,6 +1,6 @@
 package io.github.sefiraat.crystamaehistoria.utils;
 
-import io.github.sefiraat.crystamaehistoria.theme.ThemeType;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import lombok.experimental.UtilityClass;
 import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.StringUtils;
@@ -21,7 +21,7 @@ public class TextUtils {
 
     @Nonnull
     public static String getLoreDivider() {
-        ChatColor c = ThemeType.PASSIVE.getChatColor();
+        ChatColor c = ThemeType.PASSIVE.getColor();
         return c + StringUtils.repeat("-", 25);
     }
 

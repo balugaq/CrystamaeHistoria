@@ -3,10 +3,10 @@ package io.github.sefiraat.crystamaehistoria;
 import de.slikey.effectlib.EffectManager;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.sefiraat.crystamaehistoria.commands.TestSpell;
+import io.github.sefiraat.crystamaehistoria.config.ConfigManager;
+import io.github.sefiraat.crystamaehistoria.listeners.ListenerManager;
 import io.github.sefiraat.crystamaehistoria.magic.ActiveStorage;
 import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
-import io.github.sefiraat.crystamaehistoria.magic.SpellType;
-import io.github.sefiraat.crystamaehistoria.managers.ListenerManager;
 import io.github.sefiraat.crystamaehistoria.runnables.spells.SpellTick;
 import io.github.sefiraat.crystamaehistoria.slimefun.Structure;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
@@ -14,7 +14,6 @@ import io.github.sefiraat.crystamaehistoria.utils.Keys;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import org.apache.commons.lang.Validate;
 import org.bstats.bukkit.Metrics;
-import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 
 import javax.annotation.Nonnull;
@@ -28,17 +27,17 @@ public class CrystamaeHistoria extends AbstractAddon {
 
     private Keys keys;
     private Structure structure;
-    private ListenerManager listenerManager;
+    private ConfigManager configManager;
     private StoriesManager storiesManager;
-    private EffectManager effectManager;
-
+    private ListenerManager listenerManager;
     private ActiveStorage activeStorage;
+    private EffectManager effectManager;
 
     public CrystamaeHistoria() {
         super("ybw0014", "CrystamaeHistoria-CN", "master", "auto-update");
     }
 
-    public static CrystamaeHistoria inst() {
+    public static CrystamaeHistoria getInstance() {
         return instance;
     }
 
@@ -66,17 +65,47 @@ public class CrystamaeHistoria extends AbstractAddon {
         return instance.effectManager;
     }
 
-    public static PluginManager getPluginManager() {
-        return instance.getServer().getPluginManager();
+    public static ConfigManager getConfigManager() {
+        return instance.configManager;
     }
 
-    public static Server getServ() {
-        return instance.getServer();
+    public static PluginManager getPluginManager() {
+        return instance.getServer().getPluginManager();
     }
 
     @Nonnull
     public static Map<UUID, Pair<CastInformation, Long>> getProjectileMap() {
         return instance.activeStorage.getProjectileMap();
+    }
+
+    @Override
+    public void enable() {
+        instance = this;
+
+        getLogger().info("########################################");
+        getLogger().info("     Crystamae Historia  水晶编年史       ");
+        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
+        getLogger().info("########################################");
+
+        this.structure = new Structure();
+        this.configManager = new ConfigManager();
+        this.storiesManager = new StoriesManager();
+        this.listenerManager = new ListenerManager();
+        this.activeStorage = new ActiveStorage();
+        this.effectManager = new EffectManager(this);
+
+        structure.setup();
+
+        new Metrics(this, 12065);
+
+        getAddonCommand().addSub(new TestSpell());
+    }
+
+    @Override
+    protected void disable() {
+        activeStorage.clearAll();
+        saveConfig();
+        instance = null;
     }
 
     @Nonnull
@@ -91,54 +120,4 @@ public class CrystamaeHistoria extends AbstractAddon {
     public static Map<SpellTick, Integer> getTickingMap() {
         return instance.activeStorage.getTickingCastables();
     }
-
-    @ParametersAreNonnullByDefault
-    // TODO Remove before v1
-    public static void logInfo(String... message) {
-        for (String string : message) {
-            instance.getServer().getLogger().info(string);
-        }
-    }
-
-    @ParametersAreNonnullByDefault
-    // TODO Remove before v1
-    public static void logWarning(String... message) {
-        for (String string : message) {
-            instance.getServer().getLogger().warning(string);
-        }
-    }
-
-    @Override
-    public void enable() {
-
-        instance = this;
-
-        getLogger().info("########################################");
-        getLogger().info("     Crystamae Historia  水晶编年史       ");
-        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
-        getLogger().info("########################################");
-
-        this.keys = new Keys();
-        this.structure = new Structure();
-        this.listenerManager = new ListenerManager();
-        this.storiesManager = new StoriesManager();
-        this.activeStorage = new ActiveStorage();
-        this.effectManager = new EffectManager(this);
-
-        new Metrics(this, 12065);
-
-        getAddonCommand().addSub(new TestSpell());
-
-        // Just to load the class
-        SpellType.getCachedValues();
-
-    }
-
-    @Override
-    protected void disable() {
-        activeStorage.clearAll();
-        saveConfig();
-        instance = null;
-    }
-
 }

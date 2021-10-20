@@ -9,7 +9,9 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -31,7 +33,7 @@ public class Teleport extends Spell {
                 caster.teleport(teleportToLocation);
                 displayParticleEffect(caster, Particle.END_ROD, 1, 10);
             } else {
-                caster.sendMessage(CrystamaeHistoria.inst().getConfig().getString("messages.spells.teleport_no_suitable_location"));
+                caster.sendMessage(CrystamaeHistoria.getInstance().getConfig().getString("messages.spells.teleport_no_suitable_location"));
             }
         }
     }
@@ -62,4 +64,23 @@ public class Teleport extends Spell {
         }
     }
 
+    @Nonnull
+    @Override
+    public String getId() {
+        return "TELEPORT";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "Teleports the caster x blocks forward."
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.ENDER_PEARL;
+    }
 }

@@ -5,10 +5,14 @@ import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import org.bukkit.Color;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -17,7 +21,8 @@ public class Quake extends Spell {
     public Quake() {
         SpellCoreBuilder spellCoreBuilder = new SpellCoreBuilder(100, true, 30, false, 20, true)
             .makeDamagingSpell(2, true, 0, false)
-            .makeTickingSpell(this::onTick, 5, false, 20, false);
+            .makeTickingSpell(this::onTick, 5, false, 20, false)
+            .addNegativeEffect(PotionEffectType.SLOW, 1, 60);
         setSpellCore(spellCoreBuilder.build());
     }
 
@@ -43,9 +48,31 @@ public class Quake extends Spell {
         }
         for (Entity entity : castLocation.getWorld().getNearbyEntities(castLocation, range, 2, range)) {
             if (entity instanceof LivingEntity && entity.getUniqueId() != castInformation.getCaster()) {
-                damageEntity(((LivingEntity) entity), castInformation.getCaster(), getDamage(castInformation));
+                LivingEntity livingEntity = (LivingEntity) entity;
+                applyNegativeEffects(livingEntity);
+                damageEntity(livingEntity, castInformation.getCaster(), getDamage(castInformation));
             }
         }
     }
 
+    @Nonnull
+    @Override
+    public String getId() {
+        return "QUAKE";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "Creates a localized quake around the caster",
+            "damaging and slowing."
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.CRACKED_DEEPSLATE_BRICKS;
+    }
 }

@@ -3,33 +3,36 @@ package io.github.sefiraat.crystamaehistoria.slimefun.machines.liquefactionbasin
 import de.slikey.effectlib.effect.SphereEffect;
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.magic.SpellType;
-import io.github.sefiraat.crystamaehistoria.slimefun.AbstractCache;
+import io.github.sefiraat.crystamaehistoria.slimefun.machines.DisplayStandHolder;
 import io.github.sefiraat.crystamaehistoria.slimefun.materials.Crystal;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.BlankPlateBasic;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.BlankPlate;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.ChargedPlate;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.PlateStorage;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
-import io.github.sefiraat.crystamaehistoria.theme.ThemeType;
 import io.github.sefiraat.crystamaehistoria.utils.ArmourStandUtils;
 import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
+import io.github.sefiraat.crystamaehistoria.utils.Keys;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.DataTypeMethods;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.PersistentPlateDataType;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import lombok.Getter;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
-import org.bukkit.World;
-import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.util.Vector;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -39,17 +42,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 @Getter
-public class LiquefactionBasinCache extends AbstractCache {
+public class LiquefactionBasinCache extends DisplayStandHolder {
 
-    public static final Map<StoryRarity, Integer> RARITY_VALUE_MAP = new EnumMap<>(StoryRarity.class);
     public static final double LOWEST_LEVEL = -1.7;
     public static final double HIGHEST_LEVEL = -1;
     public static final double MAX_VOLUME = 1000;
+    protected static final Map<StoryRarity, Integer> RARITY_VALUE_MAP = new EnumMap<>(StoryRarity.class);
     protected static final String CH_LEVEL_PREFIX = "ch_c_lvl:";
     private static final Map<SpellType, SpellRecipe> RECIPES_SPELL = new HashMap<>();
 
@@ -82,8 +84,10 @@ public class LiquefactionBasinCache extends AbstractCache {
             if (slimefunItem instanceof Crystal) {
                 Crystal crystal = (Crystal) slimefunItem;
                 addCrystamae(crystal.getType(), crystal.getRarity(), item);
-            } else if (slimefunItem instanceof BlankPlateBasic) {
-                checkPlate(item);
+            } else if (slimefunItem instanceof BlankPlate) {
+                processBlankPlate(item, (BlankPlate) slimefunItem);
+            } else if (slimefunItem instanceof ChargedPlate) {
+                processChargedPlate(item, (ChargedPlate) slimefunItem);
             } else {
                 rejectItem(item, true);
             }
@@ -131,7 +135,7 @@ public class LiquefactionBasinCache extends AbstractCache {
         int blue = 0;
 
         for (Map.Entry<StoryType, Integer> entry : contentMap.entrySet()) {
-            final Color color = ThemeType.getByType(entry.getKey()).getChatColor().getColor();
+            final Color color = ThemeType.getByType(entry.getKey()).getColor().getColor();
             final int additionalAmount = entry.getValue();
             amount += additionalAmount;
             red += color.getRed() * additionalAmount;
@@ -174,6 +178,7 @@ public class LiquefactionBasinCache extends AbstractCache {
         }
     }
 
+    @ParametersAreNonnullByDefault
     private void setFillHeight(ArmorStand armorStand) {
         final double diff = HIGHEST_LEVEL - LOWEST_LEVEL;
         final double incrementAmount = diff / MAX_VOLUME;
@@ -188,37 +193,61 @@ public class LiquefactionBasinCache extends AbstractCache {
         }
     }
 
-    private void checkPlate(Item item) {
-        // TODO Hate this - fix slowly or get REEE'd
-        Set<StoryType> set = contentMap.entrySet()
-            .stream()
-            .sorted(Map.Entry.<StoryType, Integer>comparingByValue().reversed())
-            .limit(3).map(Map.Entry::getKey).collect(Collectors.toSet());
+    @ParametersAreNonnullByDefault
+    private void processBlankPlate(Item item, BlankPlate plate) {
+        Set<StoryType> set = contentMap.entrySet().stream().sorted(Map.Entry.<StoryType, Integer>comparingByValue().reversed()).limit(3).map(Map.Entry::getKey).collect(Collectors.toSet());
+        ItemStack itemStack = item.getItemStack();
         if (set.size() == 3) {
-            emptyBasin();
-            // TODO Check for t2
-            SpellType spellType = null;
-            for (Map.Entry<SpellType, SpellRecipe> recipeEntry : RECIPES_SPELL.entrySet()) {
-                if (recipeEntry.getValue().getStoryTypes().containsAll(set)) {
-                    spellType = recipeEntry.getKey();
-                    break;
-                }
-            }
+            SlimefunItem.getByItem(itemStack);
+            SpellType spellType = getMatchingRecipe(set, plate);
             if (spellType != null) {
-                item.remove();
+                // TODO Plate tier checks
+                item.getWorld().dropItem(item.getLocation(), ChargedPlate.getChargedPlate(plate.getTier(), spellType, getFillLevel()));
+                if (itemStack.getAmount() > 1) {
+                    itemStack.setAmount(itemStack.getAmount() - 1);
+                } else {
+                    item.remove();
+                }
                 summonCatalystParticles();
-            } else {
-                /*(
-                 TODO Remove
-                 Debugging only as when working this will not be able
-                 to not be present. Lets just yeet it for now to stop
-                 firing multiple times
-                 */
-                rejectItem(item, false);
             }
+            emptyBasin();
         } else {
             rejectItem(item, true);
         }
+    }
+
+    private void processChargedPlate(Item item, ChargedPlate plate) {
+        final ItemStack itemStack = item.getItemStack();
+        final ItemMeta itemMeta = itemStack.getItemMeta();
+        final PlateStorage plateStorage = DataTypeMethods.getCustom(itemMeta, Keys.PDC_PLATE_STORAGE, PersistentPlateDataType.TYPE);
+        final SpellType currentSpellType = plateStorage.getStoredSpell();
+
+        final Set<StoryType> set = contentMap.entrySet().stream().sorted(Map.Entry.<StoryType, Integer>comparingByValue().reversed()).limit(3).map(Map.Entry::getKey).collect(Collectors.toSet());
+        if (set.size() == 3) {
+            SpellType spellType = getMatchingRecipe(set, plate);
+            if (spellType == currentSpellType) {
+                plateStorage.addCrysta(getFillLevel());
+                itemStack.setItemMeta(itemMeta);
+                summonCatalystParticles();
+            }
+            emptyBasin();
+        } else {
+            rejectItem(item, false);
+        }
+
+    }
+
+    @Nullable
+    @ParametersAreNonnullByDefault
+    public SpellType getMatchingRecipe(Set<StoryType> set, SlimefunItem slimefunItem) {
+        SpellType spellType = null;
+        for (Map.Entry<SpellType, SpellRecipe> recipeEntry : RECIPES_SPELL.entrySet()) {
+            if (recipeEntry.getValue().recipeMatches(set, slimefunItem)) {
+                spellType = recipeEntry.getKey();
+                break;
+            }
+        }
+        return spellType;
     }
 
     public int getFillLevel() {
@@ -248,42 +277,4 @@ public class LiquefactionBasinCache extends AbstractCache {
         sphereEffect.iterations = 2;
         sphereEffect.start();
     }
-
-    protected void kill(Location location) {
-        BlockStorage.clearBlockInfo(location);
-        getDisplayStand().remove();
-    }
-
-    protected World getWorld() {
-        return blockMenu.getLocation().getWorld();
-    }
-
-    protected Location getLocation() {
-        return blockMenu.getLocation().clone();
-    }
-
-    protected Location getLocation(boolean centered) {
-        if (centered) {
-            return getLocation().add(0.5, 0.5, 0.5);
-        } else {
-            return getLocation();
-        }
-    }
-
-    @ParametersAreNonnullByDefault
-    private ArmorStand getDisplayStand() {
-        // TODO Generify ArmourStands
-        Block block = blockMenu.getBlock();
-        String uuidString = BlockStorage.getLocationInfo(getLocation(), "ch_display_stand");
-        if (uuidString != null) {
-            UUID uuid = UUID.fromString(uuidString);
-            return (ArmorStand) Bukkit.getEntity(uuid);
-        } else {
-            final ArmorStand armorStand = (ArmorStand) block.getWorld().spawnEntity(getLocation().add(0.5, -1.7, 0.5), EntityType.ARMOR_STAND);
-            ArmourStandUtils.setDisplay(armorStand);
-            BlockStorage.addBlockInfo(block.getLocation(), "ch_display_stand", armorStand.getUniqueId().toString());
-            return armorStand;
-        }
-    }
-
 }

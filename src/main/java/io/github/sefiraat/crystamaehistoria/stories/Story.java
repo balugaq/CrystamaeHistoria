@@ -1,13 +1,14 @@
 package io.github.sefiraat.crystamaehistoria.stories;
 
-import io.github.mooy1.infinitylib.core.AddonConfig;
-import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryShardProfile;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
-import io.github.sefiraat.crystamaehistoria.theme.ThemeType;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.blocks.BlockPosition;
 import lombok.Getter;
+import lombok.Setter;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 
 import javax.annotation.Nonnull;
@@ -15,16 +16,13 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
+import java.util.Map;
 
 @Getter
 public class Story {
 
-    private static final String ROOT = "stories.";
-
-    private final int id;
     @Nonnull
-    private final String name;
+    private final String id;
     @Nullable
     private final String author;
     @Nonnull
@@ -35,23 +33,19 @@ public class Story {
     private final StoryShardProfile storyShardProfile;
     @Nonnull
     private final List<String> storyStrings;
+    @Setter
+    @Nullable
+    private BlockPosition blockPosition;
 
+    /** @noinspection unchecked*/
     @ParametersAreNonnullByDefault
-    public Story(int[] ints) {
-        this(ints[0], ints[1], ints[2]);
-    }
-
-    @ParametersAreNonnullByDefault
-    public Story(int id, int rarity, int type) {
-        this.id = id;
-        this.rarity = StoryRarity.getById(rarity);
-        this.type = StoryType.getById(type);
-        AddonConfig config = CrystamaeHistoria.config();
-        String rarityString = this.rarity.toString().toLowerCase(Locale.ROOT);
-        this.name = config.getString(ROOT + rarityString + "." + id + ".name");
-        this.storyShardProfile = new StoryShardProfile(config.getIntegerList(ROOT + rarityString + "." + id + ".shards"));
-        this.storyStrings = config.getStringList(ROOT + rarityString + "." + id + ".lore");
-        this.author = config.getString(ROOT + rarityString + "." + id + ".author");
+    public Story(Map<String, Object> map, StoryRarity storyRarity) {
+        this.rarity = storyRarity;
+        this.id = (String) map.get("name");
+        this.type = StoryType.getByName((String) map.get("type"));
+        this.storyShardProfile = new StoryShardProfile((List<Integer>) map.get("shards"));
+        this.storyStrings = (List<String>) map.get("lore");
+        this.author = (String) map.get("author");
     }
 
     public String getDisplayRarity() {
@@ -59,17 +53,17 @@ public class Story {
     }
 
     public String getDisplayName() {
-        final TextComponent rarity = new TextComponent(getDisplayRarity());
-        final TextComponent name = new TextComponent(this.name);
+        final TextComponent rarityComponent = new TextComponent(getDisplayRarity());
+        final TextComponent nameComponent = new TextComponent(this.id);
 
-        rarity.setColor(ThemeType.getByRarity(this.rarity).getChatColor());
-        rarity.setBold(true);
-        name.setColor(ThemeType.CLICK_INFO.getChatColor());
-        return TextComponent.toLegacyText(rarity, name);
+        rarityComponent.setColor(ThemeType.getByRarity(this.rarity).getColor());
+        rarityComponent.setBold(true);
+        nameComponent.setColor(ThemeType.CLICK_INFO.getColor());
+        return BaseComponent.toLegacyText(rarityComponent, nameComponent);
     }
 
     public List<String> getStoryLore() {
-        final ChatColor passive = ThemeType.PASSIVE.getChatColor();
+        final ChatColor passive = ThemeType.PASSIVE.getColor();
         final List<String> l = new ArrayList<>();
 
         for (String s : storyStrings) {
@@ -77,32 +71,24 @@ public class Story {
 
             line.setColor(passive);
             line.setItalic(false);
-            l.add(TextComponent.toLegacyText(line));
+            l.add(BaseComponent.toLegacyText(line));
         }
         if (author != null) {
-            l.add(ThemeType.NOTICE.getChatColor() + "作者: " + author);
+            l.add(ThemeType.NOTICE.getColor() + "作者: " + author);
         }
         return l;
     }
 
-    public int[] toPrimitive() {
-        return new int[]{this.id, this.rarity.getId(), this.type.getId()};
-    }
-
     @Override
     public int hashCode() {
-        int result = this.id;
-        result = 31 * result + name.hashCode();
-        result = 31 * result + rarity.hashCode();
-        result = 31 * result + type.hashCode();
-        return result;
+        return id.hashCode();
     }
 
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Story) {
             Story story = (Story) obj;
-            return this.id == story.id
+            return this.id.equals(story.id)
                 && this.rarity == story.rarity
                 && this.type == story.type;
         } else {

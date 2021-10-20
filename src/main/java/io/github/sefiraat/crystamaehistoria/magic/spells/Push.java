@@ -4,10 +4,13 @@ import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class Push extends Spell {
@@ -42,4 +45,24 @@ public class Push extends Spell {
         }
     }
 
+    @Nonnull
+    @Override
+    public String getId() {
+        return "PUSH";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "In a jam? This spell gives you some room",
+            "to breathe."
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.PISTON;
+    }
 }

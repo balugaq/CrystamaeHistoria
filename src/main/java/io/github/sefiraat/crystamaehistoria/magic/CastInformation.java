@@ -20,6 +20,9 @@ public class CastInformation {
     private final Location castLocation;
     @Getter
     @Setter
+    private SpellType spellType;
+    @Getter
+    @Setter
     private Location damageLocation;
     @Getter
     @Setter

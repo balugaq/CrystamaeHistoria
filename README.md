@@ -9,7 +9,7 @@ out the raw essence of these experiences from blocks.
 
 记录者是一个魔法装置，你可以从方块中获取它们经历过的故事。当这些故事被发掘出来后，可以直接在方块上阅读。这些故事有不同的等级，以方块的类型来确定。
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_chronicler_panel.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_chronicler_panel.gif"></p>
 
 ## The Realisation Altar
 
@@ -17,7 +17,7 @@ The Realisation Altar will take the stories that have been discovered on blocks 
 from them. This energy slowly begins to crystalize around the altar and, when fully matured, can be broken giving you
 magic in its physical form. The type of crystal you get is dependent on the type of story that was used to form it.
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_realisation_altar.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_realisation_altar.gif"></p>
 
 ## The Liquefaction Basin
 
@@ -28,7 +28,7 @@ absorbed to create a magical artefact, the result being based on the types of Cr
 Be careful when using the basin though, a wrong recipe will ruin all your materials and, sometimes, have devastating
 effects.
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_liquefaction_basin.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_liquefaction_basin.gif"></p>
 
 ## Magical Plates
 
@@ -37,9 +37,10 @@ and, based on the top 3 magical values, will produce a plate that is able to cha
 combinations are available meaning 80 possible magical spells. Plates are attached to Staves using the Stave
 Configurator.
 
-Plates hold the potential for a magical spell but will need refilling with Crystamae as charges are used up. There is no
-limit to the stored charges. charges are restored by dropping a pre-made plate into a basin with the same contents as
-when it was first made.
+Plates hold the potential for a magical spell but will need refilling with Crystamae as the magical energy is used.
+There is no limit to the stored Crystamae. You can recharge a plate by dropping it into a basin.
+
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_plate_filling.gif?raw=true"></p>
 
 ## Stave Configurator
 
@@ -53,8 +54,8 @@ customise your load-out whenever.
 
 经过你的努力，你得到了什么? 当然是：咒语!
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_rof.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_rof.gif"></p>
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_ethereal.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_ethereal.gif"></p>
 
-<p align="center"><img width="900" height="486" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_push.gif"></p>
+<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_push.gif"></p>

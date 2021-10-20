@@ -3,11 +3,16 @@ package io.github.sefiraat.crystamaehistoria.magic.spells.core;
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
 import io.github.sefiraat.crystamaehistoria.runnables.spells.SpellTick;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import lombok.Getter;
 import lombok.Setter;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
@@ -16,6 +21,8 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.inventory.ItemFlag;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
@@ -23,7 +30,9 @@ import org.bukkit.util.Vector;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
@@ -34,6 +43,37 @@ public abstract class Spell {
     @Getter
     @Setter
     private SpellCore spellCore;
+
+    @Nonnull
+    public abstract String getId();
+
+    @Nonnull
+    public abstract String[] getLore();
+
+    @Nonnull
+    public abstract Material getMaterial();
+
+    @Nonnull
+    public SlimefunItemStack getThemedStack() {
+        ChatColor passiveColor = ThemeType.PASSIVE.getColor();
+        List<String> finalLore = new ArrayList<>();
+        for (String s : getLore()) {
+            finalLore.add(passiveColor + s);
+        }
+        finalLore.add("");
+        finalLore.add(ThemeType.applyThemeToString(ThemeType.CLICK_INFO, "Spell"));
+        SlimefunItemStack stack = new SlimefunItemStack(
+            getId(),
+            getMaterial(),
+            ThemeType.applyThemeToString(ThemeType.SPELL, ThemeType.toTitleCase(getId())),
+            finalLore.toArray(new String[finalLore.size() - 1])
+        );
+        ItemMeta itemMeta = stack.getItemMeta();
+        itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        itemMeta.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+        stack.setItemMeta(itemMeta);
+        return stack;
+    }
 
     @ParametersAreNonnullByDefault
     public void castSpell(CastInformation castInformation) {
@@ -66,8 +106,8 @@ public abstract class Spell {
     }
 
     @ParametersAreNonnullByDefault
-    public double getDurabilityCost(CastInformation castInformation) {
-        return spellCore.isDurabilityMultiplied() ? spellCore.getDurabilityCost() * (3 - castInformation.getStaveLevel()) : spellCore.getDurabilityCost();
+    public int getCrystaCost(CastInformation castInformation) {
+        return spellCore.isCrystaMultiplied() ? spellCore.getCrystaCost() * (3 - castInformation.getStaveLevel()) : spellCore.getCrystaCost();
     }
 
     @ParametersAreNonnullByDefault
@@ -235,7 +275,7 @@ public abstract class Spell {
         castInformation.setAfterTicksEvent(spellCore.getAfterAllTicksEvent());
         SpellTick ticker = new SpellTick(castInformation, tickAmount);
         CrystamaeHistoria.getActiveStorage().getTickingCastables().put(ticker, tickAmount);
-        ticker.runTaskTimer(CrystamaeHistoria.inst(), 0, period);
+        ticker.runTaskTimer(CrystamaeHistoria.getInstance(), 0, period);
     }
 
     /**

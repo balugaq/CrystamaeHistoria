@@ -1,9 +1,9 @@
 package io.github.sefiraat.crystamaehistoria.slimefun;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
-import io.github.sefiraat.crystamaehistoria.slimefun.categories.ItemGroups;
+import io.github.sefiraat.crystamaehistoria.slimefun.itemgroups.ItemGroups;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.stave.Stave;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -20,13 +20,19 @@ public class Tools {
     }
 
     public void setup() {
-        SlimefunItemStack stave1 = new SlimefunItemStack("CRY_STAVE_1", Material.STICK, "Stave 1", "DUMMY");
-        new Stave(ItemGroups.TOOLS,
-            stave1,
+        new Stave(
+            ItemGroups.TOOLS,
+            ThemeType.themeStack(
+                "CRY_STAVE_1",
+                new ItemStack(Material.STICK),
+                ThemeType.STAVE,
+                "Basic Stave",
+                "A stave with the ability to hold",
+                "magically charged plates."
+            ),
             RecipeType.SMELTERY,
             new ItemStack[]{},
             1
         ).register(plugin);
     }
-
 }

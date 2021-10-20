@@ -1,14 +1,15 @@
 package io.github.sefiraat.crystamaehistoria.slimefun.machines.realisationaltar;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
-import io.github.sefiraat.crystamaehistoria.slimefun.AbstractCache;
+import io.github.sefiraat.crystamaehistoria.slimefun.machines.AbstractCache;
+import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
 import io.github.sefiraat.crystamaehistoria.stories.Story;
-import io.github.sefiraat.crystamaehistoria.stories.StoryList;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
 import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
 import io.github.sefiraat.crystamaehistoria.utils.Keys;
-import io.github.sefiraat.crystamaehistoria.utils.StackUtils;
 import io.github.sefiraat.crystamaehistoria.utils.StoryUtils;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.DataTypeMethods;
+import io.github.sefiraat.crystamaehistoria.utils.datatypes.PersistentStoryChunkDataType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.blocks.BlockPosition;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
@@ -33,7 +34,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RealisationAltarCache extends AbstractCache {
 
     @Getter
-    private Map<Long, Pair<StoryRarity, Integer>> crystalStoryMap = new HashMap<>();
+    private final Map<BlockPosition, Pair<StoryRarity, String>> crystalStoryMap = new HashMap<>();
 
     @ParametersAreNonnullByDefault
     public RealisationAltarCache(BlockMenu blockMenu) {
@@ -42,10 +43,14 @@ public class RealisationAltarCache extends AbstractCache {
 
     protected void process() {
         tryGrow();
-        final ItemStack i = blockMenu.getItemInSlot(RealisationAltar.INPUT_SLOT);
-        if (i != null && i.getType() != Material.AIR && !StoryUtils.hasRemainingStorySlots(i)) {
-            rejectOverage(i);
-            processItem(i);
+        final ItemStack itemStack = blockMenu.getItemInSlot(RealisationAltar.INPUT_SLOT);
+        if (itemStack != null
+            && itemStack.getType() != Material.AIR
+            && StoryUtils.isStoried(itemStack)
+            && !StoryUtils.hasRemainingStorySlots(itemStack)
+        ) {
+            rejectOverage(itemStack);
+            processItem(itemStack);
         }
         saveMap();
     }
@@ -70,11 +75,11 @@ public class RealisationAltarCache extends AbstractCache {
             if (potentialBlock.getType() == Material.AIR) {
                 Story story = storyList.get(0);
                 potentialBlock.setType(Material.SMALL_AMETHYST_BUD);
-                crystalStoryMap.put(new BlockPosition(potentialBlock.getLocation()).getPosition(), new Pair<>(story.getRarity(), story.getId()));
+                crystalStoryMap.put(new BlockPosition(potentialBlock.getLocation()), new Pair<>(story.getRarity(), story.getId()));
                 if (StoryUtils.removeStory(itemStack, story) == 0) {
                     itemStack.setAmount(0);
                 } else {
-                    StackUtils.rebuildStoriedStack(itemStack);
+                    StoriesManager.rebuildStoriedStack(itemStack);
                 }
                 summonGrowParticles(potentialBlock);
                 summonConsumeParticles(blockMenu.getBlock());
@@ -84,44 +89,37 @@ public class RealisationAltarCache extends AbstractCache {
     }
 
     private void saveMap() {
-        final List<Integer> storyRarityIds = new ArrayList<>();
-        final List<Integer> storyIds = new ArrayList<>();
-        for (Pair<StoryRarity, Integer> pair : crystalStoryMap.values()) {
-            storyRarityIds.add(pair.getFirstValue().getId());
-            storyIds.add(pair.getSecondValue());
-        }
-        final long[] locations = crystalStoryMap.keySet().stream().mapToLong(l -> l).toArray();
-        final int[] rarities = storyRarityIds.stream().mapToInt(i -> i).toArray();
-        final int[] ids = storyIds.stream().mapToInt(i -> i).toArray();
         final Chunk chunk = blockMenu.getBlock().getChunk();
-        final Keys keys = CrystamaeHistoria.getKeys();
-        PersistentDataAPI.setLongArray(chunk, keys.getResolutionCrystalMap(), locations);
-        PersistentDataAPI.setIntArray(chunk, keys.getResolutionRarityMap(), rarities);
-        PersistentDataAPI.setIntArray(chunk, keys.getResolutionStoryMap(), ids);
+        final BlockPosition position = new BlockPosition(blockMenu.getLocation());
+        final List<Story> stories = new ArrayList<>();
+        for (Map.Entry<BlockPosition, Pair<StoryRarity, String>> entry : crystalStoryMap.entrySet()) {
+            Pair<StoryRarity, String> pair = entry.getValue();
+            Story story = CrystamaeHistoria.getStoriesManager().getStory(pair.getSecondValue(), pair.getFirstValue());
+            story.setBlockPosition(new BlockPosition(blockMenu.getLocation().getWorld(), entry.getKey().getPosition()));
+            stories.add(story);
+        }
+        DataTypeMethods.setCustom(chunk, Keys.newKey(String.valueOf(position.getPosition())), PersistentStoryChunkDataType.TYPE, stories);
     }
 
     protected void loadMap() {
         final Chunk chunk = blockMenu.getBlock().getChunk();
-        final Keys keys = CrystamaeHistoria.getKeys();
-        final long[] locations = PersistentDataAPI.getLongArray(chunk, keys.getResolutionCrystalMap());
-        final int[] rarities = PersistentDataAPI.getIntArray(chunk, keys.getResolutionRarityMap());
-        final int[] ids = PersistentDataAPI.getIntArray(chunk, keys.getResolutionStoryMap());
-        if (locations != null && locations.length > 0) {
-            for (int i = 0; i < locations.length - 1; i++) {
-                crystalStoryMap.put(locations[i], new Pair<>(StoryRarity.getById(rarities[i]), ids[i]));
+        final BlockPosition position = new BlockPosition(blockMenu.getLocation());
+        final List<Story> stories = DataTypeMethods.getCustom(chunk, Keys.newKey(String.valueOf(position.getPosition())), PersistentStoryChunkDataType.TYPE);
+        if (stories != null) {
+            for (Story story : stories) {
+                crystalStoryMap.put(story.getBlockPosition(), new Pair<>(story.getRarity(), story.getId()));
             }
         }
     }
 
     private void clearMap() {
-        PersistentDataAPI.remove(blockMenu.getBlock().getChunk(), CrystamaeHistoria.getKeys().getResolutionCrystalMap());
+        PersistentDataAPI.remove(blockMenu.getBlock().getChunk(), Keys.RESOLUTION_CRYSTAL_MAP);
     }
 
     private void tryGrow() {
-        Iterator<Long> iterator = crystalStoryMap.keySet().iterator();
+        Iterator<BlockPosition> iterator = crystalStoryMap.keySet().iterator();
         while (iterator.hasNext()) {
-            long l = iterator.next();
-            final BlockPosition blockPosition = new BlockPosition(blockMenu.getLocation().getWorld(), l);
+            BlockPosition blockPosition = iterator.next();
             final Block block = blockPosition.getBlock();
             final Material material = block.getType();
             switch (material) {
@@ -168,14 +166,16 @@ public class RealisationAltarCache extends AbstractCache {
     }
 
     protected void kill() {
-        Iterator<Long> iterator = crystalStoryMap.keySet().iterator();
+        Iterator<BlockPosition> iterator = crystalStoryMap.keySet().iterator();
         while (iterator.hasNext()) {
-            long l = iterator.next();
-            Block block = new BlockPosition(blockMenu.getLocation().getWorld(), l).getBlock();
+            Block block = iterator.next().getBlock();
             block.setType(Material.AIR);
             iterator.remove();
             summonConsumeParticles(block);
         }
+        final Chunk chunk = blockMenu.getBlock().getChunk();
+        final BlockPosition position = new BlockPosition(blockMenu.getLocation());
+        PersistentDataAPI.remove(chunk, Keys.newKey(String.valueOf(position.getPosition())));
         clearMap();
     }
 

@@ -1,12 +1,14 @@
 package io.github.sefiraat.crystamaehistoria.utils;
 
-import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
-import io.github.sefiraat.crystamaehistoria.theme.ThemeType;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
 import lombok.experimental.UtilityClass;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.util.EulerAngle;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -14,16 +16,16 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class ArmourStandUtils {
 
     @ParametersAreNonnullByDefault
-    public static void setDisplay(ArmorStand a) {
-        a.setVisible(false);
-        a.setGravity(false);
-        a.setBasePlate(false);
-        a.setCustomNameVisible(false);
-        a.setRemoveWhenFarAway(false);
-        a.setCollidable(false);
-        a.setInvulnerable(true);
-        a.setCustomName(ThemeType.getRandomEggName());
-        PersistentDataAPI.setBoolean(a, CrystamaeHistoria.getKeys().getPdcIsDisplayStand(), true);
+    public static void setDisplay(ArmorStand armorStand) {
+        armorStand.setVisible(false);
+        armorStand.setGravity(false);
+        armorStand.setBasePlate(false);
+        armorStand.setCustomNameVisible(false);
+        armorStand.setRemoveWhenFarAway(false);
+        armorStand.setCollidable(false);
+        armorStand.setInvulnerable(true);
+        armorStand.setCustomName(ThemeType.getRandomEggName());
+        PersistentDataAPI.setBoolean(armorStand, Keys.PDC_IS_DISPLAY_STAND, true);
     }
 
     @ParametersAreNonnullByDefault
@@ -42,8 +44,20 @@ public class ArmourStandUtils {
     }
 
     @ParametersAreNonnullByDefault
-    public static boolean isDisplayStand(ArmorStand a) {
-        return PersistentDataAPI.getBoolean(a, CrystamaeHistoria.getKeys().getPdcIsDisplayStand());
+    public static boolean isDisplayStand(ArmorStand armorStand) {
+        return PersistentDataAPI.getBoolean(armorStand, Keys.PDC_IS_DISPLAY_STAND);
     }
 
+    @ParametersAreNonnullByDefault
+    public static void panelAnimationStep(ArmorStand armorStand, boolean directionUp) {
+        armorStand.setHeadPose(armorStand.getHeadPose().add(0, 0.1, 0));
+        Location location = directionUp ? armorStand.getLocation().add(0, 0.01, 0) : armorStand.getLocation().add(0, -0.01, 0);
+        armorStand.teleport(location);
+    }
+
+    @ParametersAreNonnullByDefault
+    public static void panelAnimationReset(ArmorStand armorStand, Block block) {
+        armorStand.setHeadPose(new EulerAngle(0, 0, 0));
+        armorStand.teleport(block.getLocation().clone().add(0.5, -0.6, 0.5));
+    }
 }

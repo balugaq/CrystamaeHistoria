@@ -5,7 +5,10 @@ import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import org.bukkit.Effect;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class EtherealFlow extends Spell {
@@ -24,4 +27,23 @@ public class EtherealFlow extends Spell {
         location.getWorld().playEffect(location, Effect.ENDER_SIGNAL, 1);
     }
 
+    @Nonnull
+    @Override
+    public String getId() {
+        return "ETHEREAL_FLOW";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "Fast-forwards time"
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.CLOCK;
+    }
 }

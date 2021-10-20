@@ -4,11 +4,14 @@ import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class HealingMist extends Spell {
@@ -35,4 +38,25 @@ public class HealingMist extends Spell {
         }
     }
 
+    @Nonnull
+    @Override
+    public String getId() {
+        return "HEALING_MIST";
+    }
+
+    @Nonnull
+    @Override
+    public String[] getLore() {
+        return new String[]{
+            "Calls fourth a mist of healing energy",
+            "around the caster. Gives regen to all",
+            "players affected."
+        };
+    }
+
+    @Nonnull
+    @Override
+    public Material getMaterial() {
+        return Material.GOLDEN_APPLE;
+    }
 }
