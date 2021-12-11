@@ -50,7 +50,7 @@ public class CrystamaeHistoria extends AbstractAddon {
     private SupportedPluginManager supportedPluginManager;
 
     public CrystamaeHistoria() {
-        super("ybw0014", "CrystamaeHistoria-CN", "master", "auto-update");
+        super("ybw0014", "CrystamaeHistoria", "master", "auto-update");
     }
 
     public static CrystamaeHistoria getInstance() {
@@ -138,7 +138,7 @@ public class CrystamaeHistoria extends AbstractAddon {
         instance = this;
 
         getLogger().info("########################################");
-        getLogger().info("     Crystamae Historia  水晶编年史       ");
+        getLogger().info("     Crystamae Historia  魔法水晶编年史   ");
         getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 

@@ -1,25 +1,22 @@
-![](https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/logo/logo_large.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/logo/logo_large.png)
 
-水晶编年史是一个 Slimefun4 附属插件 (目前仍在制作中,有许多内容需要添加) 。该附属插件添加了一系列的咒语，以及用于创建与解锁新咒语的进度系统。
+魔法水晶编年史是一个 Slimefun4 附属插件。该附属插件添加了一系列的法术，以及用于创建与解锁新法术的进度系统。
 
-Any major event or experience leaves its mark on the surrounding area. Historia allows you to harness this by drawing
-out the raw essence of these experiences from blocks.
+任何重大事件或者经历都会在附近留下痕迹。本附属插件允许你从方块中提取原始精华来发掘出这些故事。
 
 ## 记录者
 
-记录者是一个魔法装置，你可以从方块中获取它们经历过的故事。当这些故事被发掘出来后，可以直接在方块上阅读。这些故事有不同的等级，以方块的类型来确定。
+记录者是一个魔法装置，你可以从方块中获取它们经历过的故事。当这些故事被发掘出来后，你便可以直接阅读这些故事。这些故事有不同的等级，以方块的类型来确定。
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_chronicler_panel.gif"></p>
 
-## The Realisation Altar
+## 现实祭坛
 
-The Realisation Altar will take the stories that have been discovered on blocks and slowly draw out the magical energy
-from them. This energy slowly begins to crystalize around the altar and, when fully matured, can be broken giving you
-magic in its physical form. The type of crystal you get is dependent on the type of story that was used to form it.
+现实祭坛将会从已发掘故事的方块中缓慢地提取魔法能量。这会在现实祭坛周围生成魔法水晶。当魔法能量完全被提取出来后，你可以破坏生成的魔法水晶，以获取其中包含的魔法的物理形态———水晶。获得的水晶类型取决于故事的类型。
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_realisation_altar.gif"></p>
 
-## The Liquefaction Basin
+## 液化池
 
 One of the primary uses for magical crystals is the Liquefaction Basin. The Basin will take any crystals thrown into it
 and convert them into a liquid state (Crystamae). When a valid catalyst is thrown in, the contents of the basin are
@@ -52,9 +49,9 @@ customise your load-out whenever.
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_stave_configurator.gif"></p>
 
-## Spells
+## 法术
 
-经过你的努力，你得到了什么? 当然是：咒语!
+经过你的努力，你得到了什么? 当然是：法术!
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_chaos.gif"></p>
 
