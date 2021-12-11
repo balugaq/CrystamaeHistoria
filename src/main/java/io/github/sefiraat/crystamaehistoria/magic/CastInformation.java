@@ -2,7 +2,10 @@ package io.github.sefiraat.crystamaehistoria.magic;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
@@ -27,12 +30,29 @@ public class CastInformation {
     @Getter
     @Setter
     private LivingEntity mainTarget;
+    @Getter
     @Setter
-    private Consumer<CastInformation> beforeAffectEvent;
+    private Block hitBlock;
+    @Getter
     @Setter
-    private Consumer<CastInformation> affectEvent;
+    private Block targetedBlockOnCast;
+    @Getter
     @Setter
-    private Consumer<CastInformation> afterAffectEvent;
+    private BlockFace targetedBlockFaceOnCast;
+    @Getter
+    @Setter
+    private Location projectileLocation;
+    @Getter
+    @Setter
+    private int currentTick = 1;
+    @Setter
+    private Consumer<CastInformation> beforeProjectileHitEvent;
+    @Setter
+    private Consumer<CastInformation> projectileHitEvent;
+    @Setter
+    private Consumer<CastInformation> afterProjectileHitEvent;
+    @Setter
+    private Consumer<CastInformation> projectileHitBlockEvent;
     @Setter
     private Consumer<CastInformation> tickEvent;
     @Setter
@@ -43,26 +63,49 @@ public class CastInformation {
         this.caster = caster.getUniqueId();
         this.staveLevel = staveLevel;
         this.castLocation = caster.getLocation().clone();
+        this.targetedBlockOnCast = caster.getTargetBlockExact(50);
+        this.targetedBlockFaceOnCast = caster.getTargetBlockFace(50);
+    }
+
+    public Player getCasterAsPlayer() {
+        return Bukkit.getPlayer(this.caster);
     }
 
     public void runPreAffectEvent() {
-        if (beforeAffectEvent != null) beforeAffectEvent.accept(this);
+        if (beforeProjectileHitEvent != null) {
+            beforeProjectileHitEvent.accept(this);
+        }
     }
 
     public void runAffectEvent() {
-        if (affectEvent != null) affectEvent.accept(this);
+        if (projectileHitEvent != null) {
+            projectileHitEvent.accept(this);
+        }
     }
 
     public void runPostAffectEvent() {
-        if (afterAffectEvent != null) afterAffectEvent.accept(this);
+        if (afterProjectileHitEvent != null) {
+            afterProjectileHitEvent.accept(this);
+        }
+    }
+
+    public void runProjectileHitBlockEvent() {
+        if (projectileHitBlockEvent != null) {
+            projectileHitBlockEvent.accept(this);
+        }
     }
 
     public void runTickEvent() {
-        if (tickEvent != null) tickEvent.accept(this);
+        if (tickEvent != null) {
+            tickEvent.accept(this);
+        }
+        this.currentTick++;
     }
 
     public void runAfterTicksEvent() {
-        if (afterTicksEvent != null) afterTicksEvent.accept(this);
+        if (afterTicksEvent != null) {
+            afterTicksEvent.accept(this);
+        }
     }
 
 }

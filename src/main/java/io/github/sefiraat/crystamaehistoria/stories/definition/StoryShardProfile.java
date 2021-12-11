@@ -1,6 +1,6 @@
 package io.github.sefiraat.crystamaehistoria.stories.definition;
 
-import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
+import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
@@ -29,12 +29,20 @@ public class StoryShardProfile {
         dropShards(rarity, block.getLocation());
     }
 
+    public void dropShards(StoryRarity rarity, Block block, int multiplier) {
+        dropShards(rarity, block.getLocation(), multiplier);
+    }
+
     public void dropShards(StoryRarity rarity, Location location) {
+        dropShards(rarity, location, 1);
+    }
+
+    public void dropShards(StoryRarity rarity, Location location, int multiplier) {
         for (Map.Entry<StoryType, Integer> entry : shardMap.entrySet()) {
             StoryType storyType = entry.getKey();
-            int amount = entry.getValue();
+            int amount = entry.getValue() * multiplier;
             if (amount > 0) {
-                ItemStack itemStack = CrystamaeHistoria.getStructure().getMaterials().getCrystalMap().get(rarity).get(storyType).getItem().clone();
+                ItemStack itemStack = Materials.getCrystalMap().get(rarity).get(storyType).getItem().clone();
                 itemStack.setAmount(amount);
                 location.getWorld().dropItemNaturally(location, itemStack);
             }

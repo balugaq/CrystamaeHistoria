@@ -15,12 +15,20 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>papermc</id>
+            <url>https://papermc.io/repo/repository/maven-public/</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>mcmmo-repo</id>
+            <url>https://nexus.neetgames.com/repository/maven-public</url>
+        </repository>
+        <repository>
+            <id>jeff-media-public</id>
+            <url>https://hub.jeff-media.com/nexus/repository/jeff-media-public/</url>
         </repository>
     </repositories>
 
@@ -81,36 +89,28 @@
                 <filtering>true</filtering>
                 <includes>
                     <include>**/*.*</include>
+                    <include>tags/*.json</include>
                 </includes>
             </resource>
         </resources>
     </build>
 
     <dependencies>
+        <!-- Core -->
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
             <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-28</version>
+            <version>RC-29</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>LATEST</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.ybw0014</groupId>
-            <artifactId>InfinityLib</artifactId>
-            <version>LATEST</version>
-            <scope>compile</scope>
-        </dependency>
+
+        <!-- Tools etc. -->
         <dependency>
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
@@ -127,6 +127,34 @@
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.jeff_media</groupId>
+            <artifactId>MorePersistentDataTypes</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Supported Plugins -->
+        <dependency>
+            <groupId>com.github.TheBusyBiscuit</groupId>
+            <artifactId>ExoticGarden</artifactId>
+            <version>a2c4b6d</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gmail.nossr50.mcMMO</groupId>
+            <artifactId>mcMMO</artifactId>
+            <version>2.1.202</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- To be removed, do not use further -->
+        <dependency>
+            <groupId>io.github.ybw0014</groupId>
+            <artifactId>InfinityLib</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.elmakers.mine.bukkit</groupId>

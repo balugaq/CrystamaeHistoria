@@ -1,15 +1,27 @@
 package io.github.sefiraat.crystamaehistoria.listeners;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
-import io.github.sefiraat.crystamaehistoria.slimefun.machines.realisationaltar.CrystalBreakListener;
+import org.bukkit.event.Listener;
 
 public class ListenerManager {
 
     public ListenerManager() {
-        CrystamaeHistoria.getPluginManager().registerEvents(new ArmorStandInteract(), CrystamaeHistoria.getInstance());
-        CrystamaeHistoria.getPluginManager().registerEvents(new PlayerInteract(), CrystamaeHistoria.getInstance());
-        CrystamaeHistoria.getPluginManager().registerEvents(new SpellEffectListener(), CrystamaeHistoria.getInstance());
-        CrystamaeHistoria.getPluginManager().registerEvents(new CrystalBreakListener(), CrystamaeHistoria.getInstance());
+        addListener(new ArmorStandInteract());
+        addListener(new SpellCastListener());
+        addListener(new SpellEffectListener());
+        addListener(new CrystalBreakListener());
+        addListener(new BlockRemovalListener());
+        addListener(new MaintenanceListener());
+        addListener(new RefractingLensListener());
+        addListener(new ThaumaturgicSaltsListener());
+        addListener(new EndermanInhibitorListener());
+        addListener(new MobCandleListener());
+        addListener(new DisplayItemListener());
+        addListener(new MiscListener());
+    }
+
+    private void addListener(Listener listener) {
+        CrystamaeHistoria.getPluginManager().registerEvents(listener, CrystamaeHistoria.getInstance());
     }
 
 }

@@ -1,5 +1,6 @@
 package io.github.sefiraat.crystamaehistoria.stories;
 
+import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryShardProfile;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
@@ -10,13 +11,14 @@ import lombok.Setter;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.configuration.ConfigurationSection;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Getter
 public class Story {
@@ -37,15 +39,44 @@ public class Story {
     @Nullable
     private BlockPosition blockPosition;
 
-    /** @noinspection unchecked*/
+    /**
+     * @noinspection ConstantConditions
+     */
     @ParametersAreNonnullByDefault
-    public Story(Map<String, Object> map, StoryRarity storyRarity) {
+    public Story(ConfigurationSection section, StoryRarity storyRarity) {
+        final List<Integer> shards = section.getIntegerList("shards");
+
+        this.id = section.getString("name");
+
+        StoryType storyType = StoryType.getByName(section.getString("type"));
+
+        if (shards.size() != 9) {
+            CrystamaeHistoria.getInstance().getLogger().warning(
+                MessageFormat.format("The following story does not have a correctly setup shard profile: {0}", this.id)
+            );
+        }
+
+        if (storyType == null) {
+            CrystamaeHistoria.getInstance().getLogger().warning(
+                MessageFormat.format("A block story has a badly typed element -> {0}", this.id)
+            );
+        }
+
         this.rarity = storyRarity;
-        this.id = (String) map.get("name");
-        this.type = StoryType.getByName((String) map.get("type"));
-        this.storyShardProfile = new StoryShardProfile((List<Integer>) map.get("shards"));
-        this.storyStrings = (List<String>) map.get("lore");
-        this.author = (String) map.get("author");
+        this.type = storyType;
+        this.storyShardProfile = new StoryShardProfile(section.getIntegerList("shards"));
+        this.storyStrings = section.getStringList("lore");
+        this.author = section.getString("author");
+    }
+
+    @ParametersAreNonnullByDefault
+    private Story(Story story) {
+        this.rarity = story.rarity;
+        this.id = story.getId();
+        this.type = story.type;
+        this.storyShardProfile = story.getStoryShardProfile();
+        this.storyStrings = story.storyStrings;
+        this.author = story.author;
     }
 
     public String getDisplayRarity() {
@@ -74,7 +105,8 @@ public class Story {
             l.add(BaseComponent.toLegacyText(line));
         }
         if (author != null) {
-            l.add(ThemeType.NOTICE.getColor() + "作者: " + author);
+            l.add("");
+            l.add(ThemeType.PASSIVE.getColor() + "作者: " + author);
         }
         return l;
     }
@@ -94,5 +126,9 @@ public class Story {
         } else {
             return false;
         }
+    }
+
+    public Story copy() {
+        return new Story(this);
     }
 }

@@ -1,10 +1,14 @@
 package io.github.sefiraat.crystamaehistoria.slimefun.itemgroups;
 
-import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.magic.SpellType;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCore;
+import io.github.sefiraat.crystamaehistoria.player.PlayerStatistics;
+import io.github.sefiraat.crystamaehistoria.player.SpellRank;
+import io.github.sefiraat.crystamaehistoria.slimefun.ItemGroups;
+import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
+import io.github.sefiraat.crystamaehistoria.utils.theme.GuiElements;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.FlexItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.player.PlayerProfile;
@@ -36,6 +40,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
     private static final int PAGE_SIZE = 36;
 
     private static final int GUIDE_BACK = 1;
+    private static final int GUIDE_STATS = 7;
 
     private static final int PAGE_PREVIOUS = 46;
     private static final int PAGE_NEXT = 52;
@@ -60,7 +65,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
     private static final int PROJECTILE_INFO = 42;
     private static final int EFFECTS = 43;
 
-    protected SpellCollectionFlexGroup(NamespacedKey key, ItemStack item) {
+    public SpellCollectionFlexGroup(NamespacedKey key, ItemStack item) {
         super(key, item);
     }
 
@@ -86,38 +91,50 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         chestMenu.open(p);
     }
 
-    private void setupPage(@Nonnull Player p, @Nonnull PlayerProfile profile, @Nonnull SlimefunGuideMode mode, @Nonnull ChestMenu menu, int page) {
-        final List<SpellType> spellTypes = Arrays.asList(SpellType.getCachedValues());
+    private void setupPage(@Nonnull Player player, @Nonnull PlayerProfile profile, @Nonnull SlimefunGuideMode mode, @Nonnull ChestMenu menu, int page) {
+        final List<SpellType> spellTypes = Arrays.asList(SpellType.getEnabledSpells());
         final int numberOfBlocks = spellTypes.size();
         final int totalPages = (int) Math.ceil(numberOfBlocks / (double) PAGE_SIZE);
         final int start = (page - 1) * PAGE_SIZE;
         final int end = Math.min(start + PAGE_SIZE, spellTypes.size());
-        final List<SpellType> blockDefinitionSubList = spellTypes.subList(start, end);
+
+        spellTypes.sort(Comparator.comparing(spellType -> spellType.getSpell().getId()));
+
+        final List<SpellType> spellTypeSubList = spellTypes.subList(start, end);
+
+        reapplyFooter(player, profile, mode, menu, page, totalPages);
 
         // Back
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(p, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(player, Slimefun.getLocalization().getMessage("guide.back.guide")));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             SlimefunGuide.openItemGroup(profile, ItemGroups.MAIN, mode, 1);
             return false;
         });
 
-        blockDefinitionSubList.sort(Comparator.comparing(spellType -> spellType.getSpell().getId()));
-
-        reapplyFooter(p, profile, mode, menu, page, totalPages);
+        // Stats
+        menu.replaceExistingItem(GUIDE_STATS, getStatsStack(player));
+        menu.addMenuClickHandler(GUIDE_STATS, (player1, slot, itemStack, clickAction) -> false);
 
         for (int i = 0; i < 36; i++) {
             final int slot = i + 9;
-            // TODO WalshyBoi Visible when unlocked or GuideMode == CHEAT
-            if (i + 1 > blockDefinitionSubList.size()) {
+
+            if (i + 1 <= spellTypeSubList.size()) {
+                final SpellType spellType = spellTypeSubList.get(i);
+                final boolean researched = PlayerStatistics.hasUnlockedSpell(player, spellType);
+
+                if (mode == SlimefunGuideMode.CHEAT_MODE || researched) {
+                    menu.replaceExistingItem(slot, new ItemStack(spellType.getSpell().getThemedStack()));
+                    menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> {
+                        displayDefinition(player1, profile, mode, menu, page, spellType);
+                        return false;
+                    });
+                } else {
+                    menu.replaceExistingItem(slot, GuiElements.getSpellNotUnlockedIcon(spellType.getId()));
+                    menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> false);
+                }
+            } else {
                 menu.replaceExistingItem(slot, null);
                 menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> false);
-            } else {
-                SpellType spellType = SpellType.getCachedValues()[i];
-                menu.replaceExistingItem(slot, new ItemStack(spellType.getSpell().getThemedStack()));
-                menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> {
-                    displayDefinition(player1, profile, mode, menu, page, spellType);
-                    return false;
-                });
             }
         }
     }
@@ -138,8 +155,8 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         for (int i = 0; i < RECIPE.length; i++) {
             int slot = RECIPE[i];
-            StoryType storyType = spellType.getSpellRecipe().getStoryTypes().get(i);
-            ItemStack stack = CrystamaeHistoria.getStructure().getMaterials().getTypeItemMap().get(storyType).getItem();
+            StoryType storyType = spellType.getSpell().getRecipe().getInput(i);
+            ItemStack stack = Materials.getDummyCrystalMap().get(storyType).getItem();
             menu.replaceExistingItem(slot, stack);
             menu.addMenuClickHandler(slot, ((player, slot2, itemStack, clickAction) -> false));
         }
@@ -147,7 +164,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         menu.replaceExistingItem(MECHANISM, getMechanismStack());
         menu.addMenuClickHandler(MECHANISM, ((player, i, itemStack, clickAction) -> false));
 
-        menu.replaceExistingItem(CRYSTA_COST, getCrystaStack(spell));
+        menu.replaceExistingItem(CRYSTA_COST, getBasicStack(spell));
         menu.addMenuClickHandler(CRYSTA_COST, ((player, i, itemStack, clickAction) -> false));
 
         menu.replaceExistingItem(VALUES, getValuesStack(spell));
@@ -204,16 +221,19 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
     }
 
     private ItemStack getMechanismStack() {
-        final List<String> lore = Arrays.stream(new String[]{
-            "Spells are created by combining",
-            "liquid crystamae in a Liquefaction",
-            "Basin.",
-            "The highest 3 amounts of liquid",
-            "determine the spell created (left).",
-            "",
-            "Throw in a Spell Plate when ready",
-            "to create your spell."
-        }).map(s -> ThemeType.PASSIVE.getColor() + s).collect(Collectors.toList());
+        final List<String> lore = Arrays.stream(
+            new String[]{
+                "Spells are created by combining",
+                "liquid crystamae in a Liquefaction",
+                "Basin.",
+                "The highest 3 amounts of liquid",
+                "determine the spell created (left).",
+                "",
+                "Throw in a Spell Plate when ready",
+                "to create your spell."
+            }
+        ).map(s -> ThemeType.PASSIVE.getColor() + s)
+            .collect(Collectors.toList());
 
         return new CustomItemStack(
             Material.CAULDRON,
@@ -222,16 +242,24 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         );
     }
 
-    private ItemStack getCrystaStack(Spell spell) {
+    private ItemStack getBasicStack(Spell spell) {
+        final SpellCore spellCore = spell.getSpellCore();
         final ChatColor color = ThemeType.CLICK_INFO.getColor();
         final ChatColor passive = ThemeType.PASSIVE.getColor();
 
-        final String message = MessageFormat.format("{0}Crysta Cost per Cast: {1}{2}", color, passive, spell.getSpellCore().getCrystaCost());
+        final String crysta = MessageFormat.format("{0}Crysta Cost per Cast: {1}{2}", color, passive, spellCore.getCrystaCost());
+        final String crystaMulti = MessageFormat.format("{0}Crysta cost {1} with stave tier", color, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
+        final String cooldown = MessageFormat.format("{0}Cooldown (sec) on use: {1}{2}", color, passive, spell.getSpellCore().getCooldownSeconds());
+        final String cooldownDivided = MessageFormat.format("{0}Cooldown {1} with stave tier", color, spellCore.isDamageMultiplied() ? "isn't reduced" : "is reduced");
+
 
         return new CustomItemStack(
             Material.GLOW_BERRIES,
-            ThemeType.MAIN.getColor() + "Crysta Cost",
-            message
+            ThemeType.MAIN.getColor() + "Basic Details",
+            crysta,
+            crystaMulti,
+            cooldown,
+            cooldownDivided
         );
     }
 
@@ -250,11 +278,15 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         if (spellCore.isDamagingSpell()) {
             lore.add(damageMessage);
             lore.add(damageMulti);
+        } else {
+            lore.add(passive + "This spell does not damage.");
         }
 
         if (spellCore.isHealingSpell()) {
             lore.add(healMessage);
             lore.add(healMulti);
+        } else {
+            lore.add(passive + "This spell does not heal.");
         }
 
         return new CustomItemStack(
@@ -273,8 +305,10 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         final int ticks = spellCore.getNumberOfTicks();
 
+        final String instantCast = MessageFormat.format("{0}Instant: {1}Fires immediately when cast", color, passive);
         final String damagingSpell = MessageFormat.format("{0}Damaging: {1}Will cause damage and/or debuff", color, passive);
         final String healingSpell = MessageFormat.format("{0}Healing: {1}Will heal and/or buff", color, passive);
+        final String effectingSpell = MessageFormat.format("{0}Effecting: {1}Will apply potion effects", color, passive);
         final String tickingSpell1 = MessageFormat.format("{0}Ticking: {1}Effects of this spell will", color, passive);
         final String tickingSpell2 = MessageFormat.format("{0}fire ({1}{2}{3}) times", passive, notice, ticks, passive);
         final String tickingSpell3 = MessageFormat.format("{0}Tick number {1} with stave tier", passive, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
@@ -283,11 +317,17 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final String projectileSpell2 = MessageFormat.format("{0}which, when it hits, may induce", passive);
         final String projectileSpell3 = MessageFormat.format("{0}further effects", passive);
 
+        if (spellCore.isInstantCast()) {
+            lore.add(instantCast);
+        }
         if (spellCore.isDamagingSpell()) {
             lore.add(damagingSpell);
         }
         if (spellCore.isHealingSpell()) {
             lore.add(healingSpell);
+        }
+        if (spellCore.isEffectingSpell()) {
+            lore.add(effectingSpell);
         }
         if (spellCore.isTickingSpell()) {
             lore.add(tickingSpell1);
@@ -313,9 +353,14 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         final String message = MessageFormat.format("{0}Range: {1}{2}", color, passive, spell.getSpellCore().getRange());
         final String multiMessage = MessageFormat.format("{0}Range {1} with stave tier", passive, spell.getSpellCore().isRangeMultiplied() ? "increases" : "doesn't increase");
+        final String noRange = passive + "Not effected by range";
 
-        lore.add(message);
-        lore.add(multiMessage);
+        if (spell.getSpellCore().getKnockbackAmount() > 0) {
+            lore.add(message);
+            lore.add(multiMessage);
+        } else {
+            lore.add(noRange);
+        }
 
         return new CustomItemStack(
             Material.TARGET,
@@ -331,9 +376,14 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         final String message = MessageFormat.format("{0}Knockback: {1}{2}", color, passive, spell.getSpellCore().getKnockbackAmount());
         final String multiMessage = MessageFormat.format("{0}Amount {1} with stave tier", passive, spell.getSpellCore().isKnockbackMultiplied() ? "increases" : "doesn't increase");
+        final String noKnockback = passive + "No direct knockback";
 
-        lore.add(message);
-        lore.add(multiMessage);
+        if (spell.getSpellCore().getKnockbackAmount() > 0) {
+            lore.add(message);
+            lore.add(multiMessage);
+        } else {
+            lore.add(noKnockback);
+        }
 
         return new CustomItemStack(
             Material.SLIME_BLOCK,
@@ -366,7 +416,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         return new CustomItemStack(
             Material.FIRE_CHARGE,
-            ThemeType.MAIN.getColor() + "Knockback",
+            ThemeType.MAIN.getColor() + "Projectile Information",
             lore
         );
     }
@@ -377,45 +427,79 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor passive = ThemeType.PASSIVE.getColor();
         final List<String> lore = new ArrayList<>();
 
-        if (spellCore.getNegativeEffectPairMap().size() > 0) {
-            lore.add(color + "Negative Effects:");
-            spellCore.getNegativeEffectPairMap().forEach(
-                (type, pair) -> {
-                    final String negativeEffectMessage = MessageFormat.format(
-                        "{0}{1}: {2}Power ({3}) - Duration ({4})",
-                        color,
-                        type.getName(),
-                        passive,
-                        pair.getFirstValue(),
-                        pair.getSecondValue()
-                    );
-                    lore.add(negativeEffectMessage);
-                }
+        if (spellCore.isEffectingSpell()) {
+            final String effectAmplification = MessageFormat.format(
+                "{0}Effect power {1} with stave tier",
+                passive,
+                spellCore.isAmplificationMultiplied() ? "increases" : "doesn't increase"
             );
-        }
+            final String effectDuration = MessageFormat.format(
+                "{0}Effect duration {1} with stave tier",
+                passive,
+                spellCore.isEffectDurationMultiplied() ? "increases" : "doesn't increase"
+            );
 
-        if (spellCore.getNegativeEffectPairMap().size() > 0) {
-            lore.add(color + "Positive Effects:");
-            spellCore.getPositiveEffectPairMap().forEach(
-                (type, pair) -> {
-                    final String positiveEffectMessage = MessageFormat.format(
-                        "{0}{1}: {2}Power ({3}) - Duration ({4})",
-                        color,
-                        type.getName(),
-                        passive,
-                        pair.getFirstValue(),
-                        pair.getSecondValue()
-                    );
-                    lore.add(positiveEffectMessage);
-                }
-            );
+            if (spellCore.getNegativeEffectPairMap().size() > 0) {
+                lore.add(color + "Negative Effects:");
+                spellCore.getNegativeEffectPairMap().forEach(
+                    (type, pair) -> {
+                        final String negativeEffectMessage = MessageFormat.format(
+                            "{0}{1}: {2}Power ({3}) - Duration ({4})",
+                            color,
+                            ThemeType.toTitleCase(type.getName()),
+                            passive,
+                            pair.getFirstValue(),
+                            pair.getSecondValue()
+                        );
+                        lore.add(negativeEffectMessage);
+                    }
+                );
+            }
+
+            if (spellCore.getPositiveEffectPairMap().size() > 0) {
+                lore.add(color + "Positive Effects:");
+                spellCore.getPositiveEffectPairMap().forEach(
+                    (type, pair) -> {
+                        final String positiveEffectMessage = MessageFormat.format(
+                            "{0}{1}: {2}Power ({3}) - Duration ({4})",
+                            color,
+                            ThemeType.toTitleCase(type.getName()),
+                            passive,
+                            pair.getFirstValue(),
+                            pair.getSecondValue()
+                        );
+                        lore.add(positiveEffectMessage);
+                    }
+                );
+            }
+
+            lore.add("");
+            lore.add(effectAmplification);
+            lore.add(effectDuration);
+        } else {
+            lore.add(passive + "Spell has no effects");
         }
 
         return new CustomItemStack(
-            Material.POTION,
+            Material.BREWING_STAND,
             ThemeType.MAIN.getColor() + "Effects",
             lore
         );
     }
 
+    private ItemStack getStatsStack(Player player) {
+        final ChatColor color = ThemeType.CLICK_INFO.getColor();
+        final ChatColor passive = ThemeType.PASSIVE.getColor();
+        final List<String> lore = new ArrayList<>();
+        final SpellRank spellRank = PlayerStatistics.getSpellRank(player.getUniqueId());
+
+        lore.add(MessageFormat.format("{0}Spells Unlocked: {1}{2}", color, passive, PlayerStatistics.getSpellsUnlocked(player.getUniqueId())));
+        lore.add(MessageFormat.format("{0}Rank: {1}{2}", color, spellRank.getTheme().getColor(), spellRank.getTheme().getLoreLine()));
+
+        return new CustomItemStack(
+            Material.TARGET,
+            ThemeType.MAIN.getColor() + "Spell Statistics",
+            lore
+        );
+    }
 }

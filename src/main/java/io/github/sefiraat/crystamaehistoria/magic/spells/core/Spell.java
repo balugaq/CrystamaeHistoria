@@ -2,10 +2,10 @@ package io.github.sefiraat.crystamaehistoria.magic.spells.core;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
-import io.github.sefiraat.crystamaehistoria.runnables.spells.SpellTick;
+import io.github.sefiraat.crystamaehistoria.runnables.spells.SpellTickRunnable;
+import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.RecipeSpell;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,10 +13,8 @@ import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.Particle;
-import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LightningStrike;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -25,10 +23,8 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.util.Vector;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -36,13 +32,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Spell {
 
     @Getter
     @Setter
     private SpellCore spellCore;
+    @Getter
+    @Setter
+    private boolean enabled;
 
     @Nonnull
     public abstract String getId();
@@ -52,6 +50,9 @@ public abstract class Spell {
 
     @Nonnull
     public abstract Material getMaterial();
+
+    @Nonnull
+    public abstract RecipeSpell getRecipe();
 
     @Nonnull
     public SlimefunItemStack getThemedStack() {
@@ -84,20 +85,24 @@ public abstract class Spell {
 
         if (spellCore.isProjectileSpell()) {
             spellCore.getFireProjectileEvent().accept(castInformation);
-            castInformation.setBeforeAffectEvent(spellCore.getBeforeProjectileHitEvent());
-            castInformation.setAffectEvent(spellCore.getProjectileHitEvent());
-            castInformation.setAfterAffectEvent(spellCore.getAfterProjectileHitEvent());
+            if (spellCore.isProjectileVsEntitySpell()) {
+                castInformation.setBeforeProjectileHitEvent(spellCore.getBeforeProjectileHitEvent());
+                castInformation.setProjectileHitEvent(spellCore.getProjectileHitEvent());
+                castInformation.setAfterProjectileHitEvent(spellCore.getAfterProjectileHitEvent());
+            }
+            if (spellCore.isProjectileVsBlockSpell()) {
+                castInformation.setProjectileHitBlockEvent(spellCore.getProjectileHitBlockEvent());
+            }
         }
 
         if (spellCore.isTickingSpell()) {
             registerTicker(castInformation, spellCore.getTickInterval(), spellCore.getNumberOfTicks());
         }
-
     }
 
     @ParametersAreNonnullByDefault
-    public long getCooldown(CastInformation castInformation) {
-        return spellCore.isCooldownMultiplied() ? spellCore.getCooldown() * (3 - castInformation.getStaveLevel()) : spellCore.getCooldown();
+    public double getCooldownSeconds(CastInformation castInformation) {
+        return spellCore.isCooldownDivided() ? spellCore.getCooldownSeconds() / castInformation.getStaveLevel() : spellCore.getCooldownSeconds();
     }
 
     @ParametersAreNonnullByDefault
@@ -107,7 +112,7 @@ public abstract class Spell {
 
     @ParametersAreNonnullByDefault
     public int getCrystaCost(CastInformation castInformation) {
-        return spellCore.isCrystaMultiplied() ? spellCore.getCrystaCost() * (3 - castInformation.getStaveLevel()) : spellCore.getCrystaCost();
+        return spellCore.isCrystaMultiplied() ? spellCore.getCrystaCost() * (castInformation.getStaveLevel()) : spellCore.getCrystaCost();
     }
 
     @ParametersAreNonnullByDefault
@@ -161,104 +166,21 @@ public abstract class Spell {
         }
     }
 
-    @ParametersAreNonnullByDefault
-    protected void displayParticleEffect(Entity entity, Particle particle, double rangeRadius) {
-        displayParticleEffect(entity.getLocation(), particle, rangeRadius, spellCore.getParticleNumber());
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void displayParticleEffect(Entity entity, Particle particle, double rangeRadius, int numberOfParticles) {
-        displayParticleEffect(entity.getLocation(), particle, rangeRadius, numberOfParticles);
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void displayParticleEffect(Location location, Particle particle, double rangeRadius) {
-        displayParticleEffect(location, particle, rangeRadius, spellCore.getParticleNumber());
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void displayParticleEffect(Location location, Particle particle, double rangeRadius, int numberOfParticles) {
-        for (int i = 0; i < numberOfParticles; i++) {
-            double x = ThreadLocalRandom.current().nextDouble(-rangeRadius, rangeRadius + 0.1);
-            double y = ThreadLocalRandom.current().nextDouble(-rangeRadius, rangeRadius + 0.1);
-            double z = ThreadLocalRandom.current().nextDouble(-rangeRadius, rangeRadius + 0.1);
-            location.getWorld().spawnParticle(particle, location.clone().add(x, y, z), 1);
-        }
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void pullEntity(Location loc, Entity pushed, double force) {
-        Vector vector = pushed.getLocation().toVector().subtract(loc.toVector()).normalize().multiply(-force);
-        pushEntity(vector, pushed);
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void pushEntity(Location loc, Entity pushed, double force) {
-        Vector vector = pushed.getLocation().toVector().subtract(loc.toVector()).normalize().multiply(force);
-        pushEntity(vector, pushed);
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void pushEntity(Vector vector, Entity pushed) {
-        pushed.setVelocity(vector);
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void damageEntity(LivingEntity livingEntity, UUID caster, double damage) {
-        damageEntity(livingEntity, caster, damage, null, 0);
-    }
-
-    @ParametersAreNonnullByDefault
-    protected void damageEntity(LivingEntity livingEntity, UUID caster, double damage, @Nullable Location knockbackOrigin, double knockbackForce) {
-        Player player = Bukkit.getPlayer(caster);
-        livingEntity.damage(damage, player);
-        if (knockbackOrigin != null && knockbackForce > 0) {
-            pushEntity(knockbackOrigin, livingEntity, knockbackForce);
-        }
-    }
-
-    /**
-     * Heal the entity by the provided amount
-     *
-     * @param livingEntity The {@link LivingEntity} to heal
-     * @param healAmount   The amount to heal by
-     */
-    @ParametersAreNonnullByDefault
-    protected void healEntity(LivingEntity livingEntity, double healAmount) {
-        AttributeInstance attribute = livingEntity.getAttribute(Attribute.GENERIC_MAX_HEALTH);
-        if (attribute != null) {
-            livingEntity.setHealth(Math.min(attribute.getValue(), livingEntity.getHealth() + healAmount));
-        }
-    }
-
     /**
      * Used to register the projectile's events to the definition and then
      * the projectile/definition to the projectileMap. Used when detecting
      * the projectile hitting targets.
      *
-     * @param entity          The {@link Entity} being stored (projectile or LightningStrike)
+     * @param lightningStrike The {@link LightningStrike} being stored
      * @param castInformation The {@link CastInformation} with the stave information
      */
     @ParametersAreNonnullByDefault
-    protected void registerProjectile(Entity entity, CastInformation castInformation) {
-        registerProjectile(entity, castInformation, spellCore.getParticleNumber());
-    }
-
-    /**
-     * Used to register the projectile's events to the definition and then
-     * the projectile/definition to the projectileMap. Used when detecting
-     * the projectile hitting targets.
-     *
-     * @param entity          The {@link Entity} being stored (projectile or lightningstrike)
-     * @param castInformation The {@link CastInformation} with the stave information
-     */
-    @ParametersAreNonnullByDefault
-    protected void registerProjectile(Entity entity, CastInformation castInformation, long projectileDuration) {
-        castInformation.setBeforeAffectEvent(spellCore.getBeforeProjectileHitEvent());
-        castInformation.setAffectEvent(spellCore.getProjectileHitEvent());
-        castInformation.setAfterAffectEvent(spellCore.getAfterProjectileHitEvent());
-        Long expiry = System.currentTimeMillis() + projectileDuration;
-        CrystamaeHistoria.getActiveStorage().getProjectileMap().put(entity.getUniqueId(), new Pair<>(castInformation, expiry));
+    protected void registerLightningStrike(LightningStrike lightningStrike, CastInformation castInformation) {
+        castInformation.setBeforeProjectileHitEvent(spellCore.getBeforeProjectileHitEvent());
+        castInformation.setProjectileHitEvent(spellCore.getProjectileHitEvent());
+        castInformation.setAfterProjectileHitEvent(spellCore.getAfterProjectileHitEvent());
+        Long expiry = System.currentTimeMillis() + 1000;
+        CrystamaeHistoria.getSpellMemory().getStrikeMap().put(lightningStrike.getUniqueId(), new Pair<>(castInformation, expiry));
     }
 
     /**
@@ -271,10 +193,13 @@ public abstract class Spell {
      */
     @ParametersAreNonnullByDefault
     protected void registerTicker(CastInformation castInformation, long period, int tickAmount) {
+        tickAmount = spellCore.isNumberOfTicksMultiplied() ? tickAmount * castInformation.getStaveLevel() : tickAmount;
+        period = spellCore.isTickIntervalMultiplied() ? period * castInformation.getStaveLevel() : period;
         castInformation.setTickEvent(spellCore.getTickEvent());
         castInformation.setAfterTicksEvent(spellCore.getAfterAllTicksEvent());
-        SpellTick ticker = new SpellTick(castInformation, tickAmount);
-        CrystamaeHistoria.getActiveStorage().getTickingCastables().put(ticker, tickAmount);
+
+        final SpellTickRunnable ticker = new SpellTickRunnable(castInformation, tickAmount);
+        CrystamaeHistoria.getSpellMemory().getTickingCastables().put(ticker, tickAmount);
         ticker.runTaskTimer(CrystamaeHistoria.getInstance(), 0, period);
     }
 
@@ -284,9 +209,16 @@ public abstract class Spell {
      * @param livingEntity The {@link LivingEntity} to apply the effects to
      */
     @ParametersAreNonnullByDefault
-    protected void applyPositiveEffects(LivingEntity livingEntity) {
+    protected void applyPositiveEffects(LivingEntity livingEntity, CastInformation castInformation) {
         for (Map.Entry<PotionEffectType, Pair<Integer, Integer>> entry : spellCore.getPositiveEffectPairMap().entrySet()) {
-            livingEntity.addPotionEffect(new PotionEffect(entry.getKey(), entry.getValue().getFirstValue(), entry.getValue().getSecondValue()));
+            int duration = entry.getValue().getSecondValue();
+            int amplification = entry.getValue().getFirstValue();
+
+            duration = spellCore.isEffectDurationMultiplied() ? duration * castInformation.getStaveLevel() : duration;
+            amplification = spellCore.isAmplificationMultiplied() ? amplification * castInformation.getStaveLevel() : amplification;
+
+            final PotionEffect potionEffect = new PotionEffect(entry.getKey(), duration, amplification - 1);
+            livingEntity.addPotionEffect(potionEffect);
         }
     }
 
@@ -296,9 +228,16 @@ public abstract class Spell {
      * @param livingEntity The {@link LivingEntity} to apply the effects to
      */
     @ParametersAreNonnullByDefault
-    protected void applyNegativeEffects(LivingEntity livingEntity) {
+    protected void applyNegativeEffects(LivingEntity livingEntity, CastInformation castInformation) {
         for (Map.Entry<PotionEffectType, Pair<Integer, Integer>> entry : spellCore.getNegativeEffectPairMap().entrySet()) {
-            livingEntity.addPotionEffect(new PotionEffect(entry.getKey(), entry.getValue().getFirstValue(), entry.getValue().getSecondValue()));
+            int duration = entry.getValue().getSecondValue();
+            int amplification = entry.getValue().getFirstValue();
+
+            duration = spellCore.isEffectDurationMultiplied() ? duration * castInformation.getStaveLevel() : duration;
+            amplification = spellCore.isAmplificationMultiplied() ? amplification * castInformation.getStaveLevel() : amplification;
+
+            final PotionEffect potionEffect = new PotionEffect(entry.getKey(), duration, amplification - 1);
+            livingEntity.addPotionEffect(potionEffect);
         }
     }
 
@@ -336,5 +275,4 @@ public abstract class Spell {
         }
         return livingEntities;
     }
-
 }

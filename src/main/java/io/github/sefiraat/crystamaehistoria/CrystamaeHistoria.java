@@ -2,22 +2,38 @@ package io.github.sefiraat.crystamaehistoria;
 
 import de.slikey.effectlib.EffectManager;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
+import io.github.sefiraat.crystamaehistoria.commands.GetRanks;
+import io.github.sefiraat.crystamaehistoria.commands.OpenSpellCompendium;
+import io.github.sefiraat.crystamaehistoria.commands.OpenStoryCompendium;
 import io.github.sefiraat.crystamaehistoria.commands.TestSpell;
+import io.github.sefiraat.crystamaehistoria.commands.TestWand;
 import io.github.sefiraat.crystamaehistoria.config.ConfigManager;
 import io.github.sefiraat.crystamaehistoria.listeners.ListenerManager;
-import io.github.sefiraat.crystamaehistoria.magic.ActiveStorage;
 import io.github.sefiraat.crystamaehistoria.magic.CastInformation;
-import io.github.sefiraat.crystamaehistoria.runnables.spells.SpellTick;
-import io.github.sefiraat.crystamaehistoria.slimefun.Structure;
+import io.github.sefiraat.crystamaehistoria.magic.SpellType;
+import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
+import io.github.sefiraat.crystamaehistoria.magic.spells.spellobjects.MagicFallingBlock;
+import io.github.sefiraat.crystamaehistoria.magic.spells.spellobjects.MagicProjectile;
+import io.github.sefiraat.crystamaehistoria.magic.spells.spellobjects.MagicSummon;
+import io.github.sefiraat.crystamaehistoria.player.PlayerStatistics;
+import io.github.sefiraat.crystamaehistoria.runnables.RunnableManager;
+import io.github.sefiraat.crystamaehistoria.slimefun.Gadgets;
+import io.github.sefiraat.crystamaehistoria.slimefun.ItemGroups;
+import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
+import io.github.sefiraat.crystamaehistoria.slimefun.Mechanisms;
+import io.github.sefiraat.crystamaehistoria.slimefun.PaintBrushes;
+import io.github.sefiraat.crystamaehistoria.slimefun.Tools;
+import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
-import io.github.sefiraat.crystamaehistoria.utils.Keys;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import org.apache.commons.lang.Validate;
 import org.bstats.bukkit.Metrics;
+import org.bstats.charts.AdvancedPie;
 import org.bukkit.plugin.PluginManager;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -25,13 +41,13 @@ public class CrystamaeHistoria extends AbstractAddon {
 
     private static CrystamaeHistoria instance;
 
-    private Keys keys;
-    private Structure structure;
     private ConfigManager configManager;
     private StoriesManager storiesManager;
     private ListenerManager listenerManager;
-    private ActiveStorage activeStorage;
+    private RunnableManager runnableManager;
+    private SpellMemory spellMemory;
     private EffectManager effectManager;
+    private SupportedPluginManager supportedPluginManager;
 
     public CrystamaeHistoria() {
         super("ybw0014", "CrystamaeHistoria-CN", "master", "auto-update");
@@ -41,32 +57,32 @@ public class CrystamaeHistoria extends AbstractAddon {
         return instance;
     }
 
-    public static Keys getKeys() {
-        return instance.keys;
-    }
-
-    public static Structure getStructure() {
-        return instance.structure;
-    }
-
-    public static ListenerManager getListenerManager() {
-        return instance.listenerManager;
+    public static ConfigManager getConfigManager() {
+        return instance.configManager;
     }
 
     public static StoriesManager getStoriesManager() {
         return instance.storiesManager;
     }
 
-    public static ActiveStorage getActiveStorage() {
-        return instance.activeStorage;
+    public static ListenerManager getListenerManager() {
+        return instance.listenerManager;
+    }
+
+    public static RunnableManager getRunnableManager() {
+        return instance.runnableManager;
+    }
+
+    public static SpellMemory getSpellMemory() {
+        return instance.spellMemory;
     }
 
     public static EffectManager getEffectManager() {
         return instance.effectManager;
     }
 
-    public static ConfigManager getConfigManager() {
-        return instance.configManager;
+    public static SupportedPluginManager getSupportedPluginManager() {
+        return instance.supportedPluginManager;
     }
 
     public static PluginManager getPluginManager() {
@@ -74,8 +90,47 @@ public class CrystamaeHistoria extends AbstractAddon {
     }
 
     @Nonnull
-    public static Map<UUID, Pair<CastInformation, Long>> getProjectileMap() {
-        return instance.activeStorage.getProjectileMap();
+    public static Map<MagicProjectile, Pair<CastInformation, Long>> getProjectileMap() {
+        return instance.spellMemory.getProjectileMap();
+    }
+
+    @Nonnull
+    public static Map<MagicFallingBlock, Pair<CastInformation, Long>> getFallingBlockMap() {
+        return instance.spellMemory.getFallingBlockMap();
+    }
+
+    @Nonnull
+    public static Map<UUID, Pair<CastInformation, Long>> getStrikeMap() {
+        return instance.spellMemory.getStrikeMap();
+    }
+
+    @Nonnull
+    public static Map<MagicSummon, Long> getSummonedEntityMap() {
+        return instance.spellMemory.getSummonedEntities();
+    }
+
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    public static CastInformation getProjectileCastInfo(MagicProjectile magicProjectile) {
+        CastInformation castInformation = getProjectileMap().get(magicProjectile).getFirstValue();
+        Validate.notNull(castInformation, "Cast information is null, magical projectile spawned incorrectly.");
+        return castInformation;
+    }
+
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    public static CastInformation getFallingBlockCastInfo(MagicFallingBlock magicFallingBlock) {
+        CastInformation castInformation = getFallingBlockMap().get(magicFallingBlock).getFirstValue();
+        Validate.notNull(castInformation, "Cast information is null, magical falling block spawned incorrectly.");
+        return castInformation;
+    }
+
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    public static CastInformation getStrikeCastInfo(UUID lightningStrike) {
+        CastInformation castInformation = getStrikeMap().get(lightningStrike).getFirstValue();
+        Validate.notNull(castInformation, "Cast information is null, magical projectile spawned incorrectly.");
+        return castInformation;
     }
 
     @Override
@@ -87,37 +142,86 @@ public class CrystamaeHistoria extends AbstractAddon {
         getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 
-        this.structure = new Structure();
         this.configManager = new ConfigManager();
         this.storiesManager = new StoriesManager();
         this.listenerManager = new ListenerManager();
-        this.activeStorage = new ActiveStorage();
+        this.runnableManager = new RunnableManager();
+        this.spellMemory = new SpellMemory();
+        this.supportedPluginManager = new SupportedPluginManager();
         this.effectManager = new EffectManager(this);
 
-        structure.setup();
+        configManager.loadConfig();
 
-        new Metrics(this, 12065);
+        SpellType.setupEnabledSpells();
+
+        setupSlimefun();
+
+        setupBstats();
 
         getAddonCommand().addSub(new TestSpell());
+        getAddonCommand().addSub(new TestWand());
+        getAddonCommand().addSub(new OpenSpellCompendium());
+        getAddonCommand().addSub(new OpenStoryCompendium());
+        getAddonCommand().addSub(new GetRanks());
+    }
+
+    private void setupBstats() {
+        Metrics metrics = new Metrics(this, 12065);
+
+        AdvancedPie disabledSpellsChart = new AdvancedPie("disabled_spells", () -> {
+            Map<String, Integer> values = new HashMap<>();
+            for (SpellType spellType : SpellType.getCachedValues()) {
+                Spell spell = spellType.getSpell();
+                values.put(spell.getId(), spell.isEnabled() ? 0 : 1);
+            }
+            return values;
+        });
+
+        AdvancedPie spellsCastChart = new AdvancedPie("spells_cast", () -> {
+            Map<String, Integer> values = new HashMap<>();
+            for (SpellType spellType : SpellType.getCachedValues()) {
+                Spell spell = spellType.getSpell();
+                int timesCast = 0;
+                for (String string : CrystamaeHistoria.getConfigManager().getPlayerStats().getKeys(false)) {
+                    UUID uuid = UUID.fromString(string);
+                    timesCast += PlayerStatistics.getUsages(uuid, spellType);
+                }
+                values.put(spell.getId(), timesCast);
+            }
+            return values;
+        });
+
+        AdvancedPie storiesChronicled = new AdvancedPie("stories_chronicled", () -> {
+            Map<String, Integer> values = new HashMap<>();
+            for (BlockDefinition definition : CrystamaeHistoria.getStoriesManager().getBlockDefinitionMap().values()) {
+                int timesChronicled = 0;
+                for (String string : CrystamaeHistoria.getConfigManager().getPlayerStats().getKeys(false)) {
+                    UUID uuid = UUID.fromString(string);
+                    timesChronicled += PlayerStatistics.getChronicle(uuid, definition);
+                }
+                values.put(definition.getMaterial().toString(), timesChronicled);
+            }
+            return values;
+        });
+
+        metrics.addCustomChart(disabledSpellsChart);
+        metrics.addCustomChart(spellsCastChart);
+        metrics.addCustomChart(storiesChronicled);
     }
 
     @Override
     protected void disable() {
-        activeStorage.clearAll();
-        saveConfig();
+        spellMemory.clearAll();
+        configManager.saveAll();
         instance = null;
     }
 
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    public static CastInformation getSpellCastInfo(UUID uuid) {
-        CastInformation castInformation = getProjectileMap().get(uuid).getFirstValue();
-        Validate.notNull(castInformation, "Cast information is null, magical projectile spawned incorrectly.");
-        return castInformation;
-    }
-
-    @Nonnull
-    public static Map<SpellTick, Integer> getTickingMap() {
-        return instance.activeStorage.getTickingCastables();
+    private void setupSlimefun() {
+        ItemGroups.setup();
+        Materials.setup();
+        Mechanisms.setup();
+        Gadgets.setup();
+        Tools.setup();
+        PaintBrushes.setup();
     }
 }

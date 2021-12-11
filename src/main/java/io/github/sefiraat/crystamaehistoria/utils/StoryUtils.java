@@ -3,8 +3,8 @@ package io.github.sefiraat.crystamaehistoria.utils;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
+import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.BlockTier;
-import io.github.sefiraat.crystamaehistoria.stories.StoriedBlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
 import io.github.sefiraat.crystamaehistoria.stories.Story;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryChances;
@@ -15,7 +15,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.Persis
 import lombok.experimental.UtilityClass;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -36,34 +35,15 @@ public class StoryUtils {
     /**
      * Returns true if the block is able to have stories (is in the map)
      *
-     * @param block The {@link Block}  to check
-     * @return true if in the stories map
-     */
-    @ParametersAreNonnullByDefault
-    public static boolean canBeStoried(Block block) {
-        return canBeStoried(block.getType());
-    }
-
-    /**
-     * Returns true if the block is able to have stories (is in the map)
-     *
      * @param itemStack The {@link ItemStack} to check
      * @return true if in the stories map
      */
     @ParametersAreNonnullByDefault
-    public static boolean canBeStoried(ItemStack itemStack) {
-        return canBeStoried(itemStack.getType());
-    }
+    public static boolean canBeStoried(ItemStack itemStack, int tier) {
+        final Material material = itemStack.getType();
+        final BlockDefinition definition = CrystamaeHistoria.getStoriesManager().getBlockDefinitionMap().get(material);
 
-    /**
-     * Returns true if the block is able to have stories (is in the map)
-     *
-     * @param material The {@link Material} to check
-     * @return true if in the stories map
-     */
-    @ParametersAreNonnullByDefault
-    public static boolean canBeStoried(Material material) {
-        return CrystamaeHistoria.getStoriesManager().getStoriedBlockDefinitionMap().containsKey(material);
+        return definition != null && definition.getTier().tier <= tier && !itemStack.hasItemMeta();
     }
 
     /**
@@ -193,7 +173,7 @@ public class StoryUtils {
     @ParametersAreNonnullByDefault
     public static JsonObject getInitialStoryLimits(ItemStack itemStack) {
         Material m = itemStack.getType();
-        StoriedBlockDefinition definition = CrystamaeHistoria.getStoriesManager().getStoriedBlockDefinitionMap().get(m);
+        BlockDefinition definition = CrystamaeHistoria.getStoriesManager().getBlockDefinitionMap().get(m);
         Validate.notNull(definition, "The selected material does not have a story definition. This shouldn't happen, SefiDumb™");
         int availableStoryCount = ThreadLocalRandom.current().nextInt(definition.getTier().minStories, definition.getTier().maxStories + 1);
         int tier = definition.getTier().tier;
@@ -205,30 +185,30 @@ public class StoryUtils {
 
     @ParametersAreNonnullByDefault
     public static void requestNewStory(ItemStack itemstack) {
-        final StoriesManager m = CrystamaeHistoria.getStoriesManager();
-        final StoriedBlockDefinition s = m.getStoriedBlockDefinitionMap().get(itemstack.getType());
-        final BlockTier t = s.getTier();
-        final StoryChances c = t.storyChances;
-        final List<StoryType> p = s.getPools();
+        final StoriesManager manager = CrystamaeHistoria.getStoriesManager();
+        final BlockDefinition definition = manager.getBlockDefinitionMap().get(itemstack.getType());
+        final BlockTier tier = definition.getTier();
+        final StoryChances chance = tier.storyChances;
+        final List<StoryType> pool = definition.getPools();
         int rnd = ThreadLocalRandom.current().nextInt(1, 101);
 
-        if (rnd <= c.mythical) {
-            addStory(itemstack, p, m.getStoryMapMythical());
-        } else if (rnd <= c.epic) {
-            addStory(itemstack, p, m.getStoryMapEpic());
-        } else if (rnd <= c.rare) {
-            addStory(itemstack, p, m.getStoryMapRare());
-        } else if (rnd <= c.uncommon) {
-            addStory(itemstack, p, m.getStoryMapUncommon());
+        if (rnd <= chance.mythical) {
+            addStory(itemstack, pool, manager.getStoryMapMythical());
+        } else if (rnd <= chance.epic) {
+            addStory(itemstack, pool, manager.getStoryMapEpic());
+        } else if (rnd <= chance.rare) {
+            addStory(itemstack, pool, manager.getStoryMapRare());
+        } else if (rnd <= chance.uncommon) {
+            addStory(itemstack, pool, manager.getStoryMapUncommon());
         } else {
-            addStory(itemstack, p, m.getStoryMapCommon());
+            addStory(itemstack, pool, manager.getStoryMapCommon());
         }
     }
 
     @ParametersAreNonnullByDefault
     public static void requestUniqueStory(ItemStack itemstack) {
         final StoriesManager m = CrystamaeHistoria.getStoriesManager();
-        final StoriedBlockDefinition s = m.getStoriedBlockDefinitionMap().get(itemstack.getType());
+        final BlockDefinition s = m.getBlockDefinitionMap().get(itemstack.getType());
         Story unique = s.getUnique();
         applyStory(itemstack, unique);
     }

@@ -12,86 +12,65 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
+@Getter
 public class SpellCoreBuilder {
 
-    @Getter
-    private final int cooldown;
-    @Getter
+    // All
+    private final double cooldownSeconds;
     private final double range;
-    @Getter
     private final int crystaCost;
-    @Getter
+    private final boolean cooldownDivided;
+    private final boolean rangeMultiplied;
+    private final boolean crystaMultiplied;
     private final Map<PotionEffectType, Pair<Integer, Integer>> positiveEffectPairMap = new HashMap<>();
-    @Getter
     private final Map<PotionEffectType, Pair<Integer, Integer>> negativeEffectPairMap = new HashMap<>();
-    @Getter
-    private double damageAmount;
-    @Getter
-    private double knockbackAmount;
-    @Getter
-    private double healAmount;
-    @Getter
-    private double projectileAoeRange;
-    @Getter
-    private double projectileKnockbackAmount;
-    @Getter
-    private int numberOfTicks;
-    @Getter
-    private int tickInterval;
-    @Getter
-    private boolean cooldownMultiplied;
-    @Getter
-    private boolean rangeMultiplied;
-    @Getter
-    private boolean durabilityMultiplied;
-    @Getter
-    private boolean damageMultiplied;
-    @Getter
-    private boolean knockbackMultiplied;
-    @Getter
-    private boolean healMultiplied;
-    @Getter
-    private boolean projectileAoeMultiplied;
-    @Getter
-    private boolean projectileKnockbackMultiplied;
-    @Getter
-    private boolean numberOfTicksMultiplied;
-    @Getter
-    private boolean tickIntervalMultiplied;
-    @Getter
     private int particleNumber = 1;
-    @Getter
+    // Instant Casts
     private boolean isInstantCast;
-    @Getter
     private Consumer<CastInformation> instantCastEvent;
-    @Getter
+    // Projectile Based Spells
     private boolean isProjectileSpell;
-    @Getter
+    private boolean isProjectileVsEntitySpell;
+    private boolean isProjectileVsBlockSpell;
+    private double projectileAoeRange;
+    private double projectileKnockbackAmount;
+    private boolean projectileAoeMultiplied;
+    private boolean projectileKnockbackMultiplied;
     private Consumer<CastInformation> fireProjectileEvent;
-    @Getter
     private Consumer<CastInformation> beforeProjectileHitEvent;
-    @Getter
     private Consumer<CastInformation> projectileHitEvent;
-    @Getter
+    private Consumer<CastInformation> projectileHitBlockEvent;
     private Consumer<CastInformation> afterProjectileHitEvent;
-    @Getter
+    // Ticking Spells
     private boolean isTickingSpell;
-    @Getter
+    private int numberOfTicks;
+    private int tickInterval;
+    private boolean numberOfTicksMultiplied;
+    private boolean tickIntervalMultiplied;
     private Consumer<CastInformation> tickEvent;
-    @Getter
     private Consumer<CastInformation> afterAllTicksEvent;
-    @Getter
+    // Damaging Spells
     private boolean isDamagingSpell;
-    @Getter
+    private double damageAmount;
+    private boolean damageMultiplied;
+    private double knockbackAmount;
+    private boolean knockbackMultiplied;
+    // Healing Spells
     private boolean isHealingSpell;
+    private double healAmount;
+    private boolean healMultiplied;
+    // Affecting spells
+    private boolean isEffectingSpell;
+    private boolean amplificationMultiplied;
+    private boolean effectDurationMultiplied;
 
-    public SpellCoreBuilder(int cooldown, boolean cooldownMultiplied, double range, boolean rangeMultiplied, int crystaCost, boolean durabilityMultiplied) {
-        this.cooldown = cooldown;
-        this.cooldownMultiplied = cooldownMultiplied;
+    public SpellCoreBuilder(double cooldownSeconds, boolean cooldownDivided, double range, boolean rangeMultiplied, int crystaCost, boolean crystaMultiplied) {
+        this.cooldownSeconds = cooldownSeconds;
+        this.cooldownDivided = cooldownDivided;
         this.range = range;
         this.rangeMultiplied = rangeMultiplied;
         this.crystaCost = crystaCost;
-        this.durabilityMultiplied = durabilityMultiplied;
+        this.crystaMultiplied = crystaMultiplied;
     }
 
     @Nonnull
@@ -100,6 +79,15 @@ public class SpellCoreBuilder {
         this.isHealingSpell = true;
         this.healAmount = healAmount;
         this.healMultiplied = healMultiplied;
+        return this;
+    }
+
+    @Nonnull
+    @CheckReturnValue
+    public SpellCoreBuilder makeEffectingSpell(boolean effectAmplificationMultiplied, boolean effectDurationMultiplied) {
+        this.isEffectingSpell = true;
+        this.amplificationMultiplied = effectAmplificationMultiplied;
+        this.effectDurationMultiplied = effectDurationMultiplied;
         return this;
     }
 
@@ -128,7 +116,6 @@ public class SpellCoreBuilder {
     @ParametersAreNonnullByDefault
     public SpellCoreBuilder makeProjectileSpell(
         Consumer<CastInformation> fireProjectileConsumer,
-        Consumer<CastInformation> projectileHitConsumer,
         double projectileAoeRange,
         boolean projectileAoeMultiplied,
         double projectileKnockbackAmount,
@@ -136,7 +123,6 @@ public class SpellCoreBuilder {
     ) {
         this.isProjectileSpell = true;
         this.fireProjectileEvent = fireProjectileConsumer;
-        this.projectileHitEvent = projectileHitConsumer;
         this.projectileAoeRange = projectileAoeRange;
         this.projectileAoeMultiplied = projectileAoeMultiplied;
         this.projectileKnockbackAmount = projectileKnockbackAmount;
@@ -147,7 +133,29 @@ public class SpellCoreBuilder {
     @Nonnull
     @CheckReturnValue
     @ParametersAreNonnullByDefault
-    public SpellCoreBuilder addBeforeProjectileHitEvent(Consumer<CastInformation> spellCastInformationConsumer) {
+    public SpellCoreBuilder makeProjectileVsEntitySpell(
+        Consumer<CastInformation> projectileHitConsumer
+    ) {
+        this.isProjectileVsEntitySpell = true;
+        this.projectileHitEvent = projectileHitConsumer;
+        return this;
+    }
+
+    @Nonnull
+    @CheckReturnValue
+    @ParametersAreNonnullByDefault
+    public SpellCoreBuilder makeProjectileVsBlockSpell(
+        Consumer<CastInformation> projectileHitConsumer
+    ) {
+        this.isProjectileVsBlockSpell = true;
+        this.projectileHitBlockEvent = projectileHitConsumer;
+        return this;
+    }
+
+    @Nonnull
+    @CheckReturnValue
+    @ParametersAreNonnullByDefault
+    public SpellCoreBuilder addBeforeProjectileHitEntityEvent(Consumer<CastInformation> spellCastInformationConsumer) {
         this.beforeProjectileHitEvent = spellCastInformationConsumer;
         return this;
     }
@@ -155,8 +163,16 @@ public class SpellCoreBuilder {
     @Nonnull
     @CheckReturnValue
     @ParametersAreNonnullByDefault
-    public SpellCoreBuilder addAfterProjectileHitEvent(Consumer<CastInformation> spellCastInformationConsumer) {
+    public SpellCoreBuilder addAfterProjectileHitEntityEvent(Consumer<CastInformation> spellCastInformationConsumer) {
         this.afterProjectileHitEvent = spellCastInformationConsumer;
+        return this;
+    }
+
+    @Nonnull
+    @CheckReturnValue
+    @ParametersAreNonnullByDefault
+    public SpellCoreBuilder addProjectileHitBlockEvent(Consumer<CastInformation> spellCastInformationConsumer) {
+        this.projectileHitBlockEvent = spellCastInformationConsumer;
         return this;
     }
 
@@ -189,42 +205,26 @@ public class SpellCoreBuilder {
     }
 
     /**
-     * @param potionEffectType The {@link PotionEffectType} to apply.
-     * @param amplification    The amplification of the effect. If multiple of the same effects are added, the cashedValues are combined.
-     * @param duration         The duration of the effect in seconds. If multiple of the same effects are added, the highest is used.
+     * @param potionEffectType  The {@link PotionEffectType} to apply.
+     * @param level             The amplification of the effect. If multiple of the same effects are added, the cashedValues are combined.
+     * @param durationInSeconds The duration of the effect in seconds. If multiple of the same effects are added, the highest is used.
      */
     @ParametersAreNonnullByDefault
-    public SpellCoreBuilder addPositiveEffect(PotionEffectType potionEffectType, int amplification, int duration) {
-        duration = duration * 1000;
-        if (positiveEffectPairMap.containsKey(potionEffectType)) {
-            Pair<Integer, Integer> integerPair = positiveEffectPairMap.get(potionEffectType);
-            amplification = amplification == 0 ? 1 : amplification;
-            integerPair.setFirstValue(integerPair.getFirstValue() + duration);
-            integerPair.setSecondValue(Math.max(integerPair.getSecondValue(), amplification));
-            positiveEffectPairMap.put(potionEffectType, integerPair);
-        } else {
-            positiveEffectPairMap.put(potionEffectType, new Pair<>(amplification, duration));
-        }
+    public SpellCoreBuilder addPositiveEffect(PotionEffectType potionEffectType, int level, int durationInSeconds) {
+        durationInSeconds = durationInSeconds * 20;
+        positiveEffectPairMap.put(potionEffectType, new Pair<>(level, durationInSeconds));
         return this;
     }
 
     /**
-     * @param potionEffectType The {@link PotionEffectType} to apply.
-     * @param amplification    The amplification of the effect. If multiple of the same effects are added, the cashedValues are combined.
-     * @param duration         The duration of the effect. If multiple of the same effects are added, the highest is used.
+     * @param potionEffectType  The {@link PotionEffectType} to apply.
+     * @param level             The amplification of the effect. If multiple of the same effects are added, the cashedValues are combined.
+     * @param durationInSeconds The duration of the effect. If multiple of the same effects are added, the highest is used.
      */
     @ParametersAreNonnullByDefault
-    public SpellCoreBuilder addNegativeEffect(PotionEffectType potionEffectType, int amplification, int duration) {
-        duration = duration * 1000;
-        if (negativeEffectPairMap.containsKey(potionEffectType)) {
-            Pair<Integer, Integer> integerPair = negativeEffectPairMap.get(potionEffectType);
-            amplification = amplification == 0 ? 1 : amplification;
-            integerPair.setFirstValue(integerPair.getFirstValue() + duration);
-            integerPair.setSecondValue(Math.max(integerPair.getSecondValue(), amplification));
-            negativeEffectPairMap.put(potionEffectType, integerPair);
-        } else {
-            negativeEffectPairMap.put(potionEffectType, new Pair<>(amplification, duration));
-        }
+    public SpellCoreBuilder addNegativeEffect(PotionEffectType potionEffectType, int level, int durationInSeconds) {
+        durationInSeconds = durationInSeconds * 20;
+        negativeEffectPairMap.put(potionEffectType, new Pair<>(level, durationInSeconds));
         return this;
     }
 

@@ -1,86 +1,187 @@
 package io.github.sefiraat.crystamaehistoria.magic;
 
-import io.github.sefiraat.crystamaehistoria.magic.spells.Bright;
-import io.github.sefiraat.crystamaehistoria.magic.spells.CallLightning;
-import io.github.sefiraat.crystamaehistoria.magic.spells.EtherealFlow;
-import io.github.sefiraat.crystamaehistoria.magic.spells.FanOfArrows;
-import io.github.sefiraat.crystamaehistoria.magic.spells.FireNova;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Fireball;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Heal;
-import io.github.sefiraat.crystamaehistoria.magic.spells.HealingMist;
-import io.github.sefiraat.crystamaehistoria.magic.spells.KnowledgeShare;
-import io.github.sefiraat.crystamaehistoria.magic.spells.LovePotion;
-import io.github.sefiraat.crystamaehistoria.magic.spells.PoisonNova;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Push;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Quake;
-import io.github.sefiraat.crystamaehistoria.magic.spells.RainOfFire;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Shroud;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Squall;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Teleport;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Tempest;
-import io.github.sefiraat.crystamaehistoria.magic.spells.Vacuum;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
-import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
-import io.github.sefiraat.crystamaehistoria.slimefun.machines.liquefactionbasin.LiquefactionBasinCache;
-import io.github.sefiraat.crystamaehistoria.slimefun.machines.liquefactionbasin.SpellRecipe;
-import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.AbstractVoid;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.AirNova;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.AirSprite;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.AncientDefence;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Animaniacs;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.AntiPrism;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.BatteringRam;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.BloodMagics;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Bobulate;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Break;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Bright;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.CallLightning;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Cascada;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Chaos;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.ChillWind;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Compass;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.CurificationRitual;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Deity;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.EarthNova;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.EasterEgg;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.EndermansVeil;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.EscapeRope;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.EtherealFlow;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.FanOfArrows;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.FireNova;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Fireball;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.FlameSprite;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.FrostNova;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Gravity;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.GrowUp;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Gyroscopic;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.HarmonysSonata;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.HarvestMoon;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Heal;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.HealingMist;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Hearthstone;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Hellscape;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.HolyCow;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.ImbueVoid;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.KnowledgeShare;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Launch;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.LavaLake;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.LeechBomb;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.LovePotion;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Oviparous;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.PhantomsFlight;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.PhilosophersStone;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.PlutosDecent;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.PoisonNova;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Prism;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Protectorate;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Push;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Quake;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.RainOfFire;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Ravage;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.RemnantOfWar;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Shroud;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.SpawnFiends;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Squall;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.StarFall;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.StripMine;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.SummonGolem;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Teleport;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Tempest;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.TimeCompression;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.TimeDilation;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Tracer;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.Vacuum;
+import io.github.sefiraat.crystamaehistoria.magic.spells.tier1.WitherWeather;
 import lombok.Getter;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Arrays;
 
 public enum SpellType {
 
-    // Tier 1 Plate Recipes
-    LIGHTNING_CALL("LIGHTNING_CALL", new CallLightning(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.MECHANICAL, StoryType.HISTORICAL)),
-    FAN_OF_ARROWS("FAN_OF_ARROWS", new FanOfArrows(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.MECHANICAL, StoryType.HISTORICAL, StoryType.HUMAN)),
-    FIREBALL("FIREBALL", new Fireball(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.HUMAN, StoryType.CELESTIAL)),
-    POISON_NOVA("POISON_NOVA", new PoisonNova(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ALCHEMICAL, StoryType.HUMAN, StoryType.ANIMAL)),
-    RAIN_OF_FIRE("RAIN_OF_FIRE", new RainOfFire(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.HUMAN, StoryType.VOID)),
-    TELEPORT("TELEPORT", new Teleport(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.HISTORICAL, StoryType.VOID)),
-    TEMPEST("TEMPEST", new Tempest(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.MECHANICAL, StoryType.CELESTIAL)),
-    FIRE_NOVA("FIRE_NOVA", new FireNova(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ELEMENTAL, StoryType.CELESTIAL, StoryType.VOID)),
-    QUAKE("QUAKE", new Quake(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.HISTORICAL, StoryType.HUMAN, StoryType.PHILOSOPHICAL)),
-    BRIGHT("BRIGHT", new Bright(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ALCHEMICAL, StoryType.HISTORICAL, StoryType.CELESTIAL)),
-    SQUALL("SQUALL", new Squall(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ALCHEMICAL, StoryType.HISTORICAL, StoryType.VOID)),
-    ETHEREAL_FLOW("ETHEREAL_FLOW", new EtherealFlow(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.HISTORICAL, StoryType.VOID, StoryType.PHILOSOPHICAL)),
-    HEAL("HEAL", new Heal(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.HUMAN, StoryType.CELESTIAL, StoryType.PHILOSOPHICAL)),
-    HEALING_MIST("HEALING_MIST", new HealingMist(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.CELESTIAL, StoryType.VOID, StoryType.PHILOSOPHICAL)),
-    LOVE_POTION("LOVE_POTION", new LovePotion(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ALCHEMICAL, StoryType.ANIMAL, StoryType.CELESTIAL)),
-    SHROUD("SHROUD", new Shroud(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.ALCHEMICAL, StoryType.HUMAN, StoryType.VOID)),
-    PUSH("PUSH", new Push(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.MECHANICAL, StoryType.HUMAN, StoryType.CELESTIAL)),
-    VACUUM("VACUUM", new Vacuum(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.MECHANICAL, StoryType.HUMAN, StoryType.VOID)),
-    KNOWLEDGE_SHARE("KNOWLEDGE_SHARE", new KnowledgeShare(), new SpellRecipe(Materials.INERT_PLATE_T_1, StoryType.HISTORICAL, StoryType.HUMAN, StoryType.CELESTIAL));
+    // Tier 1
+    ABSTRACT_VOID(new AbstractVoid()),
+    AIR_NOVA(new AirNova()),
+    AIR_SPRITE(new AirSprite()),
+    ANCIENT_DEFENCE(new AncientDefence()),
+    ANIMANIACS(new Animaniacs()),
+    ANTI_PRISM(new AntiPrism()),
+    BATTERING_RAM(new BatteringRam()),
+    BLOOD_MAGICS(new BloodMagics()),
+    BOBULATE(new Bobulate()),
+    BREAK(new Break()),
+    BRIGHT(new Bright()),
+    CALL_LIGHTNING(new CallLightning()),
+    CASCADA(new Cascada()),
+    CHAOS(new Chaos()),
+    CHILL_WIND(new ChillWind()),
+    COMPASS(new Compass()),
+    CURIFICATION_RITUAL(new CurificationRitual()),
+    DEITY(new Deity()),
+    EARTH_NOVA(new EarthNova()),
+    EASTER_EGG(new EasterEgg()),
+    ENDERMANS_VEIL(new EndermansVeil()),
+    ESCAPE_ROPE(new EscapeRope()),
+    ETHEREAL_FLOW(new EtherealFlow()),
+    FAN_OF_ARROWS(new FanOfArrows()),
+    FIREBALL(new Fireball()),
+    FIRE_NOVA(new FireNova()),
+    FLAME_SPRITE(new FlameSprite()),
+    FROST_NOVA(new FrostNova()),
+    GRAVITY(new Gravity()),
+    GROW_UP(new GrowUp()),
+    HEAL(new Heal()),
+    HEALING_MIST(new HealingMist()),
+    HEARTHSTONE(new Hearthstone()),
+    HELLSCAPE(new Hellscape()),
+    HOLY_COW(new HolyCow()),
+    IMBUE_VOID(new ImbueVoid()),
+    GYROSCOPIC(new Gyroscopic()),
+    HARMONYS_SONATA(new HarmonysSonata()),
+    HARVEST_MOON(new HarvestMoon()),
+    KNOWLEDGE_SHARE(new KnowledgeShare()),
+    LAUNCH(new Launch()),
+    LAVA_LAKE(new LavaLake()),
+    LEECH_BOMB(new LeechBomb()),
+    LOVE_POTION(new LovePotion()),
+    OVIPAROUS(new Oviparous()),
+    PHANTOMS_FLIGHT(new PhantomsFlight()),
+    PHILOSOPHERS_STONE(new PhilosophersStone()),
+    PLUTOS_DESCENT(new PlutosDecent()),
+    POISON_NOVA(new PoisonNova()),
+    PRISM(new Prism()),
+    PROTECTORATE(new Protectorate()),
+    PUSH(new Push()),
+    QUAKE(new Quake()),
+    RAIN_OF_FIRE(new RainOfFire()),
+    RAVAGE(new Ravage()),
+    REMNANT_OF_WAR(new RemnantOfWar()),
+    SHROUD(new Shroud()),
+    SPAWN_FIENDS(new SpawnFiends()),
+    SQUALL(new Squall()),
+    STAR_FALL(new StarFall()),
+    STRIP_MINE(new StripMine()),
+    SUMMON_GOLEM(new SummonGolem()),
+    TELEPORT(new Teleport()),
+    TEMPEST(new Tempest()),
+    TIME_COMPRESSION(new TimeCompression()),
+    TIME_DILATION(new TimeDilation()),
+    TRACER(new Tracer()),
+    VACUUM(new Vacuum()),
+    WITHER_WEATHER(new WitherWeather());
 
     @Getter
     protected static final SpellType[] cachedValues = values();
-
     @Getter
-    private final String id;
+    protected static SpellType[] enabledSpells;
     @Getter
     private final Spell spell;
-    @Getter
-    private final SpellRecipe spellRecipe;
 
     @ParametersAreNonnullByDefault
-    SpellType(String id, Spell spell, @Nullable SpellRecipe spellRecipe) {
-        this.id = id;
+    SpellType(Spell spell) {
         this.spell = spell;
-        this.spellRecipe = spellRecipe;
-        LiquefactionBasinCache.addSpellRecipe(this, spellRecipe);
     }
 
     @Nullable
     @ParametersAreNonnullByDefault
     public static Spell getById(String id) {
-        for (SpellType spell : getCachedValues()) {
-            if (spell.id.equals(id)) {
-                return spell.spell;
+        for (SpellType spellType : getCachedValues()) {
+            if (spellType.getId().equals(id)) {
+                return spellType.spell;
             }
         }
         return null;
+    }
+
+    public static void setupEnabledSpells() {
+        enabledSpells = Arrays.stream(values())
+            .filter(spellType -> spellType.getSpell().isEnabled())
+            .toArray(SpellType[]::new);
+    }
+
+    @Nonnull
+    public String getId() {
+        return spell.getId();
     }
 
     @Nonnull
@@ -91,10 +192,6 @@ public enum SpellType {
     @ParametersAreNonnullByDefault
     public void cast(CastInformation castInformation) {
         this.spell.castSpell(castInformation);
-    }
-
-    public StoryType getRecipeStory(int index) {
-        return spellRecipe.getStoryTypes().get(index);
     }
 
 }
