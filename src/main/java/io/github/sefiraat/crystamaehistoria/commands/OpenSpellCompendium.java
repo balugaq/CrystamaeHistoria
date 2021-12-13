@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OpenSpellCompendium extends SubCommand {
 
     public OpenSpellCompendium() {
-        super("spells", "Opens the spell compendium", false);
+        super("spells", "打开法术集", false);
     }
 
     @Override

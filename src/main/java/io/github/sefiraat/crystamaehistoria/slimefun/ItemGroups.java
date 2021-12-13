@@ -30,70 +30,70 @@ public final class ItemGroups {
         Keys.newKey("main"),
         new CustomItemStack(
             new ItemStack(Material.AMETHYST_CLUSTER),
-            ThemeType.MAIN.getColor() + "Crystamae Historia"
+            ThemeType.MAIN.getColor() + "魔法水晶编年史(CrystamaeHistoria)"
         )
     );
     public static final DummyItemGroup MECHANISMS = new DummyItemGroup(
         Keys.newKey("mechanisms"),
         new CustomItemStack(
             new ItemStack(Material.DEEPSLATE_TILE_SLAB),
-            ThemeType.MAIN.getColor() + "Historia Mechanisms"
+            ThemeType.MAIN.getColor() + "装置"
         )
     );
     public static final DummyItemGroup CRYSTALS = new DummyItemGroup(
         Keys.newKey("crystals"),
         new CustomItemStack(
             new ItemStack(Material.AMETHYST_CLUSTER),
-            ThemeType.MAIN.getColor() + "Historia Crystals"
+            ThemeType.MAIN.getColor() + "魔法水晶"
         )
     );
     public static final DummyItemGroup TOOLS = new DummyItemGroup(
         Keys.newKey("tools"),
         new CustomItemStack(
             new ItemStack(Material.STICK),
-            ThemeType.MAIN.getColor() + "Historia Staves and Tool"
+            ThemeType.MAIN.getColor() + "法杖与工具"
         )
     );
     public static final DummyItemGroup PAINTBRUSHES = new DummyItemGroup(
         Keys.newKey("paintbrushes"),
         new CustomItemStack(
             MagicPaintbrush.getTippedBrush(DyeColor.WHITE, true),
-            ThemeType.MAIN.getColor() + "Crystamae Magic Paintbrushes"
+            ThemeType.MAIN.getColor() + "魔法画笔"
         )
     );
     public static final DummyItemGroup GADGETS = new DummyItemGroup(
         Keys.newKey("gadgets"),
         new CustomItemStack(
             new ItemStack(Material.REDSTONE_LAMP),
-            ThemeType.MAIN.getColor() + "Magical Tech and Gadgets"
+            ThemeType.MAIN.getColor() + "魔法科技道具"
         )
     );
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
         Keys.newKey("materials"),
         new CustomItemStack(
             new ItemStack(Material.GOLD_INGOT),
-            ThemeType.MAIN.getColor() + "Crystamae Raw Materials"
+            ThemeType.MAIN.getColor() + "原材料"
         )
     );
     public static final DummyItemGroup GUIDE = new DummyItemGroup(
         Keys.newKey("guide"),
         new CustomItemStack(
             new ItemStack(Material.BOOK),
-            ThemeType.MAIN.getColor() + "Crystamae Misc Guides"
+            ThemeType.MAIN.getColor() + "指南"
         )
     );
     public static final StoryCollectionFlexGroup STORY_COLLECTION = new StoryCollectionFlexGroup(
         Keys.newKey("story_collection"),
         new CustomItemStack(
             new ItemStack(Material.KNOWLEDGE_BOOK),
-            ThemeType.MAIN.getColor() + "Story Collection"
+            ThemeType.MAIN.getColor() + "故事集"
         )
     );
     public static final SpellCollectionFlexGroup SPELL_COLLECTION = new SpellCollectionFlexGroup(
         Keys.newKey("spell_collection"),
         new CustomItemStack(
             new ItemStack(Material.KNOWLEDGE_BOOK),
-            ThemeType.MAIN.getColor() + "Spell Collection"
+            ThemeType.MAIN.getColor() + "法术集"
         )
     );
 
@@ -114,18 +114,15 @@ public final class ItemGroups {
                 "CRY_GUIDE_CHRONICLER",
                 new ItemStack(Material.DEEPSLATE_TILE_SLAB),
                 ThemeType.GUIDE,
-                "Chronicler Panel Guide",
-                "The chronicler panel will take a block",
-                "and 'learn' the stories it has. The type of",
-                "stories is determined by the block and the",
-                "amount is random but based on tier.",
+                "指南: 记录者",
+                "你可以在记录者中放置一个方块",
+                "记录者会\"发掘\"方块中含有的故事",
+                "故事的类型取决于方块的类型",
+                "而方块数量则是随机的，但随机范围与方块等级有关",
                 "",
-                "A chronicler can only work on blocks of",
-                "a matching tier + 1.",
+                "记录者只会发掘至少T1的方块",
                 "",
-                "A block is finished when it's unique",
-                "story has been chronicled and the block",
-                "stops floating."
+                "当记录者完成发掘后，记录者上方的悬浮方块会消失"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -138,16 +135,13 @@ public final class ItemGroups {
                 "CRY_GUIDE_REALISATION",
                 new ItemStack(Material.CHISELED_DEEPSLATE),
                 ThemeType.GUIDE,
-                "Realisation Altar Guide",
-                "Place a fully chronicled block onto",
-                "the Realisation Altar and it will start",
-                "to consume it's stories and turn them",
-                "into a crystalline structure on the ground",
-                "nearby.",
+                "指南: 现实祭坛",
+                "将一个已被发掘的方块放入现实祭坛中",
+                "祭坛会开始从方块中提取魔法能量",
+                "这会在周围生成紫水晶(必须同一高度)",
                 "",
-                "These crystal will slowly grow",
-                "and, when fully formed, can be broken",
-                "into Crystamae."
+                "魔法水晶簇会缓慢生长，直到魔法能量被完全提取出来",
+                "这时你可以破坏魔法水晶簇来获取魔法水晶"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -160,17 +154,14 @@ public final class ItemGroups {
                 "CRY_GUIDE_LIQUEFACTION",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.GUIDE,
-                "Liquefaction Basin Guide",
-                "The Liquefaction Basin is where you",
-                "can finally make cool things.",
+                "指南: 液化池",
+                "你可以使用液化池做出一些很酷的东西",
                 "",
-                "Any Crystamae crystal you throw in",
-                "will be melted down into a liquid.",
-                "When you throw in an item that is",
-                "not a crystal, it will use that to try",
-                "to make an item.",
+                "任何扔进液化池中的魔法水晶会转为液态",
+                "当你扔进不是魔法水晶的物品时",
+                "液化池会尝试使用该物品进行合成",
                 "",
-                "Get it wrong and you lose your Crysta."
+                "如果你丢入错误的物品，你会失去所有魔法水晶"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -183,11 +174,10 @@ public final class ItemGroups {
                 "CRY_GUIDE_STAVE_CONFIGURATOR",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.GUIDE,
-                "Stave Configurator",
-                "Put a stave into the input slot of the",
-                "configurator. Add charged spell plates",
-                "into the four spell slots then click",
-                "'Add Plates'. Click 'Remove' to remove",
+                "指南: 法杖配置器",
+                "将法杖放置在输入栏",
+                "把充能的法术板放入法术栏",
+                "点击'Add Plates'. Click 'Remove' to remove",
                 "them again.",
                 "",
                 "Spells can be changed freely without cost."
@@ -203,7 +193,7 @@ public final class ItemGroups {
                 "CRY_GUIDE_MAKE_SPELL",
                 new ItemStack(Material.PAPER),
                 ThemeType.GUIDE,
-                "How To: Make a spell",
+                "指南: 制作法术",
                 "To make a spell, first craft a Basic",
                 "Spell Plate. The in the Liquefaction",
                 "Basin, fill with at least 3 different",
@@ -221,7 +211,8 @@ public final class ItemGroups {
                 "CRY_GUIDE_CHARGE_SPELL",
                 new ItemStack(Material.PAPER),
                 ThemeType.GUIDE,
-                "How To: Recharge a spell",
+                "指南: " +
+                    "充能法术",
                 "To refill a plate with crysta first",
                 "take it off of the stave using the",
                 "configurator. then in the Liquefaction",

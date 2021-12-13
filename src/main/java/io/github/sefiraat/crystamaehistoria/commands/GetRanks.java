@@ -11,7 +11,7 @@ import java.util.List;
 public class GetRanks extends SubCommand {
 
     public GetRanks() {
-        super("rank", "Displays your Crystamae ranks", false);
+        super("rank", "显示你的魔法水晶等级", false);
     }
 
     @Override
