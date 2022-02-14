@@ -51,14 +51,20 @@ public class PhantomsFlight extends Spell {
         bat.addPassenger(castInformation.getCasterAsPlayer());
     }
 
+    @ParametersAreNonnullByDefault
     public void onTick(MagicSummon magicSummon) {
         ParticleUtils.displayParticleEffect(magicSummon.getMob(), Particle.SPORE_BLOSSOM_AIR, 1, 2);
     }
 
     @Nonnull
     @Override
-    public String getId() {
-        return "PHANTOMS_FLIGHT";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.HUMAN,
+            StoryType.ANIMAL,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -73,19 +79,14 @@ public class PhantomsFlight extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.DRAGON_EGG;
+    public String getId() {
+        return "PHANTOMS_FLIGHT";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.ANIMAL,
-            StoryType.CELESTIAL,
-            StoryType.PHILOSOPHICAL
-        );
+    public Material getMaterial() {
+        return Material.DRAGON_EGG;
     }
 
 }

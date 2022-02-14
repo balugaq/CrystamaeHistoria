@@ -62,6 +62,7 @@ public class LeechBomb extends Spell {
         }
     }
 
+    @ParametersAreNonnullByDefault
     public void onTick(MagicSummon magicSummon) {
         Mob mob = magicSummon.getMob();
         Player player = magicSummon.getPlayer();
@@ -76,8 +77,13 @@ public class LeechBomb extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "LEECH_BOMB";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.HISTORICAL,
+            StoryType.ANIMAL,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -91,19 +97,14 @@ public class LeechBomb extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.CARVED_PUMPKIN;
+    public String getId() {
+        return "LEECH_BOMB";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.MECHANICAL,
-            StoryType.HUMAN,
-            StoryType.ANIMAL
-        );
+    public Material getMaterial() {
+        return Material.CARVED_PUMPKIN;
     }
 
 }

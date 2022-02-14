@@ -32,7 +32,6 @@ import java.util.UUID;
 
 public class GreenHouseGlass extends TickingBlockNoGui {
 
-
     @Getter
     private final int rate;
     @Getter
@@ -42,6 +41,14 @@ public class GreenHouseGlass extends TickingBlockNoGui {
     public GreenHouseGlass(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int rate) {
         super(category, item, recipeType, recipe);
         this.rate = rate;
+    }
+
+    @Override
+    protected void onFirstTick(@Nonnull Block block, @Nonnull SlimefunItem slimefunItem, @Nonnull Config config) {
+        blockOwnerMap.put(
+            block.getLocation(),
+            UUID.fromString(BlockStorage.getLocationInfo(block.getLocation(), "CH_UUID"))
+        );
     }
 
     @Override
@@ -81,14 +88,6 @@ public class GreenHouseGlass extends TickingBlockNoGui {
                 testBlock.setBlockData(ageable);
             }
         }
-    }
-
-    @Override
-    protected void onFirstTick(@Nonnull Block block, @Nonnull SlimefunItem slimefunItem, @Nonnull Config config) {
-        blockOwnerMap.put(
-            block.getLocation(),
-            UUID.fromString(BlockStorage.getLocationInfo(block.getLocation(), "CH_UUID"))
-        );
     }
 
     @Override

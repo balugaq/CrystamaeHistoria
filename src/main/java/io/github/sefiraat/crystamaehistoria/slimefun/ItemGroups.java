@@ -6,7 +6,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.itemgroups.DummyItemGroup;
 import io.github.sefiraat.crystamaehistoria.slimefun.itemgroups.MainFlexGroup;
 import io.github.sefiraat.crystamaehistoria.slimefun.itemgroups.SpellCollectionFlexGroup;
 import io.github.sefiraat.crystamaehistoria.slimefun.itemgroups.StoryCollectionFlexGroup;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush.MagicPaintbrush;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.MagicPaintbrush;
 import io.github.sefiraat.crystamaehistoria.utils.Keys;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -30,7 +30,7 @@ public final class ItemGroups {
         Keys.newKey("main"),
         new CustomItemStack(
             new ItemStack(Material.AMETHYST_CLUSTER),
-            ThemeType.MAIN.getColor() + "魔法水晶编年史(CrystamaeHistoria)"
+            ThemeType.MAIN.getColor() + "魔法水晶编年史"
         )
     );
     public static final DummyItemGroup MECHANISMS = new DummyItemGroup(
@@ -54,18 +54,25 @@ public final class ItemGroups {
             ThemeType.MAIN.getColor() + "法杖与工具"
         )
     );
-    public static final DummyItemGroup PAINTBRUSHES = new DummyItemGroup(
-        Keys.newKey("paintbrushes"),
+    public static final DummyItemGroup ARTISTIC = new DummyItemGroup(
+        Keys.newKey("art"),
         new CustomItemStack(
             MagicPaintbrush.getTippedBrush(DyeColor.WHITE, true),
-            ThemeType.MAIN.getColor() + "魔法画笔"
+            ThemeType.MAIN.getColor() + "魔法与艺术"
         )
     );
     public static final DummyItemGroup GADGETS = new DummyItemGroup(
         Keys.newKey("gadgets"),
         new CustomItemStack(
             new ItemStack(Material.REDSTONE_LAMP),
-            ThemeType.MAIN.getColor() + "魔法科技道具"
+            ThemeType.MAIN.getColor() + "魔法与科技"
+        )
+    );
+    public static final DummyItemGroup EXALTED = new DummyItemGroup(
+        Keys.newKey("exalted"),
+        new CustomItemStack(
+            new ItemStack(Material.BEACON),
+            ThemeType.MAIN.getColor() + "Exalted Items"
         )
     );
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
@@ -73,6 +80,13 @@ public final class ItemGroups {
         new CustomItemStack(
             new ItemStack(Material.GOLD_INGOT),
             ThemeType.MAIN.getColor() + "原材料"
+        )
+    );
+    public static final DummyItemGroup UNIQUES = new DummyItemGroup(
+        Keys.newKey("uniques"),
+        new CustomItemStack(
+            new ItemStack(Material.NETHER_STAR),
+            ThemeType.MAIN.getColor() + "Uniques"
         )
     );
     public static final DummyItemGroup GUIDE = new DummyItemGroup(
@@ -226,8 +240,6 @@ public final class ItemGroups {
 
         // Slimefun Registry
         ItemGroups.MAIN.register(plugin);
-        //ItemGroups.STORY_COLLECTION.register(plugin);
-        //ItemGroups.SPELL_COLLECTION.register(plugin);
 
         guideChronicler.register(plugin);
         guideRealisation.register(plugin);

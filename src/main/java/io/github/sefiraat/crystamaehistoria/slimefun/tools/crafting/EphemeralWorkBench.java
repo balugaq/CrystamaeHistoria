@@ -55,19 +55,25 @@ public class EphemeralWorkBench extends SlimefunItem {
     @ParametersAreNonnullByDefault
     public EphemeralWorkBench(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
-        addItemHandler((ItemUseHandler) e -> {
+    }
+
+    @Override
+    public void preRegister() {
+        addItemHandler(onItemUse());
+    }
+
+    private ItemUseHandler onItemUse() {
+        return e -> {
             e.cancel();
             WorkBenchMenu workBenchMenu = new WorkBenchMenu();
             workBenchMenu.open(e.getPlayer());
-        });
+        };
     }
+
+
 
     public static boolean allowedRecipe(SlimefunItemStack i) {
         return allowedRecipe(i.getItemId());
-    }
-
-    public static boolean allowedRecipe(SlimefunItem i) {
-        return allowedRecipe(i.getId());
     }
 
     public static boolean allowedRecipe(String s) {
@@ -76,6 +82,10 @@ public class EphemeralWorkBench extends SlimefunItem {
 
     public static boolean isBackpack(String s) {
         return s.matches("(.*)BACKPACK(.*)");
+    }
+
+    public static boolean allowedRecipe(SlimefunItem i) {
+        return allowedRecipe(i.getId());
     }
 
     public static void addRecipe(ItemStack[] input, ItemStack output) {
@@ -129,6 +139,27 @@ public class EphemeralWorkBench extends SlimefunItem {
             });
         }
 
+        private boolean testRecipe(ItemStack[] input, ItemStack[] recipe) {
+            for (int test = 0; test < recipe.length; test++) {
+                if (!SlimefunUtils.isItemSimilar(input[test], recipe[test], true, false)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Taken from DirtyChestMenu - Slimefun4
+        public boolean fits(@Nonnull ItemStack item, int... slots) {
+            for (int slot : slots) {
+                // A small optimization for empty slots
+                if (getItemInSlot(slot) == null) {
+                    return true;
+                }
+            }
+
+            return InvUtils.fits(toInventory(), ItemStackWrapper.wrap(item), slots);
+        }
+
         private void pushAndClear(ItemStack itemStack) {
             pushItem(itemStack, OUTPUT_SLOT);
             for (int recipeSlot : RECIPE_SLOTS) {
@@ -138,13 +169,16 @@ public class EphemeralWorkBench extends SlimefunItem {
             }
         }
 
-        private boolean testRecipe(ItemStack[] input, ItemStack[] recipe) {
-            for (int test = 0; test < recipe.length; test++) {
-                if (!SlimefunUtils.isItemSimilar(input[test], recipe[test], true, false)) {
-                    return false;
+        // Taken from BlockMenu - Slimefun4
+        public void dropItems(Location l, int... slots) {
+            for (int slot : slots) {
+                ItemStack item = getItemInSlot(slot);
+
+                if (item != null) {
+                    l.getWorld().dropItemNaturally(l, item);
+                    replaceExistingItem(slot, null);
                 }
             }
-            return true;
         }
 
         // Taken from DirtyChestMenu - Slimefun4
@@ -188,30 +222,6 @@ public class EphemeralWorkBench extends SlimefunItem {
             } else {
                 return null;
             }
-        }
-
-        // Taken from BlockMenu - Slimefun4
-        public void dropItems(Location l, int... slots) {
-            for (int slot : slots) {
-                ItemStack item = getItemInSlot(slot);
-
-                if (item != null) {
-                    l.getWorld().dropItemNaturally(l, item);
-                    replaceExistingItem(slot, null);
-                }
-            }
-        }
-
-        // Taken from DirtyChestMenu - Slimefun4
-        public boolean fits(@Nonnull ItemStack item, int... slots) {
-            for (int slot : slots) {
-                // A small optimization for empty slots
-                if (getItemInSlot(slot) == null) {
-                    return true;
-                }
-            }
-
-            return InvUtils.fits(toInventory(), ItemStackWrapper.wrap(item), slots);
         }
     }
 

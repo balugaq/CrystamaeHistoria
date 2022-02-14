@@ -37,7 +37,16 @@ public class ChroniclerPanel extends TickingMenuBlock {
     public ChroniclerPanel(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int tier) {
         super(itemGroup, item, recipeType, recipe);
         this.tier = tier;
-        this.addItemHandler(new BlockPlaceHandler(false) {
+    }
+
+    @Override
+    public void preRegister() {
+        addItemHandler(onBlockPlace());
+    }
+
+
+    private BlockPlaceHandler onBlockPlace() {
+        return new BlockPlaceHandler(false) {
             @Override
             public void onPlayerPlace(@Nonnull BlockPlaceEvent event) {
                 final Location location = event.getBlockPlaced().getLocation();
@@ -45,7 +54,7 @@ public class ChroniclerPanel extends TickingMenuBlock {
                 cache.setActivePlayer(event.getPlayer());
                 CACHES.put(location, cache);
             }
-        });
+        };
     }
 
     @Override
@@ -53,15 +62,6 @@ public class ChroniclerPanel extends TickingMenuBlock {
     protected void setup(BlockMenuPreset blockMenuPreset) {
         blockMenuPreset.drawBackground(GuiElements.MENU_BACKGROUND, BACKGROUND_SLOTS);
         blockMenuPreset.drawBackground(GuiElements.MENU_BACKGROUND_INPUT, BACKGROUND_INPUT);
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
-    protected void tick(Block block, BlockMenu blockMenu) {
-        ChroniclerPanelCache cache = CACHES.get(block.getLocation());
-        if (cache != null) {
-            cache.process();
-        }
     }
 
     @Override
@@ -76,6 +76,16 @@ public class ChroniclerPanel extends TickingMenuBlock {
 
     @Override
     @ParametersAreNonnullByDefault
+    protected void onNewInstance(BlockMenu blockMenu, Block b) {
+        super.onNewInstance(blockMenu, b);
+        if (!CACHES.containsKey(blockMenu.getLocation())) {
+            ChroniclerPanelCache cache = new ChroniclerPanelCache(blockMenu, this.tier);
+            CACHES.put(blockMenu.getLocation(), cache);
+        }
+    }
+
+    @Override
+    @ParametersAreNonnullByDefault
     protected void onBreak(BlockBreakEvent event, BlockMenu blockMenu) {
         super.onBreak(event, blockMenu);
         Location location = blockMenu.getLocation();
@@ -86,11 +96,10 @@ public class ChroniclerPanel extends TickingMenuBlock {
 
     @Override
     @ParametersAreNonnullByDefault
-    protected void onNewInstance(BlockMenu blockMenu, Block b) {
-        super.onNewInstance(blockMenu, b);
-        if (!CACHES.containsKey(blockMenu.getLocation())) {
-            ChroniclerPanelCache cache = new ChroniclerPanelCache(blockMenu, this.tier);
-            CACHES.put(blockMenu.getLocation(), cache);
+    protected void tick(Block block, BlockMenu blockMenu) {
+        ChroniclerPanelCache cache = CACHES.get(block.getLocation());
+        if (cache != null) {
+            cache.process();
         }
     }
 

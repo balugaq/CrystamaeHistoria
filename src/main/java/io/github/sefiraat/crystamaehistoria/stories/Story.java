@@ -27,6 +27,8 @@ public class Story {
     private final String id;
     @Nullable
     private final String author;
+    @Nullable
+    private final String sponsor;
     @Nonnull
     private final StoryRarity rarity;
     @Nonnull
@@ -67,6 +69,7 @@ public class Story {
         this.storyShardProfile = new StoryShardProfile(section.getIntegerList("shards"));
         this.storyStrings = section.getStringList("lore");
         this.author = section.getString("author");
+        this.sponsor = section.getString("sponsor");
     }
 
     @ParametersAreNonnullByDefault
@@ -77,10 +80,8 @@ public class Story {
         this.storyShardProfile = story.getStoryShardProfile();
         this.storyStrings = story.storyStrings;
         this.author = story.author;
-    }
-
-    public String getDisplayRarity() {
-        return "[" + rarity.toString() + "] ";
+        this.sponsor = story.sponsor;
+        this.blockPosition = story.blockPosition;
     }
 
     public String getDisplayName() {
@@ -91,6 +92,10 @@ public class Story {
         rarityComponent.setBold(true);
         nameComponent.setColor(ThemeType.CLICK_INFO.getColor());
         return BaseComponent.toLegacyText(rarityComponent, nameComponent);
+    }
+
+    public String getDisplayRarity() {
+        return "[" + rarity + "] ";
     }
 
     public List<String> getStoryLore() {
@@ -107,6 +112,10 @@ public class Story {
         if (author != null) {
             l.add("");
             l.add(ThemeType.PASSIVE.getColor() + "作者: " + author);
+        }
+        if (sponsor != null) {
+            l.add("");
+            l.add(ThemeType.PASSIVE.getColor() + "Sponsor: " + sponsor);
         }
         return l;
     }

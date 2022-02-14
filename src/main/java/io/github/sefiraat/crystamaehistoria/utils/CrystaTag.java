@@ -15,7 +15,7 @@ import javax.annotation.Nonnull;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.MessageFormat;
-import java.util.EnumSet;
+import java.util.LinkedHashSet;
 import java.util.Locale;
 import java.util.Set;
 
@@ -23,23 +23,31 @@ public enum CrystaTag implements Tag<Material> {
 
     GLAZED_TERRACOTTA,
     SPAWN_EGGS,
-    CONCRETE_BLOCKS;
+    CONCRETE_BLOCKS,
+    COPPER_BLOCKS,
+    COPPER_BLOCKS_WAXED,
+    CUT_COPPER_BLOCKS,
+    CUT_COPPER_BLOCKS_WAXED,
+    CUT_COPPER_SLABS,
+    CUT_COPPER_SLABS_WAXED,
+    CUT_COPPER_STAIRS,
+    CUT_COPPER_STAIRS_WAXED;
 
     @Getter
-    protected static final CrystaTag[] cachedValues = values();
+    private static final CrystaTag[] cachedValues = values();
 
     private final NamespacedKey namespacedKey;
-    private final Set<Material> materialList = EnumSet.noneOf(Material.class);
+    private final Set<Material> materialList = new LinkedHashSet<>();
 
     CrystaTag() {
         final String name = this.name().toLowerCase(Locale.ROOT);
         final String fileLocation = "/tags/" + name + ".json";
-        final JsonParser parser = new JsonParser();
+        this.namespacedKey = new NamespacedKey(CrystamaeHistoria.getInstance(), name);
 
         try {
             final InputStream stream = CrystamaeHistoria.class.getResourceAsStream(fileLocation);
             final JsonReader reader = new JsonReader(new InputStreamReader(stream));
-            final JsonObject object = (JsonObject) parser.parse(reader);
+            final JsonObject object = (JsonObject) JsonParser.parseReader(reader);
 
             for (JsonElement element : object.get("values").getAsJsonArray()) {
                 final String tagString = element.getAsString();
@@ -57,7 +65,6 @@ public enum CrystaTag implements Tag<Material> {
                 MessageFormat.format("Error with tag: {0}", fileLocation)
             );
         }
-        namespacedKey = new NamespacedKey(CrystamaeHistoria.getInstance(), name);
     }
 
     public void setup() {

@@ -17,6 +17,7 @@ import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
@@ -113,10 +114,7 @@ public abstract class AbstractGoal<T extends Mob> implements Goal<T> {
 
     }
 
-    public void customActions(Player player) {
-
-    }
-
+    @Nullable
     public Player removeOffline() {
         final OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(owner);
 
@@ -125,6 +123,30 @@ public abstract class AbstractGoal<T extends Mob> implements Goal<T> {
             return null;
         }
         return offlinePlayer.getPlayer();
+    }
+
+    public boolean getTickCondition() {
+        return true;
+    }
+
+    public boolean getTargetsEnemies() {
+        return true;
+    }
+
+    public Class<? extends Entity> getTargetClass() {
+        return Monster.class;
+    }
+
+    public boolean getFollowsPlayer() {
+        return true;
+    }
+
+    public double getStayNearDistance() {
+        return 5D;
+    }
+
+    public void customActions(Player player) {
+
     }
 
     @Override
@@ -137,26 +159,6 @@ public abstract class AbstractGoal<T extends Mob> implements Goal<T> {
     @Nonnull
     public final EnumSet<GoalType> getTypes() {
         return EnumSet.of(GoalType.TARGET);
-    }
-
-    public double getStayNearDistance() {
-        return 5D;
-    }
-
-    public boolean getTargetsEnemies() {
-        return true;
-    }
-
-    public boolean getTickCondition() {
-        return true;
-    }
-
-    public boolean getFollowsPlayer() {
-        return true;
-    }
-
-    public Class<? extends Entity> getTargetClass() {
-        return Monster.class;
     }
 
 }

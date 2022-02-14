@@ -23,12 +23,14 @@ import org.bukkit.entity.Projectile;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.UUID;
 import java.util.function.Consumer;
 
 @UtilityClass
 public class SpellUtils {
 
+    @ParametersAreNonnullByDefault
     public static <T extends Mob> MagicSummon summonTemporaryMob(
         EntityType entityType,
         UUID caster,
@@ -38,6 +40,7 @@ public class SpellUtils {
         return summonTemporaryMob(entityType, caster, location, goal, 30);
     }
 
+    @ParametersAreNonnullByDefault
     public static <T extends Mob> MagicSummon summonTemporaryMob(
         EntityType entityType,
         UUID caster,
@@ -48,27 +51,7 @@ public class SpellUtils {
         return summonTemporaryMob(entityType, caster, location, goal, timeInSeconds * 1000L, null);
     }
 
-    public static <T extends Mob> MagicSummon summonTemporaryMob(
-        EntityType entityType,
-        UUID caster,
-        Location location,
-        @Nullable AbstractGoal<T> goal,
-        @Nonnull Consumer<MagicSummon> tickConsumer
-    ) {
-        return summonTemporaryMob(entityType, caster, location, goal, 30, tickConsumer);
-    }
-
-    public static <T extends Mob> MagicSummon summonTemporaryMob(
-        EntityType entityType,
-        UUID caster,
-        Location location,
-        @Nullable AbstractGoal<T> goal,
-        int timeInSeconds,
-        @Nonnull Consumer<MagicSummon> tickConsumer
-    ) {
-        return summonTemporaryMob(entityType, caster, location, goal, timeInSeconds * 1000L, tickConsumer);
-    }
-
+    @ParametersAreNonnullByDefault
     private static <T extends Mob> MagicSummon summonTemporaryMob(
         EntityType entityType,
         UUID caster,
@@ -99,6 +82,30 @@ public class SpellUtils {
         return magicSummon;
     }
 
+    @ParametersAreNonnullByDefault
+    public static <T extends Mob> MagicSummon summonTemporaryMob(
+        EntityType entityType,
+        UUID caster,
+        Location location,
+        @Nullable AbstractGoal<T> goal,
+        Consumer<MagicSummon> tickConsumer
+    ) {
+        return summonTemporaryMob(entityType, caster, location, goal, 30, tickConsumer);
+    }
+
+    @ParametersAreNonnullByDefault
+    public static <T extends Mob> MagicSummon summonTemporaryMob(
+        EntityType entityType,
+        UUID caster,
+        Location location,
+        @Nullable AbstractGoal<T> goal,
+        int timeInSeconds,
+        Consumer<MagicSummon> tickConsumer
+    ) {
+        return summonTemporaryMob(entityType, caster, location, goal, timeInSeconds * 1000L, tickConsumer);
+    }
+
+    @ParametersAreNonnullByDefault
     public static MagicProjectile summonMagicProjectile(
         CastInformation castInformation,
         EntityType entityType,
@@ -107,6 +114,7 @@ public class SpellUtils {
         return summonMagicProjectile(castInformation, entityType, location, 5);
     }
 
+    @ParametersAreNonnullByDefault
     public static MagicProjectile summonMagicProjectile(
         CastInformation castInformation,
         EntityType entityType,
@@ -116,25 +124,7 @@ public class SpellUtils {
         return summonMagicProjectile(castInformation, entityType, location, timeInSeconds * 1000L, null);
     }
 
-    public static MagicProjectile summonMagicProjectile(
-        CastInformation castInformation,
-        EntityType entityType,
-        Location location,
-        @Nonnull Consumer<MagicProjectile> tickConsumer
-    ) {
-        return summonMagicProjectile(castInformation, entityType, location, 30, tickConsumer);
-    }
-
-    public static MagicProjectile summonMagicProjectile(
-        CastInformation castInformation,
-        EntityType entityType,
-        Location location,
-        int timeInSeconds,
-        @Nonnull Consumer<MagicProjectile> tickConsumer
-    ) {
-        return summonMagicProjectile(castInformation, entityType, location, timeInSeconds * 1000L, tickConsumer);
-    }
-
+    @ParametersAreNonnullByDefault
     private static MagicProjectile summonMagicProjectile(
         CastInformation castInformation,
         EntityType entityType,
@@ -160,6 +150,28 @@ public class SpellUtils {
         return magicProjectile;
     }
 
+    @ParametersAreNonnullByDefault
+    public static MagicProjectile summonMagicProjectile(
+        CastInformation castInformation,
+        EntityType entityType,
+        Location location,
+        Consumer<MagicProjectile> tickConsumer
+    ) {
+        return summonMagicProjectile(castInformation, entityType, location, 30, tickConsumer);
+    }
+
+    @ParametersAreNonnullByDefault
+    public static MagicProjectile summonMagicProjectile(
+        CastInformation castInformation,
+        EntityType entityType,
+        Location location,
+        int timeInSeconds,
+        Consumer<MagicProjectile> tickConsumer
+    ) {
+        return summonMagicProjectile(castInformation, entityType, location, timeInSeconds * 1000L, tickConsumer);
+    }
+
+    @ParametersAreNonnullByDefault
     public static MagicFallingBlock summonMagicFallingBlock(
         CastInformation castInformation,
         Location location,
@@ -168,6 +180,7 @@ public class SpellUtils {
         return summonMagicFallingBlock(castInformation, location, material, 30);
     }
 
+    @ParametersAreNonnullByDefault
     public static MagicFallingBlock summonMagicFallingBlock(
         CastInformation castInformation,
         Location location,
@@ -177,6 +190,7 @@ public class SpellUtils {
         return summonMagicFallingBlock(castInformation, location, material, timeInSeconds * 1000L);
     }
 
+    @ParametersAreNonnullByDefault
     private static MagicFallingBlock summonMagicFallingBlock(
         CastInformation castInformation,
         Location location,

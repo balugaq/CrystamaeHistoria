@@ -1,4 +1,4 @@
-package io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush;
+package io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic;
 
 import io.github.sefiraat.crystamaehistoria.utils.Keys;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
@@ -24,10 +24,14 @@ public class InfinitePaintbrush extends SlimefunItem implements MagicPaintbrush 
                               ItemStack[] recipe
     ) {
         super(itemGroup, item, recipeType, recipe);
-        addItemHandler(getItemHandler());
     }
 
-    public ItemUseHandler getItemHandler() {
+    @Override
+    public void preRegister() {
+        addItemHandler(onItemUse());
+    }
+
+    public ItemUseHandler onItemUse() {
         return e -> {
             ItemStack itemStack = e.getItem();
             if (itemStack.getType() != Material.AIR) {

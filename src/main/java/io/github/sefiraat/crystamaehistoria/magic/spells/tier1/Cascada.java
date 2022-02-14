@@ -42,6 +42,7 @@ public class Cascada extends Spell {
         magicProjectile.disableGravity();
     }
 
+    @ParametersAreNonnullByDefault
     public void projectileHit(CastInformation castInformation) {
         final UUID caster = castInformation.getCaster();
         final Location location = castInformation.getProjectileLocation();
@@ -76,8 +77,13 @@ public class Cascada extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "CASCADA";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.MECHANICAL,
+            StoryType.HISTORICAL,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -90,18 +96,13 @@ public class Cascada extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.PODZOL;
+    public String getId() {
+        return "CASCADA";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.MECHANICAL,
-            StoryType.HISTORICAL,
-            StoryType.PHILOSOPHICAL
-        );
+    public Material getMaterial() {
+        return Material.PODZOL;
     }
 }

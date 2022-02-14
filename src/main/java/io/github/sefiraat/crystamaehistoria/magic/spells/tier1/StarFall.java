@@ -64,6 +64,7 @@ public class StarFall extends Spell {
         }
     }
 
+    @ParametersAreNonnullByDefault
     public void onTick(MagicProjectile magicProjectile) {
         final Location location = magicProjectile.getProjectile().getLocation();
         final Particle.DustOptions dustOptions = new Particle.DustOptions(
@@ -80,8 +81,13 @@ public class StarFall extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "STAR_FALL";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.ALCHEMICAL,
+            StoryType.CELESTIAL,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -95,18 +101,13 @@ public class StarFall extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.NETHER_STAR;
+    public String getId() {
+        return "STAR_FALL";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.ALCHEMICAL,
-            StoryType.CELESTIAL,
-            StoryType.PHILOSOPHICAL
-        );
+    public Material getMaterial() {
+        return Material.NETHER_STAR;
     }
 }

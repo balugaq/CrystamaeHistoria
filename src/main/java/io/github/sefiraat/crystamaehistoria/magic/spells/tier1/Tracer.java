@@ -71,6 +71,8 @@ public class Tracer extends Spell {
                 dustOptions = new Particle.DustOptions(COLOR_MAP.get("animal"), 1);
             } else if (livingEntity instanceof Ambient) {
                 dustOptions = new Particle.DustOptions(COLOR_MAP.get("ambient"), 1);
+            } else {
+                continue;
             }
 
             Validate.notNull(
@@ -89,8 +91,13 @@ public class Tracer extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "TRACER";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.MECHANICAL,
+            StoryType.HISTORICAL,
+            StoryType.ANIMAL
+        );
     }
 
     @Nonnull
@@ -104,18 +111,13 @@ public class Tracer extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.LEAD;
+    public String getId() {
+        return "TRACER";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.MECHANICAL,
-            StoryType.HISTORICAL,
-            StoryType.ANIMAL
-        );
+    public Material getMaterial() {
+        return Material.LEAD;
     }
 }

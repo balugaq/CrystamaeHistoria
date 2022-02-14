@@ -35,6 +35,7 @@ public class BloodMagics extends Spell {
         castBlood(castInformation, location, size, 1);
     }
 
+    @ParametersAreNonnullByDefault
     private void castBlood(CastInformation castInformation, Location location, double size, int iteration) {
         final Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(190, 55, 80), 1F);
         final Collection<Entity> entities = location.getWorld().getNearbyEntities(location, size, size, size);
@@ -61,8 +62,13 @@ public class BloodMagics extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "BLOOD_MAGICS";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.ALCHEMICAL,
+            StoryType.HISTORICAL,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -76,18 +82,13 @@ public class BloodMagics extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.RED_DYE;
+    public String getId() {
+        return "BLOOD_MAGICS";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.ALCHEMICAL,
-            StoryType.HISTORICAL,
-            StoryType.PHILOSOPHICAL
-        );
+    public Material getMaterial() {
+        return Material.RED_DYE;
     }
 }

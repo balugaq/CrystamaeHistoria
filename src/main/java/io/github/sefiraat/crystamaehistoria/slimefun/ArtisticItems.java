@@ -1,18 +1,23 @@
 package io.github.sefiraat.crystamaehistoria.slimefun;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
+import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.DummyLiquefactionBasinCrafting;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.LiquefactionBasinCache;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.RecipeItem;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush.BasicPaintbrush;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush.InfinitePaintbrush;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush.MagicPaintbrush;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.magicpaintbrush.PaintProfile;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.BasicPaintbrush;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.ImbuedStand;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.InfinitePaintbrush;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.MagicPaintbrush;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.PaintProfile;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.PoseChanger;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic.PoseCloner;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 import lombok.Getter;
+import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
@@ -20,7 +25,8 @@ import org.bukkit.inventory.ItemStack;
 
 import java.text.MessageFormat;
 
-public class PaintBrushes {
+@UtilityClass
+public class ArtisticItems {
 
     @Getter
     private static BasicPaintbrush blackPaintBrush100;
@@ -92,6 +98,20 @@ public class PaintBrushes {
     private static SlimefunItem mysticalTintanno;
     @Getter
     private static InfinitePaintbrush paintersResolve;
+    @Getter
+    private static SlimefunItem bodyStand;
+    @Getter
+    private static SlimefunItem mindStand;
+    @Getter
+    private static SlimefunItem soulStand;
+    @Getter
+    private static SlimefunItem mysticalAttitudinizer;
+    @Getter
+    private static ImbuedStand imbuedStand;
+    @Getter
+    private static PoseChanger poseChanger;
+    @Getter
+    private static PoseCloner poseCloner;
 
     public static void setup() {
 
@@ -117,7 +137,7 @@ public class PaintBrushes {
 
         // Black Paintbrush 100
         blackPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BLACK_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLACK),
@@ -139,7 +159,7 @@ public class PaintBrushes {
 
         // Blue Paintbrush 100
         bluePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BLUE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLUE),
@@ -161,7 +181,7 @@ public class PaintBrushes {
 
         // Brown Paintbrush 100
         brownPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BROWN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BROWN),
@@ -183,7 +203,7 @@ public class PaintBrushes {
 
         // Cyan Paintbrush 100
         cyanPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_CYAN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.CYAN),
@@ -205,7 +225,7 @@ public class PaintBrushes {
 
         // Gray Paintbrush 100
         grayPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_GRAY_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.GRAY),
@@ -227,7 +247,7 @@ public class PaintBrushes {
 
         // Green Paintbrush 100
         greenPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_GREEN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.GREEN),
@@ -249,7 +269,7 @@ public class PaintBrushes {
 
         // Light Blue Paintbrush 100
         lightBluePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIGHT_BLUE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_BLUE),
@@ -271,7 +291,7 @@ public class PaintBrushes {
 
         // Light Gray Paintbrush 100
         lightGrayPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIGHT_GRAY_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_GRAY),
@@ -293,7 +313,7 @@ public class PaintBrushes {
 
         // Lime Paintbrush 100
         limePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIME_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIME),
@@ -315,7 +335,7 @@ public class PaintBrushes {
 
         // Magenta Paintbrush 100
         magentaPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_MAGENTA_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.MAGENTA),
@@ -337,7 +357,7 @@ public class PaintBrushes {
 
         // Orange Paintbrush 100
         orangePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_ORANGE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.ORANGE),
@@ -359,7 +379,7 @@ public class PaintBrushes {
 
         // Pink Paintbrush 100
         pinkPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_PINK_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.PINK),
@@ -381,7 +401,7 @@ public class PaintBrushes {
 
         // Purple Paintbrush 100
         purplePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_PURPLE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.PURPLE),
@@ -403,7 +423,7 @@ public class PaintBrushes {
 
         // Red Paintbrush 100
         redPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_RED_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.RED),
@@ -425,7 +445,7 @@ public class PaintBrushes {
 
         // White Paintbrush 100
         whitePaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_WHITE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE),
@@ -447,7 +467,7 @@ public class PaintBrushes {
 
         // Yellow Paintbrush 100
         yellowPaintBrush100 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_YELLOW_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.YELLOW),
@@ -475,7 +495,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         blackPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BLACK_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLACK),
@@ -499,7 +519,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         bluePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BLUE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLUE),
@@ -523,7 +543,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         brownPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_BROWN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BROWN),
@@ -547,7 +567,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         cyanPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_CYAN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.CYAN),
@@ -571,7 +591,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         grayPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_GRAY_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.GRAY),
@@ -595,7 +615,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         greenPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_GREEN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.GREEN),
@@ -619,7 +639,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         lightBluePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIGHT_BLUE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_BLUE),
@@ -643,7 +663,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         lightGrayPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIGHT_GRAY_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_GRAY),
@@ -667,7 +687,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         limePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_LIME_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIME),
@@ -691,7 +711,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         magentaPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_MAGENTA_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.MAGENTA),
@@ -715,7 +735,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         orangePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_ORANGE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.ORANGE),
@@ -739,7 +759,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         pinkPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_PINK_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.PINK),
@@ -763,7 +783,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         purplePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_PURPLE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.PURPLE),
@@ -787,7 +807,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         redPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_RED_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.RED),
@@ -811,7 +831,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         whitePaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_WHITE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE),
@@ -835,7 +855,7 @@ public class PaintBrushes {
             StoryType.PHILOSOPHICAL, 25
         );
         yellowPaintBrush1000 = new BasicPaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_YELLOW_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.YELLOW),
@@ -889,7 +909,7 @@ public class PaintBrushes {
 
         // Painters Resolve
         paintersResolve = new InfinitePaintbrush(
-            ItemGroups.PAINTBRUSHES,
+            ItemGroups.ARTISTIC,
             ThemeType.themedSlimefunItemStack(
                 "CRY_BRUSH_INFINITE",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE, true),
@@ -905,6 +925,159 @@ public class PaintBrushes {
                 null, null, null,
                 getMysticalTintanno().getItem(), Materials.getAmalgamateIngotMythical().getItem(), getMysticalPigmentato().getItem(),
                 null, null, null
+            }
+        );
+
+        // Body Stand
+        RecipeItem bodyStandRecipe = new RecipeItem(
+            new ItemStack(Material.ARMOR_STAND),
+            StoryType.ELEMENTAL, 100,
+            StoryType.ALCHEMICAL, 100,
+            StoryType.MECHANICAL, 100
+        );
+        bodyStand = new UnplaceableBlock(
+            ItemGroups.MATERIALS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_BODY_STAND",
+                new ItemStack(Material.ARMOR_STAND),
+                ThemeType.CRAFTING,
+                "Armorstand of the Body",
+                "Something about this stand is off."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            bodyStandRecipe.getDisplayRecipe()
+        );
+
+        // Mind Stand
+        RecipeItem mindStandRecipe = new RecipeItem(
+            new ItemStack(Material.ARMOR_STAND),
+            StoryType.HISTORICAL, 100,
+            StoryType.HUMAN, 100,
+            StoryType.ANIMAL, 100
+        );
+        mindStand = new UnplaceableBlock(
+            ItemGroups.MATERIALS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_MIND_STAND",
+                new ItemStack(Material.ARMOR_STAND),
+                ThemeType.CRAFTING,
+                "Armorstand of the Mind",
+                "Something about this stand is off."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            mindStandRecipe.getDisplayRecipe()
+        );
+
+        // Soul Stand
+        RecipeItem soulStandRecipe = new RecipeItem(
+            new ItemStack(Material.ARMOR_STAND),
+            StoryType.CELESTIAL, 100,
+            StoryType.VOID, 100,
+            StoryType.PHILOSOPHICAL, 100
+        );
+        soulStand = new UnplaceableBlock(
+            ItemGroups.MATERIALS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_SOUL_STAND",
+                new ItemStack(Material.ARMOR_STAND),
+                ThemeType.CRAFTING,
+                "Armorstand of the Soul",
+                "Something about this stand is off."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            soulStandRecipe.getDisplayRecipe()
+        );
+
+        // Mystical Attitudinizer
+        mysticalAttitudinizer = new UnplaceableBlock(
+            ItemGroups.MATERIALS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_MYSTICAL_ATTITUDINIZER",
+                new ItemStack(Material.BELL),
+                ThemeType.CRAFTING,
+                "Mystical Attitudinizer",
+                "A condensed essence of posture"
+            ),
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                Materials.getBasicFibres().getItem(), Materials.getBasicFibres().getItem(), Materials.getBasicFibres().getItem(),
+                bodyStand.getItem(), mindStand.getItem(), soulStand.getItem(),
+                Materials.getBasicFibres().getItem(), Materials.getBasicFibres().getItem(), Materials.getBasicFibres().getItem(),
+            }
+        );
+
+        // Imbued Stand
+        RecipeItem imbuedStandRecipe = new RecipeItem(
+            new ItemStack(Material.ARMOR_STAND),
+            StoryType.MECHANICAL, 5,
+            StoryType.HUMAN, 5,
+            StoryType.VOID, 5
+        );
+        imbuedStand = new ImbuedStand(
+            ItemGroups.ARTISTIC,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_IMBUED_STAND",
+                new ItemStack(Material.ARMOR_STAND),
+                ThemeType.TOOL,
+                "Imbued Armor Stand",
+                "This Armor Stand can be made",
+                "invisible or smaller with a pose",
+                "changer."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            imbuedStandRecipe.getDisplayRecipe()
+        );
+
+        // Pose Changer
+        poseChanger = new PoseChanger(
+            ItemGroups.ARTISTIC,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_POSE_CHANGER",
+                new ItemStack(Material.BAMBOO),
+                ThemeType.TOOL,
+                "Pose Changer",
+                "This item is able to manipulate",
+                "the pose of armor stands.",
+                "Works with vanilla stand and",
+                "can do additional things to",
+                "Imbued Stands.",
+                "",
+                MessageFormat.format("{0}Left Click: {1}Change selected body part", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift Left Click: {1}Change selected change method", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Right Click: {1}Apply change (positive)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift Right Click: {1}Apply change (negative)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                "",
+                MessageFormat.format("{0}Pose Set To: {1}HEAD", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Change Set To: {1}RESET", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+            ),
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                Materials.getBasicFibres().getItem(), Materials.getAmalgamateIngotEpic().getItem(), Materials.getBasicFibres().getItem(),
+                Materials.getAmalgamateIngotEpic().getItem(), mysticalAttitudinizer.getItem(), Materials.getAmalgamateIngotEpic().getItem(),
+                Materials.getBasicFibres().getItem(), Materials.getAmalgamateIngotEpic().getItem(), Materials.getBasicFibres().getItem(),
+            }
+        );
+
+        // Pose Cloner
+        poseCloner = new PoseCloner(
+            ItemGroups.ARTISTIC,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_POSE_CLONER",
+                new ItemStack(Material.SEA_PICKLE),
+                ThemeType.TOOL,
+                "Pose Cloner",
+                "This item can copy the state",
+                "of an Inbued Armorstand and",
+                "make another match to suit.",
+                "",
+                MessageFormat.format("{0}Right Click: {1}Clone pose", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift Right Click: {1}Apply stored clone", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+            ),
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                Materials.getBasicFibres().getItem(), Materials.getAmalgamateIngotUnique().getItem(), Materials.getBasicFibres().getItem(),
+                Materials.getAmalgamateIngotRare().getItem(), bodyStand.getItem(), Materials.getAmalgamateIngotRare().getItem(),
+                Materials.getBasicFibres().getItem(), Materials.getAmalgamateIngotUnique().getItem(), Materials.getBasicFibres().getItem(),
             }
         );
 
@@ -945,6 +1118,14 @@ public class PaintBrushes {
         mysticalTintanno.register(plugin);
         paintersResolve.register(plugin);
 
+        bodyStand.register(plugin);
+        mindStand.register(plugin);
+        soulStand.register(plugin);
+        mysticalAttitudinizer.register(plugin);
+        imbuedStand.register(plugin);
+        poseChanger.register(plugin);
+        poseCloner.register(plugin);
+
         // Liquefaction Recipes
         LiquefactionBasinCache.addCraftingRecipe(blackPaintBrush1000, blackPaintbrush1000Recipe);
         LiquefactionBasinCache.addCraftingRecipe(bluePaintBrush1000, bluePaintbrush1000Recipe);
@@ -963,7 +1144,9 @@ public class PaintBrushes {
         LiquefactionBasinCache.addCraftingRecipe(whitePaintBrush1000, whitePaintbrush1000Recipe);
         LiquefactionBasinCache.addCraftingRecipe(yellowPaintBrush1000, yellowPaintbrush1000Recipe);
 
+        LiquefactionBasinCache.addCraftingRecipe(bodyStand, bodyStandRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(mindStand, mindStandRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(soulStand, soulStandRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(imbuedStand, imbuedStandRecipe);
     }
-
-
 }

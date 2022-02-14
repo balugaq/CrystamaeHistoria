@@ -13,6 +13,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -25,6 +26,7 @@ public class AbstractVoid extends Spell {
         setSpellCore(spellCoreBuilder.build());
     }
 
+    @ParametersAreNonnullByDefault
     private void cast(CastInformation castInformation) {
         final Location castLocation = castInformation.getCastLocation();
         final double range = getRange(castInformation);
@@ -51,8 +53,13 @@ public class AbstractVoid extends Spell {
 
     @Nonnull
     @Override
-    public String getId() {
-        return "ABSTRACT_VOID";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.MECHANICAL,
+            StoryType.VOID,
+            StoryType.PHILOSOPHICAL
+        );
     }
 
     @Nonnull
@@ -65,18 +72,13 @@ public class AbstractVoid extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.GREEN_DYE;
+    public String getId() {
+        return "ABSTRACT_VOID";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.MECHANICAL,
-            StoryType.VOID,
-            StoryType.PHILOSOPHICAL
-        );
+    public Material getMaterial() {
+        return Material.GREEN_DYE;
     }
 }

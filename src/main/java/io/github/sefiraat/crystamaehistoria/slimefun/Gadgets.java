@@ -4,6 +4,7 @@ import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.AngelBlock;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.CursedEarth;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.EnderInhibitor;
+import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.ExaltationStand;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.ExpCollector;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.GreenHouseGlass;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MobCandle;
@@ -12,6 +13,8 @@ import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MobLamp;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MobMat;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MobTrap;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MysteriousTicker;
+import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.MysteriousTickerNoInteraction;
+import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.PhilosophersSpray;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.TrophyDisplay;
 import io.github.sefiraat.crystamaehistoria.slimefun.gadgets.Waystone;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.DummyLiquefactionBasinCrafting;
@@ -78,7 +81,7 @@ public class Gadgets {
     @Getter
     private static MobCandle scintillatingMobCandle;
     @Getter
-    private static MysteriousTicker mysteriousPottedPlant;
+    private static MysteriousTickerNoInteraction mysteriousPottedPlant;
     @Getter
     private static MysteriousTicker mysteriousPlant;
     @Getter
@@ -98,9 +101,13 @@ public class Gadgets {
     @Getter
     private static TrophyDisplay trophyDisplay;
     @Getter
+    private static ExaltationStand exaltationStand;
+    @Getter
     private static Waystone waystone;
     @Getter
     private static AngelBlock angelBlock;
+    @Getter
+    private static PhilosophersSpray philosophersSpray;
 
     public static void setup() {
 
@@ -158,7 +165,7 @@ public class Gadgets {
                 ThemeType.CLICK_INFO.getColor() + "Force: " + ThemeType.PASSIVE.getColor() + "5 CrystaPow™"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
-            abstractionLampRecipe.getDisplayRecipe(),
+            dispersionLampRecipe.getDisplayRecipe(),
             7,
             0.5
         );
@@ -575,7 +582,7 @@ public class Gadgets {
         );
 
         // Mysterious Potted Plant
-        mysteriousPottedPlant = new MysteriousTicker(
+        mysteriousPottedPlant = new MysteriousTickerNoInteraction(
             ItemGroups.GADGETS,
             ThemeType.themedSlimefunItemStack(
                 "CRY_MYSTERIOUS_POTTED_PLANT",
@@ -814,6 +821,28 @@ public class Gadgets {
             trophyDisplayRecipe.getDisplayRecipe()
         );
 
+        // Exaltation Stand
+        RecipeItem exaltationStandRecipe = new RecipeItem(
+            new ItemStack(Material.PRISMARINE_WALL),
+            StoryType.MECHANICAL, 50,
+            StoryType.HUMAN, 50,
+            StoryType.PHILOSOPHICAL, 50
+        );
+        exaltationStand = new ExaltationStand(
+            ItemGroups.GADGETS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_EXALTATION_STAND",
+                new ItemStack(Material.PRISMARINE_WALL),
+                ThemeType.GADGET,
+                "Exaltation Stand",
+                "Used to place 'Exalted' items on.",
+                "These items require special conditions",
+                "and impart powerful effects while nearby."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            exaltationStandRecipe.getDisplayRecipe()
+        );
+
         // Waystone
         final Set<Material> waystoneMaterials = new HashSet<>();
         waystoneMaterials.add(Material.RED_NETHER_BRICK_WALL);
@@ -871,6 +900,26 @@ public class Gadgets {
             angelBlockStack.asQuantity(8)
         );
 
+        // Philosophers Spray
+        SlimefunItemStack philosophersSprayStack = ThemeType.themedSlimefunItemStack(
+            "CRY_PHILOSOPHERS_SPRAY",
+            new ItemStack(Material.DISPENSER),
+            ThemeType.GADGET,
+            "Philosophers Spray",
+            "Will 'displace' the block above",
+            "this one when triggered with Redstone."
+        );
+        philosophersSpray = new PhilosophersSpray(
+            ItemGroups.GADGETS,
+            philosophersSprayStack,
+            RecipeType.ENHANCED_CRAFTING_TABLE,
+            new ItemStack[]{
+                amalgamateIngotRare, amalgamateIngotRare, amalgamateIngotRare,
+                amalgamateIngotRare, new ItemStack(Material.DISPENSER), amalgamateIngotRare,
+                amalgamateIngotRare, Tools.getArcaneDisplacer().getItem(), amalgamateIngotRare
+            }
+        );
+
         // Slimefun Registry
         abstractionLamp.register(plugin);
         dispersionLamp.register(plugin);
@@ -899,8 +948,10 @@ public class Gadgets {
         greenHouseGlass.register(plugin);
         focusedGreenHouseGlass.register(plugin);
         trophyDisplay.register(plugin);
+        exaltationStand.register(plugin);
         waystone.register(plugin);
         angelBlock.register(plugin);
+        philosophersSpray.register(plugin);
 
         // Liquefaction Recipes
         LiquefactionBasinCache.addCraftingRecipe(abstractionLamp, abstractionLampRecipe);
@@ -933,8 +984,8 @@ public class Gadgets {
         LiquefactionBasinCache.addCraftingRecipe(focusedGreenHouseGlass, focusedGreenHouseGlassRecipe);
 
         LiquefactionBasinCache.addCraftingRecipe(trophyDisplay, trophyDisplayRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(exaltationStand, exaltationStandRecipe);
 
         LiquefactionBasinCache.addCraftingRecipe(waystone, waystoneRecipe);
     }
-
 }

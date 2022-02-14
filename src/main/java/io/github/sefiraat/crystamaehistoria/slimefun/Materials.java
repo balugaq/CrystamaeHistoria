@@ -2,6 +2,7 @@ package io.github.sefiraat.crystamaehistoria.slimefun;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.slimefun.materials.Crystal;
+import io.github.sefiraat.crystamaehistoria.slimefun.materials.PowderedEssence;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.DummyLiquefactionBasinCrafting;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.LiquefactionBasinCache;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.RecipeItem;
@@ -17,6 +18,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
@@ -26,8 +28,8 @@ import java.util.Map;
 @UtilityClass
 public class Materials {
 
-    protected static final Map<StoryType, SlimefunItem> DUMMY_CRYSTAL_MAP = new EnumMap<>(StoryType.class);
-    protected static final Map<StoryRarity, Map<StoryType, SlimefunItem>> CRYSTAL_MAP = new EnumMap<>(StoryRarity.class);
+    private static final Map<StoryType, SlimefunItem> DUMMY_CRYSTAL_MAP = new EnumMap<>(StoryType.class);
+    static final Map<StoryRarity, Map<StoryType, SlimefunItem>> CRYSTAL_MAP = new EnumMap<>(StoryRarity.class);
 
     @Getter
     private static SlimefunItem amalgamateDustCommon;
@@ -61,6 +63,8 @@ public class Materials {
     private static SlimefunItem gildedPearl;
     @Getter
     private static SlimefunItem basicFibres;
+    @Getter
+    private static PowderedEssence powderedEssence;
 
     public static void setup() {
 
@@ -72,10 +76,10 @@ public class Materials {
             SlimefunItem sfItem = new Crystal(
                 ItemGroups.DUMMY_ITEM_GROUP,
                 ThemeType.themedSlimefunItemStack(
-                    "CRY_CRYSTAL_DUMMY_" + type.toString() + "_" + type.toString(),
+                    "CRY_CRYSTAL_DUMMY_" + type + "_" + type,
                     Skulls.getByType(type).getPlayerHead(),
                     ThemeType.CRYSTAL,
-                    theme.getColor() + TextUtils.toTitleCase(type.toString() + " Crystal"),
+                    theme.getColor() + TextUtils.toTitleCase(type + " Crystal"),
                     "Magical Crystamae in it's physical form"
                 ),
                 DummyRealisationAltar.TYPE,
@@ -95,10 +99,10 @@ public class Materials {
                 SlimefunItem slimefunItem = new Crystal(
                     ItemGroups.CRYSTALS,
                     ThemeType.themedSlimefunItemStack(
-                        "CRY_CRYSTAL_" + rarity.toString() + "_" + type.toString(),
+                        "CRY_CRYSTAL_" + rarity + "_" + type.toString(),
                         Skulls.getByType(type).getPlayerHead(),
                         ThemeType.CRYSTAL,
-                        theme.getColor() + TextUtils.toTitleCase(rarity.toString() + " " + type.toString()) + " Crystal",
+                        theme.getColor() + TextUtils.toTitleCase(rarity + " " + type) + " Crystal",
                         "Magical Crystamae in it's physical form",
                         "Higher tier blocks are more likely to",
                         "provide rarer Crystal types.",
@@ -398,7 +402,7 @@ public class Materials {
             uncannyPearlRecipe.getDisplayRecipe()
         );
 
-        // Guilded Pearl
+        // Gilded Pearl
         gildedPearl = new UnplaceableBlock(
             ItemGroups.MATERIALS,
             ThemeType.themedSlimefunItemStack(
@@ -438,6 +442,30 @@ public class Materials {
             basicFibresRecipe.getDisplayRecipe()
         );
 
+        // Powdered Essence
+        RecipeItem powderedEssenceRecipe = new RecipeItem(
+            new ItemStack(Material.BONE_MEAL),
+            StoryType.ELEMENTAL, 20,
+            StoryType.ALCHEMICAL, 25,
+            StoryType.PHILOSOPHICAL, 15
+        );
+        powderedEssence = new PowderedEssence(
+            ItemGroups.MATERIALS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_POWDERED_ESSENCE",
+                new ItemStack(Material.WHITE_DYE),
+                ThemeType.CRAFTING,
+                "Powdered Essence",
+                "A refined crafting material.",
+                "Can be used as bone meal.",
+                "",
+                ChatColor.YELLOW + "250 Uses " + ChatColor.GRAY + "left"
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            powderedEssenceRecipe.getDisplayRecipe(),
+            250
+        );
+
         // Slimefun Registry
         amalgamateDustCommon.register(plugin);
         amalgamateDustUncommon.register(plugin);
@@ -455,11 +483,13 @@ public class Materials {
         uncannyPearl.register(plugin);
         gildedPearl.register(plugin);
         basicFibres.register(plugin);
+        powderedEssence.register(plugin);
 
         // Liquefaction Recipes
         LiquefactionBasinCache.addCraftingRecipe(imbuedGlass, imbuedGlassRecipe);
         LiquefactionBasinCache.addCraftingRecipe(uncannyPearl, uncannyPearlRecipe);
         LiquefactionBasinCache.addCraftingRecipe(basicFibres, basicFibresRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(powderedEssence, powderedEssenceRecipe);
     }
 
     public static Map<StoryType, SlimefunItem> getDummyCrystalMap() {
@@ -469,4 +499,5 @@ public class Materials {
     public static Map<StoryRarity, Map<StoryType, SlimefunItem>> getCrystalMap() {
         return CRYSTAL_MAP;
     }
+
 }

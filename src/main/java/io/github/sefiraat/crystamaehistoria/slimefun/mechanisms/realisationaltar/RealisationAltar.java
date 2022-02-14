@@ -40,7 +40,15 @@ public class RealisationAltar extends TickingMenuBlock {
     public RealisationAltar(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, int tier) {
         super(itemGroup, item, recipeType, recipe);
         this.tier = tier;
-        this.addItemHandler(new BlockPlaceHandler(false) {
+    }
+
+    @Override
+    public void preRegister() {
+        addItemHandler(onBlockPlace());
+    }
+
+    private BlockPlaceHandler onBlockPlace() {
+        return new BlockPlaceHandler(false) {
             @Override
             public void onPlayerPlace(@Nonnull BlockPlaceEvent event) {
                 final Location location = event.getBlockPlaced().getLocation();
@@ -48,7 +56,7 @@ public class RealisationAltar extends TickingMenuBlock {
                 cache.setActivePlayer(event.getPlayer());
                 CACHES.put(location, cache);
             }
-        });
+        };
     }
 
     public static Map<Location, RealisationAltarCache> getCaches() {
@@ -62,6 +70,11 @@ public class RealisationAltar extends TickingMenuBlock {
         if (cache != null) {
             cache.process();
         }
+    }
+
+    @Override
+    protected boolean synchronous() {
+        return true;
     }
 
     @Override
@@ -83,18 +96,6 @@ public class RealisationAltar extends TickingMenuBlock {
 
     @Override
     @ParametersAreNonnullByDefault
-    protected void onBreak(BlockBreakEvent event, BlockMenu blockMenu) {
-        super.onBreak(event, blockMenu);
-        Location location = blockMenu.getLocation();
-        RealisationAltarCache realisationAltarCache = CACHES.remove(location);
-        if (realisationAltarCache != null) {
-            realisationAltarCache.kill();
-        }
-        blockMenu.dropItems(location, INPUT_SLOT);
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
     protected void onNewInstance(BlockMenu blockMenu, Block b) {
         super.onNewInstance(blockMenu, b);
         if (!CACHES.containsKey(blockMenu.getLocation())) {
@@ -105,7 +106,14 @@ public class RealisationAltar extends TickingMenuBlock {
     }
 
     @Override
-    protected boolean synchronous() {
-        return true;
+    @ParametersAreNonnullByDefault
+    protected void onBreak(BlockBreakEvent event, BlockMenu blockMenu) {
+        super.onBreak(event, blockMenu);
+        Location location = blockMenu.getLocation();
+        RealisationAltarCache realisationAltarCache = CACHES.remove(location);
+        if (realisationAltarCache != null) {
+            realisationAltarCache.kill();
+        }
+        blockMenu.dropItems(location, INPUT_SLOT);
     }
 }

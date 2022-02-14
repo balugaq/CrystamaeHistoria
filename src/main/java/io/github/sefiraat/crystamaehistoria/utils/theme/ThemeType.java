@@ -35,6 +35,7 @@ public enum ThemeType {
     MACHINE(ChatColor.of("#3295a8"), "机器"),
     MECHANISM(ChatColor.of("#3295a8"), "装置"),
     GADGET(ChatColor.of("#8732a8"), "道具"),
+    EXALTED(ChatColor.of("#8732a8"), "Exalted"),
     GUIDE(ChatColor.of("#444444"), "指南"),
     CHEST(ChatColor.of("#b89b1c"), "箱子"),
     DROP(ChatColor.of("#bf307f"), "稀有掉落物"),
@@ -95,7 +96,7 @@ public enum ThemeType {
      * List of names to be given to ArmourStands, invisible but mods and Minimaps can see them :)
      */
     @Nonnull
-    protected static final List<String> EGG_NAMES = Arrays.asList(
+    private static final List<String> EGG_NAMES = Arrays.asList(
         "TheBusyBiscuit",
         "Alessio",
         "Walshy",
@@ -127,7 +128,7 @@ public enum ThemeType {
     );
 
     @Getter
-    protected static final ThemeType[] cachedValues = values();
+    private static final ThemeType[] cachedValues = values();
     private final ChatColor color;
     private final String loreLine;
 
@@ -135,19 +136,6 @@ public enum ThemeType {
         this.color = color;
         this.loreLine = loreLine;
 
-    }
-
-    /**
-     * Applies the theme color to a given string
-     *
-     * @param themeType The {@link ThemeType} to apply the color from
-     * @param string    The string to apply the color to
-     * @return Returns the string provides preceded by the color
-     */
-    @Nonnull
-    @ParametersAreNonnullByDefault
-    public static String applyThemeToString(ThemeType themeType, String string) {
-        return themeType.getColor() + string;
     }
 
     /**
@@ -177,6 +165,19 @@ public enum ThemeType {
             ThemeType.applyThemeToString(themeType, name),
             finalLore.toArray(new String[finalLore.size() - 1])
         );
+    }
+
+    /**
+     * Applies the theme color to a given string
+     *
+     * @param themeType The {@link ThemeType} to apply the color from
+     * @param string    The string to apply the color to
+     * @return Returns the string provides preceded by the color
+     */
+    @Nonnull
+    @ParametersAreNonnullByDefault
+    public static String applyThemeToString(ThemeType themeType, String string) {
+        return themeType.getColor() + string;
     }
 
     /**
@@ -278,6 +279,7 @@ public enum ThemeType {
         return EGG_NAMES;
     }
 
+    @Nonnull
     public Particle.DustOptions getDustOptions(float size) {
         return new Particle.DustOptions(
             Color.fromRGB(
@@ -289,6 +291,7 @@ public enum ThemeType {
         );
     }
 
+    @Nonnull
     public TextColor getComponentColor() {
         return TextColor.color(this.getColor().getColor().getRGB());
     }

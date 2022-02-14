@@ -15,6 +15,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * @noinspection deprecation
@@ -30,10 +31,12 @@ public class MainFlexGroup extends FlexItemGroup {
     private static final int TOOLS = 11;
     private static final int GADGETS = 12;
     private static final int PAINTBRUSHES = 13;
-    private static final int MATERIALS = 14;
-    private static final int GUIDE = 15;
-    private static final int STORY = 16;
-    private static final int SPELL = 17;
+    private static final int EXALTED = 14;
+    private static final int UNIQUES = 15;
+    private static final int MATERIALS = 16;
+    private static final int GUIDE = 17;
+    private static final int STORY = 18;
+    private static final int SPELL = 19;
 
     private static final int[] HEADER = new int[]{
         0, 1, 2, 3, 4, 5, 6, 7, 8
@@ -47,11 +50,13 @@ public class MainFlexGroup extends FlexItemGroup {
     }
 
     @Override
-    public boolean isVisible(@Nonnull Player player, @Nonnull PlayerProfile playerProfile, @Nonnull SlimefunGuideMode guideMode) {
+    @ParametersAreNonnullByDefault
+    public boolean isVisible(Player player, PlayerProfile playerProfile, SlimefunGuideMode guideMode) {
         return true;
     }
 
     @Override
+    @ParametersAreNonnullByDefault
     public void open(Player p, PlayerProfile profile, SlimefunGuideMode mode) {
         final ChestMenu chestMenu = new ChestMenu(ThemeType.MAIN.getColor() + "魔法水晶编年史");
 
@@ -68,8 +73,8 @@ public class MainFlexGroup extends FlexItemGroup {
         chestMenu.open(p);
     }
 
-
-    private void setupPage(@Nonnull Player player, @Nonnull PlayerProfile profile, @Nonnull SlimefunGuideMode mode, @Nonnull ChestMenu menu) {
+    @ParametersAreNonnullByDefault
+    private void setupPage(Player player, PlayerProfile profile, SlimefunGuideMode mode, ChestMenu menu) {
         for (int slot : FOOTER) {
             menu.replaceExistingItem(slot, ChestMenuUtils.getBackground());
             menu.addMenuClickHandler(slot, ((player1, i, itemStack, clickAction) -> false));
@@ -103,9 +108,19 @@ public class MainFlexGroup extends FlexItemGroup {
             openPage(profile, ItemGroups.GADGETS, mode, 1));
 
         // Paint Brushes
-        menu.replaceExistingItem(PAINTBRUSHES, ItemGroups.PAINTBRUSHES.getItem(player));
+        menu.replaceExistingItem(PAINTBRUSHES, ItemGroups.ARTISTIC.getItem(player));
         menu.addMenuClickHandler(PAINTBRUSHES, (player1, i1, itemStack1, clickAction) ->
-            openPage(profile, ItemGroups.PAINTBRUSHES, mode, 1));
+            openPage(profile, ItemGroups.ARTISTIC, mode, 1));
+
+        // Exalted
+        menu.replaceExistingItem(EXALTED, ItemGroups.EXALTED.getItem(player));
+        menu.addMenuClickHandler(EXALTED, (player1, i1, itemStack1, clickAction) ->
+            openPage(profile, ItemGroups.EXALTED, mode, 1));
+
+        // Uniques
+        menu.replaceExistingItem(UNIQUES, ItemGroups.UNIQUES.getItem(player));
+        menu.addMenuClickHandler(UNIQUES, (player1, i1, itemStack1, clickAction) ->
+            openPage(profile, ItemGroups.UNIQUES, mode, 1));
 
         // Materials
         menu.replaceExistingItem(MATERIALS, ItemGroups.MATERIALS.getItem(player));
@@ -128,6 +143,7 @@ public class MainFlexGroup extends FlexItemGroup {
             openPage(profile, ItemGroups.GUIDE, mode, 1));
     }
 
+    @ParametersAreNonnullByDefault
     public boolean openPage(PlayerProfile profile, ItemGroup itemGroup, SlimefunGuideMode mode, int page) {
         profile.getGuideHistory().add(this, 1);
         SlimefunGuide.openItemGroup(profile, itemGroup, mode, page);

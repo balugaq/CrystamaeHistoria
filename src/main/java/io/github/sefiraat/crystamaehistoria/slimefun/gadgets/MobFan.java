@@ -25,7 +25,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
 
-import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.UUID;
@@ -52,21 +51,106 @@ public class MobFan extends TickingMenuBlock {
     public MobFan(ItemGroup category, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe, double range) {
         super(category, item, recipeType, recipe);
         this.range = range;
-        this.addItemHandler(
-            new BlockPlaceHandler(false) {
-                @Override
-                public void onPlayerPlace(@Nonnull BlockPlaceEvent event) {
-                    BlockStorage.addBlockInfo(event.getBlock(), ID_UUID, event.getPlayer().getUniqueId().toString());
-                    BlockStorage.addBlockInfo(event.getBlock(), ID_DIRECTION, BlockFace.SELF.name());
-                }
-            },
-            new BlockBreakHandler(false, false) {
-                @Override
-                public void onPlayerBreak(BlockBreakEvent blockBreakEvent, ItemStack itemStack, List<ItemStack> list) {
-                    BlockStorage.clearBlockInfo(blockBreakEvent.getBlock());
-                }
+    }
+
+    @Override
+    public void preRegister() {
+        addItemHandler(onBlockPlace(), onBlockBreak());
+    }
+
+    private BlockPlaceHandler onBlockPlace() {
+        return new BlockPlaceHandler(false) {
+            @Override
+            @ParametersAreNonnullByDefault
+            public void onPlayerPlace(BlockPlaceEvent event) {
+                BlockStorage.addBlockInfo(event.getBlock(), ID_UUID, event.getPlayer().getUniqueId().toString());
+                BlockStorage.addBlockInfo(event.getBlock(), ID_DIRECTION, BlockFace.SELF.name());
             }
+        };
+    }
+
+    private BlockBreakHandler onBlockBreak() {
+        return new BlockBreakHandler(false, false) {
+            @Override
+            @ParametersAreNonnullByDefault
+            public void onPlayerBreak(BlockBreakEvent blockBreakEvent, ItemStack itemStack, List<ItemStack> list) {
+                BlockStorage.clearBlockInfo(blockBreakEvent.getBlock());
+            }
+        };
+    }
+
+    @Override
+    @ParametersAreNonnullByDefault
+    protected void tick(Block block, BlockMenu blockMenu) {
+        final BlockFace direction = BlockFace.valueOf(BlockStorage.getLocationInfo(block.getLocation(), ID_DIRECTION));
+        final Vector facingVector = direction.getDirection();
+        final UUID owner = UUID.fromString(BlockStorage.getLocationInfo(block.getLocation(), ID_UUID));
+
+        if (direction == BlockFace.SELF) {
+            return;
+        }
+
+        final Location location = block.getLocation();
+        final RayTraceResult result = location.getWorld().rayTraceBlocks(
+            location.add(facingVector),
+            facingVector,
+            range,
+            FluidCollisionMode.ALWAYS,
+            false
         );
+
+        double finalRange = range;
+
+        if (result != null && result.getHitBlock() != null) {
+            finalRange = result.getHitBlock().getLocation().distance(block.getLocation());
+        }
+
+        for (int i = 0; i < finalRange + 0.5; i++) {
+            Location offsetLocation = location.clone().add(direction.getDirection().clone().multiply(i));
+            for (Entity entity : block.getWorld().getNearbyEntities(offsetLocation, 0.5, 0.5, 0.5)) {
+                if (entity instanceof Player) {
+                    Player player = (Player) entity;
+                    if (player.getGameMode() != GameMode.SURVIVAL) {
+                        return;
+                    }
+                }
+                GeneralUtils.pushEntity(
+                    owner,
+                    facingVector,
+                    entity,
+                    1
+                );
+            }
+        }
+    }
+
+    @Override
+    protected boolean synchronous() {
+        return true;
+    }
+
+    @Override
+    @ParametersAreNonnullByDefault
+    protected void setup(BlockMenuPreset blockMenuPreset) {
+        blockMenuPreset.drawBackground(BACKGROUND_SLOTS);
+
+        blockMenuPreset.addItem(SET_NORTH, GuiElements.getDirectionalSlotPane(BlockFace.NORTH, false), (player, i, itemStack, clickAction) -> false);
+        blockMenuPreset.addItem(SET_SOUTH, GuiElements.getDirectionalSlotPane(BlockFace.SOUTH, false), (player, i, itemStack, clickAction) -> false);
+        blockMenuPreset.addItem(SET_EAST, GuiElements.getDirectionalSlotPane(BlockFace.EAST, false), (player, i, itemStack, clickAction) -> false);
+        blockMenuPreset.addItem(SET_WEST, GuiElements.getDirectionalSlotPane(BlockFace.WEST, false), (player, i, itemStack, clickAction) -> false);
+
+        blockMenuPreset.addItem(SET_UP, GuiElements.getDirectionalSlotPane(BlockFace.UP, false), (player, i, itemStack, clickAction) -> false);
+        blockMenuPreset.addItem(SET_DOWN, GuiElements.getDirectionalSlotPane(BlockFace.DOWN, false), (player, i, itemStack, clickAction) -> false);
+    }
+
+    @Override
+    protected int[] getInputSlots() {
+        return new int[0];
+    }
+
+    @Override
+    protected int[] getOutputSlots() {
+        return new int[0];
     }
 
     @Override
@@ -128,79 +212,5 @@ public class MobFan extends TickingMenuBlock {
         }
 
         return false;
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
-    protected void tick(Block block, BlockMenu blockMenu) {
-        final BlockFace direction = BlockFace.valueOf(BlockStorage.getLocationInfo(block.getLocation(), ID_DIRECTION));
-        final Vector facingVector = direction.getDirection();
-        final UUID owner = UUID.fromString(BlockStorage.getLocationInfo(block.getLocation(), ID_UUID));
-
-        if (direction == BlockFace.SELF) {
-            return;
-        }
-
-        final Location location = block.getLocation();
-        final RayTraceResult result = location.getWorld().rayTraceBlocks(
-            location.add(facingVector),
-            facingVector,
-            range,
-            FluidCollisionMode.ALWAYS,
-            false
-        );
-
-        double finalRange = range;
-
-        if (result != null && result.getHitBlock() != null) {
-            finalRange = result.getHitBlock().getLocation().distance(block.getLocation());
-        }
-
-        for (int i = 0; i < finalRange + 0.5; i++) {
-            Location offsetLocation = location.clone().add(direction.getDirection().clone().multiply(i));
-            for (Entity entity : block.getWorld().getNearbyEntities(offsetLocation, 0.5, 0.5, 0.5)) {
-                if (entity instanceof Player) {
-                    Player player = (Player) entity;
-                    if (player.getGameMode() != GameMode.SURVIVAL) {
-                        return;
-                    }
-                }
-                GeneralUtils.pushEntity(
-                    owner,
-                    facingVector,
-                    entity,
-                    1
-                );
-            }
-        }
-    }
-
-    @Override
-    @ParametersAreNonnullByDefault
-    protected void setup(BlockMenuPreset blockMenuPreset) {
-        blockMenuPreset.drawBackground(BACKGROUND_SLOTS);
-
-        blockMenuPreset.addItem(SET_NORTH, GuiElements.getDirectionalSlotPane(BlockFace.NORTH, false), (player, i, itemStack, clickAction) -> false);
-        blockMenuPreset.addItem(SET_SOUTH, GuiElements.getDirectionalSlotPane(BlockFace.SOUTH, false), (player, i, itemStack, clickAction) -> false);
-        blockMenuPreset.addItem(SET_EAST, GuiElements.getDirectionalSlotPane(BlockFace.EAST, false), (player, i, itemStack, clickAction) -> false);
-        blockMenuPreset.addItem(SET_WEST, GuiElements.getDirectionalSlotPane(BlockFace.WEST, false), (player, i, itemStack, clickAction) -> false);
-
-        blockMenuPreset.addItem(SET_UP, GuiElements.getDirectionalSlotPane(BlockFace.UP, false), (player, i, itemStack, clickAction) -> false);
-        blockMenuPreset.addItem(SET_DOWN, GuiElements.getDirectionalSlotPane(BlockFace.DOWN, false), (player, i, itemStack, clickAction) -> false);
-    }
-
-    @Override
-    protected int[] getInputSlots() {
-        return new int[0];
-    }
-
-    @Override
-    protected int[] getOutputSlots() {
-        return new int[0];
-    }
-
-    @Override
-    protected boolean synchronous() {
-        return true;
     }
 }

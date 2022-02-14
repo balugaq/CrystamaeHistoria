@@ -48,14 +48,20 @@ public class HolyCow extends Spell {
         }
     }
 
+    @ParametersAreNonnullByDefault
     public void onTick(MagicSummon magicSummon) {
         ParticleUtils.displayParticleEffect(magicSummon.getMob(), Particle.GLOW, 1, 4);
     }
 
     @Nonnull
     @Override
-    public String getId() {
-        return "HOLY_COW";
+    public RecipeSpell getRecipe() {
+        return new RecipeSpell(
+            1,
+            StoryType.ANIMAL,
+            StoryType.CELESTIAL,
+            StoryType.VOID
+        );
     }
 
     @Nonnull
@@ -69,19 +75,14 @@ public class HolyCow extends Spell {
 
     @Nonnull
     @Override
-    public Material getMaterial() {
-        return Material.COW_SPAWN_EGG;
+    public String getId() {
+        return "HOLY_COW";
     }
 
     @Nonnull
     @Override
-    public RecipeSpell getRecipe() {
-        return new RecipeSpell(
-            1,
-            StoryType.ANIMAL,
-            StoryType.CELESTIAL,
-            StoryType.VOID
-        );
+    public Material getMaterial() {
+        return Material.COW_SPAWN_EGG;
     }
 
 }
