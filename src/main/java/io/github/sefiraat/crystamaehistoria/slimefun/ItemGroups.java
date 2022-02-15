@@ -72,7 +72,7 @@ public final class ItemGroups {
         Keys.newKey("exalted"),
         new CustomItemStack(
             new ItemStack(Material.BEACON),
-            ThemeType.MAIN.getColor() + "Exalted Items"
+            ThemeType.MAIN.getColor() + "尊贵物品"
         )
     );
     public static final DummyItemGroup MATERIALS = new DummyItemGroup(
@@ -86,14 +86,14 @@ public final class ItemGroups {
         Keys.newKey("uniques"),
         new CustomItemStack(
             new ItemStack(Material.NETHER_STAR),
-            ThemeType.MAIN.getColor() + "Uniques"
+            ThemeType.MAIN.getColor() + "独特物品"
         )
     );
     public static final DummyItemGroup GUIDE = new DummyItemGroup(
         Keys.newKey("guide"),
         new CustomItemStack(
             new ItemStack(Material.BOOK),
-            ThemeType.MAIN.getColor() + "指南"
+            ThemeType.MAIN.getColor() + "指南/教程"
         )
     );
     public static final StoryCollectionFlexGroup STORY_COLLECTION = new StoryCollectionFlexGroup(
