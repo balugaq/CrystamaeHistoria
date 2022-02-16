@@ -249,8 +249,8 @@ public class LiquefactionBasinCache extends DisplayStandHolder {
 
         if (instancePlate == null) {
             CrystamaeHistoria.getInstance().getLogger().warning(
-                "The charged plate used has not been configured correctly. /sf cheat charged plates will not " +
-                    "work in the Liquefaction Basin. If this is not the case, please raises an issue."
+                "充能法术板配置不正确. 使用 /sf cheat 得到的充能法术板无法正常使用" +
+                    "如果你没有使用作弊模式，请汇报该问题"
             );
             item.remove();
             return;

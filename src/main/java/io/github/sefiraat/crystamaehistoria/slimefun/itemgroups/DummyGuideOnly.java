@@ -16,11 +16,11 @@ public class DummyGuideOnly {
         new ItemStack(Material.BOOK),
         ThemeType.MECHANISM,
         "指南",
-        "这只是一个指南",
+        "这只是一个指南物品",
         "由于魔法水晶编年史中",
         "部分物品的制作方式",
         "与其他附属插件不同",
-        "你可以查看指南来了解"
+        "你可以通过查看指南来了解详情"
     );
     public static final RecipeType TYPE = new RecipeType(Keys.GUIDE_ONLY, STACK);
 }

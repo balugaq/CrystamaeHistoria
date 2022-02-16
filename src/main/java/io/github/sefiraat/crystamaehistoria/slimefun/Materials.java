@@ -107,7 +107,7 @@ public class Materials {
                         "物理形态的魔法水晶",
                         "高等级的方块可以提供类型更稀有的魔法水晶",
                         "",
-                        "包含 " + Crystal.getRarityValueMap().get(rarity) + " 单位的液态魔法水晶"
+                        "可液化为 " + Crystal.getRarityValueMap().get(rarity) + " 单位的液化魔法水晶"
                     ),
                     DummyRealisationAltar.TYPE,
                     new ItemStack[]{null, null, null, null, new ItemStack(Material.AMETHYST_CLUSTER), null, null, null, null},

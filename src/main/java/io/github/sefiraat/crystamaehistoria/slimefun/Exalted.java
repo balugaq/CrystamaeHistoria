@@ -60,12 +60,12 @@ public class Exalted {
                 "CRY_EXALTED_BEACON",
                 new ItemStack(Material.BEACON),
                 ThemeType.EXALTED,
-                "Exalted Beacon",
+                "尊贵的信标",
                 "A powerful beacon with incredible",
                 "potential. Must be placed on a",
                 "Exaltation Stand to operate.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Story Rank > Emeritus Professor"
+                ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedBeaconRecipe.getDisplayRecipe()
@@ -91,7 +91,7 @@ public class Exalted {
                 "Must be placed on an Exaltation",
                 "Stand to operate.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Story Rank > Emeritus Professor"
+                ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedFertilityPharoRecipe.getDisplayRecipe()
@@ -117,7 +117,7 @@ public class Exalted {
                 "Must be placed on an Exaltation",
                 "Stand to operate.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Spell Rank > Grandmaster Magus"
+                ThemeType.CLICK_INFO.getColor() + "需要: 法术等级 达到 宗师级魔法师"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedHarvesterRecipe.getDisplayRecipe()
@@ -141,7 +141,7 @@ public class Exalted {
                 "A magical construct that burns",
                 "brightly like the sun.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during the day"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在白天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedDawnRecipe.getDisplayRecipe(),
@@ -166,7 +166,7 @@ public class Exalted {
                 "A magical construct shines",
                 "as vivid as the new moon",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during the night"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在夜间合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedDuskRecipe.getDisplayRecipe(),
@@ -191,7 +191,7 @@ public class Exalted {
                 "A magical construct emanating",
                 "the power of a sun.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during a clear day"
+                ThemeType.CLICK_INFO.getColor() + "需要: 需要在晴天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedSunRecipe.getDisplayRecipe(),
@@ -216,7 +216,7 @@ public class Exalted {
                 "A magical construct emanating",
                 "the destruction of a storm.",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during a storm"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在雨天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedStormRecipe.getDisplayRecipe(),

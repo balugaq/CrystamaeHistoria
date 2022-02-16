@@ -23,7 +23,7 @@ public final class ItemGroups {
         Keys.newKey("dummy"),
         new CustomItemStack(
             new ItemStack(Material.FIRE_CHARGE),
-            ThemeType.MAIN.getColor() + "Dummy Crystamae Historia"
+            ThemeType.MAIN.getColor() + "魔法水晶编年史 - 占位符"
         )
     );
     public static final MainFlexGroup MAIN = new MainFlexGroup(

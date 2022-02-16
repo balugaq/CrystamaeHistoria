@@ -200,7 +200,7 @@ public class Tools {
                 ThemeType.TOOL,
                 "魔法盐",
                 "一种特制的盐",
-                "可以从液化池中吸收液态魔法水晶",
+                "可以从液化池中吸收液化魔法水晶",
                 "",
                 "右键点击液化池以清空"
             ),
@@ -518,7 +518,7 @@ public class Tools {
                 ThemeType.TOOL,
                 "方块隐藏器 - 能源节点",
                 "(消耗品)",
-                "右键点击一个能源",
+                "右键点击一个能源节点",
                 "以使用副手上的方块隐藏该节点"
             );
             RecipeItem energyNetCoverRecipe = new RecipeItem(
@@ -551,12 +551,10 @@ public class Tools {
                 "CRY_NETWORK_COVER",
                 new ItemStack(Material.PAPER),
                 ThemeType.TOOL,
-                "Block Veil - Networks",
-                "Right click to place a magical",
-                "block veil over a Networks node.",
-                "The cover will mimic the block",
-                "in your offhand.",
-                "One time use per item."
+                "方块隐藏器 - 网络节点",
+                "(消耗品)",
+                "右键点击一个网络节点",
+                "以使用副手上的方块隐藏该节点"
             );
             RecipeItem networksCoverRecipe = new RecipeItem(
                 NetworksSlimefunItemStacks.NETWORK_BRIDGE,
