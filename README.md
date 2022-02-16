@@ -6,15 +6,15 @@
 
 ## 记录者
 
-记录者是一个魔法装置，你可以从方块中获取它们经历过的故事。  
+记录者是一个魔法装置，你可以从物品中发掘它们的故事。  
 当这些故事被发掘出来后，你便可以直接阅读这些故事。  
-这些故事有不同的等级，以方块的类型来确定。
+故事有不同的等级，根据物品的类型来确定。
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_chronicler_panel.gif"></p>
 
 ## 现实祭坛
 
-现实祭坛将会从已发掘故事的方块中缓慢地提取魔法能量。这会在现实祭坛周围生成魔法水晶簇。  
+现实祭坛将会从已发掘故事的物品中缓慢地提取魔法能量。这会在现实祭坛周围生成魔法水晶簇。  
 当魔法能量完全被提取出来后，你可以破坏生成的魔法水晶簇，以获取其中包含的魔法的物理形态———魔法水晶。  
 获得的水晶类型取决于故事的类型。
 
@@ -22,35 +22,32 @@
 
 ## 液化池
 
-魔法水晶主要用于液化池。液化池会将投入其中魔法水晶转化为液体形式。  
+魔法水晶主要用于液化池。液化池会将投入其中魔法水晶转化为液化魔法水晶。  
 当投入有效的催化剂后，液化池中的液体会开始转换为一件魔法造物。
 
 使用液化池时需要小心，错误的配方会导致所有材料的损失，有时候还会有毁灭性的影响。
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_liquefaction_basin.gif"></p>
 
-## 魔法板
+## 魔法板 & 法术板
 
 你可以使用钢板作为催化剂，来制作魔法板。  
-魔法板可以吸收魔法能量。在液化池中放入至少3种不同类型的魔法水晶，液化池就会
-Using a steel plate as a catalyst, you can create a magical imbued plate. The plate will absorb the magic given to it
-and, based on the top 3 magical values, will produce a plate that is able to channel a magical spell. 80 possible plate
-combinations are available meaning 80 possible magical spells. Plates are attached to Staves using the Stave
-Configurator.
+在液化池中放入至少3种不同类型的魔法水晶，然后投入魔法板。如果三种魔法水晶可以制造出法术，那么魔法板会开始吸收魔法能量，变成法术板。  
+一共有80多种可用的组合等待你发掘。
 
-Plates hold the potential for a magical spell but will need refilling with Crystamae as the magical energy is used.
-There is no limit to the stored Crystamae. You can recharge a plate by dropping it into a basin.
+在法杖配置器中，将法术板绑定至法杖上。
+
+法术板包含一个可用的法术，但如果上面的能量用完，你就要使用制造法术时所使用的3种不同类型的魔法水晶为法术板重新充能。
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_plate_filling.gif"></p>
 
 ## 法杖配置器
 
-法杖很容易制作
-A Stave is, surprisingly, very easy to craft and source. The downside being is that the Stave does nothing by itself.
-Just like some sorcerers use runes to imbue a staff with magic, the Stave requires a filled Magical Plate to channel
-magic. The configurator allows you to add/remove 4 plates to the Stave at any given time. Each plate binds it's spell to
-a specific player action (Left, Right, Shift-Left and Shift-Right click). Plates can be added and removed freely to
-customise your load-out whenever.
+法杖很容易制作。法杖本身没有任何作用，你需要给法杖绑定法术。  
+就像巫师使用符文给法杖注入魔力一样，法杖需要法术板才能释放法术。
+
+法杖配置器让你可以给法杖添加最多4个法术（分别通过左键点击、右键点击、Shift+左键点击、Shift+右键点击来释放）。你可以随时更换法杖上绑定的法术。
+
 
 <p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_stave_configurator.gif"></p>
 
