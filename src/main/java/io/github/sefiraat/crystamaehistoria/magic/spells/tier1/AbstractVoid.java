@@ -64,9 +64,15 @@ public class AbstractVoid extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "抽象虚空";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Swaps everything around!"
+            "交换周围的一切生物!"
         };
     }
 

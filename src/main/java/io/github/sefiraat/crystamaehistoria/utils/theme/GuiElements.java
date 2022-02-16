@@ -98,11 +98,11 @@ public class GuiElements {
     }
 
     @ParametersAreNonnullByDefault
-    public static ItemStack getSpellNotUnlockedIcon(String id) {
+    public static ItemStack getSpellNotUnlockedIcon(String name) {
         return ThemeType.themedItemStack(
             Material.BARRIER,
             ThemeType.RESEARCH,
-            ThemeType.toTitleCase(id),
+            name,
             MessageFormat.format("{0}{1}已锁定", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
             "该法术还没有被解锁",
             "当你在液化池中首次",

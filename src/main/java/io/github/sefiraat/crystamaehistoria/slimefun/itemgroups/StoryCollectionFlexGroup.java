@@ -18,6 +18,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
+import net.guizhanss.minecraft.crystamaehistoria.utils.GuiItems;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -111,7 +112,7 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
         reapplyFooter(player, profile, mode, menu, page, totalPages);
 
         // Back
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(player, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(player));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             SlimefunGuide.openItemGroup(profile, ItemGroups.MAIN, mode, 1);
             return false;
@@ -148,7 +149,7 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
     @ParametersAreNonnullByDefault
     private void displayDefinition(Player p, PlayerProfile profile, SlimefunGuideMode mode, ChestMenu menu, int returnPage, BlockDefinition definition) {
         // Back Button
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(p, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(p));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             setupPage(player1, profile, mode, menu, returnPage);
             return false;
@@ -232,7 +233,7 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
         }).map(s -> ThemeType.PASSIVE.getColor() + s).collect(Collectors.toList());
 
         for (StoryType storyType : storyTypes) {
-            lore.add(ThemeType.CLICK_INFO.getColor() + ThemeType.toTitleCase(storyType.toString()));
+            lore.add(ThemeType.CLICK_INFO.getColor() + ThemeType.getByType(storyType).getLoreLine());
         }
         return new CustomItemStack(
             Material.DEEPSLATE_BRICK_SLAB,

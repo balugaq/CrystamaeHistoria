@@ -120,7 +120,7 @@ public class Tools {
                 "CRY_CHARGED_PLATE_1",
                 new ItemStack(Material.PAPER),
                 ThemeType.TOOL,
-                "充能的基础魔法板",
+                "基础法术板",
                 "经过魔法充能的魔法板"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
@@ -180,8 +180,8 @@ public class Tools {
                 "右键点击一个方块来查看信息",
                 "",
                 ThemeType.CLICK_INFO.getColor() + "可用于:",
-                ChatColor.DARK_BLUE + "液化池",
-                ChatColor.DARK_BLUE + "经验收集器"
+                "液化池",
+                "经验收集器"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -219,7 +219,7 @@ public class Tools {
                 "CRY_RECALL_LATTICE",
                 new ItemStack(Material.NETHER_STAR),
                 ThemeType.TOOL,
-                "魔法传送信标",
+                "魔法传送网",
                 "右键点击传送至绑定的路标",
                 "",
                 "Shift+右键点击一个路标以绑定"

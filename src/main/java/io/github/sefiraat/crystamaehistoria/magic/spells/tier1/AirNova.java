@@ -74,10 +74,18 @@ public class AirNova extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "新星冲击";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a massive nova of air",
-            "around you to knockback foes."
+            "",
+            "\"快使用神奇的猩猩充饥~\"",
+            "",
+            "释放新星冲击，击退附近的敌人"
         };
     }
 

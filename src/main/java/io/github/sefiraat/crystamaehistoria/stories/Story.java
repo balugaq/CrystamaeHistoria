@@ -95,7 +95,7 @@ public class Story {
     }
 
     public String getDisplayRarity() {
-        return "[" + rarity + "] ";
+        return "[" + ThemeType.getByRarity(rarity).getLoreLine() + "] ";
     }
 
     public List<String> getStoryLore() {

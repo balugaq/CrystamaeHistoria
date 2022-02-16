@@ -18,6 +18,8 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
+import net.guizhanss.guizhanlib.minecraft.helper.potion.PotionEffectTypeHelper;
+import net.guizhanss.minecraft.crystamaehistoria.utils.GuiItems;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -109,7 +111,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         reapplyFooter(player, profile, mode, menu, page, totalPages);
 
         // Back
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(player, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(player));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             SlimefunGuide.openItemGroup(profile, ItemGroups.MAIN, mode, 1);
             return false;
@@ -133,7 +135,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
                         return false;
                     });
                 } else {
-                    menu.replaceExistingItem(slot, GuiElements.getSpellNotUnlockedIcon(spellType.getId()));
+                    menu.replaceExistingItem(slot, GuiElements.getSpellNotUnlockedIcon(spellType.getSpell().getName()));
                     menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> false);
                 }
             } else {
@@ -147,7 +149,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
     private void displayDefinition(Player p, PlayerProfile profile, SlimefunGuideMode mode, ChestMenu menu, int returnPage, SpellType spellType) {
         final Spell spell = spellType.getSpell();
         // Back Button
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(p, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(p));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             setupPage(player1, profile, mode, menu, returnPage);
             return false;
@@ -230,21 +232,19 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
     private ItemStack getMechanismStack() {
         final List<String> lore = Arrays.stream(
             new String[]{
-                "Spells are created by combining",
-                "liquid crystamae in a Liquefaction",
-                "Basin.",
-                "The highest 3 amounts of liquid",
-                "determine the spell created (left).",
+                "在液化池中投入魔法水晶",
+                "将其转化为液化魔法水晶",
                 "",
-                "Throw in a Spell Plate when ready",
-                "to create your spell."
+                "数量最多的3种液化魔法水晶决定法术的类型",
+                "",
+                "投入一个魔法板来制作法术"
             }
         ).map(s -> ThemeType.PASSIVE.getColor() + s)
             .collect(Collectors.toList());
 
         return new CustomItemStack(
             Material.CAULDRON,
-            ThemeType.MAIN.getColor() + "Liquefaction Basin",
+            ThemeType.MAIN.getColor() + "液化池",
             lore
         );
     }
@@ -255,15 +255,15 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor color = ThemeType.CLICK_INFO.getColor();
         final ChatColor passive = ThemeType.PASSIVE.getColor();
 
-        final String crysta = MessageFormat.format("{0}Crysta Cost per Cast: {1}{2}", color, passive, spellCore.getCrystaCost());
-        final String crystaMulti = MessageFormat.format("{0}Crysta cost {1} with stave tier", color, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
-        final String cooldown = MessageFormat.format("{0}Cooldown (sec) on use: {1}{2}", color, passive, spell.getSpellCore().getCooldownSeconds());
-        final String cooldownDivided = MessageFormat.format("{0}Cooldown {1} with stave tier", color, spellCore.isDamageMultiplied() ? "isn't reduced" : "is reduced");
+        final String crysta = MessageFormat.format("{0}每次施法消耗充能: {1}{2}", color, passive, spellCore.getCrystaCost());
+        final String crystaMulti = MessageFormat.format("{0}施法消耗{1}随着法杖等级提升而增加", color, spellCore.isDamageMultiplied() ? "会" : "不会");
+        final String cooldown = MessageFormat.format("{0}冷却时间(秒): {1}{2}", color, passive, spell.getSpellCore().getCooldownSeconds());
+        final String cooldownDivided = MessageFormat.format("{0}冷却时间{1}随着法杖等级提升而减少", color, spellCore.isDamageMultiplied() ? "不会" : "会");
 
 
         return new CustomItemStack(
             Material.GLOW_BERRIES,
-            ThemeType.MAIN.getColor() + "Basic Details",
+            ThemeType.MAIN.getColor() + "基本信息",
             crysta,
             crystaMulti,
             cooldown,
@@ -278,29 +278,29 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor passive = ThemeType.PASSIVE.getColor();
         final List<String> lore = new ArrayList<>();
 
-        final String damageMessage = MessageFormat.format("{0}Damage: {1}{2}", color, passive, spellCore.getDamageAmount());
-        final String damageMulti = MessageFormat.format("{0}Damage {1} with stave tier", color, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
+        final String damageMessage = MessageFormat.format("{0}伤害: {1}{2}", color, passive, spellCore.getDamageAmount());
+        final String damageMulti = MessageFormat.format("{0}伤害{1}随着法杖等级提升而增加", color, spellCore.isDamageMultiplied() ? "会" : "不会");
 
-        final String healMessage = MessageFormat.format("{0}Heal Amount: {1}{2}", color, passive, spellCore.getDamageAmount());
-        final String healMulti = MessageFormat.format("{0}Heal Amount {1} with stave tier", color, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
+        final String healMessage = MessageFormat.format("{0}治疗量: {1}{2}", color, passive, spellCore.getDamageAmount());
+        final String healMulti = MessageFormat.format("{0}治疗量{1}随着法杖等级提升而增加", color, spellCore.isDamageMultiplied() ? "会" : "不会");
 
         if (spellCore.isDamagingSpell()) {
             lore.add(damageMessage);
             lore.add(damageMulti);
         } else {
-            lore.add(passive + "This spell does not damage.");
+            lore.add(passive + "该法术不会造成伤害.");
         }
 
         if (spellCore.isHealingSpell()) {
             lore.add(healMessage);
             lore.add(healMulti);
         } else {
-            lore.add(passive + "This spell does not heal.");
+            lore.add(passive + "该法术不会进行治疗.");
         }
 
         return new CustomItemStack(
             Material.MAP,
-            ThemeType.MAIN.getColor() + "Spell Values",
+            ThemeType.MAIN.getColor() + "法术属性",
             lore
         );
     }
@@ -315,17 +315,15 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         final int ticks = spellCore.getNumberOfTicks();
 
-        final String instantCast = MessageFormat.format("{0}Instant: {1}Fires immediately when cast", color, passive);
-        final String damagingSpell = MessageFormat.format("{0}Damaging: {1}Will cause damage and/or debuff", color, passive);
-        final String healingSpell = MessageFormat.format("{0}Healing: {1}Will heal and/or buff", color, passive);
-        final String effectingSpell = MessageFormat.format("{0}Effecting: {1}Will apply potion effects", color, passive);
-        final String tickingSpell1 = MessageFormat.format("{0}Ticking: {1}Effects of this spell will", color, passive);
-        final String tickingSpell2 = MessageFormat.format("{0}fire ({1}{2}{3}) times", passive, notice, ticks, passive);
-        final String tickingSpell3 = MessageFormat.format("{0}Tick number {1} with stave tier", passive, spellCore.isDamageMultiplied() ? "increases" : "doesn't increase");
+        final String instantCast = MessageFormat.format("{0}瞬间: {1}施法后立即生效", color, passive);
+        final String damagingSpell = MessageFormat.format("{0}伤害: {1}会造成伤害、附带负面效果", color, passive);
+        final String healingSpell = MessageFormat.format("{0}治疗: {1}会进行治疗、附带正面效果", color, passive);
+        final String effectingSpell = MessageFormat.format("{0}特效: {1}会附带药水效果", color, passive);
+        final String tickingSpell1 = MessageFormat.format("{0}多重: {1}该法术会释放 {2}{3}{4} 次", color, passive, notice, ticks, passive);
+        final String tickingSpell2 = MessageFormat.format("{0}施法次数{1}随着法杖等级提升而增加", passive, spellCore.isDamageMultiplied() ? "会" : "不会");
 
-        final String projectileSpell1 = MessageFormat.format("{0}Projectile: {1}This spell fires a projectile", color, passive);
-        final String projectileSpell2 = MessageFormat.format("{0}which, when it hits, may induce", passive);
-        final String projectileSpell3 = MessageFormat.format("{0}further effects", passive);
+        final String projectileSpell1 = MessageFormat.format("{0}弹射物: {1}该法术会发射弹射物", color, passive);
+        final String projectileSpell2 = MessageFormat.format("{0}命中后会附带后续效果", passive);
 
         if (spellCore.isInstantCast()) {
             lore.add(instantCast);
@@ -342,16 +340,14 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         if (spellCore.isTickingSpell()) {
             lore.add(tickingSpell1);
             lore.add(tickingSpell2);
-            lore.add(tickingSpell3);
         }
         if (spellCore.isProjectileSpell()) {
             lore.add(projectileSpell1);
             lore.add(projectileSpell2);
-            lore.add(projectileSpell3);
         }
         return new CustomItemStack(
             Material.NAME_TAG,
-            ThemeType.MAIN.getColor() + "Spell Cast Type(s)",
+            ThemeType.MAIN.getColor() + "施法类型",
             lore
         );
     }
@@ -362,9 +358,9 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor passive = ThemeType.PASSIVE.getColor();
         final List<String> lore = new ArrayList<>();
 
-        final String message = MessageFormat.format("{0}Range: {1}{2}", color, passive, spell.getSpellCore().getRange());
-        final String multiMessage = MessageFormat.format("{0}Range {1} with stave tier", passive, spell.getSpellCore().isRangeMultiplied() ? "increases" : "doesn't increase");
-        final String noRange = passive + "Not effected by range";
+        final String message = MessageFormat.format("{0}范围: {1}{2}", color, passive, spell.getSpellCore().getRange());
+        final String multiMessage = MessageFormat.format("{0}范围{1}随着法杖等级提升而增加", passive, spell.getSpellCore().isRangeMultiplied() ? "会" : "不会");
+        final String noRange = passive + "不会受到范围的影响";
 
         if (spell.getSpellCore().getKnockbackAmount() > 0) {
             lore.add(message);
@@ -375,7 +371,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         return new CustomItemStack(
             Material.TARGET,
-            ThemeType.MAIN.getColor() + "Range",
+            ThemeType.MAIN.getColor() + "范围",
             lore
         );
     }
@@ -386,9 +382,9 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor passive = ThemeType.PASSIVE.getColor();
         final List<String> lore = new ArrayList<>();
 
-        final String message = MessageFormat.format("{0}Knockback: {1}{2}", color, passive, spell.getSpellCore().getKnockbackAmount());
-        final String multiMessage = MessageFormat.format("{0}Amount {1} with stave tier", passive, spell.getSpellCore().isKnockbackMultiplied() ? "increases" : "doesn't increase");
-        final String noKnockback = passive + "No direct knockback";
+        final String message = MessageFormat.format("{0}击退: {1}{2}", color, passive, spell.getSpellCore().getKnockbackAmount());
+        final String multiMessage = MessageFormat.format("{0}击退等级{1}随着法杖等级提升而增加", passive, spell.getSpellCore().isKnockbackMultiplied() ? "会" : "不会");
+        final String noKnockback = passive + "没有击退效果";
 
         if (spell.getSpellCore().getKnockbackAmount() > 0) {
             lore.add(message);
@@ -399,7 +395,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         return new CustomItemStack(
             Material.SLIME_BLOCK,
-            ThemeType.MAIN.getColor() + "Knockback",
+            ThemeType.MAIN.getColor() + "击退",
             lore
         );
     }
@@ -410,10 +406,10 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final ChatColor color = ThemeType.CLICK_INFO.getColor();
         final ChatColor passive = ThemeType.PASSIVE.getColor();
 
-        final String aoeMessage = MessageFormat.format("{0}Projectile AoE: {1}{2}", color, passive, spellCore.getProjectileAoeRange());
-        final String aoeMultiMessage = MessageFormat.format("{0}AoE {1} with stave tier", passive, spellCore.isProjectileAoeMultiplied() ? "increases" : "doesn't increase");
-        final String knockbackMessage = MessageFormat.format("{0}Projectile Knockback: {1}{2}", color, passive, spellCore.getKnockbackAmount());
-        final String knockbackMultiMessage = MessageFormat.format("{0}Knockback {1} with stave tier", passive, spellCore.isKnockbackMultiplied() ? "increases" : "doesn't increase");
+        final String aoeMessage = MessageFormat.format("{0}弹射物溅射范围: {1}{2}", color, passive, spellCore.getProjectileAoeRange());
+        final String aoeMultiMessage = MessageFormat.format("{0}溅射范围{1}随着法杖等级提升而增加", passive, spellCore.isProjectileAoeMultiplied() ? "会" : "不会");
+        final String knockbackMessage = MessageFormat.format("{0}弹射物击退: {1}{2}", color, passive, spellCore.getKnockbackAmount());
+        final String knockbackMultiMessage = MessageFormat.format("{0}击退等级{1}随着法杖等级提升而增加", passive, spellCore.isKnockbackMultiplied() ? "会" : "不会");
 
         final List<String> lore = new ArrayList<>();
 
@@ -424,12 +420,12 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
             lore.add(knockbackMessage);
             lore.add(knockbackMultiMessage);
         } else {
-            lore.add(passive + "Not a projectile spell");
+            lore.add(passive + "不是弹射物类型的法术");
         }
 
         return new CustomItemStack(
             Material.FIRE_CHARGE,
-            ThemeType.MAIN.getColor() + "Projectile Information",
+            ThemeType.MAIN.getColor() + "弹射物信息",
             lore
         );
     }
@@ -443,24 +439,24 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
         if (spellCore.isEffectingSpell()) {
             final String effectAmplification = MessageFormat.format(
-                "{0}Effect power {1} with stave tier",
+                "{0}药水效果等级{1}随着法杖等级提升而增加",
                 passive,
-                spellCore.isAmplificationMultiplied() ? "increases" : "doesn't increase"
+                spellCore.isAmplificationMultiplied() ? "会" : "不会"
             );
             final String effectDuration = MessageFormat.format(
-                "{0}Effect duration {1} with stave tier",
+                "{0}药水效果持续时间{1}随着法杖等级提升而增加",
                 passive,
-                spellCore.isEffectDurationMultiplied() ? "increases" : "doesn't increase"
+                spellCore.isEffectDurationMultiplied() ? "会" : "不会"
             );
 
             if (spellCore.getNegativeEffectPairMap().size() > 0) {
-                lore.add(color + "Negative Effects:");
+                lore.add(color + "负面效果:");
                 spellCore.getNegativeEffectPairMap().forEach(
                     (type, pair) -> {
                         final String negativeEffectMessage = MessageFormat.format(
-                            "{0}{1}: {2}Power ({3}) - Duration ({4})",
+                            "{0}{1}: {2}等级 ({3}) - 持续时间 ({4})",
                             color,
-                            ThemeType.toTitleCase(type.getName()),
+                            PotionEffectTypeHelper.getName(type),
                             passive,
                             pair.getFirstValue(),
                             pair.getSecondValue()
@@ -471,13 +467,13 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
             }
 
             if (spellCore.getPositiveEffectPairMap().size() > 0) {
-                lore.add(color + "Positive Effects:");
+                lore.add(color + "正面效果:");
                 spellCore.getPositiveEffectPairMap().forEach(
                     (type, pair) -> {
                         final String positiveEffectMessage = MessageFormat.format(
-                            "{0}{1}: {2}Power ({3}) - Duration ({4})",
+                            "{0}{1}: {2}等级 ({3}) - 持续时间 ({4})",
                             color,
-                            ThemeType.toTitleCase(type.getName()),
+                            PotionEffectTypeHelper.getName(type),
                             passive,
                             pair.getFirstValue(),
                             pair.getSecondValue()
@@ -491,12 +487,12 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
             lore.add(effectAmplification);
             lore.add(effectDuration);
         } else {
-            lore.add(passive + "Spell has no effects");
+            lore.add(passive + "没有药水效果");
         }
 
         return new CustomItemStack(
             Material.BREWING_STAND,
-            ThemeType.MAIN.getColor() + "Effects",
+            ThemeType.MAIN.getColor() + "药水效果",
             lore
         );
     }
@@ -508,12 +504,12 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
         final List<String> lore = new ArrayList<>();
         final SpellRank spellRank = PlayerStatistics.getSpellRank(player.getUniqueId());
 
-        lore.add(MessageFormat.format("{0}Spells Unlocked: {1}{2}", color, passive, PlayerStatistics.getSpellsUnlocked(player.getUniqueId())));
-        lore.add(MessageFormat.format("{0}Rank: {1}{2}", color, spellRank.getTheme().getColor(), spellRank.getTheme().getLoreLine()));
+        lore.add(MessageFormat.format("{0}已解锁法术: {1}{2}", color, passive, PlayerStatistics.getSpellsUnlocked(player.getUniqueId())));
+        lore.add(MessageFormat.format("{0}等级: {1}{2}", color, spellRank.getTheme().getColor(), spellRank.getTheme().getLoreLine()));
 
         return new CustomItemStack(
             Material.TARGET,
-            ThemeType.MAIN.getColor() + "Spell Statistics",
+            ThemeType.MAIN.getColor() + "法术统计",
             lore
         );
     }

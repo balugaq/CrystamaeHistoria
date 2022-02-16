@@ -54,10 +54,10 @@ public class Uniques {
                 "CRY_SPELL_TROPHY",
                 new ItemStack(Material.PAPER),
                 ThemeType.CRAFTING,
-                "Proofs: Grandmaster Magus",
-                "Proof that you are simply the best.",
+                "传说之证: 宗师级魔法师",
+                "证明你是最优秀的",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Spell Rank > Grandmaster Magus"
+                ThemeType.CLICK_INFO.getColor() + "需要: 法术等级 达到 宗师级魔法师"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             spellTrophyRecipe.getDisplayRecipe(),
@@ -83,10 +83,10 @@ public class Uniques {
                 "CRY_STORY_TROPHY",
                 new ItemStack(Material.PAPER),
                 ThemeType.CRAFTING,
-                "Proofs: Emeritus Professor",
-                "Proof that you are simply the best.",
+                "传说之证: 荣誉教授",
+                "证明你是最优秀的",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Story Rank > Emeritus Professor"
+                ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             storyTrophyRecipe.getDisplayRecipe(),
@@ -112,11 +112,11 @@ public class Uniques {
                 "CRY_CHRISTMAS_TROPHY",
                 new ItemStack(Material.SPRUCE_SAPLING),
                 ThemeType.CRAFTING,
-                "Merry Christmas",
-                "A little gift for you... but you",
-                "have to work for it!",
+                "圣诞快乐",
+                "为你们准备了一些小礼物",
+                "你只需要把它制作出来",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Can only be crafted during the holidays"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在圣诞节期间制作（不仅限当天）"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             christmasTrophyRecipe.getDisplayRecipe(),
@@ -150,10 +150,10 @@ public class Uniques {
                 "CRY_VALENTINES_TROPHY",
                 new ItemStack(Material.PINK_DYE),
                 ThemeType.CRAFTING,
-                "Happy Valentines Day",
-                "A little love goes a long way.",
+                "情人节快乐",
+                "一点小小的爱，希望能有帮助",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Can only be crafted when love is in the air"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在情人节期间制作（不仅限当天）"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             valentinesTrophyRecipe.getDisplayRecipe(),

@@ -5,7 +5,7 @@ ACACIA_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Acacia)
+    name: Ship-shape (金合欢)
     type: PHILOSOPHICAL
     lore:
       - Live in the sunshine, swim the sea
@@ -18,7 +18,7 @@ ACACIA_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Acacia)
+    name: Depressed (金合欢)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -30,12 +30,12 @@ ACACIA_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway (Acacia)
+    name: 门 (金合欢)
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 ACACIA_FENCE:
@@ -44,7 +44,7 @@ ACACIA_FENCE:
     - HUMAN
     - ANIMAL
   story:
-    name: Livestock (Acacia)
+    name: Livestock (金合欢)
     type: ANIMAL
     lore:
       - Nothing brings more joy to a fence
@@ -58,7 +58,7 @@ ACACIA_FENCE_GATE:
     - MECHANICAL
     - ANIMAL
   story:
-    name: Gate (Acacia)
+    name: Gate (金合欢)
     type: MECHANICAL
     lore:
       - Still round the corner there may wait,
@@ -72,7 +72,7 @@ ACACIA_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Leaf me alone! (Acacia)
+    name: Leaf me alone! (金合欢)
     type: PHILOSOPHICAL
     lore:
       - Gently swaying in a cool breeze,
@@ -86,7 +86,7 @@ ACACIA_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Log (Acacia)
+    name: Punching Trees Gives Me Log (金合欢)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -99,7 +99,7 @@ ACACIA_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: Walk the Plank (Acacia)
+    name: Walk the Plank (金合欢)
     type: HUMAN
     lore:
       - The first step on your crafting journey
@@ -112,7 +112,7 @@ ACACIA_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: Under Pressure (Acacia)
+    name: Under Pressure (金合欢)
     type: VOID
     lore:
       - Being walked all over will drop any
@@ -125,7 +125,7 @@ ACACIA_SAPLING:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: Growth (Acacia)
+    name: Growth (金合欢)
     type: ELEMENTAL
     lore:
       - A youthful spirit empowered to grow
@@ -138,7 +138,7 @@ ACACIA_SIGN:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: Signed (Acacia)
+    name: Signed (金合欢)
     type: PHILOSOPHICAL
     lore:
       - Imbued with the thoughts of those
@@ -150,7 +150,7 @@ ACACIA_SLAB:
   elements:
     - HUMAN
   story:
-    name: A Cut Below (Acacia)
+    name: A Cut Below (金合欢)
     type: HUMAN
     lore:
       - Ripped in half and divided from
@@ -163,7 +163,7 @@ ACACIA_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: Arise (Acacia)
+    name: Arise (金合欢)
     type: CELESTIAL
     lore:
       - Lives to feel the joy of others being
@@ -176,7 +176,7 @@ ACACIA_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: To the Pits (Acacia)
+    name: To the Pits (金合欢)
     type: VOID
     lore:
       - Awaiting the perfect moment to drop an
@@ -189,7 +189,7 @@ ACACIA_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Acacia)
+    name: Punching Trees Gives Me Wood (金合欢)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -654,12 +654,12 @@ BIRCH_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway (Birch)
+    name: 门 (Birch)
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 BIRCH_FENCE:
@@ -2772,12 +2772,12 @@ CRIMSON_DOOR:
     - MECHANICAL
     - VOID
   story:
-    name: Gateway (Crimson)
+    name: 门 (Crimson)
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,1,1 ]
 
 CRIMSON_FENCE:
@@ -3309,12 +3309,12 @@ DARK_OAK_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway (Dark Oak)
+    name: 门 (Dark Oak)
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 DARK_OAK_FENCE:
@@ -6471,12 +6471,12 @@ JUNGLE_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway (Jungle)
+    name: 门 (Jungle)
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 JUNGLE_FENCE:
@@ -8617,12 +8617,12 @@ OAK_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway
+    name: 门
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 OAK_FENCE:
@@ -11667,12 +11667,12 @@ SPRUCE_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: Gateway
+    name: 门
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,0,1 ]
 
 SPRUCE_FENCE:
@@ -12099,7 +12099,7 @@ STRIPPED_ACACIA_LOG:
     - ELEMENTAL
     - HUMAN
   story:
-    name: Stripped Bare (Acacia Log)
+    name: Stripped Bare (金合欢 Log)
     type: HUMAN
     lore:
       - With nothing left to hide, this spirit
@@ -12112,7 +12112,7 @@ STRIPPED_ACACIA_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: Stripped Bare (Acacia Wood)
+    name: Stripped Bare (金合欢 Wood)
     type: HUMAN
     lore:
       - With nothing left to hide, this spirit
@@ -12692,12 +12692,12 @@ WARPED_DOOR:
     - MECHANICAL
     - VOID
   story:
-    name: Gateway
+    name: 门
     type: HUMAN
     lore:
-      - Every entrance  is also an exit.
-      - Doors protects from the outside but
-      - don't let them keep you in!
+      - 每个入口都是出口。
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards: [ 0,2,0,0,1,0,0,1,1 ]
 
 WARPED_FENCE:
@@ -12804,7 +12804,7 @@ WARPED_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: Under Pressure (Acacia)
+    name: Under Pressure (金合欢)
     type: VOID
     lore:
       - Being walked all over will drop any

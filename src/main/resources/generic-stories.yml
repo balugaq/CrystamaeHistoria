@@ -1,11 +1,11 @@
 COMMON:
   Quiet Days:
-    name: Quiet Days
+    name: 安静的日子
     type: ELEMENTAL
     shards: [ 1,0,1,1,0,0,0,0,0 ]
     lore:
-      - Present during the beginning of the world.
-      - Everything was quiet and peaceful and serene.
+      - 在世界诞生时就存在于世界中
+      - 一切都很安静，很平静，很宁静。
 
   Grinding Gears:
     name: Grinding Gears

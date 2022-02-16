@@ -8,19 +8,22 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public enum SpellSlot {
-    LEFT_CLICK(1),
-    RIGHT_CLICK(2),
-    SHIFT_LEFT_CLICK(3),
-    SHIFT_RIGHT_CLICK(4);
+    LEFT_CLICK(1, "左键点击"),
+    RIGHT_CLICK(2, "右键点击"),
+    SHIFT_LEFT_CLICK(3, "Shift+左键点击"),
+    SHIFT_RIGHT_CLICK(4, "Shift+右键点击");
 
     @Getter
     protected static final SpellSlot[] cashedValues = values();
 
     @Getter
     private final int slot;
+    @Getter
+    private final String description;
 
-    SpellSlot(int slot) {
+    SpellSlot(int slot, String description) {
         this.slot = slot;
+        this.description = description;
     }
 
     @Nullable
