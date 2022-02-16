@@ -23,7 +23,7 @@ public final class ItemGroups {
         Keys.newKey("dummy"),
         new CustomItemStack(
             new ItemStack(Material.FIRE_CHARGE),
-            ThemeType.MAIN.getColor() + "魔法水晶编年史 - 占位符"
+            ThemeType.MAIN.getColor() + "魔法水晶编年史 - 不要使用这里的物品"
         )
     );
     public static final MainFlexGroup MAIN = new MainFlexGroup(
@@ -129,14 +129,14 @@ public final class ItemGroups {
                 new ItemStack(Material.DEEPSLATE_TILE_SLAB),
                 ThemeType.GUIDE,
                 "指南: 记录者",
-                "你可以在记录者中放置一个方块",
-                "记录者会\"发掘\"方块中含有的故事",
-                "故事的类型取决于方块的类型",
-                "而方块数量则是随机的，但随机范围与方块等级有关",
+                "你可以在记录者中放置一个原版物品",
+                "记录者会\"发掘\"物品中含有的故事",
+                "故事的类型取决于物品的类型",
+                "而故事数量则是随机的，但与物品级别有关",
                 "",
-                "记录者只会发掘至少T1的方块",
+                "所有可发掘的物品可以在\"故事集\"分类中查看",
                 "",
-                "当记录者完成发掘后，记录者上方的悬浮方块会消失"
+                "当记录者完成发掘后，记录者上方的悬浮物品会消失"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -150,8 +150,8 @@ public final class ItemGroups {
                 new ItemStack(Material.CHISELED_DEEPSLATE),
                 ThemeType.GUIDE,
                 "指南: 现实祭坛",
-                "将一个已被发掘的方块放入现实祭坛中",
-                "祭坛会开始从方块中提取魔法能量",
+                "将一个有故事的物品放入现实祭坛中",
+                "祭坛会开始从该物品中提取魔法能量",
                 "这会在周围生成紫水晶(必须同一高度)",
                 "",
                 "魔法水晶簇会缓慢生长，直到魔法能量被完全提取出来",
@@ -172,7 +172,7 @@ public final class ItemGroups {
                 "你可以使用液化池做出一些很酷的东西",
                 "",
                 "任何扔进液化池中的魔法水晶会转为液态",
-                "当你扔进不是魔法水晶的物品时",
+                "当你扔进其他物品时",
                 "液化池会尝试使用该物品进行合成",
                 "",
                 "如果你丢入错误的物品，你会失去所有魔法水晶"
@@ -191,10 +191,10 @@ public final class ItemGroups {
                 "指南: 法杖配置器",
                 "将法杖放置在输入栏",
                 "把充能的法术板放入法术栏",
-                "点击'Add Plates'. Click 'Remove' to remove",
-                "them again.",
+                "点击'保存法杖设置'来将法术绑定至法杖上",
+                "点击'移除法术板'来将法术板从法杖中取出",
                 "",
-                "Spells can be changed freely without cost."
+                "你可以在任何时间随意调整法杖上的法术"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -208,11 +208,9 @@ public final class ItemGroups {
                 new ItemStack(Material.PAPER),
                 ThemeType.GUIDE,
                 "指南: 制作法术",
-                "To make a spell, first craft a Basic",
-                "Spell Plate. The in the Liquefaction",
-                "Basin, fill with at least 3 different",
-                "types of Crystamae - then throw in the",
-                "Plate"
+                "要制作一个法术，你需要先制作一块基础魔法板。",
+                "然后在液化池中，放入足够数量的三种不同类型的魔法水晶",
+                "最后将魔法板投入液化池即可"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -225,14 +223,11 @@ public final class ItemGroups {
                 "CRY_GUIDE_CHARGE_SPELL",
                 new ItemStack(Material.PAPER),
                 ThemeType.GUIDE,
-                "指南: " +
-                    "充能法术",
-                "To refill a plate with crysta first",
-                "take it off of the stave using the",
-                "configurator. then in the Liquefaction",
-                "Basin, make the spell recipe and throw",
-                "the charged plate in. It will refill",
-                "the Crysta inside."
+                "指南: 充能法术",
+                "要为法术重新充能，你需要先",
+                "使用法杖配置器将法术板从法杖中取出",
+                "然后在液化池中，投入制作该法术所使用的三种魔法水晶",
+                "最后投入法术板，即可重新充能"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}

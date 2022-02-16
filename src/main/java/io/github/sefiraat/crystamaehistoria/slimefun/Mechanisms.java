@@ -63,10 +63,10 @@ public class Mechanisms {
                 new ItemStack(Material.COBBLED_DEEPSLATE_SLAB),
                 ThemeType.MECHANISM,
                 "记录者 (T1)",
-                "记录者可以在方块中寻找",
+                "记录者可以在任意物品中寻找",
                 "并发掘出隐藏在其中的故事",
                 "",
-                "可发掘 T1-T2 方块"
+                "可发掘 T1-T2 物品"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -85,10 +85,10 @@ public class Mechanisms {
                 new ItemStack(Material.DEEPSLATE_TILE_SLAB),
                 ThemeType.MECHANISM,
                 "记录者 (T2)",
-                "记录者可以在方块中寻找",
+                "记录者可以在任意物品中寻找",
                 "并发掘出隐藏在其中的故事",
                 "",
-                "可发掘 T1-T3 方块"
+                "可发掘 T1-T3 物品"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -113,10 +113,10 @@ public class Mechanisms {
                 new ItemStack(Material.NETHER_BRICK_SLAB),
                 ThemeType.MECHANISM,
                 "记录者 (T3)",
-                "记录者可以在方块中寻找",
+                "记录者可以在任意物品中寻找",
                 "并发掘出隐藏在其中的故事",
                 "",
-                "可发掘 T1-T4 方块"
+                "可发掘 T1-T4 物品"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             chroniclerT3Recipe.getDisplayRecipe(),
@@ -137,10 +137,10 @@ public class Mechanisms {
                 new ItemStack(Material.DARK_PRISMARINE_SLAB),
                 ThemeType.MECHANISM,
                 "记录者 (T4)",
-                "记录者可以在方块中寻找",
+                "记录者可以在任意物品中寻找",
                 "并发掘出隐藏在其中的故事",
                 "",
-                "可发掘 T1-T5 方块"
+                "可发掘 T1-T5 物品"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             chroniclerT4Recipe.getDisplayRecipe(),
@@ -155,10 +155,10 @@ public class Mechanisms {
                 new ItemStack(Material.CHISELED_DEEPSLATE),
                 ThemeType.MECHANISM,
                 "现实祭坛 (T1)",
-                "现实祭坛可以从已发掘出故事的方块中",
+                "现实祭坛可以从已发掘出故事的物品中",
                 "提取魔法能量，并将其转化为物理形态",
                 "",
-                "可提取 T1 - T2 方块"
+                "可提取 T1 - T2 物品"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -177,10 +177,10 @@ public class Mechanisms {
                 new ItemStack(Material.CHISELED_NETHER_BRICKS),
                 ThemeType.MECHANISM,
                 "现实祭坛 (T2)",
-                "现实祭坛可以从已发掘出故事的方块中",
+                "现实祭坛可以从已发掘出故事的物品中",
                 "提取魔法能量，并将其转化为物理形态",
                 "",
-                "可提取 T1 - T3 方块"
+                "可提取 T1 - T3 物品"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -205,10 +205,10 @@ public class Mechanisms {
                 new ItemStack(Material.CHISELED_RED_SANDSTONE),
                 ThemeType.MECHANISM,
                 "现实祭坛 (T3)",
-                "现实祭坛可以从已发掘出故事的方块中",
+                "现实祭坛可以从已发掘出故事的物品中",
                 "提取魔法能量，并将其转化为物理形态",
                 "",
-                "可提取 T1 - T4 方块"
+                "可提取 T1 - T4 物品"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             realisationT3Recipe.getDisplayRecipe(),
@@ -229,10 +229,10 @@ public class Mechanisms {
                 new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE),
                 ThemeType.MECHANISM,
                 "现实祭坛 (T4)",
-                "现实祭坛可以从已发掘出故事的方块中",
+                "现实祭坛可以从已发掘出故事的物品中",
                 "提取魔法能量，并将其转化为物理形态",
                 "",
-                "可提取 T1 - T5 方块"
+                "可提取 T1 - T5 物品"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             realisationT4Recipe.getDisplayRecipe(),

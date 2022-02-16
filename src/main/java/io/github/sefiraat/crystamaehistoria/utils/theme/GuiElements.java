@@ -31,7 +31,7 @@ public class GuiElements {
 
     public static final CustomItemStack MENU_REMOVE_PLATES = new CustomItemStack(
         Material.ORANGE_STAINED_GLASS_PANE,
-        ChatColor.BLUE + "移除魔法板"
+        ChatColor.BLUE + "移除法术板"
     );
 
     public static final CustomItemStack MENU_SAVE_STAVE = new CustomItemStack(
@@ -114,7 +114,7 @@ public class GuiElements {
     public static CustomItemStack getSpellSlotPane(SpellSlot spellSlot) {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.GRAY + "法术: " + ThemeType.toTitleCase(spellSlot.name())
+            ChatColor.GRAY + "法术: " + spellSlot.getDescription()
         );
     }
 
