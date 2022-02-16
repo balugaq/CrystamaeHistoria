@@ -1,4 +1,4 @@
-![](https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/logo/logo_large.png)
+![](https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/logo/logo_large.png?raw=true)
 
 魔法水晶编年史是一个 Slimefun4 附属插件。该附属插件添加了一系列的法术，以及用于创建与解锁新法术的进度系统。
 
@@ -10,7 +10,7 @@
 当这些故事被发掘出来后，你便可以直接阅读这些故事。  
 故事有不同的等级，根据物品的类型来确定。
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_chronicler_panel.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_chronicler_panel.gif?raw=true"></p>
 
 ## 现实祭坛
 
@@ -18,7 +18,7 @@
 当魔法能量完全被提取出来后，你可以破坏生成的魔法水晶簇，以获取其中包含的魔法的物理形态———魔法水晶。  
 获得的水晶类型取决于故事的类型。
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_realisation_altar.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_realisation_altar.gif?raw=true"></p>
 
 ## 液化池
 
@@ -27,7 +27,7 @@
 
 使用液化池时需要小心，错误的配方会导致所有材料的损失，有时候还会有毁灭性的影响。
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_liquefaction_basin.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_liquefaction_basin.gif?raw=true"></p>
 
 ## 魔法板 & 法术板
 
@@ -39,7 +39,7 @@
 
 法术板包含一个可用的法术，但如果上面的能量用完，你就要使用制造法术时所使用的3种不同类型的魔法水晶为法术板重新充能。
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_plate_filling.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_plate_filling.gif?raw=true"></p>
 
 ## 法杖配置器
 
@@ -49,16 +49,16 @@
 法杖配置器让你可以给法杖添加最多4个法术（分别通过左键点击、右键点击、Shift+左键点击、Shift+右键点击来释放）。你可以随时更换法杖上绑定的法术。
 
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_stave_configurator.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_stave_configurator.gif?raw=true"></p>
 
 ## 法术
 
 经过你的努力，你得到了什么? 当然是：法术!
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_chaos.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_chaos.gif?raw=true"></p>
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_rof.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_rof.gif?raw=true"></p>
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_ethereal.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_ethereal.gif?raw=true"></p>
 
-<p align="center"><img width="900" src="https://cdn.jsdelivr.net/gh/Sefiraat/CrystamaeHistoria@master/images/wiki/wiki_spell_push.gif"></p>
+<p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_push.gif?raw=true"></p>
