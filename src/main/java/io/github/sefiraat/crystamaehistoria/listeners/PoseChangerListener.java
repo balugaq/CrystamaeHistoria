@@ -33,7 +33,7 @@ import java.util.List;
 
 public class PoseChangerListener implements Listener {
 
-    private static final String IMBUED_ONLY_MESSAGE = ThemeType.WARNING.getColor() + "This can only be done to an Imbued Armorstand";
+    private static final String IMBUED_ONLY_MESSAGE = ThemeType.WARNING.getColor() + "该方法仅能对注入盔甲架使用";
     private static final double STEP_AMOUNT = 0.01;
 
     private final NamespacedKey poseKey = Keys.newKey("pose_type");
@@ -98,7 +98,7 @@ public class PoseChangerListener implements Listener {
                 ) {
                     final boolean isImbued = PersistentDataAPI.getBoolean(armorStand, ImbuedStand.KEY);
                     if (!isImbued) {
-                        player.sendMessage(ThemeType.WARNING.getColor() + "This can only be done to an Imbued Armorstand");
+                        player.sendMessage(IMBUED_ONLY_MESSAGE);
                         return;
                     }
 
@@ -108,17 +108,17 @@ public class PoseChangerListener implements Listener {
                         final PoseCloner.StoredPose pose = DataTypeMethods.getCustom(itemMeta, clonedPoseKey, PersistentPoseType.TYPE);
 
                         if (pose == null) {
-                            player.sendMessage(ThemeType.WARNING.getColor() + "No pose has been stored.");
+                            player.sendMessage(ThemeType.WARNING.getColor() + "没有已保存的造型");
                             return;
                         }
                         pose.applyPose(armorStand);
-                        player.sendActionBar(Component.text(ThemeType.WARNING.getColor() + "Pose Applied"));
+                        player.sendActionBar(Component.text(ThemeType.WARNING.getColor() + "已应用造型"));
                     } else {
                         final PoseCloner.StoredPose pose = new PoseCloner.StoredPose(armorStand);
 
                         DataTypeMethods.setCustom(itemMeta, clonedPoseKey, PersistentPoseType.TYPE, pose);
                         heldItem.setItemMeta(itemMeta);
-                        player.sendActionBar(Component.text(ThemeType.WARNING.getColor() + "Pose Stored"));
+                        player.sendActionBar(Component.text(ThemeType.WARNING.getColor() + "已保存造型"));
                     }
                 }
             }
@@ -131,7 +131,7 @@ public class PoseChangerListener implements Listener {
             final PoseType poseType = PoseType.valueOf(PersistentDataAPI.getString(itemMeta, poseKey, "HEAD"));
             final PoseType nextType = poseType.getNext();
             final String message = MessageFormat.format(
-                "{0}Pose type: {1}{2}",
+                "{0}造型类型: {1}{2}",
                 ThemeType.ERROR.getColor(),
                 ThemeType.CLICK_INFO.getColor(),
                 nextType
@@ -146,7 +146,7 @@ public class PoseChangerListener implements Listener {
             final ChangeType changeType = ChangeType.valueOf(PersistentDataAPI.getString(itemMeta, changeKey, "RESET"));
             final ChangeType nextType = changeType.getNext();
             final String message = MessageFormat.format(
-                "{0}Change type: {1}{2}",
+                "{0}更改类型: {1}{2}",
                 ThemeType.ERROR.getColor(),
                 ThemeType.CLICK_INFO.getColor(),
                 nextType
@@ -198,22 +198,22 @@ public class PoseChangerListener implements Listener {
                 if (isImbued) {
                     armorStand.setVisible(!armorStand.isVisible());
                 } else {
-                    player.sendMessage(ThemeType.WARNING.getColor() + "This can only be done to an Imbued Armorstand");
+                    player.sendMessage(IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             case STAND_SIZE:
                 if (isImbued) {
                     armorStand.setSmall(!armorStand.isSmall());
                 } else {
-                    player.sendMessage(ThemeType.WARNING.getColor() + "This can only be done to an Imbued Armorstand");
+                    player.sendMessage(IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             case STAND_GRAVITY:
                 if (isImbued) {
                     armorStand.setGravity(!armorStand.hasGravity());
-                    player.sendActionBar(Component.text("Gravity: " + armorStand.hasGravity()));
+                    player.sendActionBar(Component.text("重力: " + armorStand.hasGravity()));
                 } else {
-                    player.sendMessage(ThemeType.WARNING.getColor() + "This can only be done to an Imbued Armorstand");
+                    player.sendMessage(IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             default:

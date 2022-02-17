@@ -240,7 +240,7 @@ public class Gadgets {
                 "黑魔法影响了这个方块",
                 "会不断召唤出可怕的怪物",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "生成间隔: " + ThemeType.PASSIVE.getColor() + "20 sf ticks",
+                ThemeType.CLICK_INFO.getColor() + "生成间隔: " + ThemeType.PASSIVE.getColor() + "20",
                 ThemeType.CLICK_INFO.getColor() + "光照等级不高于: " + ThemeType.PASSIVE.getColor() + "7",
                 ThemeType.CLICK_INFO.getColor() + "生成: " + ThemeType.PASSIVE.getColor() + "基础"
             ),
@@ -891,8 +891,8 @@ public class Gadgets {
             new ItemStack(Material.DISPENSER),
             ThemeType.GADGET,
             "哲学家喷雾",
-            "Will 'displace' the block above",
-            "this one when triggered with Redstone."
+            "使用红石信号激活后",
+            "可以置换上方的方块"
         );
         philosophersSpray = new PhilosophersSpray(
             ItemGroups.GADGETS,

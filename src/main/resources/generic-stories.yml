@@ -8,7 +8,7 @@ COMMON:
       - 一切都很安静，很平静，很宁静。
 
   Grinding Gears:
-    name: Grinding Gears
+    name: 砂轮
     type: MECHANICAL
     shards: [ 0,1,0,0,1,0,0,0,0 ]
     lore:
@@ -16,7 +16,7 @@ COMMON:
       - will wear down the spirit with ease.
 
   Lead into Gold:
-    name: Lead into Gold
+    name: 引领黄金
     type: ALCHEMICAL
     shards: [ 0,0,1,0,1,0,1,0,0 ]
     lore:
@@ -24,7 +24,7 @@ COMMON:
       - driven many-a-person mad.
 
   Everlasting:
-    name: Everlasting
+    name: 持久
     type: HISTORICAL
     shards: [ 1,0,1,1,0,0,0,0,0 ]
     lore:

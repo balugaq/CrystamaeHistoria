@@ -39,7 +39,7 @@ public class EphemeralWorkBench extends SlimefunItem {
 
     private static final CustomItemStack CRAFT_BUTTON_STACK = new CustomItemStack(
         Material.CRAFTING_TABLE,
-        ThemeType.CLICK_INFO.getColor() + "Click to craft"
+        ThemeType.CLICK_INFO.getColor() + "点击合成"
     );
 
     private static final Map<ItemStack[], ItemStack> RECIPES = new HashMap<>();
@@ -96,7 +96,7 @@ public class EphemeralWorkBench extends SlimefunItem {
     public class WorkBenchMenu extends ChestMenu {
 
         public WorkBenchMenu() {
-            super("Ephemeral Workbench");
+            super("临时融合工作台");
             ChestMenuUtils.drawBackground(this, BACKGROUND_SLOTS);
             addPlayerInventoryClickHandler((p, slot, item, action) -> true);
             addItem(CRAFT_SLOT, CRAFT_BUTTON_STACK, (p, slot, item, action) -> false);

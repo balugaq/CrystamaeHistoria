@@ -28,6 +28,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.Uniques;
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.apache.commons.lang.Validate;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
@@ -140,7 +141,7 @@ public class CrystamaeHistoria extends AbstractAddon {
         instance = this;
 
         getLogger().info("########################################");
-        getLogger().info("     Crystamae Historia  魔法水晶编年史   ");
+        getLogger().info("     CrystamaeHistoria  魔法水晶编年史    ");
         getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 
@@ -165,6 +166,11 @@ public class CrystamaeHistoria extends AbstractAddon {
         getAddonCommand().addSub(new OpenSpellCompendium());
         getAddonCommand().addSub(new OpenStoryCompendium());
         getAddonCommand().addSub(new GetRanks());
+
+        if (getConfig().getBoolean("auto-update") &&
+            getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "CrystamaeHistoria-CN", "master", false).start();
+        }
     }
 
     private void setupBstats() {

@@ -5,11 +5,11 @@ ACACIA_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (金合欢)
+    name: 船 (金合欢)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 ACACIA_BUTTON:
@@ -18,10 +18,10 @@ ACACIA_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (金合欢)
+    name: 抑郁 (金合欢)
     type: HUMAN
     lore:
-      - Can get easily depressed
+      - 很容易抑郁
     shards: [ 0,1,0,0,2,0,0,1,0 ]
 
 ACACIA_DOOR:
@@ -44,11 +44,11 @@ ACACIA_FENCE:
     - HUMAN
     - ANIMAL
   story:
-    name: Livestock (金合欢)
+    name: 家畜 (金合欢)
     type: ANIMAL
     lore:
-      - Nothing brings more joy to a fence
-      - than keeping your livestock safe.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards: [ 0,0,0,0,1,2,0,0,0 ]
 
 ACACIA_FENCE_GATE:
@@ -58,11 +58,11 @@ ACACIA_FENCE_GATE:
     - MECHANICAL
     - ANIMAL
   story:
-    name: Gate (金合欢)
+    name: 大门 (金合欢)
     type: MECHANICAL
     lore:
-      - Still round the corner there may wait,
-      - A new road or a secret gate.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards: [ 0,2,0,0,1,1,0,0,0 ]
     author: J. R. R. Tolkien
 
@@ -72,12 +72,11 @@ ACACIA_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Leaf me alone! (金合欢)
+    name: 树叶的思考 (金合欢)
     type: PHILOSOPHICAL
     lore:
-      - Gently swaying in a cool breeze,
-      - Leaves want nothing more than to be
-      - left alone to their thoughts.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards: [ 1,0,0,1,0,0,0,0,1 ]
 
 ACACIA_LOG:
@@ -86,11 +85,12 @@ ACACIA_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Log (金合欢)
+    name: 给我原木 (金合欢)
     type: ELEMENTAL
     lore:
-      - Every adventure begins with a good tree
-      - punch
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards: [ 2,0,0,1,1,0,0,0,0 ]
 
 ACACIA_PLANKS:
@@ -99,11 +99,10 @@ ACACIA_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: Walk the Plank (金合欢)
+    name: 木板，我们走 (金合欢)
     type: HUMAN
     lore:
-      - The first step on your crafting journey
-      - driving new players forwards.
+      - 你的第一次合成一定是合成木板吧
     shards: [ 1,0,0,0,1,0,1,0,0 ]
 
 ACACIA_PRESSURE_PLATE:
@@ -112,7 +111,7 @@ ACACIA_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: Under Pressure (金合欢)
+    name: 承受压力 (金合欢)
     type: VOID
     lore:
       - Being walked all over will drop any
@@ -125,7 +124,7 @@ ACACIA_SAPLING:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: Growth (金合欢)
+    name: 成长 (金合欢)
     type: ELEMENTAL
     lore:
       - A youthful spirit empowered to grow
@@ -629,11 +628,11 @@ BIRCH_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Birch)
+    name: 船 (Birch)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 BIRCH_BUTTON:
@@ -642,7 +641,7 @@ BIRCH_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Birch)
+    name: 抑郁 (Birch)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -2759,7 +2758,7 @@ CRIMSON_BUTTON:
     - MECHANICAL
     - VOID
   story:
-    name: Depressed (Crimson)
+    name: 抑郁 (Crimson)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -3284,11 +3283,11 @@ DARK_OAK_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Dark Oak)
+    name: 船 (Dark Oak)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 DARK_OAK_BUTTON:
@@ -3297,7 +3296,7 @@ DARK_OAK_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Dark Oak)
+    name: 抑郁 (Dark Oak)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -6446,11 +6445,11 @@ JUNGLE_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Jungle)
+    name: 船 (Jungle)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 JUNGLE_BUTTON:
@@ -6459,7 +6458,7 @@ JUNGLE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Jungle)
+    name: 抑郁 (Jungle)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -8592,11 +8591,11 @@ OAK_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Oak)
+    name: 船 (Oak)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 OAK_BUTTON:
@@ -8605,7 +8604,7 @@ OAK_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Oak)
+    name: 抑郁 (Oak)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -9526,7 +9525,7 @@ POLISHED_BLACKSTONE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Polished Blackstone)
+    name: 抑郁 (Polished Blackstone)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -11642,11 +11641,11 @@ SPRUCE_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Ship-shape (Spruce)
+    name: 船 (Spruce)
     type: PHILOSOPHICAL
     lore:
-      - Live in the sunshine, swim the sea
-        and drink in the wild air
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards: [ 1,0,0,0,1,0,0,0,2 ]
 
 SPRUCE_BUTTON:
@@ -11655,7 +11654,7 @@ SPRUCE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Spruce)
+    name: 抑郁 (Spruce)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -11975,7 +11974,7 @@ STONE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: Depressed (Stone)
+    name: 抑郁 (Stone)
     type: HUMAN
     lore:
       - Can get easily depressed
@@ -12679,7 +12678,7 @@ WARPED_BUTTON:
     - MECHANICAL
     - VOID
   story:
-    name: Depressed (Warped)
+    name: 抑郁 (Warped)
     type: HUMAN
     lore:
       - Can get easily depressed

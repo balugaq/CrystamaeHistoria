@@ -219,7 +219,7 @@ public class StoriesManager {
             storyMapUnique.put(story.getId(), story);
         }
         CrystamaeHistoria.getInstance().getLogger().info(
-            MessageFormat.format("Loaded: {0} unique (block) stories.", blockDefinitionMap.size())
+            MessageFormat.format("已加载: {0} 个独一无二的方块故事.", blockDefinitionMap.size())
         );
     }
 

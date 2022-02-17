@@ -388,7 +388,8 @@ public class Tools {
                 "强征",
                 "这个工具被注入了神圣的力量",
                 "可以完好地保存物品",
-                ChatColor.RED + "仅能作用于不会掉落本身的方块(无论是否拥有精准采集)",
+                ChatColor.RED + "仅能作用于不会掉落本身的方块",
+                ChatColor.RED + "(无论是否拥有精准采集)",
                 "",
                 LoreBuilder.usesLeft(50)
             ),

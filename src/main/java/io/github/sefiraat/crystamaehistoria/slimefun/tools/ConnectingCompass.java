@@ -48,7 +48,7 @@ public class ConnectingCompass extends SlimefunItem {
 
             if (player.isSneaking()) {
                 player.sendMessage(
-                        MessageFormat.format("{0}请在聊天栏内为该位置起一个名字.", ChatColor.LIGHT_PURPLE)
+                        MessageFormat.format("{0}请在聊天栏内为该位置设置名字.", ChatColor.LIGHT_PURPLE)
                 );
                 ChatUtils.awaitInput(player, s -> nameAndSet(s, itemStack, player.getEyeLocation()));
             } else {
