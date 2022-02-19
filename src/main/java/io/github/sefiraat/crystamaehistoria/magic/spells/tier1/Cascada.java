@@ -88,9 +88,16 @@ public class Cascada extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "抬高地面";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Turns the ground inside out to damage foes."
+            "将目标地面抬升至空中",
+            "落下后会伤害仍在目标区域的生物"
         };
     }
 

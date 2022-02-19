@@ -44,9 +44,15 @@ public class Heal extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "治疗";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Heals the caster for a set amount of HP"
+            "治疗施法者"
         };
     }
 

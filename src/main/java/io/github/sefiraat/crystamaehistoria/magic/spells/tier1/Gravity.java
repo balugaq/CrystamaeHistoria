@@ -54,10 +54,16 @@ public class Gravity extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "重力";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Allows you to use a temporary gravity",
-            "pocket to fly."
+            "弹射起飞",
+            "并允许飞行一段时间"
         };
     }
 

@@ -64,10 +64,16 @@ public class FanOfArrows extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "漫天飞羽";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a fan of arrows around you to slice",
-            "through your opponents"
+            "向周围释放出箭矢",
+            "来分解附近的敌人"
         };
     }
 

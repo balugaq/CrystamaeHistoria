@@ -7,6 +7,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasi
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
 import lombok.Getter;
 import lombok.Setter;
 import net.md_5.bungee.api.ChatColor;
@@ -50,7 +51,7 @@ public abstract class Spell {
         ChatColor passiveColor = ThemeType.PASSIVE.getColor();
         List<String> finalLore = new ArrayList<>();
         for (String s : getLore()) {
-            finalLore.add(passiveColor + s);
+            finalLore.add(passiveColor + ChatColors.color(s));
         }
         finalLore.add("");
         finalLore.add(ThemeType.applyThemeToString(ThemeType.CLICK_INFO, "法术"));

@@ -45,10 +45,15 @@ public class EscapeRope extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "逃生索";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Teleports you to the highest possible",
-            "point if possible."
+            "将你传送到当前位置的最高点"
         };
     }
 

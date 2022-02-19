@@ -73,10 +73,19 @@ public class BloodMagics extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "血魔法";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Damages nearby entities. Dying entities will",
-            "cause further damage."
+            "伤害周围的所有生物",
+            "",
+            "击杀生物后会在该生物的",
+            "死亡位置再次释放一次法术",
+            "最多传播5次"
         };
     }
 

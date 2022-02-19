@@ -66,10 +66,15 @@ public class FlameSprite extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "火焰精灵";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons 1-5 flame sprites to attack",
-            "your enemies."
+            "召唤 1-5 只火焰精灵来攻击你的敌人"
         };
     }
 

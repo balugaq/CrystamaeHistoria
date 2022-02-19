@@ -59,10 +59,16 @@ public class Deity extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "神";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a deity to your side. It",
-            "does... Nothing!"
+            "在施法者所在位置召唤神",
+            "但是，没有任何用处!"
         };
     }
 

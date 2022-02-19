@@ -68,9 +68,15 @@ public class CallLightning extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "召唤闪电";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Calls a lightning bolt down where you are looking"
+            "在看向的位置召唤一道闪电"
         };
     }
 

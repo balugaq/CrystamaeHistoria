@@ -82,11 +82,15 @@ public class Compass extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "指南针";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Tap into the ether to find blocks.",
-            "Will locate blocks matching the one",
-            "in the caster's off-hand."
+            "在施法者周围寻找施法者副手中的方块",
         };
     }
 

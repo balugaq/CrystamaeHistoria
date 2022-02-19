@@ -73,10 +73,16 @@ public class FireNova extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "火焰新星";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a massive nova of fireballs",
-            "around you to incinerate foes."
+            "召唤火焰新星",
+            "焚烧一切"
         };
     }
 
