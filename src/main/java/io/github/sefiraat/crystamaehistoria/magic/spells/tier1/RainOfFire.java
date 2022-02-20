@@ -86,10 +86,16 @@ public class RainOfFire extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "火铳";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons an epic hellscape of raining",
-            "fire."
+            "召唤一阵史诗般的",
+            "地狱火雨"
         };
     }
 
