@@ -55,11 +55,17 @@ public class WitherWeather extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "凋零风暴";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons 1-5 Wither Skeletons that will",
-            "focus on the caster. These spawns guarantee",
-            "a skull drop."
+            "召唤1-5个忠诚于施法者的凋零骷髅",
+            "这些凋零骷髅的掉落物与正常的一样",
+            "会掉落凋零骷髅头"
         };
     }
 
