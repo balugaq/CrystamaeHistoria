@@ -62,9 +62,15 @@ public class LavaLake extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "岩浆湖";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Spawns a lake of lava around the caster"
+            "在施法者周围生成一个岩浆湖"
         };
     }
 
