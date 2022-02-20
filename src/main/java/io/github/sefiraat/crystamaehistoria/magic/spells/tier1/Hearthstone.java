@@ -64,11 +64,17 @@ public class Hearthstone extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "炉石";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Sends you back to your last bed if",
-            "possible. Takes time to cast, movement",
-            "stops the cast."
+            "将你传送回床出生点的位置",
+            "施法需要时间，移动可打断施法",
+            "如果床出生点不可用，则不会进行传送"
         };
     }
 

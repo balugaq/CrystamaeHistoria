@@ -51,11 +51,16 @@ public class HealingMist extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "恢复光环";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Calls fourth a mist of healing energy",
-            "around the caster. Gives regen to all",
-            "players affected."
+            "在施法者周围释放治疗能量",
+            "给自己附近玩家提供生命恢复"
         };
     }
 

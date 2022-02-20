@@ -85,6 +85,12 @@ public class Hellscape extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "Hellscape";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
             "Summons a fiery spiral to ravage foes."
