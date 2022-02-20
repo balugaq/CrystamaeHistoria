@@ -123,9 +123,15 @@ public class PlutosDecent extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "冥王星腰带";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a meteor to strike down your foes."
+            "召唤一颗流星来打击你的敌人"
         };
     }
 
