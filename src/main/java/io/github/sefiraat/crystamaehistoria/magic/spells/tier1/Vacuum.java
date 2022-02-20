@@ -72,7 +72,7 @@ public class Vacuum extends Spell {
     @Override
     public String[] getLore() {
         return new String[]{
-            "感到孤独?",
+            "感到孤独？",
             "这个法术可以让你近距离接触",
             "附近所有东西"
         };
