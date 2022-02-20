@@ -64,7 +64,7 @@ public class StripMine extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "露天采矿";
+        return "露天矿井";
     }
     
     @Nonnull
