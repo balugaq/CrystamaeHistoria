@@ -71,7 +71,7 @@ public class TimeCompression extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "时光虫洞";
+        return "时间压缩";
     }
     
     @Nonnull
