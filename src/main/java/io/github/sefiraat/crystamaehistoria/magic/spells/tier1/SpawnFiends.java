@@ -68,7 +68,7 @@ public class SpawnFiends extends Spell {
     @Override
     public String[] getLore() {
         return new String[]{
-            "召唤1-5个恶魔攻击你的敌人",
+            "召唤 1-5 个恶魔攻击你的敌人",
             "恶魔永不忠诚，不会跟随施法者"
         };
     }

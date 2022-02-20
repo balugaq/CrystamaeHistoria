@@ -56,16 +56,16 @@ public class WitherWeather extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "凋零风暴";
+        return "凋灵风暴";
     }
     
     @Nonnull
     @Override
     public String[] getLore() {
         return new String[]{
-            "召唤1-5个忠诚于施法者的凋零骷髅",
-            "这些凋零骷髅的掉落物与正常的一样",
-            "会掉落凋零骷髅头"
+            "召唤 1-5 只凋灵骷髅",
+            "这些凋灵骷髅会主动攻击施法者",
+            "但击杀后一定会掉落凋灵骷髅头"
         };
     }
 

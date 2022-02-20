@@ -74,8 +74,8 @@ public class HolyCow extends Spell {
     @Override
     public String[] getLore() {
         return new String[]{
-            "召唤1-5头牛来保护你",
-            "当它们存活的时候"
+            "召唤 1-5 头牛",
+            "它们会用生命保护你"
         };
     }
 

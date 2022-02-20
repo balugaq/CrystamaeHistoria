@@ -88,7 +88,7 @@ public class PoisonNova extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "新星毒药";
+        return "毒药新星";
     }
     
     @Nonnull
@@ -96,8 +96,7 @@ public class PoisonNova extends Spell {
     public String[] getLore() {
         return new String[]{
             "召唤一颗带有剧毒的新星",
-            "撕裂敌人",
-            "并使其中毒"
+            "撕裂敌人并使其中毒"
         };
     }
 

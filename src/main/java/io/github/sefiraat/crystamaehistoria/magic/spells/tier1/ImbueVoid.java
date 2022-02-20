@@ -69,7 +69,7 @@ public class ImbueVoid extends Spell {
     public String[] getLore() {
         return new String[]{
             "产生一群末影螨来为你战斗",
-            "在这个咒语中",
+            "施法过程中",
             "你不能移动或攻击"
         };
     }

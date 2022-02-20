@@ -79,7 +79,7 @@ public class Ravage extends Spell {
     public String[] getLore() {
         return new String[]{
             "召唤一只驯服的掠夺者到你身边",
-            "这意味着效果和参数仅适用于掠夺者",
+            "该法术的效果会作用于掠夺者",
             "而不是施法者"
         };
     }
