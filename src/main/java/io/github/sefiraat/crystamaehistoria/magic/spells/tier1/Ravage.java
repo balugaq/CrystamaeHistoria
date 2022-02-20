@@ -70,12 +70,17 @@ public class Ravage extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "掠夺队长";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a tame ravager to your side.",
-            "This spells effects and multipliers",
-            "are applied to the ravager, not the",
-            "caster."
+            "召唤一只驯服的掠夺者到你身边",
+            "这意味着效果和参数仅适用于掠夺者",
+            "而不是施法者"
         };
     }
 
