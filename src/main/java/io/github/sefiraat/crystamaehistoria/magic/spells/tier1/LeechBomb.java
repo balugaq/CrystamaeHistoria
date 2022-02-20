@@ -88,10 +88,16 @@ public class LeechBomb extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "蠹虫炸弹";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Throws an egg filled with viscous",
-            "leeches that will attack your enemies."
+            "扔出一个装满粘性蠹虫的蛋",
+            "来攻击敌人"
         };
     }
 
