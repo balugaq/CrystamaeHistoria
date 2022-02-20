@@ -64,10 +64,17 @@ public class Vacuum extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "量子力学";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Feeling lonely? This spell lets you get up",
-            "close and personal will all nearby things."
+            "感到孤独?",
+            "这个法术可以让你近距离接触",
+            "附近所有东西"
         };
     }
 
