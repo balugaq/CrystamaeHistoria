@@ -4,6 +4,22 @@
 
 任何重大事件或者经历都会在附近留下痕迹。本附属插件允许你从方块中提取原始精华来发掘出这些故事。
 
+## 下载
+
+**自动更新**: 汉化版构建#1及以后版本包含自动更新功能，默认开启。
+
+点击这里下载 CrystamaeHistoria
+: [下载 CrystamaeHistoria](https://builds.guizhanss.net/SlimefunGuguProject/CrystamaeHistoria/master)
+
+<p align="center">
+  <a href="https://github.com/SlimefunGuguProject/CrystamaeHistoria/actions/workflows/maven.yml">
+    <img src="https://github.com/SlimefunGuguProject/CrystamaeHistoria/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
+  </a>
+  <a href="https://builds.guizhanss.net/SlimefunGuguProject/CrystamaeHistoria/master">
+    <img src="https://builds.guizhanss.net/f/SlimefunGuguProject/CrystamaeHistoria/master/badge.svg" alt="Build status"/>
+  </a>
+</p>
+
 ## 记录者
 
 记录者是一个魔法装置，你可以从物品中发掘它们的故事。  
