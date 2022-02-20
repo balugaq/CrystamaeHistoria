@@ -16,6 +16,7 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
+import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
@@ -79,8 +80,8 @@ public class Materials {
                     "CRY_CRYSTAL_DUMMY_" + type + "_" + type,
                     Skulls.getByType(type).getPlayerHead(),
                     ThemeType.CRYSTAL,
-                    theme.getColor() + TextUtils.toTitleCase(type + " Crystal"),
-                    "Magical Crystamae in it's physical form"
+                    theme.getColor() + TextUtils.toTitleCase(ThemeType.getByType(type).getLoreLine() + "水晶"),
+                    "物理形态的魔法水晶"
                 ),
                 DummyRealisationAltar.TYPE,
                 new ItemStack[]{},
@@ -102,12 +103,11 @@ public class Materials {
                         "CRY_CRYSTAL_" + rarity + "_" + type.toString(),
                         Skulls.getByType(type).getPlayerHead(),
                         ThemeType.CRYSTAL,
-                        theme.getColor() + TextUtils.toTitleCase(rarity + " " + type) + " Crystal",
-                        "Magical Crystamae in it's physical form",
-                        "Higher tier blocks are more likely to",
-                        "provide rarer Crystal types.",
+                        theme.getColor() + theme.getLoreLine() + ThemeType.getByType(type).getLoreLine() + "水晶",
+                        "物理形态的魔法水晶",
+                        "高等级的方块可以提供类型更稀有的魔法水晶",
                         "",
-                        "Provides " + Crystal.getRarityValueMap().get(rarity) + " Crysta."
+                        "可液化为 " + Crystal.getRarityValueMap().get(rarity) + " 单位的液化魔法水晶"
                     ),
                     DummyRealisationAltar.TYPE,
                     new ItemStack[]{null, null, null, null, new ItemStack(Material.AMETHYST_CLUSTER), null, null, null, null},
@@ -127,8 +127,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_COMMON",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Common)",
-                "A dust combining all magic types."
+                "融合粉 (普通)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -151,8 +151,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_UNCOMMON",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Uncommon)",
-                "A dust combining all magic types."
+                "融合粉 (罕见)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -175,8 +175,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_RARE",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Rare)",
-                "A dust combining all magic types."
+                "融合粉 (稀有)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -199,8 +199,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_EPIC",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Epic)",
-                "A dust combining all magic types."
+                "融合粉 (史诗)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -223,8 +223,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_MYTHICAL",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Mythical)",
-                "A dust combining all magic types."
+                "融合粉 (神秘)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -247,8 +247,8 @@ public class Materials {
                 "CRY_AMALGAMATE_DUST_UNIQUE",
                 new ItemStack(Material.GLOWSTONE_DUST),
                 ThemeType.CRAFTING,
-                "Amalgamate Dust (Unique)",
-                "A dust combining all magic types."
+                "融合粉 (独一无二)",
+                "融合了所有魔法类型的粉"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -271,8 +271,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_COMMON",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Common)",
-                "An ingot crafted of pure magics."
+                "融合锭 (普通)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -287,8 +287,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_UNCOMMON",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Uncommon)",
-                "An ingot crafted of pure magics."
+                "融合锭 (罕见)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -303,8 +303,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_RARE",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Rare)",
-                "An ingot crafted of pure magics."
+                "融合锭 (稀有)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -319,8 +319,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_EPIC",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Epic)",
-                "An ingot crafted of pure magics."
+                "融合锭 (史诗)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -335,8 +335,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_MYTHICAL",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Mythical)",
-                "An ingot crafted of pure magics."
+                "融合锭 (神秘)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -351,8 +351,8 @@ public class Materials {
                 "CRY_AMALGAMATE_INGOT_UNIQUE",
                 new ItemStack(Material.GOLD_INGOT),
                 ThemeType.CRAFTING,
-                "Amalgamate Ingot (Unique)",
-                "An ingot crafted of pure magics."
+                "融合锭 (独一无二)",
+                "由纯粹的魔法制成的锭"
             ),
             RecipeType.SMELTERY,
             new ItemStack[]{
@@ -373,9 +373,9 @@ public class Materials {
                 "CRY_IMBUED_GLASS",
                 new ItemStack(Material.GLASS_PANE),
                 ThemeType.CRAFTING,
-                "Imbued Glass",
-                "Glass imbued with Crysta that has",
-                "some strange properties."
+                "注魔玻璃",
+                "注入了魔法水晶的玻璃",
+                "拥有一些奇怪的属性"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             imbuedGlassRecipe.getDisplayRecipe()
@@ -394,9 +394,9 @@ public class Materials {
                 "CRY_UNCANNY_PEARL",
                 new ItemStack(Material.ENDER_PEARL),
                 ThemeType.CRAFTING,
-                "Uncanny Pearl",
-                "The internal resonance of this pearl",
-                "has been quelled using crysta."
+                "不可思议的珍珠",
+                "这颗末影珍珠的内部共振",
+                "已经使用魔法水晶平息了"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             uncannyPearlRecipe.getDisplayRecipe()
@@ -409,10 +409,9 @@ public class Materials {
                 "CRY_GILDED_PEARL",
                 new ItemStack(Material.ENDER_PEARL),
                 ThemeType.CRAFTING,
-                "Gilded Pearl",
-                "With the pearl quelled, it can",
-                "be safely gilded and used in certain",
-                "crafts."
+                "镀金珍珠",
+                "一颗平静的珍珠可以进行镀金",
+                "用于其他合成"
             ),
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
@@ -435,8 +434,8 @@ public class Materials {
                 "CRY_BASIC_FIBRES",
                 new ItemStack(Material.DRIED_KELP),
                 ThemeType.CRAFTING,
-                "Basic Fibres",
-                "Very basic and coarse fibres."
+                "基本纤维",
+                "非常基本与粗糙的纤维"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             basicFibresRecipe.getDisplayRecipe()
@@ -455,11 +454,11 @@ public class Materials {
                 "CRY_POWDERED_ESSENCE",
                 new ItemStack(Material.WHITE_DYE),
                 ThemeType.CRAFTING,
-                "Powdered Essence",
-                "A refined crafting material.",
-                "Can be used as bone meal.",
+                "粉状精华",
+                "精制的合成材料",
+                "可作为骨粉使用",
                 "",
-                ChatColor.YELLOW + "250 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(250)
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             powderedEssenceRecipe.getDisplayRecipe(),

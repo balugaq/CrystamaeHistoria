@@ -1,13 +1,13 @@
 package io.github.sefiraat.crystamaehistoria.slimefun.tools.artistic;
 
 import io.github.sefiraat.crystamaehistoria.utils.Keys;
-import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
+import net.guizhanss.guizhanlib.minecraft.helper.DyeColorHelper;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -45,7 +45,7 @@ public class InfinitePaintbrush extends SlimefunItem implements MagicPaintbrush 
                     PersistentDataAPI.setInt(potionMeta, Keys.PDC_PAINT_TYPE, currentSelection);
                     PaintProfile profile = PaintProfile.getCachedValues()[currentSelection];
                     e.getPlayer().sendActionBar(
-                        Component.text("Now painting in " + ThemeType.toTitleCase(profile.name()))
+                        Component.text("正在使用: " + DyeColorHelper.getName(profile.getDyeColor()))
                             .color(profile.getTextColor())
                     );
                     potionMeta.setColor(profile.getDyeColor().getColor());

@@ -95,11 +95,17 @@ public class Chaos extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "混乱风暴";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Spawns a forward-firing rain of",
-            "chaos breaking blocks and hurting",
-            "all living things."
+            "向前方释放混乱风暴",
+            "可以破坏途径的方块",
+            "伤害到路径上的所有生物"
         };
     }
 

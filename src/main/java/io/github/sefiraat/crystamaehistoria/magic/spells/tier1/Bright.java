@@ -47,9 +47,15 @@ public class Bright extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "太阳当空照";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Turns any day into a pleasant sunny one!"
+            "让世界变得晴空万里!"
         };
     }
 

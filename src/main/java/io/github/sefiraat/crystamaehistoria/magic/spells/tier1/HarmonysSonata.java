@@ -84,9 +84,15 @@ public class HarmonysSonata extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "和谐的奏鸣曲";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Allows a rich garden to grow at your feet."
+            "让附近的草地长出花朵"
         };
     }
 

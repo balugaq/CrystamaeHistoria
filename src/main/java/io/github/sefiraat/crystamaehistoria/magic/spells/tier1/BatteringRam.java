@@ -61,10 +61,16 @@ public class BatteringRam extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "攻城锤";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a battering ram to decimate",
-            "all in your way."
+            "召唤攻城锤",
+            "为你清理出前方的道路"
         };
     }
 

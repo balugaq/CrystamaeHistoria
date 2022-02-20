@@ -75,11 +75,17 @@ public class SummonGolem extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "傀儡守卫";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a golem that will follow you",
-            "and protect you.",
-            "Golems will follow you nearly anywhere."
+            "召唤一个会跟随你并保护你的傀儡",
+            "这个傀儡非常忠诚",
+            "几乎会跟随你到任何地方"
         };
     }
 

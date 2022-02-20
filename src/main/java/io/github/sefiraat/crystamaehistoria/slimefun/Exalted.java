@@ -60,12 +60,11 @@ public class Exalted {
                 "CRY_EXALTED_BEACON",
                 new ItemStack(Material.BEACON),
                 ThemeType.EXALTED,
-                "Exalted Beacon",
-                "A powerful beacon with incredible",
-                "potential. Must be placed on a",
-                "Exaltation Stand to operate.",
+                "尊贵的信标",
+                "一个信标，内部拥有难以置信的力量",
+                "需要放置在尊贵展台上才能使用",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Story Rank > Emeritus Professor"
+                ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedBeaconRecipe.getDisplayRecipe()
@@ -85,13 +84,11 @@ public class Exalted {
                 "CRY_EXALTED_FERTILITY_PHARO",
                 new ItemStack(Material.DIAMOND_BLOCK),
                 ThemeType.EXALTED,
-                "Exalted Fertility Pharo",
-                "A magical construct able to",
-                "breed nearby animals in a 20x20 area.",
-                "Must be placed on an Exaltation",
-                "Stand to operate.",
+                "尊贵的喂养机",
+                "一个魔法构造，可以喂养周围20x20范围内的动物",
+                "需要放置在尊贵展台上才能使用",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Story Rank > Emeritus Professor"
+                ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedFertilityPharoRecipe.getDisplayRecipe()
@@ -111,13 +108,11 @@ public class Exalted {
                 "CRY_EXALTED_HARVESTER",
                 new ItemStack(Material.HAY_BLOCK),
                 ThemeType.EXALTED,
-                "Exalted Harvester",
-                "A magical construct able to",
-                "harvest all crops in a 9x9 area.",
-                "Must be placed on an Exaltation",
-                "Stand to operate.",
+                "尊贵的收割机",
+                "一个魔法构造，可以收获9x9范围内的所有作物",
+                "需要放置在尊贵展台上才能使用",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Spell Rank > Grandmaster Magus"
+                ThemeType.CLICK_INFO.getColor() + "需要: 法术等级 达到 宗师级魔法师"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedHarvesterRecipe.getDisplayRecipe()
@@ -137,11 +132,11 @@ public class Exalted {
                 "CRY_EXALTED_DAWN",
                 new ItemStack(Material.YELLOW_WOOL),
                 ThemeType.EXALTED,
-                "Exalted Dawn",
-                "A magical construct that burns",
-                "brightly like the sun.",
+                "尊贵的黎明",
+                "一个魔法构造，像太阳一样耀眼",
+                "让玩家时间固定在白天（不会影响实际时间）",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during the day"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在白天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedDawnRecipe.getDisplayRecipe(),
@@ -162,11 +157,11 @@ public class Exalted {
                 "CRY_EXALTED_DUSK",
                 new ItemStack(Material.BLACK_WOOL),
                 ThemeType.EXALTED,
-                "Exalted Dusk",
-                "A magical construct shines",
-                "as vivid as the new moon",
+                "尊贵的黄昏",
+                "一个魔法构造，像新月一样闪耀",
+                "让玩家时间固定在夜晚（不会影响实际时间）",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during the night"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在夜间合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedDuskRecipe.getDisplayRecipe(),
@@ -187,11 +182,11 @@ public class Exalted {
                 "CRY_EXALTED_SUN",
                 new ItemStack(Material.MAGMA_BLOCK),
                 ThemeType.EXALTED,
-                "Exalted Sun",
-                "A magical construct emanating",
-                "the power of a sun.",
+                "尊贵的太阳",
+                "一个散发着太阳的光辉的魔法构造",
+                "让玩家天气变为晴天（不会影响实际天气）",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during a clear day"
+                ThemeType.CLICK_INFO.getColor() + "需要: 需要在晴天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedSunRecipe.getDisplayRecipe(),
@@ -212,11 +207,11 @@ public class Exalted {
                 "CRY_EXALTED_STORM",
                 new ItemStack(Material.GRAY_WOOL),
                 ThemeType.EXALTED,
-                "Exalted Storm",
-                "A magical construct emanating",
-                "the destruction of a storm.",
+                "尊贵的风暴",
+                "一个散发着风暴的破坏力的魔法构造",
+                "让玩家天气变为雨天（不会影响实际天气）",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Crafted during a storm"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在雨天合成"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             exaltedStormRecipe.getDisplayRecipe(),

@@ -16,6 +16,7 @@ import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.items.blocks.UnplaceableBlock;
+import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
@@ -142,10 +143,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_BLACK_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLACK),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Black)",
-                "Paints colored blocks black.",
+                "魔法画笔 (黑色)",
+                "可以将染色方块变成黑色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -164,10 +165,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_BLUE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLUE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Blue)",
-                "Paints colored blocks blue.",
+                "魔法画笔 (蓝色)",
+                "可以将染色方块变成蓝色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -186,10 +187,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_BROWN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.BROWN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Brown)",
-                "Paints colored blocks brown.",
+                "魔法画笔 (棕色)",
+                "可以将染色方块变成棕色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -208,10 +209,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_CYAN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.CYAN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Cyan)",
-                "Paints colored blocks cyan.",
+                "魔法画笔 (青色)",
+                "可以将染色方块变成青色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -230,10 +231,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_GRAY_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.GRAY),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Gray)",
-                "Paints colored blocks gray.",
+                "魔法画笔 (灰色)",
+                "可以将染色方块变成灰色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -252,10 +253,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_GREEN_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.GREEN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Green)",
-                "Paints colored blocks green.",
+                "魔法画笔 (绿色)",
+                "可以将染色方块变成绿色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -274,10 +275,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIGHT_BLUE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_BLUE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Light Blue)",
-                "Paints colored blocks light blue.",
+                "魔法画笔 (淡蓝色)",
+                "可以将染色方块变成淡蓝色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -296,10 +297,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIGHT_GRAY_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_GRAY),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Light Gray)",
-                "Paints colored blocks light gray.",
+                "魔法画笔 (淡灰色)",
+                "可以将染色方块变成淡灰色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -318,10 +319,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIME_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIME),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Lime)",
-                "Paints colored blocks lime.",
+                "魔法画笔 (黄绿色)",
+                "可以将染色方块变成黄绿色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -340,10 +341,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_MAGENTA_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.MAGENTA),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Magenta)",
-                "Paints colored blocks magenta.",
+                "魔法画笔 (品红色)",
+                "可以将染色方块变成黄绿色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -362,10 +363,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_ORANGE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.ORANGE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Orange)",
-                "Paints colored blocks orange.",
+                "魔法画笔 (橙色)",
+                "可以将染色方块变成橙色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -384,10 +385,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_PINK_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.PINK),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Pink)",
-                "Paints colored blocks pink.",
+                "魔法画笔 (粉色)",
+                "可以将染色方块变成粉色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -406,10 +407,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_PURPLE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.PURPLE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Purple)",
-                "Paints colored blocks purple.",
+                "魔法画笔 (紫色)",
+                "可以将染色方块变成紫色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -428,10 +429,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_RED_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.RED),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Red)",
-                "Paints colored blocks red.",
+                "魔法画笔 (红色)",
+                "可以将染色方块变成红色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -450,10 +451,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_WHITE_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (White)",
-                "Paints colored blocks white.",
+                "魔法画笔 (白色)",
+                "可以将染色方块变成红色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -472,10 +473,10 @@ public class ArtisticItems {
                 "CRY_BRUSH_YELLOW_100",
                 MagicPaintbrush.getTippedBrush(DyeColor.YELLOW),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Yellow)",
-                "Paints colored blocks yellow.",
+                "魔法画笔 (黄色)",
+                "可以将染色方块变成红色",
                 "",
-                ChatColor.YELLOW + "100 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(100)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -500,10 +501,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_BLACK_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLACK),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Black)",
-                "Paints colored blocks black.",
+                "高级魔法画笔 (黑色)",
+                "可以将染色方块变成黑色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             blackPaintbrush1000Recipe.getDisplayRecipe(),
@@ -524,10 +526,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_BLUE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BLUE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Blue)",
-                "Paints colored blocks blue.",
+                "高级魔法画笔 (蓝色)",
+                "可以将染色方块变成黑色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             bluePaintbrush1000Recipe.getDisplayRecipe(),
@@ -548,10 +551,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_BROWN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.BROWN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Brown)",
-                "Paints colored blocks brown.",
+                "高级魔法画笔 (棕色)",
+                "可以将染色方块变成黑色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             brownPaintbrush1000Recipe.getDisplayRecipe(),
@@ -572,10 +576,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_CYAN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.CYAN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Cyan)",
-                "Paints colored blocks cyan.",
+                "高级魔法画笔 (青色)",
+                "可以将染色方块变成青色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             cyanPaintbrush1000Recipe.getDisplayRecipe(),
@@ -596,10 +601,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_GRAY_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.GRAY),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Gray)",
-                "Paints colored blocks gray.",
+                "高级魔法画笔 (灰色)",
+                "可以将染色方块变成灰色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             grayPaintbrush1000Recipe.getDisplayRecipe(),
@@ -620,10 +626,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_GREEN_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.GREEN),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Green)",
-                "Paints colored blocks green.",
+                "高级魔法画笔 (绿色)",
+                "可以将染色方块变成绿色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             greenPaintbrush1000Recipe.getDisplayRecipe(),
@@ -644,10 +651,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIGHT_BLUE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_BLUE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Light Blue)",
-                "Paints colored blocks light blue.",
+                "高级魔法画笔 (淡蓝色)",
+                "可以将染色方块变成淡蓝色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             lightBluePaintbrush1000Recipe.getDisplayRecipe(),
@@ -668,10 +676,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIGHT_GRAY_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIGHT_GRAY),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Light Gray)",
-                "Paints colored blocks light gray.",
+                "高级魔法画笔 (淡灰色)",
+                "可以将染色方块变成淡灰色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             lightGrayPaintbrush1000Recipe.getDisplayRecipe(),
@@ -692,10 +701,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_LIME_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.LIME),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Lime)",
-                "Paints colored blocks lime.",
+                "高级魔法画笔 (黄绿色)",
+                "可以将染色方块变成黄绿色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             limePaintbrush1000Recipe.getDisplayRecipe(),
@@ -716,10 +726,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_MAGENTA_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.MAGENTA),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Magenta)",
-                "Paints colored blocks magenta.",
+                "高级魔法画笔 (品红色)",
+                "可以将染色方块变成品红色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             magentaPaintbrush1000Recipe.getDisplayRecipe(),
@@ -740,10 +751,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_ORANGE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.ORANGE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Orange)",
-                "Paints colored blocks orange.",
+                "高级魔法画笔 (橙色)",
+                "可以将染色方块变成橙色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             orangePaintbrush1000Recipe.getDisplayRecipe(),
@@ -764,10 +776,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_PINK_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.PINK),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Pink)",
-                "Paints colored blocks pink.",
+                "高级魔法画笔 (粉色)",
+                "可以将染色方块变成粉色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             pinkPaintbrush1000Recipe.getDisplayRecipe(),
@@ -788,10 +801,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_PURPLE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.PURPLE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Purple)",
-                "Paints colored blocks purple.",
+                "高级魔法画笔 (紫色)",
+                "可以将染色方块变成紫色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             purplePaintbrush1000Recipe.getDisplayRecipe(),
@@ -812,10 +826,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_RED_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.RED),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Red)",
-                "Paints colored blocks red.",
+                "高级魔法画笔 (红色)",
+                "可以将染色方块变成红色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             redPaintbrush1000Recipe.getDisplayRecipe(),
@@ -836,10 +851,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_WHITE_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE),
                 ThemeType.TOOL,
-                "Magic Paintbrush (White)",
-                "Paints colored blocks white.",
+                "高级魔法画笔 (白色)",
+                "可以将染色方块变成白色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             whitePaintbrush1000Recipe.getDisplayRecipe(),
@@ -860,10 +876,11 @@ public class ArtisticItems {
                 "CRY_BRUSH_YELLOW_1000",
                 MagicPaintbrush.getTippedBrush(DyeColor.YELLOW),
                 ThemeType.TOOL,
-                "Magic Paintbrush (Yellow)",
-                "Paints colored blocks yellow.",
+                "高级魔法画笔 (黄色)",
+                "可以将染色方块变成黄色",
+                "拥有更多使用次数",
                 "",
-                ChatColor.YELLOW + "1000 Uses " + ChatColor.GRAY + "left"
+                LoreBuilder.usesLeft(1000)
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             yellowPaintbrush1000Recipe.getDisplayRecipe(),
@@ -878,8 +895,8 @@ public class ArtisticItems {
                 "CRY_MYSTICAL_PIGMENTATO",
                 new ItemStack(Material.PRISMARINE),
                 ThemeType.CRAFTING,
-                "Mystical Pigmentato",
-                "A condensed essence of color"
+                "神秘色素",
+                "浓缩的彩色精华"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -896,8 +913,8 @@ public class ArtisticItems {
                 "CRY_MYSTICAL_TINTANNO",
                 new ItemStack(Material.DARK_PRISMARINE),
                 ThemeType.CRAFTING,
-                "Mystical Tintanno",
-                "A condensed essence of color"
+                "神秘染料",
+                "浓缩的彩色精华"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -914,11 +931,12 @@ public class ArtisticItems {
                 "CRY_BRUSH_INFINITE",
                 MagicPaintbrush.getTippedBrush(DyeColor.WHITE, true),
                 ThemeType.TOOL,
-                "Mythical Paintbrush",
-                "Paints colored blocks and entities. Can",
-                "paint in all colors and doesn't run out.",
+                "神秘画笔",
+                "可以粉刷染色方块与染色生物",
+                "可以选择所有的可用颜色",
+                "没有使用次数限制",
                 "",
-                MessageFormat.format("{0}Shift Left Click: {1}Change Color", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+                MessageFormat.format("{0}Shift+左键点击: {1}改变颜色", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -941,8 +959,8 @@ public class ArtisticItems {
                 "CRY_BODY_STAND",
                 new ItemStack(Material.ARMOR_STAND),
                 ThemeType.CRAFTING,
-                "Armorstand of the Body",
-                "Something about this stand is off."
+                "不完整的盔甲架(身体)",
+                "这个盔甲架的一部分坏掉了"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             bodyStandRecipe.getDisplayRecipe()
@@ -961,8 +979,8 @@ public class ArtisticItems {
                 "CRY_MIND_STAND",
                 new ItemStack(Material.ARMOR_STAND),
                 ThemeType.CRAFTING,
-                "Armorstand of the Mind",
-                "Something about this stand is off."
+                "不完整的盔甲架(思想)",
+                "这个盔甲架的一部分坏掉了"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             mindStandRecipe.getDisplayRecipe()
@@ -981,8 +999,8 @@ public class ArtisticItems {
                 "CRY_SOUL_STAND",
                 new ItemStack(Material.ARMOR_STAND),
                 ThemeType.CRAFTING,
-                "Armorstand of the Soul",
-                "Something about this stand is off."
+                "不完整的盔甲架(灵魂)",
+                "这个盔甲架的一部分坏掉了"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             soulStandRecipe.getDisplayRecipe()
@@ -995,8 +1013,8 @@ public class ArtisticItems {
                 "CRY_MYSTICAL_ATTITUDINIZER",
                 new ItemStack(Material.BELL),
                 ThemeType.CRAFTING,
-                "Mystical Attitudinizer",
-                "A condensed essence of posture"
+                "神秘姿态",
+                "浓缩的姿态精华"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -1019,10 +1037,9 @@ public class ArtisticItems {
                 "CRY_IMBUED_STAND",
                 new ItemStack(Material.ARMOR_STAND),
                 ThemeType.TOOL,
-                "Imbued Armor Stand",
-                "This Armor Stand can be made",
-                "invisible or smaller with a pose",
-                "changer."
+                "注入盔甲架",
+                "这个盔甲架可以被造型设置器",
+                "设置为隐身或变小"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             imbuedStandRecipe.getDisplayRecipe()
@@ -1035,20 +1052,18 @@ public class ArtisticItems {
                 "CRY_POSE_CHANGER",
                 new ItemStack(Material.BAMBOO),
                 ThemeType.TOOL,
-                "Pose Changer",
-                "This item is able to manipulate",
-                "the pose of armor stands.",
-                "Works with vanilla stand and",
-                "can do additional things to",
-                "Imbued Stands.",
+                "造型设置器",
+                "该物品可以让你设置盔甲架的造型",
+                "可以更改原版的盔甲架",
+                "可以对注入盔甲架做更多事情",
                 "",
-                MessageFormat.format("{0}Left Click: {1}Change selected body part", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Shift Left Click: {1}Change selected change method", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Right Click: {1}Apply change (positive)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Shift Right Click: {1}Apply change (negative)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}左键点击: {1}更改选中的部分", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift+左键点击: {1}更改修改的方法", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}右键点击: {1}应用更改 (positive)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift+右键点击: {1}应用更改 (negative)", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
                 "",
-                MessageFormat.format("{0}Pose Set To: {1}HEAD", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Change Set To: {1}RESET", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+                MessageFormat.format("{0}选中部分: {1}HEAD", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}修改方法: {1}RESET", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -1065,13 +1080,12 @@ public class ArtisticItems {
                 "CRY_POSE_CLONER",
                 new ItemStack(Material.SEA_PICKLE),
                 ThemeType.TOOL,
-                "Pose Cloner",
-                "This item can copy the state",
-                "of an Inbued Armorstand and",
-                "make another match to suit.",
+                "造型复制器",
+                "这个物品可以复制注入盔甲架",
+                "的造型并应用到另一个注入盔甲架上",
                 "",
-                MessageFormat.format("{0}Right Click: {1}Clone pose", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Shift Right Click: {1}Apply stored clone", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
+                MessageFormat.format("{0}右键点击: {1}复制造型", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
+                MessageFormat.format("{0}Shift+右键点击: {1}应用造型", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{

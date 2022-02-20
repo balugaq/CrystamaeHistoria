@@ -7,6 +7,7 @@ import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
 import io.github.sefiraat.crystamaehistoria.utils.StoryUtils;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import lombok.Getter;
+import net.guizhanss.guizhanlib.minecraft.helper.inventory.ItemStackHelper;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Material;
@@ -218,7 +219,7 @@ public class StoriesManager {
             storyMapUnique.put(story.getId(), story);
         }
         CrystamaeHistoria.getInstance().getLogger().info(
-            MessageFormat.format("Loaded: {0} unique (block) stories.", blockDefinitionMap.size())
+            MessageFormat.format("已加载: {0} 个独一无二的方块故事.", blockDefinitionMap.size())
         );
     }
 
@@ -249,7 +250,7 @@ public class StoriesManager {
 
     @ParametersAreNonnullByDefault
     private static void setName(ItemStack itemStack, ItemMeta im) {
-        TextComponent name = new TextComponent("Storied " + ThemeType.toTitleCase(itemStack.getType().toString()));
+        TextComponent name = new TextComponent("有故事的" + ItemStackHelper.getName(itemStack));
         name.setColor(ThemeType.MAIN.getColor());
         name.setBold(true);
         im.setDisplayName(name.toLegacyText());

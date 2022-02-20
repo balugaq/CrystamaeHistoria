@@ -128,10 +128,15 @@ public class Bobulate extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "混乱";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Turns colorful things into other colorful",
-            "things."
+            "让命中目标附近的方块和实体更换颜色"
         };
     }
 

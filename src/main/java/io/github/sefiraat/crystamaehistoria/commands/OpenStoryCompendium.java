@@ -16,7 +16,7 @@ import java.util.Optional;
 public class OpenStoryCompendium extends SubCommand {
 
     public OpenStoryCompendium() {
-        super("stories", "Opens the story compendium", false);
+        super("stories", "打开故事集", false);
     }
 
     @Override

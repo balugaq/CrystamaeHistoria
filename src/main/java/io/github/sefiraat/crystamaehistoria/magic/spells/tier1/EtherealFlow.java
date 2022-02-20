@@ -41,9 +41,15 @@ public class EtherealFlow extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "时光流逝";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Fast-forwards time"
+            "使所在世界的时间变快"
         };
     }
 

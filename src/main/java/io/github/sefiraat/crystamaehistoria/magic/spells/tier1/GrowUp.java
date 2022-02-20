@@ -59,9 +59,16 @@ public class GrowUp extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "生长";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Makes things grow up, and not just babies!"
+            "让附近的生物生长",
+            "不再是幼年期了!"
         };
     }
 

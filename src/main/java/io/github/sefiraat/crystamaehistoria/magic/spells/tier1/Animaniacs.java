@@ -100,9 +100,15 @@ public class Animaniacs extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "狂欢三宝";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Disjoints the reality of nearby creatures."
+            "让附近的动物脱离现实!"
         };
     }
 

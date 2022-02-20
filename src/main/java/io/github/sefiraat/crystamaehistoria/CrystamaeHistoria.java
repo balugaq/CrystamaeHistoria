@@ -17,17 +17,18 @@ import io.github.sefiraat.crystamaehistoria.magic.spells.spellobjects.MagicProje
 import io.github.sefiraat.crystamaehistoria.magic.spells.spellobjects.MagicSummon;
 import io.github.sefiraat.crystamaehistoria.player.PlayerStatistics;
 import io.github.sefiraat.crystamaehistoria.runnables.RunnableManager;
+import io.github.sefiraat.crystamaehistoria.slimefun.ArtisticItems;
 import io.github.sefiraat.crystamaehistoria.slimefun.Exalted;
 import io.github.sefiraat.crystamaehistoria.slimefun.Gadgets;
 import io.github.sefiraat.crystamaehistoria.slimefun.ItemGroups;
 import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
 import io.github.sefiraat.crystamaehistoria.slimefun.Mechanisms;
-import io.github.sefiraat.crystamaehistoria.slimefun.ArtisticItems;
 import io.github.sefiraat.crystamaehistoria.slimefun.Tools;
 import io.github.sefiraat.crystamaehistoria.slimefun.Uniques;
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.StoriesManager;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.apache.commons.lang.Validate;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
@@ -52,7 +53,7 @@ public class CrystamaeHistoria extends AbstractAddon {
     private SupportedPluginManager supportedPluginManager;
 
     public CrystamaeHistoria() {
-        super("Sefiraat", "CrystamaeHistoria", "master", "auto-update");
+        super("SlimefunGuguProject", "CrystamaeHistoria", "master", "auto-update");
     }
 
     public static CrystamaeHistoria getInstance() {
@@ -140,7 +141,8 @@ public class CrystamaeHistoria extends AbstractAddon {
         instance = this;
 
         getLogger().info("########################################");
-        getLogger().info("    Crystamae Historia - By Sefiraat    ");
+        getLogger().info("     CrystamaeHistoria  魔法水晶编年史    ");
+        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
         getLogger().info("########################################");
 
         this.configManager = new ConfigManager();
@@ -164,6 +166,11 @@ public class CrystamaeHistoria extends AbstractAddon {
         getAddonCommand().addSub(new OpenSpellCompendium());
         getAddonCommand().addSub(new OpenStoryCompendium());
         getAddonCommand().addSub(new GetRanks());
+
+        if (getConfig().getBoolean("auto-update") &&
+            getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master", false).start();
+        }
     }
 
     private void setupBstats() {

@@ -15,10 +15,9 @@ public class DummyLiquefactionBasinSpell {
         "CRY_LIQUEFACTION_BASIN_DUMMY_SPELL",
         new ItemStack(Material.CAULDRON),
         ThemeType.MECHANISM,
-        "Liquefaction Basin",
-        "Formed by dropping a basic plate into a",
-        "filled Liquefaction Basin containing",
-        "the correct Crystamae."
+        "液化池",
+        "在液化池中投入足够数量的魔法水晶",
+        "然后投入魔法板来进行合成"
     );
     public static final RecipeType TYPE = new RecipeType(Keys.LIQUEFACTION_DUMMY_SPELL, STACK);
 }

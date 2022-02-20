@@ -15,11 +15,12 @@ public class DummyGuideOnly {
         "CRY_GUIDE_DUMMY",
         new ItemStack(Material.BOOK),
         ThemeType.MECHANISM,
-        "Guide",
-        "This is a guide only.",
-        "Some crafts in Crystamae are very",
-        "different compared to other addons",
-        "so these are here just for clarification."
+        "指南",
+        "这只是一个指南物品",
+        "由于魔法水晶编年史中",
+        "部分物品的制作方式",
+        "与其他附属插件不同",
+        "你可以通过查看指南来了解详情"
     );
     public static final RecipeType TYPE = new RecipeType(Keys.GUIDE_ONLY, STACK);
 }

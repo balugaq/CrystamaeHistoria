@@ -5,6 +5,7 @@ import io.github.sefiraat.crystamaehistoria.utils.Skulls;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import lombok.experimental.UtilityClass;
+import net.guizhanss.guizhanlib.minecraft.helper.MaterialHelper;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
@@ -20,27 +21,27 @@ public class GuiElements {
 
     public static final CustomItemStack MENU_BACKGROUND_INPUT = new CustomItemStack(
         Material.LIGHT_BLUE_STAINED_GLASS_PANE,
-        ChatColor.BLUE + "Input"
+        ChatColor.BLUE + "输入"
     );
 
     public static final CustomItemStack MENU_STAVE_INPUT = new CustomItemStack(
         Material.LIGHT_BLUE_STAINED_GLASS_PANE,
-        ChatColor.BLUE + "Stave Input"
+        ChatColor.BLUE + "在此处放入法杖"
     );
 
     public static final CustomItemStack MENU_REMOVE_PLATES = new CustomItemStack(
         Material.ORANGE_STAINED_GLASS_PANE,
-        ChatColor.BLUE + "Remove Plates"
+        ChatColor.BLUE + "移除法术板"
     );
 
     public static final CustomItemStack MENU_SAVE_STAVE = new CustomItemStack(
         Material.GREEN_STAINED_GLASS_PANE,
-        ChatColor.BLUE + "Save Stave Config"
+        ChatColor.BLUE + "保存法杖设置"
     );
 
     public static final CustomItemStack MENU_BACKGROUND_OUTPUT = new CustomItemStack(
         Material.ORANGE_STAINED_GLASS_PANE,
-        ChatColor.RED + "Output"
+        ChatColor.RED + "输出"
     );
 
     public static final CustomItemStack MENU_DIVIDER = new CustomItemStack(
@@ -50,27 +51,27 @@ public class GuiElements {
 
     public static final CustomItemStack TIER_INDICATOR_1 = new CustomItemStack(
         Skulls.GUI_TIER_NUMBER_1.getPlayerHead(),
-        ThemeType.CLICK_INFO.getColor() + "Tier 1"
+        ThemeType.CLICK_INFO.getColor() + "T1"
     );
 
     public static final CustomItemStack TIER_INDICATOR_2 = new CustomItemStack(
         Skulls.GUI_TIER_NUMBER_2.getPlayerHead(),
-        ThemeType.CLICK_INFO.getColor() + "Tier 2"
+        ThemeType.CLICK_INFO.getColor() + "T2"
     );
 
     public static final CustomItemStack TIER_INDICATOR_3 = new CustomItemStack(
         Skulls.GUI_TIER_NUMBER_3.getPlayerHead(),
-        ThemeType.CLICK_INFO.getColor() + "Tier 3"
+        ThemeType.CLICK_INFO.getColor() + "T3"
     );
 
     public static final CustomItemStack TIER_INDICATOR_4 = new CustomItemStack(
         Skulls.GUI_TIER_NUMBER_4.getPlayerHead(),
-        ThemeType.CLICK_INFO.getColor() + "Tier 4"
+        ThemeType.CLICK_INFO.getColor() + "T4"
     );
 
     public static final CustomItemStack TIER_INDICATOR_5 = new CustomItemStack(
         Skulls.GUI_TIER_NUMBER_5.getPlayerHead(),
-        ThemeType.CLICK_INFO.getColor() + "Tier 5"
+        ThemeType.CLICK_INFO.getColor() + "T5"
     );
 
     @ParametersAreNonnullByDefault
@@ -78,9 +79,8 @@ public class GuiElements {
         return ThemeType.themedItemStack(
             material,
             ThemeType.RARITY_UNIQUE,
-            ThemeType.toTitleCase(material.toString()),
-            "This unique story has been",
-            "chronicled."
+            MaterialHelper.getName(material),
+            "该故事已被发掘"
         );
     }
 
@@ -89,26 +89,24 @@ public class GuiElements {
         return ThemeType.themedItemStack(
             Material.BARRIER,
             ThemeType.RESEARCH,
-            ThemeType.toTitleCase(material.toString()),
-            MessageFormat.format("{0}{1}LOCKED", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
-            "This unique story is not yet",
-            "unlocked.",
-            "Stories are unlocked the first time",
-            "you chronicle the required block."
+            MaterialHelper.getName(material),
+            MessageFormat.format("{0}{1}已锁定", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
+            "该故事还没有解锁",
+            "当你使用记录者首次发掘",
+            "指定方块的故事时才能解锁"
         );
     }
 
     @ParametersAreNonnullByDefault
-    public static ItemStack getSpellNotUnlockedIcon(String id) {
+    public static ItemStack getSpellNotUnlockedIcon(String name) {
         return ThemeType.themedItemStack(
             Material.BARRIER,
             ThemeType.RESEARCH,
-            ThemeType.toTitleCase(id),
-            MessageFormat.format("{0}{1}LOCKED", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
-            "This spell is not yet unlocked.",
-            "Spells are unlocked the first time",
-            "you charge a plate with it in the",
-            "liquefaction basin."
+            name,
+            MessageFormat.format("{0}{1}已锁定", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
+            "该法术还没有被解锁",
+            "当你在液化池中首次",
+            "充能魔法板时才能解锁法术"
         );
     }
 
@@ -116,7 +114,7 @@ public class GuiElements {
     public static CustomItemStack getSpellSlotPane(SpellSlot spellSlot) {
         return new CustomItemStack(
             Material.RED_STAINED_GLASS_PANE,
-            ChatColor.GRAY + "Spell Slot : " + ThemeType.toTitleCase(spellSlot.name())
+            ChatColor.GRAY + "法术: " + spellSlot.getDescription()
         );
     }
 
@@ -125,7 +123,7 @@ public class GuiElements {
         Material material = active ? Material.RED_STAINED_GLASS_PANE : Material.GREEN_STAINED_GLASS_PANE;
         return new CustomItemStack(
             material,
-            ChatColor.GRAY + "Set direction: " + blockFace.name()
+            ChatColor.GRAY + "设置方向: " + blockFace.name()
         );
     }
 }

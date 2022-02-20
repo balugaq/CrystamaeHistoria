@@ -66,10 +66,15 @@ public class AirSprite extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "空气精灵";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons 1-5 air sprites to attack",
-            "your enemies."
+            "召唤 1-5 只空气精灵来攻击你的敌人"
         };
     }
 

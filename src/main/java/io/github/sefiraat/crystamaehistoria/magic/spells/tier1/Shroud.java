@@ -60,11 +60,16 @@ public class Shroud extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "阴阳布";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a dark miasma around the player",
-            "causing light damage and blinding those",
-            "affected."
+            "在玩家周围召唤一股黑暗瘴气",
+            "对敌人造成轻微伤害并致盲"
         };
     }
 

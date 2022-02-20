@@ -123,10 +123,16 @@ public class RemnantOfWar extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "幽灵队长";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a remnant of war from the dead",
-            "to your side. Their gear scales with tier."
+            "从死亡中召唤战争亡灵到你身边",
+            "他们的装备随着等级的增加而增强"
         };
     }
 

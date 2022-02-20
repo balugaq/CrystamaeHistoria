@@ -88,10 +88,16 @@ public class AntiPrism extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "反棱镜";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Applies a myriad of negative effects to",
-            "enemies hit."
+            "可以给命中的目标施加",
+            "多种负面效果"
         };
     }
 

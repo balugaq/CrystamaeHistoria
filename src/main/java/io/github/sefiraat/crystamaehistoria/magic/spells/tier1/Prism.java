@@ -65,10 +65,16 @@ public class Prism extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "棱镜";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Applies a myriad of positive effects to",
-            "the caster."
+            "施法者可以获得",
+            "多种正面效果"
         };
     }
 

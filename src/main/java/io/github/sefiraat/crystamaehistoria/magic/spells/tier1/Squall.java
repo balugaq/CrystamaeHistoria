@@ -47,10 +47,15 @@ public class Squall extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "飑云";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Causes the heavens to open up and pour",
-            "down."
+            "使天空敞开并倾泻而下"
         };
     }
 

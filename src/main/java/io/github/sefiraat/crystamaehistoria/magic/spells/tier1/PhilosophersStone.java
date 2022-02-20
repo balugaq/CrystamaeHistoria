@@ -93,10 +93,16 @@ public class PhilosophersStone extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "贤者之石";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Converts the targets block into...",
-            "something else..."
+            "将目标方块...",
+            "转换成别的东西..."
         };
     }
 

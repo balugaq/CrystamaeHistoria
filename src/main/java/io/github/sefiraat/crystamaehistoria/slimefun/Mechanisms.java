@@ -62,12 +62,11 @@ public class Mechanisms {
                 "CRY_CHRONICLER_PANEL_1",
                 new ItemStack(Material.COBBLED_DEEPSLATE_SLAB),
                 ThemeType.MECHANISM,
-                "Chronicler Panel (Tier 1)",
-                "The chronicler panel will draw out",
-                "the stories contained within a given",
-                "block over time.",
+                "记录者 (T1)",
+                "记录者可以在任意方块中寻找",
+                "并发掘出隐藏在其中的故事",
                 "",
-                "Can chronicle stories for T1-T2 blocks."
+                "可发掘 T1-T2 方块"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -85,12 +84,11 @@ public class Mechanisms {
                 "CRY_CHRONICLER_PANEL_2",
                 new ItemStack(Material.DEEPSLATE_TILE_SLAB),
                 ThemeType.MECHANISM,
-                "Chronicler Panel (Tier 2)",
-                "The chronicler panel will draw out",
-                "the stories contained within a given",
-                "block over time.",
+                "记录者 (T2)",
+                "记录者可以在任意方块中寻找",
+                "并发掘出隐藏在其中的故事",
                 "",
-                "Can chronicle stories for T1-T3 blocks."
+                "可发掘 T1-T3 方块"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -114,12 +112,11 @@ public class Mechanisms {
                 "CRY_CHRONICLER_PANEL_3",
                 new ItemStack(Material.NETHER_BRICK_SLAB),
                 ThemeType.MECHANISM,
-                "Chronicler Panel (Tier 3)",
-                "The chronicler panel will draw out",
-                "the stories contained within a given",
-                "block over time.",
+                "记录者 (T3)",
+                "记录者可以在任意方块中寻找",
+                "并发掘出隐藏在其中的故事",
                 "",
-                "Can chronicle stories for T1-T4 blocks."
+                "可发掘 T1-T4 方块"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             chroniclerT3Recipe.getDisplayRecipe(),
@@ -139,12 +136,11 @@ public class Mechanisms {
                 "CRY_CHRONICLER_PANEL_4",
                 new ItemStack(Material.DARK_PRISMARINE_SLAB),
                 ThemeType.MECHANISM,
-                "Chronicler Panel (Tier 4)",
-                "The chronicler panel will draw out",
-                "the stories contained within a given",
-                "block over time.",
+                "记录者 (T4)",
+                "记录者可以在任意方块中寻找",
+                "并发掘出隐藏在其中的故事",
                 "",
-                "Can chronicle stories for T1-T5 blocks."
+                "可发掘 T1-T5 方块"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             chroniclerT4Recipe.getDisplayRecipe(),
@@ -158,12 +154,11 @@ public class Mechanisms {
                 "CRY_REALISATION_ALTAR_1",
                 new ItemStack(Material.CHISELED_DEEPSLATE),
                 ThemeType.MECHANISM,
-                "Realisation Altar (Tier 1)",
-                "The realisation altar takes storied",
-                "blocks and converts their stories into",
-                "a physical form.",
+                "现实祭坛 (T1)",
+                "现实祭坛可以从已发掘出故事的方块中",
+                "提取魔法能量，并将其转化为物理形态",
                 "",
-                "Can realise T1 - T2."
+                "可提取 T1 - T2 方块"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -181,12 +176,11 @@ public class Mechanisms {
                 "CRY_REALISATION_ALTAR_2",
                 new ItemStack(Material.CHISELED_NETHER_BRICKS),
                 ThemeType.MECHANISM,
-                "Realisation Altar (Tier 2)",
-                "The realisation altar takes storied",
-                "blocks and converts their stories into",
-                "a physical form.",
+                "现实祭坛 (T2)",
+                "现实祭坛可以从已发掘出故事的方块中",
+                "提取魔法能量，并将其转化为物理形态",
                 "",
-                "Can realise T1 - T3."
+                "可提取 T1 - T3 方块"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -210,12 +204,11 @@ public class Mechanisms {
                 "CRY_REALISATION_ALTAR_3",
                 new ItemStack(Material.CHISELED_RED_SANDSTONE),
                 ThemeType.MECHANISM,
-                "Realisation Altar (Tier 3)",
-                "The realisation altar takes storied",
-                "blocks and converts their stories into",
-                "a physical form.",
+                "现实祭坛 (T3)",
+                "现实祭坛可以从已发掘出故事的方块中",
+                "提取魔法能量，并将其转化为物理形态",
                 "",
-                "Can realise T1 - T4."
+                "可提取 T1 - T4 方块"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             realisationT3Recipe.getDisplayRecipe(),
@@ -235,12 +228,11 @@ public class Mechanisms {
                 "CRY_REALISATION_ALTAR_4",
                 new ItemStack(Material.CHISELED_POLISHED_BLACKSTONE),
                 ThemeType.MECHANISM,
-                "Realisation Altar (Tier 4)",
-                "The realisation altar takes storied",
-                "blocks and converts their stories into",
-                "a physical form.",
+                "现实祭坛 (T4)",
+                "现实祭坛可以从已发掘出故事的方块中",
+                "提取魔法能量，并将其转化为物理形态",
                 "",
-                "Can realise T1 - T5."
+                "可提取 T1 - T5 方块"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             realisationT4Recipe.getDisplayRecipe(),
@@ -254,13 +246,12 @@ public class Mechanisms {
                 "CRY_LIQUEFACTION_BASIN_1",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.MECHANISM,
-                "Liquefaction Basin (Tier 1)",
-                "The liquefaction basin can take",
-                "Crystals and convert them into their liquid",
-                "Crystamae form. Used for magical crafting.",
-                "Danger: Do not break while filled!",
+                "液化池 (T1)",
+                "投入魔法水晶可将其转化为液化魔法水晶",
+                "用于后续的魔法合成",
+                "警告: 不要在里面有液化魔法水晶时破坏!",
                 "",
-                "Holds up to 500 Liquefied Crysta."
+                "最多可存储 500 液化魔法水晶"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -279,13 +270,12 @@ public class Mechanisms {
                 "CRY_LIQUEFACTION_BASIN_2",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.MECHANISM,
-                "Liquefaction Basin (Tier 2)",
-                "The liquefaction basin can take",
-                "Crystals and convert them into their liquid",
-                "Crystamae form. Used for magical crafting.",
-                "Danger: Do not break while filled!",
+                "液化池 (T2)",
+                "投入魔法水晶可将其转化为液化魔法水晶",
+                "用于后续的魔法合成",
+                "警告: 不要在里面有液化魔法水晶时破坏!",
                 "",
-                "Holds up to 1000 Liquefied Crysta."
+                "最多可存储 1000 液化魔法水晶"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -310,13 +300,12 @@ public class Mechanisms {
                 "CRY_LIQUEFACTION_BASIN_3",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.MECHANISM,
-                "Liquefaction Basin (Tier 3)",
-                "The liquefaction basin can take",
-                "Crystals and convert them into their liquid",
-                "Crystamae form. Used for magical crafting.",
-                "Danger: Do not break while filled!",
+                "液化池 (T3)",
+                "投入魔法水晶可将其转化为液化魔法水晶",
+                "用于后续的魔法合成",
+                "警告: 不要在里面有液化魔法水晶时破坏!",
                 "",
-                "Holds up to 2500 Liquefied Crysta."
+                "最多可存储 2500 液化魔法水晶"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             liquefactionT3Recipe.getDisplayRecipe(),
@@ -337,13 +326,12 @@ public class Mechanisms {
                 "CRY_LIQUEFACTION_BASIN_4",
                 new ItemStack(Material.CAULDRON),
                 ThemeType.MECHANISM,
-                "Liquefaction Basin (Tier 4)",
-                "The liquefaction basin can take",
-                "Crystals and convert them into their liquid",
-                "Crystamae form. Used for magical crafting.",
-                "Danger: Do not break while filled!",
+                "液化池 (T4)",
+                "投入魔法水晶可将其转化为液化魔法水晶",
+                "用于后续的魔法合成",
+                "警告: 不要在里面有液化魔法水晶时破坏!",
                 "",
-                "Holds up to 5000 Liquefied Crysta."
+                "最多可存储 5000 液化魔法水晶"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             liquefactionT4Recipe.getDisplayRecipe(),
@@ -364,10 +352,9 @@ public class Mechanisms {
                 "CRY_STAVE_CONFIGURATOR",
                 new ItemStack(Material.CUT_COPPER),
                 ThemeType.MECHANISM,
-                "Stave Configurator",
-                "The Stave Configurator allows you",
-                "to add spell plates into your",
-                "Staves."
+                "法杖配置器",
+                "你可以使用法杖配置器来将",
+                "法术绑定至法杖"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             staveConfiguratorRecipe.getDisplayRecipe()

@@ -92,10 +92,16 @@ public class StarFall extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "天神下凡";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Rains celestial beings from the skies",
-            "to decimate your opponents."
+            "天神感应到了施法者的祷告",
+            "并决定下凡除恶"
         };
     }
 

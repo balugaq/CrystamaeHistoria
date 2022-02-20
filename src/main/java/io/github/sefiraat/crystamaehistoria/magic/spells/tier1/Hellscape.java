@@ -85,9 +85,15 @@ public class Hellscape extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "深渊之触";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a fiery spiral to ravage foes."
+            "召唤一个火焰漩涡来蹂躏敌人"
         };
     }
 

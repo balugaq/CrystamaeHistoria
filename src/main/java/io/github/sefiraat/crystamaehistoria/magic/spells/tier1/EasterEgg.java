@@ -66,6 +66,12 @@ public class EasterEgg extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "复活节彩蛋";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
             "???"

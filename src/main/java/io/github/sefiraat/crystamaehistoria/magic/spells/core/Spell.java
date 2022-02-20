@@ -7,6 +7,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasi
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
 import lombok.Getter;
 import lombok.Setter;
 import net.md_5.bungee.api.ChatColor;
@@ -50,14 +51,14 @@ public abstract class Spell {
         ChatColor passiveColor = ThemeType.PASSIVE.getColor();
         List<String> finalLore = new ArrayList<>();
         for (String s : getLore()) {
-            finalLore.add(passiveColor + s);
+            finalLore.add(passiveColor + ChatColors.color(s));
         }
         finalLore.add("");
-        finalLore.add(ThemeType.applyThemeToString(ThemeType.CLICK_INFO, "Spell"));
+        finalLore.add(ThemeType.applyThemeToString(ThemeType.CLICK_INFO, "法术"));
         SlimefunItemStack stack = new SlimefunItemStack(
             getId(),
             getMaterial(),
-            ThemeType.applyThemeToString(ThemeType.SPELL, ThemeType.toTitleCase(getId())),
+            ThemeType.applyThemeToString(ThemeType.SPELL, getName()),
             finalLore.toArray(new String[finalLore.size() - 1])
         );
         ItemMeta itemMeta = stack.getItemMeta();
@@ -72,6 +73,11 @@ public abstract class Spell {
 
     @Nonnull
     public abstract String getId();
+
+    @Nonnull
+    public String getName() {
+        return ThemeType.toTitleCase(getId());
+    }
 
     @Nonnull
     public abstract Material getMaterial();

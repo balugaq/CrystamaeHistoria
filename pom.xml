@@ -11,19 +11,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sonar.projectKey>Crystamae_Historia</sonar.projectKey>
-        <sonar.organization>sefiraat</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-
-        <sonar.issue.ignore.multicriteria>e1,e2,e3</sonar.issue.ignore.multicriteria>
-        <sonar.issue.ignore.multicriteria.e1.ruleKey>java:S6212</sonar.issue.ignore.multicriteria.e1.ruleKey>
-        <sonar.issue.ignore.multicriteria.e1.resourceKey>**</sonar.issue.ignore.multicriteria.e1.resourceKey>
-
-        <sonar.issue.ignore.multicriteria.e2.ruleKey>java:S125</sonar.issue.ignore.multicriteria.e2.ruleKey>
-        <sonar.issue.ignore.multicriteria.e2.resourceKey>**</sonar.issue.ignore.multicriteria.e2.resourceKey>
-
-        <sonar.issue.ignore.multicriteria.e3.ruleKey>java:S2245</sonar.issue.ignore.multicriteria.e3.ruleKey>
-        <sonar.issue.ignore.multicriteria.e3.resourceKey>**</sonar.issue.ignore.multicriteria.e3.resourceKey>
     </properties>
 
     <repositories>
@@ -51,13 +38,14 @@
     </repositories>
 
     <build>
-        <finalName>${project.name} v${project.version}</finalName>
+        <finalName>${project.name}-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.4</version>
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
                     <relocations>
                         <relocation>
                             <pattern>io.github.mooy1.infinitylib</pattern>
@@ -122,9 +110,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.Slimefun</groupId>
+            <groupId>io.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>b8f7dc</version>
+            <version>RC-30</version>
             <scope>provided</scope>
         </dependency>
 
@@ -139,6 +127,16 @@
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>annotations</artifactId>
             <version>3.0.1u2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.jcip</groupId>
+                    <artifactId>jcip-annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>jsr305</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -155,9 +153,9 @@
 
         <!-- Supported Plugins -->
         <dependency>
-            <groupId>com.github.TheBusyBiscuit</groupId>
+            <groupId>net.guizhanss</groupId>
             <artifactId>ExoticGarden</artifactId>
-            <version>a2c4b6d</version>
+            <version>171aca2211</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -181,9 +179,17 @@
 
         <!-- To be removed, do not use further -->
         <dependency>
-            <groupId>io.github.mooy1</groupId>
+            <groupId>net.guizhanss</groupId>
             <artifactId>InfinityLib</artifactId>
-            <version>7e03c79</version>
+            <version>1.3.9</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- 汉化 -->
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib</artifactId>
+            <version>0.5.3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

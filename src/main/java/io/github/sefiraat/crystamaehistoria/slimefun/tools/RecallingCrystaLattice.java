@@ -72,7 +72,7 @@ public class RecallingCrystaLattice extends SlimefunItem {
                 container.set(Keys.newKey("location"), DataType.LOCATION, location);
                 itemStack.setItemMeta(itemMeta);
                 player.sendMessage(
-                    MessageFormat.format("{0}Type the name of this Waystone into chat.", ChatColor.LIGHT_PURPLE)
+                    MessageFormat.format("{0}请在聊天栏内输入该路标的名称.", ChatColor.LIGHT_PURPLE)
                 );
                 ChatUtils.awaitInput(player, s -> renameItem(s, itemStack));
             }
@@ -96,13 +96,13 @@ public class RecallingCrystaLattice extends SlimefunItem {
                 event.getPlayer().teleportAsync(location.add(1, 1, 1), PlayerTeleportEvent.TeleportCause.PLUGIN);
             } else {
                 event.getPlayer().sendActionBar(
-                        Component.text("Waystone connection isn't functional")
+                        Component.text("路标不可用")
                                 .color(TextColor.color(200, 30, 40))
                 );
             }
         } else {
             event.getPlayer().sendMessage(
-                    MessageFormat.format("{0}Bind the Lattice to a Waystone using Shift + Right Click.", ChatColor.RED)
+                    MessageFormat.format("{0}请先使用Shift+右键点击来绑定一个路标.", ChatColor.RED)
             );
         }
     }

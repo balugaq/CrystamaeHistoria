@@ -73,10 +73,18 @@ public class EarthNova extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "新星冲击 II";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a massive nova of earth",
-            "around you to root foes."
+            "",
+            "\"快使用神奇的猩猩充饥~\"",
+            "",
+            "释放新星冲击，击退附近的敌人"
         };
     }
 

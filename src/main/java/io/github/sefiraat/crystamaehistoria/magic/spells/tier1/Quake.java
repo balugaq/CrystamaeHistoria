@@ -68,13 +68,19 @@ public class Quake extends Spell {
             StoryType.PHILOSOPHICAL
         );
     }
-
+    
+    @Nonnull
+    @Override
+    public String getName() {
+        return "地震波";
+    }
+    
     @Nonnull
     @Override
     public String[] getLore() {
         return new String[]{
-            "Creates a localized quake around the caster",
-            "damaging and slowing."
+            "在施法者周围制造地震",
+            "造成伤害并减速"
         };
     }
 

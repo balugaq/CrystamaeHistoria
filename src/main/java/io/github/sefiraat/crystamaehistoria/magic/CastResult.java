@@ -3,11 +3,11 @@ package io.github.sefiraat.crystamaehistoria.magic;
 import lombok.Getter;
 
 public enum CastResult {
-    CAST_SUCCESS("Successful"),
-    CAST_FAIL_NO_CRYSTA("Not enough Crystamae in plate"),
-    CAST_FAIL_SLOT_EMPTY("No plate in slot"),
-    ON_COOLDOWN("Spell on cooldown"),
-    SPELL_DISABLED("This spell has been disabled");
+    CAST_SUCCESS("成功"),
+    CAST_FAIL_NO_CRYSTA("充能不足"),
+    CAST_FAIL_SLOT_EMPTY("该栏位没有法术"),
+    ON_COOLDOWN("法术冷却中"),
+    SPELL_DISABLED("该法术已被禁用");
 
     @Getter
     private static final CastResult[] cachedValues = values();

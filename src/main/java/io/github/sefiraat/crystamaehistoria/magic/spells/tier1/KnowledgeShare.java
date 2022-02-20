@@ -64,10 +64,16 @@ public class KnowledgeShare extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "经验分享";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Removes EXP from the caster and makes",
-            "it rain down from the sky around them."
+            "消耗施法者的经验值",
+            "所耗经验将从施法者周围落下"
         };
     }
 

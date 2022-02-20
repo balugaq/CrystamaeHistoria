@@ -102,10 +102,16 @@ public class Tracer extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "曳光弹";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Shows you all nearby living things",
-            "color coded by type."
+            "向你展示周围所有生物",
+            "并用不同颜色分类"
         };
     }
 

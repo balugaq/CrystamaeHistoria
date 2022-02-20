@@ -21,7 +21,7 @@ import java.util.Map;
 public class TestWand extends SubCommand {
 
     public TestWand() {
-        super("test-wand", "gives a wand with the selected spell", true);
+        super("test-wand", "获取包含选定法术的法杖", true);
     }
 
     @Override

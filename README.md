@@ -1,78 +1,59 @@
-<p align="center">
-<img width="800" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/logo/logo.svg"><br><br>
-</p>
+![](https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/logo/logo_large.png?raw=true)
 
-Crystamae Historia is a Slimefun4 addon (currently a work in progress with much work left to do!) that adds a suite of
-magical spells and a progression system for crafting and unlocking new spells.
+魔法水晶编年史是一个 Slimefun4 附属插件。该附属插件添加了一系列的法术，以及用于创建与解锁新法术的进度系统。
 
-Any major event or experience leaves its mark on the surrounding area. Historia allows you to harness this by drawing
-out the raw essence of these experiences from blocks.
+任何重大事件或者经历都会在附近留下痕迹。本附属插件允许你从方块中提取原始精华来发掘出这些故事。
 
-Boomer_1 has made two awesome videos that take you through the basics of Crystamae going from the first mechanisms to casting your first spell in Part 1 to the various Gadgets and Tools Crystamae has to offer in Part 2. I'd encourange everyone to watch these both and enjoy!
+## 记录者
 
-## Download Crystamae Historia
-
-[![Build Status](https://thebusybiscuit.github.io/builds/Sefiraat/CrystamaeHistoria/master/badge.svg)](https://thebusybiscuit.github.io/builds/Sefiraat/CrystamaeHistoria/master)
-
-## Videos
-
-[![Watch the video](https://img.youtube.com/vi/fggkwmf6V6k/0.jpg)](https://www.youtube.com/embed/fggkwmf6V6k)
-
-[![Watch the video](https://img.youtube.com/vi/OiI6MaoiO_I/0.jpg)](https://www.youtube.com/watch?v=OiI6MaoiO_I)
-
-## The Chronicler
-
-The Chronicler Panel is a magical device that allows you to draw out the stories that any Minecraft block has
-experienced. These stories, once discovered, can be read from the block. Stories have a type, based on the type of
-experience that created it.
-
+记录者是一个魔法装置，你可以从物品中发掘它们的故事。  
+当这些故事被发掘出来后，你便可以直接阅读这些故事。  
+故事有不同的等级，根据物品的类型来确定。
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_chronicler_panel.gif?raw=true"></p>
 
-## The Realisation Altar
+## 现实祭坛
 
-The Realisation Altar will take the stories that have been discovered on blocks and slowly draw out the magical energy
-from them. This energy slowly begins to crystalize around the altar and, when fully matured, can be broken giving you
-magic in its physical form. The type of crystal you get is dependent on the type of story that was used to form it.
+现实祭坛将会从已发掘故事的物品中缓慢地提取魔法能量。这会在现实祭坛周围生成魔法水晶簇。  
+当魔法能量完全被提取出来后，你可以破坏生成的魔法水晶簇，以获取其中包含的魔法的物理形态———魔法水晶。  
+获得的水晶类型取决于故事的类型。
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_realisation_altar.gif?raw=true"></p>
 
-## The Liquefaction Basin
+## 液化池
 
-One of the primary uses for magical crystals is the Liquefaction Basin. The Basin will take any crystals thrown into it
-and convert them into a liquid state (Crystamae). When a valid catalyst is thrown in, the contents of the basin are
-absorbed to create a magical artefact, the result being based on the types of Crystamae in the basin.
+魔法水晶主要用于液化池。液化池会将投入其中魔法水晶转化为液化魔法水晶。  
+当投入有效的催化剂后，液化池中的液体会开始转换为一件魔法造物。
 
-Be careful when using the basin though, a wrong recipe will ruin all your materials and, sometimes, have devastating
-effects.
+使用液化池时需要小心，错误的配方会导致所有材料的损失，有时候还会有毁灭性的影响。
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_liquefaction_basin.gif?raw=true"></p>
 
-## Magical Plates
+## 魔法板 & 法术板
 
-Using a steel plate as a catalyst, you can create a magical imbued plate. The plate will absorb the magic given to it
-and, based on the top 3 magical values, will produce a plate that is able to channel a magical spell. 80 possible plate
-combinations are available meaning 80 possible magical spells. Plates are attached to Staves using the Stave
-Configurator.
+你可以使用钢板作为催化剂，来制作魔法板。  
+在液化池中放入至少3种不同类型的魔法水晶，然后投入魔法板。如果三种魔法水晶可以制造出法术，那么魔法板会开始吸收魔法能量，变成法术板。  
+一共有80多种可用的组合等待你发掘。
 
-Plates hold the potential for a magical spell but will need refilling with Crystamae as the magical energy is used.
-There is no limit to the stored Crystamae. You can recharge a plate by dropping it into a basin.
+在法杖配置器中，将法术板绑定至法杖上。
+
+法术板包含一个可用的法术，但如果上面的能量用完，你就要使用制造法术时所使用的3种不同类型的魔法水晶为法术板重新充能。
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_plate_filling.gif?raw=true"></p>
 
-## Stave Configurator
+## 法杖配置器
 
-A Stave is, surprisingly, very easy to craft and source. The downside being is that the Stave does nothing by itself.
-Just like some sorcerers use runes to imbue a staff with magic, the Stave requires a filled Magical Plate to channel
-magic. The configurator allows you to add/remove 4 plates to the Stave at any given time. Each plate binds it's spell to
-a specific player action (Left, Right, Shift-Left and Shift-Right click). Plates can be added and removed freely to
-customise your load-out whenever.
+法杖很容易制作。法杖本身没有任何作用，你需要给法杖绑定法术。  
+就像巫师使用符文给法杖注入魔力一样，法杖需要法术板才能释放法术。
+
+法杖配置器让你可以给法杖添加最多4个法术（分别通过左键点击、右键点击、Shift+左键点击、Shift+右键点击来释放）。你可以随时更换法杖上绑定的法术。
+
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_stave_configurator.gif?raw=true"></p>
 
-## Spells
+## 法术
 
-The end result of all your hard work? Spells! 
+经过你的努力，你得到了什么? 当然是：法术!
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_chaos.gif?raw=true"></p>
 
@@ -81,11 +62,3 @@ The end result of all your hard work? Spells!
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_ethereal.gif?raw=true"></p>
 
 <p align="center"><img width="900" src="https://github.com/Sefiraat/CrystamaeHistoria/blob/master/images/wiki/wiki_spell_push.gif?raw=true"></p>
-
-## Thanks!
-
-As usual, a big thanks to those who tested Crystamae to get it to the nice state it is in.
-
-A big thanks to the owners of **mct.tantrum.org** who have tested nearly everything I have made and really given me direction and drive to make these things.
-
-Another big shoutout to **GentlemanCheesy** of **mc.talosmp.net** for being my first (and as of writing this, only!) sponsor. A few coffee's a month to make me feel better about making these addons <3

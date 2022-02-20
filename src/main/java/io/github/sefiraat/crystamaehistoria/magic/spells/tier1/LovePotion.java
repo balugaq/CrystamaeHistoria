@@ -50,9 +50,15 @@ public class LovePotion extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "迷魂药";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "All nearby breedable entities get... friendly"
+            "所有附近的可繁殖实体都会对你友好"
         };
     }
 

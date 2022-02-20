@@ -40,10 +40,16 @@ public class Launch extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "正反作用力";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Launches the caster in the facing direction.",
-            "Offers no protection!"
+            "朝视角所对方向发射施法者",
+            "不提供任何保护!"
         };
     }
 

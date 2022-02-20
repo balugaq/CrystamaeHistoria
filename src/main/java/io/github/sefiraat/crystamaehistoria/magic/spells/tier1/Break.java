@@ -41,9 +41,15 @@ public class Break extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "破坏";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Breaks the block being targeted"
+            "破坏看向的方块"
         };
     }
 

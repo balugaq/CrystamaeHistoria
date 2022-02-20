@@ -9,6 +9,7 @@ import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 
@@ -35,6 +36,7 @@ public class AbstractVoid extends Spell {
 
         for (Entity entity : castLocation.getWorld().getNearbyEntities(castLocation, range, range, range)) {
             if (entity instanceof LivingEntity
+                && !(entity instanceof ArmorStand)
                 && GeneralUtils.hasPermission(castInformation.getCaster(), entity.getLocation(), Interaction.INTERACT_ENTITY)
             ) {
                 locationList.add(entity.getLocation());
@@ -64,9 +66,15 @@ public class AbstractVoid extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "抽象虚空";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Swaps everything around!"
+            "交换周围的一切生物!"
         };
     }
 

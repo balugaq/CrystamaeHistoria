@@ -70,10 +70,16 @@ public class TimeCompression extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "时间压缩";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Makes all things around the caster",
-            "shift into a different time-space."
+            "将施法者周围的所有事物",
+            "转移到不同的时空"
         };
     }
 

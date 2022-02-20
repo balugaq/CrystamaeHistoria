@@ -41,8 +41,7 @@ public class InstanceStave {
 
     public void buildLore() {
         final String[] lore = new String[]{
-            "A stave with the ability to hold",
-            "magically charged plates.",
+            "可以进行法术绑定的法杖",
         };
         final ChatColor passiveColor = ThemeType.PASSIVE.getColor();
         final List<String> finalLore = new ArrayList<>();
@@ -55,11 +54,11 @@ public class InstanceStave {
             final InstancePlate instancePlate = this.spellInstanceMap.get(slot);
             if (instancePlate != null) {
                 finalLore.add("");
-                final String magic = ThemeType.toTitleCase(instancePlate.getStoredSpell().getId());
+                final String magic = instancePlate.getStoredSpell().getSpell().getName();
                 final String crysta = String.valueOf(instancePlate.getCrysta());
-                finalLore.add(ThemeType.RARITY_MYTHICAL.getColor() + ThemeType.toTitleCase(slot.name()));
-                finalLore.add(ThemeType.PASSIVE.getColor() + "Spell: " + ThemeType.NOTICE.getColor() + magic);
-                finalLore.add(ThemeType.PASSIVE.getColor() + "Crysta: " + ThemeType.NOTICE.getColor() + crysta);
+                finalLore.add(ThemeType.RARITY_MYTHICAL.getColor() + slot.getDescription());
+                finalLore.add(ThemeType.PASSIVE.getColor() + "法术: " + ThemeType.NOTICE.getColor() + magic);
+                finalLore.add(ThemeType.PASSIVE.getColor() + "充能: " + ThemeType.NOTICE.getColor() + crysta);
             }
         }
         finalLore.add("");

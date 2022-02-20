@@ -171,7 +171,7 @@ public class PlayerStatistics {
         int unlocked = getStoriesUnlocked(uuid);
         StoryRank storyRank = StoryRank.getByPercent(((double) unlocked / total) * 100);
         return MessageFormat.format(
-            "{0}Chronicler Rank: {1}{2}{0} ({3}/{4})",
+            "{0}故事等级: {1}{2}{0} ({3}/{4})",
             ThemeType.PASSIVE.getColor(),
             storyRank.getTheme().getColor(),
             storyRank.getTheme().getLoreLine(),
@@ -208,7 +208,7 @@ public class PlayerStatistics {
         int unlocked = getSpellsUnlocked(uuid);
         SpellRank spellRank = SpellRank.getByPercent(((double) unlocked / total) * 100);
         return MessageFormat.format(
-            "{0}Crystamae Rank: {1}{2}{0} ({3}/{4})",
+            "{0}法术等级: {1}{2}{0} ({3}/{4})",
             ThemeType.PASSIVE.getColor(),
             spellRank.getTheme().getColor(),
             spellRank.getTheme().getLoreLine(),

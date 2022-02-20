@@ -61,10 +61,16 @@ public class Push extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "心理学家";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "In a jam? This spell gives you some room",
-            "to breathe."
+            "当你陷入困境时",
+            "该咒语可以给予你呼吸的空间"
         };
     }
 

@@ -68,9 +68,15 @@ public class Gyroscopic extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "旋转";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "You spin me right round baby..."
+            "旋转，跳跃，我闭着眼~"
         };
     }
 

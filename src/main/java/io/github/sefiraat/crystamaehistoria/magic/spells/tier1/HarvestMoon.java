@@ -66,12 +66,17 @@ public class HarvestMoon extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "收获季";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Speaks to the spirit of nature",
-            "to speed up the growth of nearby",
-            "crops. Crops must have direct access",
-            "to the sun."
+            "赞美大自然",
+            "增加附近作物的生长速度",
+            "作物上方必须没有遮挡光照的方块"
         };
     }
 

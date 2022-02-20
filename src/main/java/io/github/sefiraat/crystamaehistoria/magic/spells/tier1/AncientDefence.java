@@ -57,10 +57,15 @@ public class AncientDefence extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "远古防御";
+    }
+
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a defensive wall in front of",
-            "the caster."
+            "在施法者周围召唤防御性的围墙"
         };
     }
 

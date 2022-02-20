@@ -60,10 +60,16 @@ public class SpawnFiends extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "恶魔号角";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons 1-5 fiends to attack your enemies.",
-            "Fiends are erratic and do not follow the caster."
+            "召唤 1-5 个恶魔攻击你的敌人",
+            "恶魔永不忠诚，不会跟随施法者"
         };
     }
 

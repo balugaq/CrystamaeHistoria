@@ -10,6 +10,7 @@ import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuideMode;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
+import net.guizhanss.minecraft.crystamaehistoria.utils.GuiItems;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -58,7 +59,7 @@ public class MainFlexGroup extends FlexItemGroup {
     @Override
     @ParametersAreNonnullByDefault
     public void open(Player p, PlayerProfile profile, SlimefunGuideMode mode) {
-        final ChestMenu chestMenu = new ChestMenu(ThemeType.MAIN.getColor() + "Crystamae Magic Compendium");
+        final ChestMenu chestMenu = new ChestMenu(ThemeType.MAIN.getColor() + "魔法水晶编年史");
 
         for (int slot : HEADER) {
             chestMenu.addItem(slot, ChestMenuUtils.getBackground(), (player1, i1, itemStack, clickAction) -> false);
@@ -81,7 +82,7 @@ public class MainFlexGroup extends FlexItemGroup {
         }
 
         // Back
-        menu.replaceExistingItem(GUIDE_BACK, ChestMenuUtils.getBackButton(player, Slimefun.getLocalization().getMessage("guide.back.guide")));
+        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(player));
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             SlimefunGuide.openMainMenu(profile, mode, 1);
             return false;
