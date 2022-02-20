@@ -60,11 +60,17 @@ public class ImbueVoid extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "虚空螨虫";
+    }
+ 
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Spawns a hoard of endermites to fight on",
-            "you behalf. During this spell you cannot",
-            "move or attack."
+            "产生一群末影螨来为你战斗",
+            "在这个咒语中",
+            "你不能移动或攻击"
         };
     }
 
