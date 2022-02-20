@@ -64,10 +64,16 @@ public class Protectorate extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "护国守卫";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a shield that follows the caster",
-            "preventing damage to those inside."
+            "召唤一个盾牌跟随施法者",
+            "防止敌人对施法者造成伤害"
         };
     }
 
