@@ -63,13 +63,19 @@ public class HolyCow extends Spell {
             StoryType.VOID
         );
     }
+    
+    @Nonnull
+    @Override
+    public String getName() {
+        return "上帝之牛";
+    }
 
     @Nonnull
     @Override
     public String[] getLore() {
         return new String[]{
-            "Summons 1-5 cows to who will protect you",
-            "with their lives."
+            "召唤1-5头牛来保护你",
+            "当它们存活的时候"
         };
     }
 
