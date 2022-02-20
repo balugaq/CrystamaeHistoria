@@ -53,7 +53,7 @@ public class CrystamaeHistoria extends AbstractAddon {
     private SupportedPluginManager supportedPluginManager;
 
     public CrystamaeHistoria() {
-        super("ybw0014", "CrystamaeHistoria", "master", "auto-update");
+        super("SlimefunGuguProject", "CrystamaeHistoria", "master", "auto-update");
     }
 
     public static CrystamaeHistoria getInstance() {
@@ -169,7 +169,7 @@ public class CrystamaeHistoria extends AbstractAddon {
 
         if (getConfig().getBoolean("auto-update") &&
             getDescription().getVersion().startsWith("Build")) {
-            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "CrystamaeHistoria-CN", "master", false).start();
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master", false).start();
         }
     }
 
