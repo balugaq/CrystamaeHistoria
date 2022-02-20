@@ -87,11 +87,17 @@ public class PoisonNova extends Spell {
 
     @Nonnull
     @Override
+    public String getName() {
+        return "新星毒药";
+    }
+    
+    @Nonnull
+    @Override
     public String[] getLore() {
         return new String[]{
-            "Summons a nova of poisonous bullets that",
-            "tear through enemies and cause them to",
-            "get sick."
+            "召唤一颗带有剧毒的新星",
+            "撕裂敌人",
+            "并使其中毒"
         };
     }
 
