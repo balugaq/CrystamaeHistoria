@@ -5,11 +5,13 @@ import io.github.sefiraat.crystamaehistoria.SupportedPluginManager;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.DummyLiquefactionBasinCrafting;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.LiquefactionBasinCache;
 import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.RecipeItem;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.BalmySponge;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.ConnectingCompass;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.Displacer;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.LuminescenceScoop;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.RecallingCrystaLattice;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.RefactingLens;
+import io.github.sefiraat.crystamaehistoria.slimefun.tools.SleepingBag;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.SpiritualSilken;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.ThaumaturgicSalt;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.covers.BlockVeil;
@@ -20,6 +22,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.ChargedPlate;
 import io.github.sefiraat.crystamaehistoria.slimefun.tools.stave.Stave;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
+import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.sefiraat.networks.slimefun.NetworksSlimefunItemStacks;
 import io.github.sefiraat.networks.slimefun.network.NetworkBridge;
@@ -30,11 +33,13 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.cargo.CargoConnectorNode;
 import io.github.thebusybiscuit.slimefun4.implementation.items.electric.EnergyConnector;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
 import java.text.MessageFormat;
@@ -80,6 +85,12 @@ public class Tools {
     private static BlockVeil energyNetCover;
     @Getter
     private static BlockVeil networkNodeCover;
+    @Getter
+    private static BalmySponge balmySponge;
+    @Getter
+    private static BalmySponge searingSponge;
+    @Getter
+    private static SleepingBag sleepingBag;
 
 
     public static void setup() {
@@ -446,6 +457,75 @@ public class Tools {
             500
         );
 
+        // Balmy Sponge
+        RecipeItem balmySpongeRecipe = new RecipeItem(
+            new ItemStack(Material.SPONGE),
+            StoryType.ELEMENTAL, 45,
+            StoryType.ALCHEMICAL, 30,
+            StoryType.VOID, 25
+        );
+        balmySponge = new BalmySponge(
+            ItemGroups.TOOLS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_SPONGE_BALMY",
+                new ItemStack(Material.DEAD_FIRE_CORAL_BLOCK),
+                ThemeType.TOOL,
+                "温和海绵",
+                "这种注入魔法的海绵可以吸收岩浆",
+                "在使用后需要放置在水边来清洗",
+                "",
+                ThemeType.CLICK_INFO.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "4 格"
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            balmySpongeRecipe.getDisplayRecipe(),
+            4
+        );
+
+        // Searing Sponge
+        RecipeItem searingSpongeRecipe = new RecipeItem(
+            balmySponge.getItem(),
+            StoryType.ELEMENTAL, 90,
+            StoryType.ALCHEMICAL, 60,
+            StoryType.VOID, 50
+        );
+        searingSponge = new BalmySponge(
+            ItemGroups.TOOLS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_SPONGE_SEARING",
+                GeneralUtils.getPreEnchantedItemStack(Material.DEAD_FIRE_CORAL_BLOCK, true, new Pair<>(Enchantment.LURE, 1)),
+                ThemeType.TOOL,
+                "炽热海绵",
+                "这种注入魔法的海绵可以吸收岩浆",
+                "在使用后需要放置在水边来清洗",
+                "",
+                ThemeType.CLICK_INFO.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "7 格"
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            searingSpongeRecipe.getDisplayRecipe(),
+            7
+        );
+
+        // Sleeping Bag
+        RecipeItem sleepingBagRecipe = new RecipeItem(
+            balmySponge.getItem(),
+            StoryType.MECHANICAL, 75,
+            StoryType.HISTORICAL, 100,
+            StoryType.HUMAN, 100
+        );
+        sleepingBag = new SleepingBag(
+            ItemGroups.TOOLS,
+            ThemeType.themedSlimefunItemStack(
+                "CRY_SLEEPING_BAG",
+                new ItemStack(Material.LIGHT_BLUE_BANNER),
+                ThemeType.TOOL,
+                "符文睡袋",
+                "这个睡袋可以让在你野外安全地渡过晚上",
+                "不会设置重生点."
+            ),
+            DummyLiquefactionBasinCrafting.TYPE,
+            sleepingBagRecipe.getDisplayRecipe()
+        );
+
         // Slimefun Registry
         chargedPlate.register(CrystamaeHistoria.getInstance());
         inertPlate.register(CrystamaeHistoria.getInstance());
@@ -463,6 +543,9 @@ public class Tools {
         spiritualSilken.register(plugin);
         simpleDisplacer.register(plugin);
         arcaneDisplacer.register(plugin);
+        balmySponge.register(plugin);
+        searingSponge.register(plugin);
+        sleepingBag.register(plugin);
 
         // Liquefaction Recipes
         LiquefactionBasinCache.addCraftingRecipe(inertPlate, inertPlateRecipe);
@@ -473,13 +556,18 @@ public class Tools {
         LiquefactionBasinCache.addCraftingRecipe(luminescenceScoop, luminescenceScoopRecipe);
         LiquefactionBasinCache.addCraftingRecipe(brillianceScoop, brillianceScoopRecipe);
         LiquefactionBasinCache.addCraftingRecipe(lustreScoop, lustreScoopRecipe);
-          
+
         LiquefactionBasinCache.addCraftingRecipe(connectingCompass, connectingCompassRecipe);
 
         LiquefactionBasinCache.addCraftingRecipe(spiritualSilken, spiritualSilkenRecipe);
 
         LiquefactionBasinCache.addCraftingRecipe(simpleDisplacer, simpleDisplacerRecipe);
         LiquefactionBasinCache.addCraftingRecipe(arcaneDisplacer, arcaneDisplacerRecipe);
+
+        LiquefactionBasinCache.addCraftingRecipe(balmySponge, balmySpongeRecipe);
+        LiquefactionBasinCache.addCraftingRecipe(searingSponge, searingSpongeRecipe);
+
+        LiquefactionBasinCache.addCraftingRecipe(sleepingBag, sleepingBagRecipe);
 
         /*
         Covers 'hide' items from HL - until the tile entity check
