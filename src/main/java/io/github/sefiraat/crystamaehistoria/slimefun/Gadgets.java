@@ -920,11 +920,11 @@ public class Gadgets {
             "CRY_GLASS_OF_MILK",
             Skulls.ITEM_MILK.getPlayerHead(),
             ThemeType.GADGET,
-            "Glass of Milk",
-            "Right click, when placed, to remove",
-            "all active effects.",
+            "牛奶玻璃",
+            "放置后，右键点击可以",
+            "移除身上所有的药水效果",
             "",
-            ThemeType.WARNING.getColor() + "Can't be recovered when broken."
+            ThemeType.WARNING.getColor() + "破坏后无法取回"
         );
         glassOfMilk = new GlassOfMilk(
             ItemGroups.GADGETS,
@@ -950,11 +950,11 @@ public class Gadgets {
                 "CRY_FRAGMENTED_VOID",
                 new ItemStack(Material.BLACK_CONCRETE),
                 ThemeType.GADGET,
-                "Fragmented Void",
-                "A portable hole in the universe.",
-                "Will pull any nearby items into it.",
+                "虚空裂隙 (1)",
+                "经过特殊处理的黑洞，可以随身携带",
+                "会吸入附近的所有物品",
                 "",
-                ThemeType.WARNING.getColor() + "Range: " + ThemeType.PASSIVE.getColor() + "5"
+                ThemeType.WARNING.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "5 格"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             fragmentedVoidRecipe.getDisplayRecipe(),
@@ -974,11 +974,11 @@ public class Gadgets {
                 "CRY_SHATTERED_VOID",
                 new ItemStack(Material.BLACK_CONCRETE),
                 ThemeType.GADGET,
-                "Shattered Void",
-                "A portable hole in the universe.",
-                "Will pull any nearby items into it.",
+                "虚空裂隙 (2)",
+                "经过特殊处理的黑洞，可以随身携带",
+                "会吸入附近的所有物品",
                 "",
-                ThemeType.WARNING.getColor() + "Range: " + ThemeType.PASSIVE.getColor() + "7"
+                ThemeType.WARNING.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "7 格"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             shatteredVoidRecipe.getDisplayRecipe(),

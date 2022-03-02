@@ -480,10 +480,10 @@ public class Materials {
                 "CRY_MAGICAL_MILK",
                 new ItemStack(Material.MILK_BUCKET),
                 ThemeType.CRAFTING,
-                "Magical Milk",
-                "This milk has something about it...",
+                "魔法牛奶",
+                "这种牛奶有一点特殊...",
                 "",
-                ChatColor.YELLOW + "Do not waste by drinking!"
+                ChatColor.YELLOW + "不要直接饮用!"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             magicalMilkRecipe.getDisplayRecipe()
