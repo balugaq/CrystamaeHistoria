@@ -275,7 +275,7 @@ public class Mechanisms {
                 "用于后续的魔法合成",
                 "警告: 不要在里面有液化魔法水晶时破坏!",
                 "",
-                "最多可存储 1000 液化魔法水晶"
+                "最多可存储 1250 液化魔法水晶"
             ),
             RecipeType.ENHANCED_CRAFTING_TABLE,
             new ItemStack[]{
@@ -283,7 +283,7 @@ public class Mechanisms {
                 amalgamateDustRare, liquefactionBasin1.getItem(), amalgamateDustRare,
                 amalgamateDustRare, SlimefunItems.ENCHANTMENT_RUNE, amalgamateDustRare
             },
-            1000,
+            1250,
             Color.fromRGB(195, 195, 150)
         );
 
