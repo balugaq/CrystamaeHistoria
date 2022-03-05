@@ -551,11 +551,10 @@ public class Tools {
                 "CRY_SATCHEL_1",
                 new ItemStack(Material.WHITE_CONCRETE),
                 ThemeType.TOOL,
-                "Apprentice's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "学徒水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique only"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "仅独一无二"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             apprenticesSatchelRecipe.getDisplayRecipe(),
@@ -575,11 +574,10 @@ public class Tools {
                 "CRY_SATCHEL_2",
                 new ItemStack(Material.GRAY_CONCRETE),
                 ThemeType.TOOL,
-                "Crystamage's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "法师水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique -> Common"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 普通"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             crystamagesSatchelRecipe.getDisplayRecipe(),
@@ -599,11 +597,10 @@ public class Tools {
                 "CRY_SATCHEL_3",
                 new ItemStack(Material.LIME_CONCRETE),
                 ThemeType.TOOL,
-                "Wizard's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "巫师水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique -> Uncommon"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 罕见"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             wizardsSatchelRecipe.getDisplayRecipe(),
@@ -623,11 +620,10 @@ public class Tools {
                 "CRY_SATCHEL_4",
                 new ItemStack(Material.YELLOW_CONCRETE),
                 ThemeType.TOOL,
-                "Conjurer's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "咒术师水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique -> Rare"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 稀有"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             conjurersSatchelRecipe.getDisplayRecipe(),
@@ -647,11 +643,10 @@ public class Tools {
                 "CRY_SATCHEL_5",
                 new ItemStack(Material.PURPLE_CONCRETE),
                 ThemeType.TOOL,
-                "Sorcerer's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "术士水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique -> Epic"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "全部类型"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             sorcerersSatchelRecipe.getDisplayRecipe(),
@@ -671,11 +666,10 @@ public class Tools {
                 "CRY_SATCHEL_6",
                 new ItemStack(Material.RED_CONCRETE),
                 ThemeType.TOOL,
-                "Grandmaster's Satchel",
-                "This simple satchel will pick up",
-                "and hold crystals for you.",
+                "宗师水晶收纳袋",
+                "这个简易的收纳袋可以保存魔法水晶",
                 "",
-                ThemeType.WARNING.getColor() + "Rarities: " + ThemeType.PASSIVE.getColor() + "Unique -> Mythical"
+                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二，普通，罕见，稀有，史诗"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             grandmastersSatchelRecipe.getDisplayRecipe(),
