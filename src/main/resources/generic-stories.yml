@@ -12,16 +12,15 @@ COMMON:
     type: MECHANICAL
     shards: [ 0,1,0,0,1,0,0,0,0 ]
     lore:
-      - Constantly used without thanks or gratitude
-      - will wear down the spirit with ease.
+      - 经常使用而不感激
+      - 会轻易地消磨精神.
 
   Lead into Gold:
     name: 引领黄金
     type: ALCHEMICAL
     shards: [ 0,0,1,0,1,0,1,0,0 ]
     lore:
-      - An unconsious drive towards wealth that has
-      - driven many-a-person mad.
+      - 对财富的追求会让许多人走向疯狂.
 
   Everlasting:
     name: 持久
@@ -32,12 +31,12 @@ COMMON:
       - this block is proven everlasting and resolute.
 
   Toil:
-    name: Toil
+    name: 辛劳
     type: HUMAN
     shards: [ 0,0,0,0,1,0,1,0,1 ]
     lore:
-      - Witness to the toil of people through the
-      - ages, aiding where possible; a fruitless task.
+      - 它见证了历代众人的辛劳,
+      - 尽一切可能帮助; 只为了完成不可能的任务.
 
   Free Range:
     name: Free Range
