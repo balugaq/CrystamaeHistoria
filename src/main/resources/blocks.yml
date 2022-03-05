@@ -114,8 +114,7 @@ ACACIA_PRESSURE_PLATE:
     name: 承受压力 (金合欢)
     type: VOID
     lore:
-      - Being walked all over will drop any
-      - spirit.
+      - 逆来顺受只会令人失望
     shards: [ 0,2,0,0,1,0,0,1,0 ]
 
 ACACIA_SAPLING:
@@ -127,8 +126,8 @@ ACACIA_SAPLING:
     name: 成长 (金合欢)
     type: ELEMENTAL
     lore:
-      - A youthful spirit empowered to grow
-      - into a mighty tree
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards: [ 1,0,1,1,0,1,0,0,0 ]
 
 ACACIA_SIGN:
@@ -137,11 +136,10 @@ ACACIA_SIGN:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: Signed (金合欢)
+    name: 签名版 (金合欢)
     type: PHILOSOPHICAL
     lore:
-      - Imbued with the thoughts of those
-      - authors
+      - 充满了作者们的思想
     shards: [ 0,0,0,0,1,0,1,1,1 ]
 
 ACACIA_SLAB:
@@ -162,11 +160,10 @@ ACACIA_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: Arise (金合欢)
+    name: 崛起 (金合欢)
     type: CELESTIAL
     lore:
-      - Lives to feel the joy of others being
-      - raised to new heights.
+      - 感受提升到新高度的快乐.
     shards: [ 0,1,0,0,1,0,1,0,1 ]
 
 ACACIA_TRAPDOOR:
@@ -175,11 +172,10 @@ ACACIA_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: To the Pits (金合欢)
+    name: 推向深坑 (金合欢)
     type: VOID
     lore:
-      - Awaiting the perfect moment to drop an
-      - unsuspecting person to their end
+      - 等待最佳时机, 将毫无戒心的人推向终点
     shards: [ 0,1,0,0,1,0,0,1,0 ]
 
 ACACIA_WOOD:
