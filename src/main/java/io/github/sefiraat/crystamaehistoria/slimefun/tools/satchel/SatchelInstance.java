@@ -12,7 +12,7 @@ public class SatchelInstance {
 
     private long id;
     private int tier;
-    private String lastUser = "Unknown";
+    private String lastUser = "未知";
     private final Map<StoryRarity, int[]> amounts = new EnumMap<>(StoryRarity.class);
 
     public SatchelInstance(long id, int tier) {
