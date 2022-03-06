@@ -147,11 +147,10 @@ ACACIA_SLAB:
   elements:
     - HUMAN
   story:
-    name: A Cut Below (金合欢)
+    name: 低一截的木头 (金合欢)
     type: HUMAN
     lore:
-      - Ripped in half and divided from
-      - self. A soul torn asunder
+      - 被砍成了两半, 正如一个被撕裂的灵魂.
     shards: [ 1,1,0,0,1,0,0,0,0 ]
 
 ACACIA_STAIRS:
@@ -184,11 +183,12 @@ ACACIA_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (金合欢)
+    name: 给我原木 (金合欢)
     type: ELEMENTAL
     lore:
-      - Every adventure begins with a good tree
-      - punch
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards: [ 2,0,0,1,1,0,0,0,0 ]
 
 ACTIVATOR_RAIL:
@@ -197,13 +197,12 @@ ACTIVATOR_RAIL:
     - MECHANICAL
     - HUMAN
   story:
-    name: Activate!
+    name: 激活!
     type: MECHANICAL
     lore:
-      - Nothing provides more of a rush than
-      - the cracking of a cart over this track.
-      - A singular purpose with an ecstatic
-      - result.
+      - 没有什么能比矿车飞驰激活铁轨
+      - 发出的声音更让人快乐.
+      - 铁轨单一的目的却能指向令人欣喜的结果.
     shards: [ 0,2,0,0,1,0,0,0,0 ]
 
 ALLIUM:
@@ -212,11 +211,10 @@ ALLIUM:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: Sweet Smell (Allium)
+    name: 甜蜜气息 (绒球葱)
     type: ANIMAL
     lore:
-      - A wafting fragrance to quell the most
-      - vicious of temperaments.
+      - 飘散的香气能够平息最极致的愤怒.
     shards: [ 1,0,0,0,0,1,0,0,0 ]
 
 AMETHYST_BLOCK:
@@ -225,11 +223,10 @@ AMETHYST_BLOCK:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: Glittering Spirit
+    name: 闪耀灵魂
     type: ELEMENTAL
     lore:
-      - A glittering, scattering spirit residing
-      - within the resonance of this Crystal
+      - 在水晶中居住着一个被散落的闪闪发光的灵魂.
     shards: [ 2,0,1,1,0,0,0,0,0 ]
 
 AMETHYST_CLUSTER:
@@ -239,11 +236,11 @@ AMETHYST_CLUSTER:
     - HISTORICAL
     - PHILOSOPHICAL
   story:
-    name: Looks Familiar?
+    name: 看起来眼熟吗?
     type: PHILOSOPHICAL
     lore:
-      - Something about this Crystal feels familiar.
-      - Feels receptive to magic, but...
+      - 这个水晶让人感觉很熟悉.
+      - 能感受到其中的魔法, 但是...
     shards: [ 1,0,1,1,0,0,0,0,1 ]
 
 AMETHYST_SHARD:
@@ -808,7 +805,7 @@ BIRCH_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Birch)
+    name: 给我原木 (Birch)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -3463,7 +3460,7 @@ DARK_OAK_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Dark Oak)
+    name: 给我原木 (Dark Oak)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -6625,7 +6622,7 @@ JUNGLE_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Jungle)
+    name: 给我原木 (Jungle)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -8771,7 +8768,7 @@ OAK_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Oak)
+    name: 给我原木 (Oak)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
@@ -11821,7 +11818,7 @@ SPRUCE_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: Punching Trees Gives Me Wood (Spruce)
+    name: 给我原木 (Spruce)
     type: ELEMENTAL
     lore:
       - Every adventure begins with a good tree
