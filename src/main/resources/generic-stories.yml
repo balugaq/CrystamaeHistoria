@@ -39,20 +39,19 @@ COMMON:
       - 尽一切可能帮助; 只为了完成不可能的任务.
 
   Free Range:
-    name: Free Range
+    name: 自由漫步
     type: ANIMAL
     shards: [ 0,0,0,0,0,1,1,0,1 ]
     lore:
-      - Only the free can run wild and nothing stirs
-      - the magics more than animals roaming free.
+      - 只有自由才能让你走向狂野,
+      - 没有什么能比动物的肆意妄为更能激发魔力了.
 
   Moonlit:
-    name: Moonlit
+    name: 月耀
     type: CELESTIAL
     shards: [ 1,0,0,0,0,1,1,0,0 ]
     lore:
-      - A spirit that enjoys nothing more than to bathe in
-      - the light of a waning moon.
+      - 一个只喜欢沐浴在残月光芒下的灵魂.
 
   Despair:
     name: Despair
