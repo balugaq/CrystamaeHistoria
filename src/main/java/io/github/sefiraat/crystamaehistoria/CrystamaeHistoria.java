@@ -142,7 +142,7 @@ public class CrystamaeHistoria extends AbstractAddon {
 
         getLogger().info("########################################");
         getLogger().info("     CrystamaeHistoria  魔法水晶编年史    ");
-        getLogger().info("       作者: Sefiraat 汉化: ybw0014      ");
+        getLogger().info(" 作者: Sefiraat 汉化: SlimefunGuguProject");
         getLogger().info("########################################");
 
         this.configManager = new ConfigManager();
