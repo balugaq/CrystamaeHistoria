@@ -194,10 +194,10 @@ public class Uniques {
                 "CRY_BIRTHDAY_TROPHY_CHEESY",
                 new ItemStack(Material.CAKE),
                 ThemeType.CRAFTING,
-                "Happy Birthday Cheesy!",
-                "A Gentleman at Heart",
+                "生日快乐Cheesy!",
+                "一位热心的绅士",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Cheesy's Birthday!"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在Cheesy的生日当天制作"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             birthdayTrophyCheesyRecipe.getDisplayRecipe(),
@@ -230,10 +230,10 @@ public class Uniques {
                 "CRY_BIRTHDAY_TROPHY_BWHITE",
                 new ItemStack(Material.CAKE),
                 ThemeType.CRAFTING,
-                "Happy Birthday BWhite!",
-                "Joint creator of the biggest Tantrum ever!",
+                "生日快乐BWhite!",
+                "一位永恒的合作伙伴!",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: BWhite's Birthday!"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在BWhite的生日当天制作"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             birthdayTrophyBWhiteRecipe.getDisplayRecipe(),
@@ -266,10 +266,10 @@ public class Uniques {
                 "CRY_BIRTHDAY_TROPHY_DECOY",
                 new ItemStack(Material.CAKE),
                 ThemeType.CRAFTING,
-                "Happy Birthday Decoy!",
-                "Joint creator of the biggest Tantrum ever!",
+                "生日快乐Decoy!",
+                "一位永恒的合作伙伴!",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Decoy's Birthday!"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在Decoy的生日当天制作"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             birthdayTrophyDecoyRecipe.getDisplayRecipe(),
@@ -302,10 +302,10 @@ public class Uniques {
                 "CRY_BIRTHDAY_TROPHY_ODDISH",
                 new ItemStack(Material.CAKE),
                 ThemeType.CRAFTING,
-                "Happy Birthday Oddish!",
-                "A Gloom waiting to happen",
+                "生日快乐Oddish!",
+                "可能是一场即将到来的阴郁",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "Requires: Oddish's Birthday!"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在Oddish的生日当天制作"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             birthdayTrophyOddishRecipe.getDisplayRecipe(),
