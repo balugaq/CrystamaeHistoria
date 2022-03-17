@@ -305,7 +305,7 @@ public class Uniques {
                 "生日快乐Oddish!",
                 "可能是一场即将到来的阴郁",
                 "",
-                ThemeType.CLICK_INFO.getColor() + "需要: 在Oddish生日当天制作"
+                ThemeType.CLICK_INFO.getColor() + "需要: 在Oddish的生日当天制作"
             ),
             DummyLiquefactionBasinCrafting.TYPE,
             birthdayTrophyOddishRecipe.getDisplayRecipe(),
