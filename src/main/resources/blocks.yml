@@ -250,11 +250,11 @@ AMETHYST_SHARD:
     - HISTORICAL
     - PHILOSOPHICAL
   story:
-    name: Chipped Perfection
+    name: 破碎的完美
     type: ELEMENTAL
     lore:
-      - A shattered dream taken, a myriad
-      - of broken shards shaken
+      - 一个破碎的梦被夺走了,
+      - 另一个破碎的碎片摇动了
     shards: [ 1,0,1,0,0,0,0,0,0 ]
 
 ANCIENT_DEBRIS:
@@ -263,12 +263,11 @@ ANCIENT_DEBRIS:
     - ELEMENTAL
     - ALCHEMICAL
   story:
-    name: Depths
+    name: 深层
     type: ELEMENTAL
     lore:
-      - Used in the creation of the strongest
-      - items. Hidden in the depths by an old
-      - civilisation.
+      - 用于制作最坚固的物品.
+      - 被古老的文明深藏在地底.
     shards: [ 1,0,1,1,0,0,0,0,0 ]
     author: OOOOMAGAAA
 
@@ -278,11 +277,11 @@ ANDESITE:
     - HUMAN
     - ALCHEMICAL
   story:
-    name: Polished
+    name: 抛光
     type: HUMAN
     lore:
-      - Often thrown away as dull and boring,
-      - at his block is filled with an epic sadness
+      - 经常被认为是没什么用的东西,
+      - 但它却被忧伤填满.
     shards: [ 2,0,1,1,0,0,0,0,0 ]
 
 ANDESITE_SLAB:
@@ -4505,11 +4504,10 @@ ENDER_EYE:
     - HISTORICAL
     - VOID
   story:
-    name: A Watchful Gaze
+    name: 警惕的目光
     type: HISTORICAL
     lore:
-      - Every Ender Eye is magically tied to the
-      - dimension it came from.
+      - 每个末影之眼都神奇地与它来自的维度连接在一起.
     shards: [ 1,0,1,1,0,0,0,1,0 ]
 
 ENDER_PEARL:
@@ -4534,12 +4532,11 @@ END_CRYSTAL:
     - CELESTIAL
     - VOID
   story:
-    name: Tied to the Void
+    name: 虚空相接
     type: VOID
     lore:
-      - The End Crystal is intrinsically tied to
-      - the void and the End Dragon. So much so that
-      - a single tap can force a tear into space.
+      - 末影水晶与末影龙有着内在的联系.
+      - 以至于轻轻一碰就能迫使空间被撕裂.
     shards: [ 2,1,1,1,1,1,2,3,0 ]
 
 END_ROD:
@@ -4548,11 +4545,11 @@ END_ROD:
     - CELESTIAL
     - VOID
   story:
-    name: Shining Bright
+    name: 耀眼明光
     type: CELESTIAL
     lore:
-      - Seemingly created by the Purpur engineers,
-      - it's unknown how the light is produced.
+      - 似乎是由末地城的工程师们制作的,
+      - 没人知道光源是从哪来的.
     shards: [ 0,0,1,0,0,0,1,1,0 ]
     author: Seggan
 
