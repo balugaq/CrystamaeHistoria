@@ -502,8 +502,7 @@ public class CrystaStacks {
             Skulls.RUNE_F.getPlayerHead(),
             ThemeType.RUNE,
             "改变符文",
-            "All unknowns and futures of the universe",
-            "are kept in harmony within."
+            "所有宇宙的未知与未来都在符文之中"
         );
 
         RUNE_NIGHT = ThemeType.themedSlimefunItemStack(
@@ -511,8 +510,7 @@ public class CrystaStacks {
             Skulls.RUNE_G.getPlayerHead(),
             ThemeType.RUNE,
             "夜晚符文",
-            "The magic running through this rune",
-            "is the same that allows the undead to rise."
+            "该符文包含能让死灵出现的魔法"
         );
 
         RUNE_BLACK = ThemeType.themedSlimefunItemStack(
@@ -520,8 +518,7 @@ public class CrystaStacks {
             Skulls.RUNE_H.getPlayerHead(),
             ThemeType.RUNE,
             "黑色符文",
-            "The power to control minds and wills",
-            "held within."
+            "包含能够控制思想与意志的力量"
         );
 
         RUNE_TRUE_HOLY = ThemeType.themedSlimefunItemStack(
@@ -529,8 +526,7 @@ public class CrystaStacks {
             Skulls.RUNE_I.getPlayerHead(),
             ThemeType.RUNE,
             "真实神圣符文",
-            "All inner light stems from this",
-            "magical source."
+            "所有内在的光芒都源于此"
         );
 
         RUNE_DRAGON = ThemeType.themedSlimefunItemStack(
@@ -538,9 +534,8 @@ public class CrystaStacks {
             Skulls.RUNE_J.getPlayerHead(),
             ThemeType.RUNE,
             "龙之符文",
-            "The existence of dragons both created",
-            "and was caused by this magic. A paradox that",
-            "will never be unwound."
+            "龙的存在源于该符文，也生成了该符文",
+            "这究竟是不是一个悖论呢"
         );
 
         RUNE_TRUE_WATER = ThemeType.themedSlimefunItemStack(
@@ -1150,7 +1145,7 @@ public class CrystaStacks {
             new ItemStack(Material.DIAMOND_BLOCK),
             ThemeType.EXALTED,
             "尊贵的喂养机",
-            "一个魔法构造，可以喂养周围20x20范围内的动物",
+            "一个魔法构造，可以喂养周围10x10范围内的动物",
             "需要放置在尊贵展台上才能使用",
             "",
             ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
