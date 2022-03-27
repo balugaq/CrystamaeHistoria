@@ -1,49 +1,39 @@
 package io.github.sefiraat.crystamaehistoria.slimefun;
 
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
-import io.github.sefiraat.crystamaehistoria.SupportedPluginManager;
-import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.DummyLiquefactionBasinCrafting;
-import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.LiquefactionBasinCache;
-import io.github.sefiraat.crystamaehistoria.slimefun.mechanisms.liquefactionbasin.RecipeItem;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.BalmySponge;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.ConnectingCompass;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.Displacer;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.LuminescenceScoop;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.RecallingCrystaLattice;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.RefactingLens;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.SleepingBag;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.SpiritualSilken;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.ThaumaturgicSalt;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.covers.BlockVeil;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.crafting.EphemeralCraftingTable;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.crafting.EphemeralWorkBench;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.BlankPlate;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.plates.ChargedPlate;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.satchel.CrystamageSatchel;
-import io.github.sefiraat.crystamaehistoria.slimefun.tools.stave.Stave;
-import io.github.sefiraat.crystamaehistoria.stories.definition.StoryRarity;
+import io.github.sefiraat.crystamaehistoria.managers.SupportedPluginManager;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.liquefactionbasin.LiquefactionBasinCache;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.liquefactionbasin.RecipeItem;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.BalmySponge;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.ConnectingCompass;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.DisplacedVoid;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.Displacer;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.LuminescenceScoop;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.RecallingCrystaLattice;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.RefactingLens;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.SleepingBag;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.SpiritualSilken;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.ThaumaturgicSalt;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.covers.BlockVeil;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.crafting.EphemeralCraftingTable;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.crafting.EphemeralWorkBench;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.plates.BlankPlate;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.plates.ChargedPlate;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.satchel.CrystamageSatchel;
+import io.github.sefiraat.crystamaehistoria.slimefun.items.tools.stave.Stave;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
-import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
-import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.sefiraat.networks.slimefun.NetworksSlimefunItemStacks;
 import io.github.sefiraat.networks.slimefun.network.NetworkBridge;
 import io.github.sefiraat.networks.slimefun.network.NetworkMonitor;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.cargo.CargoConnectorNode;
 import io.github.thebusybiscuit.slimefun4.implementation.items.electric.EnergyConnector;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
-import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
-
-import java.text.MessageFormat;
 
 @UtilityClass
 public class Tools {
@@ -56,6 +46,8 @@ public class Tools {
     private static Stave staveBasic;
     @Getter
     private static Stave staveAdvanced;
+    @Getter
+    private static Stave staveArcane;
     @Getter
     private static RefactingLens refractingLens;
     @Getter
@@ -73,9 +65,13 @@ public class Tools {
     @Getter
     private static LuminescenceScoop lustreScoop;
     @Getter
+    private static LuminescenceScoop radianceScoop;
+    @Getter
     private static ConnectingCompass connectingCompass;
     @Getter
     private static SpiritualSilken spiritualSilken;
+    @Getter
+    private static SpiritualSilken incorporealSilken;
     @Getter
     private static Displacer simpleDisplacer;
     @Getter
@@ -91,7 +87,11 @@ public class Tools {
     @Getter
     private static BalmySponge searingSponge;
     @Getter
+    private static BalmySponge superMassiveSponge;
+    @Getter
     private static SleepingBag sleepingBag;
+    @Getter
+    private static DisplacedVoid displacedVoid;
     @Getter
     private static CrystamageSatchel apprenticesSatchel;
     @Getter
@@ -108,11 +108,6 @@ public class Tools {
     public static void setup() {
         final CrystamaeHistoria plugin = CrystamaeHistoria.getInstance();
 
-        final ItemStack elementalUniqueCrystal = Materials.CRYSTAL_MAP.get(StoryRarity.UNIQUE).get(StoryType.ELEMENTAL).getItem();
-        final ItemStack commonIngot = Materials.getAmalgamateIngotCommon().getItem();
-        final ItemStack commonDust = Materials.getAmalgamateDustCommon().getItem();
-        final ItemStack epicIngot = Materials.getAmalgamateIngotEpic().getItem();
-
         // Inert Plate
         RecipeItem inertPlateRecipe = new RecipeItem(
             SlimefunItems.REINFORCED_PLATE.clone(),
@@ -122,31 +117,17 @@ public class Tools {
         );
         inertPlate = new BlankPlate(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SPELL_PLATE_1",
-                new ItemStack(Material.PAPER),
-                ThemeType.TOOL,
-                "基础魔法板",
-                "一块空白的魔法板",
-                "可以储存魔法能量"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.INERT_PLATE,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             inertPlateRecipe.getDisplayRecipe(),
             1
         );
 
-
         // Charged Plate
         chargedPlate = new ChargedPlate(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_CHARGED_PLATE_1",
-                new ItemStack(Material.PAPER),
-                ThemeType.TOOL,
-                "基础法术板",
-                "经过魔法充能的魔法板"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.CHARGED_PLATE,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             new ItemStack[]{null, null, null, null, new ItemStack(Material.AMETHYST_CLUSTER), null, null, null, null},
             1
         );
@@ -154,16 +135,10 @@ public class Tools {
         // Basic Stave
         staveBasic = new Stave(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_STAVE_1",
-                new ItemStack(Material.STICK),
-                ThemeType.STAVE,
-                "基础法杖",
-                "可以进行法术绑定的法杖"
-            ),
+            CrystaStacks.STAVE_BASIC,
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
-                null, null, elementalUniqueCrystal,
+                null, null, CrystaStacks.AMALGAMATE_INGOT_UNIQUE,
                 null, new ItemStack(Material.STICK), null,
                 new ItemStack(Material.STICK), null, null
             },
@@ -173,85 +148,62 @@ public class Tools {
         // Advanced Stave
         staveAdvanced = new Stave(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_STAVE_2",
-                new ItemStack(Material.STICK),
-                ThemeType.STAVE,
-                "高级法杖",
-                "可以进行法术绑定的法杖"
-            ),
+            CrystaStacks.STAVE_ADVANCED,
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
-                commonIngot, commonIngot, commonIngot,
-                commonIngot, staveBasic.getItem().clone(), commonIngot,
-                commonIngot, commonIngot, commonIngot
+                CrystaStacks.AMALGAMATE_INGOT_COMMON, CrystaStacks.AMALGAMATE_INGOT_COMMON, CrystaStacks.AMALGAMATE_INGOT_COMMON,
+                CrystaStacks.AMALGAMATE_INGOT_COMMON, CrystaStacks.STAVE_BASIC, CrystaStacks.AMALGAMATE_INGOT_COMMON,
+                CrystaStacks.AMALGAMATE_INGOT_COMMON, CrystaStacks.AMALGAMATE_INGOT_COMMON, CrystaStacks.AMALGAMATE_INGOT_COMMON
             },
             2
+        );
+
+        // Arcane Stave
+        staveArcane = new Stave(
+            ItemGroups.TOOLS,
+            CrystaStacks.STAVE_ARCANE,
+            RecipeType.MAGIC_WORKBENCH,
+            new ItemStack[]{
+                CrystaStacks.RUNE_BEGINNING, CrystaStacks.RUNE_CHANGE, CrystaStacks.RUNE_DRAGON,
+                CrystaStacks.RUN_SUN, CrystaStacks.STAVE_ADVANCED, CrystaStacks.RUNE_CIRCLE,
+                CrystaStacks.RUNE_TRUE_LIGHTNING, CrystaStacks.RUNE_CHARM, CrystaStacks.RUNE_BRIGHT_SHIELD
+            },
+            3
         );
 
         // Refracting Lens
         refractingLens = new RefactingLens(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_REFRACTING_LENS",
-                new ItemStack(Material.SPYGLASS),
-                ThemeType.TOOL,
-                "折射棱镜",
-                "这个魔法棱镜可以区分",
-                "不同类型的魔法水晶的光芒",
-                "",
-                "右键点击一个方块来查看信息",
-                "",
-                ThemeType.CLICK_INFO.getColor() + "可用于:",
-                "液化池",
-                "经验收集器"
-            ),
+            CrystaStacks.REFRACTING_LENS,
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
-                null, Materials.getImbuedGlass().getItem(), null,
+                null, CrystaStacks.IMBUED_GLASS, null,
                 null, new ItemStack(Material.SPYGLASS), null,
-                null, commonIngot, null
+                null, CrystaStacks.AMALGAMATE_INGOT_COMMON, null
             }
         );
 
         // Thaumaturgic Salt
         thaumaturgicSalts = new ThaumaturgicSalt(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_THAUMATURGIC_SALT",
-                new ItemStack(Material.REDSTONE),
-                ThemeType.TOOL,
-                "魔法盐",
-                "一种特制的盐",
-                "可以从液化池中吸收液化魔法水晶",
-                "",
-                "右键点击液化池以清空"
-            ),
+            CrystaStacks.THAUMATURGIC_SALTS,
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
-                commonDust, commonDust, commonDust,
-                commonDust, SlimefunItems.SALT, commonDust,
-                commonDust, commonDust, commonDust
+                CrystaStacks.AMALGAMATE_DUST_COMMON, CrystaStacks.AMALGAMATE_DUST_COMMON, CrystaStacks.AMALGAMATE_DUST_COMMON,
+                CrystaStacks.AMALGAMATE_DUST_COMMON, SlimefunItems.SALT, CrystaStacks.AMALGAMATE_DUST_COMMON,
+                CrystaStacks.AMALGAMATE_DUST_COMMON, CrystaStacks.AMALGAMATE_DUST_COMMON, CrystaStacks.AMALGAMATE_DUST_COMMON
             }
         );
 
         // Recall Lattice
         crystaRecallLattice = new RecallingCrystaLattice(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_RECALL_LATTICE",
-                new ItemStack(Material.NETHER_STAR),
-                ThemeType.TOOL,
-                "魔法传送网",
-                "右键点击传送至绑定的路标",
-                "",
-                "Shift+右键点击一个路标以绑定"
-            ),
+            CrystaStacks.CRYSTA_RECALL_LATTICE,
             RecipeType.MAGIC_WORKBENCH,
             new ItemStack[]{
-                new ItemStack(Material.AMETHYST_SHARD), epicIngot, new ItemStack(Material.AMETHYST_SHARD),
-                epicIngot, new ItemStack(Material.NETHER_STAR), epicIngot,
-                new ItemStack(Material.AMETHYST_SHARD), epicIngot, new ItemStack(Material.AMETHYST_SHARD)
+                new ItemStack(Material.AMETHYST_SHARD), CrystaStacks.AMALGAMATE_INGOT_EPIC, new ItemStack(Material.AMETHYST_SHARD),
+                CrystaStacks.AMALGAMATE_INGOT_EPIC, new ItemStack(Material.NETHER_STAR), CrystaStacks.AMALGAMATE_INGOT_EPIC,
+                new ItemStack(Material.AMETHYST_SHARD), CrystaStacks.AMALGAMATE_INGOT_EPIC, new ItemStack(Material.AMETHYST_SHARD)
             }
         );
 
@@ -264,36 +216,22 @@ public class Tools {
         );
         ephemeralCraftingTable = new EphemeralCraftingTable(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_EPHEMERAL_CRAFT_TABLE",
-                new ItemStack(Material.CRAFTING_TABLE),
-                ThemeType.TOOL,
-                "临时工作台",
-                "右键点击可以打开一个工作台",
-                "仅原版合成"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.EPHEMERAL_CRAFT_TABLE,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             ephemeralCraftingTableRecipe.getDisplayRecipe()
         );
 
         // Ephemeral Workbench
         RecipeItem ephemeralWorkBenchRecipe = new RecipeItem(
-            ephemeralCraftingTable.getItem(),
+            CrystaStacks.EPHEMERAL_CRAFT_TABLE,
             StoryType.HUMAN, 250,
             StoryType.HISTORICAL, 100,
             StoryType.PHILOSOPHICAL, 250
         );
         ephemeralWorkBench = new EphemeralWorkBench(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_EPHEMERAL_WORKBENCH",
-                new ItemStack(Material.CRAFTING_TABLE),
-                ThemeType.TOOL,
-                "临时融合工作台",
-                "右键点击可以打开一个融合工作台",
-                "原版+增强型工作台配方"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.EPHEMERAL_WORKBENCH,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             ephemeralWorkBenchRecipe.getDisplayRecipe()
         );
 
@@ -306,67 +244,54 @@ public class Tools {
         );
         luminescenceScoop = new LuminescenceScoop(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_LUMINESCENCE_SCOOP",
-                new ItemStack(Material.LANTERN),
-                ThemeType.TOOL,
-                "发光勺 (1)",
-                "右键点击放置一个魔法光源",
-                "Shift+右键点击收回光源",
-                "",
-                LoreBuilder.usesLeft(25)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.LUMINESCENCE_SCOOP,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             luminescenceScoopRecipe.getDisplayRecipe(),
             25
         );
 
         // Brilliance Scoop
         RecipeItem brillianceScoopRecipe = new RecipeItem(
-            luminescenceScoop.getItem(),
+            CrystaStacks.LUMINESCENCE_SCOOP,
             StoryType.CELESTIAL, 140,
             StoryType.ALCHEMICAL, 40,
             StoryType.HUMAN, 30
         );
         brillianceScoop = new LuminescenceScoop(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_BRILLIANCE_SCOOP",
-                new ItemStack(Material.LANTERN),
-                ThemeType.TOOL,
-                "发光勺 (2)",
-                "右键点击放置一个魔法光源",
-                "Shift+右键点击收回光源",
-                "",
-                LoreBuilder.usesLeft(75)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.BRILLIANCE_SCOOP,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             brillianceScoopRecipe.getDisplayRecipe(),
             75
         );
 
         // Lustre Scoop
         RecipeItem lustreScoopRecipe = new RecipeItem(
-            brillianceScoop.getItem(),
+            CrystaStacks.BRILLIANCE_SCOOP,
             StoryType.CELESTIAL, 280,
             StoryType.ALCHEMICAL, 80,
             StoryType.HUMAN, 60
         );
         lustreScoop = new LuminescenceScoop(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_LUSTRE_SCOOP",
-                new ItemStack(Material.SOUL_LANTERN),
-                ThemeType.TOOL,
-                "发光勺 (3)",
-                "右键点击放置一个魔法光源",
-                "Shift+右键点击收回光源",
-                "",
-                LoreBuilder.usesLeft(250)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.LUSTRE_SCOOP,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             lustreScoopRecipe.getDisplayRecipe(),
             250
+        );
+
+        // Radiance Scoop
+        radianceScoop = new LuminescenceScoop(
+            ItemGroups.TOOLS,
+            CrystaStacks.RADIANCE_SCOOP,
+            RecipeType.MAGIC_WORKBENCH,
+            new ItemStack[] {
+                null, CrystaStacks.RUNE_TRUE_EARTH, null,
+                CrystaStacks.RUNE_TRUE_WATER, CrystaStacks.LUSTRE_SCOOP, CrystaStacks.RUNE_TWILIGHT,
+                null, CrystaStacks.RUNE_CHARM, null
+            },
+            500,
+            true
         );
 
         // Connecting Compass
@@ -378,20 +303,8 @@ public class Tools {
         );
         connectingCompass = new ConnectingCompass(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_CONNECTING_COMPASS",
-                new ItemStack(Material.COMPASS),
-                ThemeType.TOOL,
-                "连接指南针",
-                "可以保存一个坐标",
-                "让你稍后可以回到之前的位置",
-                "",
-                "没有传送功能",
-                "",
-                MessageFormat.format("{0}右键点击: {1}显示保存的坐标", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor()),
-                MessageFormat.format("{0}Shift+右键点击: {1}保存坐标", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.CONNECTING_COMPASS,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             connectingCompassRecipe.getDisplayRecipe()
         );
 
@@ -404,67 +317,51 @@ public class Tools {
         );
         spiritualSilken = new SpiritualSilken(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SPIRITUAL_SILKEN",
-                new ItemStack(Material.BONE),
-                ThemeType.TOOL,
-                "强征",
-                "这个工具被注入了神圣的力量",
-                "可以完好地保存物品",
-                ChatColor.RED + "仅能作用于不会掉落本身的方块",
-                ChatColor.RED + "(无论是否拥有精准采集)",
-                "",
-                LoreBuilder.usesLeft(50)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SPIRITUAL_SILKEN,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             spiritualSilkenRecipe.getDisplayRecipe(),
             50
         );
 
+        // Incorporeal Silken
+        incorporealSilken = new SpiritualSilken(
+            ItemGroups.TOOLS,
+            CrystaStacks.INCORPOREAL_SILKEN,
+            RecipeType.MAGIC_WORKBENCH,
+            new ItemStack[] {
+                null, CrystaStacks.RUNE_MOON, null,
+                CrystaStacks.RUNE_TRUE_HOLY, CrystaStacks.SPIRITUAL_SILKEN, CrystaStacks.RUNE_BLINKING,
+                null, CrystaStacks.RUNE_TRUE_LIGHTNING, null
+            },
+            1000
+        );
+
         // Simple Displacer
         RecipeItem simpleDisplacerRecipe = new RecipeItem(
-            Materials.getPowderedEssence().getItem(),
+            CrystaStacks.POWDERED_ESSENCE,
             StoryType.ALCHEMICAL, 120,
             StoryType.ANIMAL, 70,
             StoryType.HUMAN, 60
         );
         simpleDisplacer = new Displacer(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SIMPLE_DISPLACER",
-                new ItemStack(Material.TORCH),
-                ThemeType.TOOL,
-                "简易置换器",
-                "置换器可以将一些物品",
-                "替换为另一个维度的物品",
-                "",
-                LoreBuilder.usesLeft(50)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SIMPLE_DISPLACER,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             simpleDisplacerRecipe.getDisplayRecipe(),
             50
         );
 
         // Arcane Displacer
         RecipeItem arcaneDisplacerRecipe = new RecipeItem(
-            simpleDisplacer.getItem(),
+            CrystaStacks.SIMPLE_DISPLACER,
             StoryType.ALCHEMICAL, 240,
             StoryType.ANIMAL, 140,
             StoryType.HUMAN, 120
         );
         arcaneDisplacer = new Displacer(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_ARCANE_DISPLACER",
-                new ItemStack(Material.REDSTONE_TORCH),
-                ThemeType.TOOL,
-                "神秘置换器",
-                "置换器可以将一些物品",
-                "替换为另一个维度的物品",
-                "",
-                LoreBuilder.usesLeft(500)
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.ARCANE_DISPLACER,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             arcaneDisplacerRecipe.getDisplayRecipe(),
             500
         );
@@ -478,64 +375,64 @@ public class Tools {
         );
         balmySponge = new BalmySponge(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SPONGE_BALMY",
-                new ItemStack(Material.DEAD_FIRE_CORAL_BLOCK),
-                ThemeType.TOOL,
-                "温和海绵",
-                "这种注入魔法的海绵可以吸收岩浆",
-                "在使用后需要放置在水边来清洗",
-                "",
-                ThemeType.CLICK_INFO.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "4 格"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SPONGE_BALMY,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             balmySpongeRecipe.getDisplayRecipe(),
             4
         );
 
         // Searing Sponge
         RecipeItem searingSpongeRecipe = new RecipeItem(
-            balmySponge.getItem(),
+            CrystaStacks.SPONGE_BALMY,
             StoryType.ELEMENTAL, 90,
             StoryType.ALCHEMICAL, 60,
             StoryType.VOID, 50
         );
         searingSponge = new BalmySponge(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SPONGE_SEARING",
-                GeneralUtils.getPreEnchantedItemStack(Material.DEAD_FIRE_CORAL_BLOCK, true, new Pair<>(Enchantment.LURE, 1)),
-                ThemeType.TOOL,
-                "炽热海绵",
-                "这种注入魔法的海绵可以吸收岩浆",
-                "在使用后需要放置在水边来清洗",
-                "",
-                ThemeType.CLICK_INFO.getColor() + "范围: " + ThemeType.PASSIVE.getColor() + "7 格"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SPONGE_SEARING,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             searingSpongeRecipe.getDisplayRecipe(),
             7
         );
 
+        // Super-massive Sponge
+        superMassiveSponge = new BalmySponge(
+            ItemGroups.TOOLS,
+            CrystaStacks.SPONGE_SUPER_MASSIVE,
+            RecipeType.MAGIC_WORKBENCH,
+            new ItemStack[] {
+                null, CrystaStacks.RUNE_CHANGE, null,
+                CrystaStacks.RUN_SUN, CrystaStacks.SPONGE_SUPER_MASSIVE, CrystaStacks.RUNE_CIRCLE,
+                null, CrystaStacks.RUNE_EIGHTFOLD, null
+            },
+            10
+        );
+
         // Sleeping Bag
         RecipeItem sleepingBagRecipe = new RecipeItem(
-            balmySponge.getItem(),
+            new ItemStack(Material.WHITE_BED),
             StoryType.MECHANICAL, 75,
             StoryType.HISTORICAL, 100,
             StoryType.HUMAN, 100
         );
         sleepingBag = new SleepingBag(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SLEEPING_BAG",
-                new ItemStack(Material.LIGHT_BLUE_BANNER),
-                ThemeType.TOOL,
-                "符文睡袋",
-                "这个睡袋可以让在你野外安全地渡过晚上",
-                "不会设置重生点."
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SLEEPING_BAG,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             sleepingBagRecipe.getDisplayRecipe()
+        );
+
+        // Displaced Void
+        displacedVoid = new DisplacedVoid(
+            ItemGroups.TOOLS,
+            CrystaStacks.DISPLACED_VOID,
+            RecipeType.MAGIC_WORKBENCH,
+            new ItemStack[]{
+                null, CrystaStacks.ARCANE_DISPLACER, null,
+                null, CrystaStacks.SHATTERED_VOID, null,
+                null, null, null
+            }
         );
 
         // Apprentices Satchel
@@ -547,131 +444,83 @@ public class Tools {
         );
         apprenticesSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_1",
-                new ItemStack(Material.WHITE_CONCRETE),
-                ThemeType.TOOL,
-                "学徒水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "仅独一无二"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_1,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             apprenticesSatchelRecipe.getDisplayRecipe(),
             1
         );
 
         // Crystamages Satchel
         RecipeItem crystamagesSatchelRecipe = new RecipeItem(
-            apprenticesSatchel.getItem(),
+            CrystaStacks.SATCHEL_1,
             StoryType.ALCHEMICAL, 35,
             StoryType.ANIMAL, 35,
             StoryType.VOID, 35
         );
         crystamagesSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_2",
-                new ItemStack(Material.GRAY_CONCRETE),
-                ThemeType.TOOL,
-                "法师水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 普通"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_2,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             crystamagesSatchelRecipe.getDisplayRecipe(),
             2
         );
 
         // Wizards Satchel
         RecipeItem wizardsSatchelRecipe = new RecipeItem(
-            crystamagesSatchel.getItem(),
+            CrystaStacks.SATCHEL_2,
             StoryType.MECHANICAL, 45,
             StoryType.HISTORICAL, 45,
             StoryType.CELESTIAL, 45
         );
         wizardsSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_3",
-                new ItemStack(Material.LIME_CONCRETE),
-                ThemeType.TOOL,
-                "巫师水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 罕见"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_3,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             wizardsSatchelRecipe.getDisplayRecipe(),
             3
         );
 
         // Conjurers Satchel
         RecipeItem conjurersSatchelRecipe = new RecipeItem(
-            wizardsSatchel.getItem(),
+            CrystaStacks.SATCHEL_3,
             StoryType.ELEMENTAL, 55,
             StoryType.HUMAN, 55,
             StoryType.PHILOSOPHICAL, 55
         );
         conjurersSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_4",
-                new ItemStack(Material.YELLOW_CONCRETE),
-                ThemeType.TOOL,
-                "咒术师水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二 至 稀有"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_4,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             conjurersSatchelRecipe.getDisplayRecipe(),
             4
         );
 
         // Sorcerers Satchel
         RecipeItem sorcerersSatchelRecipe = new RecipeItem(
-            conjurersSatchel.getItem(),
+            CrystaStacks.SATCHEL_4,
             StoryType.ALCHEMICAL, 65,
             StoryType.ANIMAL, 65,
             StoryType.VOID, 65
         );
         sorcerersSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_5",
-                new ItemStack(Material.PURPLE_CONCRETE),
-                ThemeType.TOOL,
-                "术士水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "全部类型"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_5,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             sorcerersSatchelRecipe.getDisplayRecipe(),
             5
         );
 
         // Grandmasters Satchel
         RecipeItem grandmastersSatchelRecipe = new RecipeItem(
-            sorcerersSatchel.getItem(),
+            CrystaStacks.SATCHEL_5,
             StoryType.MECHANICAL, 75,
             StoryType.HISTORICAL, 75,
             StoryType.CELESTIAL, 75
         );
         grandmastersSatchel = new CrystamageSatchel(
             ItemGroups.TOOLS,
-            ThemeType.themedSlimefunItemStack(
-                "CRY_SATCHEL_6",
-                new ItemStack(Material.RED_CONCRETE),
-                ThemeType.TOOL,
-                "宗师水晶收纳袋",
-                "这个简易的收纳袋可以保存魔法水晶",
-                "",
-                ThemeType.WARNING.getColor() + "可收纳: " + ThemeType.PASSIVE.getColor() + "独一无二，普通，罕见，稀有，史诗"
-            ),
-            DummyLiquefactionBasinCrafting.TYPE,
+            CrystaStacks.SATCHEL_6,
+            CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
             grandmastersSatchelRecipe.getDisplayRecipe(),
             6
         );
@@ -681,6 +530,7 @@ public class Tools {
         inertPlate.register(CrystamaeHistoria.getInstance());
         staveBasic.register(plugin);
         staveAdvanced.register(plugin);
+        staveArcane.register(plugin);
         refractingLens.register(plugin);
         thaumaturgicSalts.register(plugin);
         crystaRecallLattice.register(plugin);
@@ -689,13 +539,17 @@ public class Tools {
         luminescenceScoop.register(plugin);
         brillianceScoop.register(plugin);
         lustreScoop.register(plugin);
+        radianceScoop.register(plugin);
         connectingCompass.register(plugin);
         spiritualSilken.register(plugin);
+        incorporealSilken.register(plugin);
         simpleDisplacer.register(plugin);
         arcaneDisplacer.register(plugin);
         balmySponge.register(plugin);
         searingSponge.register(plugin);
+        superMassiveSponge.register(plugin);
         sleepingBag.register(plugin);
+        displacedVoid.register(plugin);
         apprenticesSatchel.register(plugin);
         crystamagesSatchel.register(plugin);
         wizardsSatchel.register(plugin);
@@ -739,15 +593,6 @@ public class Tools {
          */
         if (!SupportedPluginManager.isHeadLimiter()) {
             // Cargo Cover
-            SlimefunItemStack cargoCoverStack = ThemeType.themedSlimefunItemStack(
-                "CRY_CARGO_COVER",
-                new ItemStack(Material.PAPER),
-                ThemeType.TOOL,
-                "方块隐藏器 - 货运",
-                "(消耗品)",
-                "右键点击一个货运节点",
-                "以使用副手上的方块隐藏该节点"
-            );
             RecipeItem cargoCoverRecipe = new RecipeItem(
                 SlimefunItems.CARGO_INPUT_NODE,
                 StoryType.MECHANICAL, 10,
@@ -756,23 +601,14 @@ public class Tools {
             );
             cargoCover = new BlockVeil(
                 ItemGroups.TOOLS,
-                cargoCoverStack,
-                DummyLiquefactionBasinCrafting.TYPE,
+                CrystaStacks.CARGO_COVER,
+                CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
                 cargoCoverRecipe.getDisplayRecipe(),
-                cargoCoverStack.asQuantity(8),
+                CrystaStacks.CARGO_COVER.asQuantity(8),
                 CargoConnectorNode.class
             );
 
             // Energy Net Cover
-            SlimefunItemStack energyNetCoverStack = ThemeType.themedSlimefunItemStack(
-                "CRY_ENERGY_NET_COVER",
-                new ItemStack(Material.PAPER),
-                ThemeType.TOOL,
-                "方块隐藏器 - 能源节点",
-                "(消耗品)",
-                "右键点击一个能源节点",
-                "以使用副手上的方块隐藏该节点"
-            );
             RecipeItem energyNetCoverRecipe = new RecipeItem(
                 SlimefunItems.ENERGY_CONNECTOR,
                 StoryType.MECHANICAL, 10,
@@ -781,10 +617,10 @@ public class Tools {
             );
             energyNetCover = new BlockVeil(
                 ItemGroups.TOOLS,
-                energyNetCoverStack,
-                DummyLiquefactionBasinCrafting.TYPE,
+                CrystaStacks.ENERGY_NET_COVER,
+                CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
                 energyNetCoverRecipe.getDisplayRecipe(),
-                energyNetCoverStack.asQuantity(8),
+                CrystaStacks.ENERGY_NET_COVER.asQuantity(8),
                 EnergyConnector.class
             );
 
@@ -799,15 +635,6 @@ public class Tools {
         if (SupportedPluginManager.isNetworks()) {
 
             // Networks Cover
-            SlimefunItemStack networksCoverStack = ThemeType.themedSlimefunItemStack(
-                "CRY_NETWORK_COVER",
-                new ItemStack(Material.PAPER),
-                ThemeType.TOOL,
-                "方块隐藏器 - 网络节点",
-                "(消耗品)",
-                "右键点击一个网络节点",
-                "以使用副手上的方块隐藏该节点"
-            );
             RecipeItem networksCoverRecipe = new RecipeItem(
                 NetworksSlimefunItemStacks.NETWORK_BRIDGE,
                 StoryType.MECHANICAL, 10,
@@ -816,10 +643,10 @@ public class Tools {
             );
             networkNodeCover = new BlockVeil(
                 ItemGroups.TOOLS,
-                networksCoverStack,
-                DummyLiquefactionBasinCrafting.TYPE,
+                CrystaStacks.NETWORKS_COVER,
+                CrystaRecipeTypes.LIQUEFACTION_CRAFTING,
                 networksCoverRecipe.getDisplayRecipe(),
-                networksCoverStack.asQuantity(8),
+                CrystaStacks.NETWORKS_COVER.asQuantity(8),
                 NetworkBridge.class,
                 NetworkMonitor.class
             );

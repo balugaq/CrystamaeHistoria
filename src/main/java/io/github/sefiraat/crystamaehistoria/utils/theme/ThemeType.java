@@ -51,6 +51,7 @@ public enum ThemeType {
     MOD(ChatColor.of("#bf307f"), "模组"),
     PROP(ChatColor.of("#bf307f"), "特性"),
     SPELL(ChatColor.of("#bf307f"), "法术"),
+    RUNE(ChatColor.of("#32a852"), "符文"),
     MULTIBLOCK(ChatColor.of("#ba12af"), "多方块结构"),
     RARITY_COMMON(ChatColor.of("#dbdbdb"), "普通"),
     RARITY_UNCOMMON(ChatColor.of("#97d16b"), "罕见"),
@@ -90,7 +91,15 @@ public enum ThemeType {
     RANK_BLOCK_RESEARCHED(ChatColor.of("#29ff40"), "研究过"),
     RANK_BLOCK_EXPERT_OF(ChatColor.of("#0fff29"), "专家"),
     RANK_BLOCK_MASTER_OF(ChatColor.of("#00db18"), "大师"),
-    RANK_BLOCK_SME(ChatColor.of("#00820e"), "历史见证者");
+    RANK_BLOCK_SME(ChatColor.of("#00820e"), "历史见证者"),
+    RANK_GILDING_NOVICE(ChatColor.of("#a8ffb1"), "Novice"),
+    RANK_GILDING_MEMBER(ChatColor.of("#87ff94"), "Member"),
+    RANK_GILDING_SECRETARY(ChatColor.of("#66ff77"), "Secretary"),
+    RANK_GILDING_OFFICER(ChatColor.of("#4dff60"), "Officer"),
+    RANK_GILDING_EXECUTIVE(ChatColor.of("#29ff40"), "Executive"),
+    RANK_GILDING_CHIEF(ChatColor.of("#0fff29"), "Chief"),
+    RANK_GILDING_MANAGER(ChatColor.of("#00db18"), "Manager"),
+    RANK_GILDING_OWNER(ChatColor.of("#00820e"), "Owner");
 
     /**
      * List of names to be given to ArmourStands, invisible but mods and Minimaps can see them :)
