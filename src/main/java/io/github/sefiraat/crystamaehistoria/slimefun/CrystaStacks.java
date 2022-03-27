@@ -391,8 +391,8 @@ public class CrystaStacks {
             new ItemStack(Material.GLOW_LICHEN),
             ThemeType.CRAFTING,
             "神秘印记",
-            "在世界中由其他",
-            "遗留下来古代标记"
+            "在世界中由其他魔法水晶使用者",
+            "遗留下来的古代标记"
         );
 
         IMBUED_GLASS = ThemeType.themedSlimefunItemStack(
