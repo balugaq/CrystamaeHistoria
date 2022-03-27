@@ -56,7 +56,7 @@ public class CrystaStacks {
     public static final SlimefunItemStack RUNE_DRAGON;
     public static final SlimefunItemStack RUNE_TRUE_WATER;
     public static final SlimefunItemStack RUNE_SOVEREIGN;
-    public static final SlimefunItemStack RUN_SUN;
+    public static final SlimefunItemStack RUNE_SUN;
     public static final SlimefunItemStack RUNE_DAWN;
     public static final SlimefunItemStack RUNE_TWILIGHT;
     public static final SlimefunItemStack RUNE_TRUE_FIRE;
@@ -560,7 +560,7 @@ public class CrystaStacks {
             "一人之下，万人之上"
         );
 
-        RUN_SUN = ThemeType.themedSlimefunItemStack(
+        RUNE_SUN = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_SUN",
             Skulls.RUNE_M.getPlayerHead(),
             ThemeType.RUNE,
