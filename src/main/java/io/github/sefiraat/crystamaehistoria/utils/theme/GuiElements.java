@@ -115,7 +115,7 @@ public class GuiElements {
         return ThemeType.themedItemStack(
             material,
             ThemeType.RARITY_UNIQUE,
-            ThemeType.toTitleCase(material.toString()),
+            MaterialHelper.getName(material),
             "该方块已被镀金过"
         );
     }
@@ -125,7 +125,7 @@ public class GuiElements {
         return ThemeType.themedItemStack(
             Material.BARRIER,
             ThemeType.RESEARCH,
-            ThemeType.toTitleCase(material.toString()),
+            MaterialHelper.getName(material),
             MessageFormat.format("{0}{1}已锁定", ThemeType.RESEARCH.getColor(), ChatColor.BOLD),
             "该方块还未被镀金过"
         );
