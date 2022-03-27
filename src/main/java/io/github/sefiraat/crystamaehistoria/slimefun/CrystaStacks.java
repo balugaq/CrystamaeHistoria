@@ -452,57 +452,56 @@ public class CrystaStacks {
         );
 
         // Runes
-        // TODO: 符文需要翻译
         RUNE_BEAST = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BEAST",
             Skulls.RUNE_A.getPlayerHead(),
             ThemeType.RUNE,
-            "Beast Rune",
-            "Unbridled passion and drive. The howl",
-            "of the wolf echos from within."
+            "野性符文",
+            "肆无忌惮的激情和干劲",
+            "狼的嚎叫在内部回响"
         );
 
         RUNE_BEGINNING = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BEGINNING",
             Skulls.RUNE_B.getPlayerHead(),
             ThemeType.RUNE,
-            "Rune of Beginning",
-            "Chaos formed into order. The swirling",
-            "vortex of the unknown made still."
+            "起源符文",
+            "混乱形成秩序",
+            "未知的漩涡静止了"
         );
 
         RUNE_MOON = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_MOON",
             Skulls.RUNE_C.getPlayerHead(),
             ThemeType.RUNE,
-            "Moon Rune",
-            "The clash of both compassion and",
-            "sheer destruction rage within."
+            "转化符文",
+            "慈悲心和纯粹的破坏性的冲突",
+            "在内心汹涌澎湃"
         );
 
         RUNE_GATE = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_GATE",
             Skulls.RUNE_D.getPlayerHead(),
             ThemeType.RUNE,
-            "Gate Rune",
-            "Threads connecting worlds all pass",
-            "through the magic within these runes."
+            "大门符文",
+            "连接世界的线程",
+            "都经过符文中蕴含的魔法"
         );
 
         RUNE_TRUE_EARTH = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_TRUE_EARTH",
             Skulls.RUNE_E.getPlayerHead(),
             ThemeType.RUNE,
-            "True Earth Rune",
-            "The single point of power for",
-            "all earth magic."
+            "真实地球符文",
+            "所有地球魔法的能量",
+            "都集中在符文中"
         );
 
         RUNE_CHANGE = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_CHANGE",
             Skulls.RUNE_F.getPlayerHead(),
             ThemeType.RUNE,
-            "Rune of Change",
+            "改变符文",
             "All unknowns and futures of the universe",
             "are kept in harmony within."
         );
@@ -511,7 +510,7 @@ public class CrystaStacks {
             "CRY_RUNE_NIGHT",
             Skulls.RUNE_G.getPlayerHead(),
             ThemeType.RUNE,
-            "Night Rune",
+            "夜晚符文",
             "The magic running through this rune",
             "is the same that allows the undead to rise."
         );
@@ -520,7 +519,7 @@ public class CrystaStacks {
             "CRY_RUNE_BLACK",
             Skulls.RUNE_H.getPlayerHead(),
             ThemeType.RUNE,
-            "Black Rune",
+            "黑色符文",
             "The power to control minds and wills",
             "held within."
         );
@@ -529,7 +528,7 @@ public class CrystaStacks {
             "CRY_RUNE_TRUE_HOLY",
             Skulls.RUNE_I.getPlayerHead(),
             ThemeType.RUNE,
-            "True Holy Rune",
+            "真实神圣符文",
             "All inner light stems from this",
             "magical source."
         );
@@ -538,7 +537,7 @@ public class CrystaStacks {
             "CRY_RUNE_DRAGON",
             Skulls.RUNE_J.getPlayerHead(),
             ThemeType.RUNE,
-            "Dragon Rune",
+            "龙之符文",
             "The existence of dragons both created",
             "and was caused by this magic. A paradox that",
             "will never be unwound."
@@ -548,146 +547,138 @@ public class CrystaStacks {
             "CRY_RUNE_TRUE_WATER",
             Skulls.RUNE_K.getPlayerHead(),
             ThemeType.RUNE,
-            "True Water Rune",
-            "The beginning of all flowing freely."
+            "真实水之符文",
+            "一切自由流体的开端"
         );
 
         RUNE_SOVEREIGN = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_SOVEREIGN",
             Skulls.RUNE_L.getPlayerHead(),
             ThemeType.RUNE,
-            "Sovereign Rune",
-            "Order through rule, protection from",
-            "one, protection for all."
+            "至高符文",
+            "根据规则统治",
+            "一人之下，万人之上"
         );
 
         RUN_SUN = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_SUN",
             Skulls.RUNE_M.getPlayerHead(),
             ThemeType.RUNE,
-            "Sun Rune",
-            "Bringer of prosperity and life but",
-            "at a toll for all."
+            "太阳符文",
+            "带来繁荣与生命",
+            "所有人都要付出代价"
         );
 
         RUNE_DAWN = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_DAWN",
             Skulls.RUNE_N.getPlayerHead(),
             ThemeType.RUNE,
-            "Dawn Rune",
-            "The bringer of new, of regeneration",
-            "and renewal."
+            "黎明符文",
+            "带来新生，带来恢复"
         );
 
         RUNE_TWILIGHT = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_TWILIGHT",
             Skulls.RUNE_O.getPlayerHead(),
             ThemeType.RUNE,
-            "Twilight Rune",
-            "The removal of old, the bringer of",
-            "rest and recuperation."
+            "暮光符文",
+            "抛弃过去的一切",
+            "带来全新的世界"
         );
 
         RUNE_TRUE_FIRE = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_TRUE_FIRE",
             Skulls.RUNE_P.getPlayerHead(),
             ThemeType.RUNE,
-            "True Fire Rune",
-            "An inferno without limits held",
-            "back by nothing but it's own tempest."
+            "真实火焰符文",
+            "无限的地狱之火包含在其中"
         );
 
         RUNE_CIRCLE = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_CIRCLE",
             Skulls.RUNE_Q.getPlayerHead(),
             ThemeType.RUNE,
-            "Circle Rune",
-            "Brings both order and routine keeping",
-            "other forms of magic in check.",
-            "Circle Rune magic is weakened in",
-            "the Minecraft world for some reason..."
+            "圆之符文",
+            "保持秩序，维护和平",
+            "圆之符文在MC中因为某些原因被弱化了"
         );
 
         RUNE_BLINKING = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BLINKING",
             Skulls.RUNE_R.getPlayerHead(),
             ThemeType.RUNE,
-            "Blinking Rune",
-            "This rune contains space and in turn",
-            "itself and is used to traverse",
-            "large distances in moments."
+            "折跃符文",
+            "该符文包含空间魔法",
+            "可用于远距离折跃"
         );
 
         RUNE_SOUL = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_SOUL",
             Skulls.RUNE_S.getPlayerHead(),
             ThemeType.RUNE,
-            "Souleater Rune",
-            "The rune of life and death. Both",
-            "kept in balance and check."
+            "灵魂吞噬者符文",
+            "生与死，轮回不止",
+            "我们生，他们死"
         );
 
         RUNE_PUNISHMENT = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_PUNISHMENT",
             Skulls.RUNE_T.getPlayerHead(),
             ThemeType.RUNE,
-            "Rune of Punishment",
-            "This rune imposes order by crushing",
-            "dissidence and wrong-doing, culling",
-            "magic gone-astray."
+            "惩罚符文",
+            "该符文通过剔除异见者与不法之徒",
+            "来加强统治"
         );
 
         RUNE_TRUE_LIGHTNING = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_TRUE_LIGHTNING",
             Skulls.RUNE_U.getPlayerHead(),
             ThemeType.RUNE,
-            "True Lightning Rune",
-            "The tempest from above contained",
-            "within a sealing magic."
+            "真实雷电符文",
+            "来自天空中的暴风雨",
+            "蕴含在该符文中"
         );
 
         RUNE_EIGHTFOLD = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_EIGHTFOLD",
             Skulls.RUNE_V.getPlayerHead(),
             ThemeType.RUNE,
-            "Eightfold Rune",
-            "The rule of reality and form.",
-            "Magics from this rune have the power to",
-            "create and form new matter."
+            "八重符文",
+            "现实与诞生的规则",
+            "这个符文中的魔法可以创造全新的物质"
         );
 
         RUNE_CHARM = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_CHARM",
             Skulls.RUNE_W.getPlayerHead(),
             ThemeType.RUNE,
-            "Charm Rune",
-            "Passion, drive and love. These power",
-            "and are powered by the magic within."
+            "魅力符文",
+            "激情，驱动与爱",
+            "全都包含在符文中的魔法内"
         );
 
         RUNE_TRUE_WIND = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_TRUE_WIND",
             Skulls.RUNE_X.getPlayerHead(),
             ThemeType.RUNE,
-            "True Wind Rune",
-            "The never ending zephyr is contained",
-            "within."
+            "真实风之符文",
+            "包含永无止境的风"
         );
 
         RUNE_BLACK_SWORD = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BLACK_SWORD",
             Skulls.RUNE_Y.getPlayerHead(),
             ThemeType.RUNE,
-            "Black Sword Rune",
-            "The magic of power, domination and drive."
+            "黑剑符文",
+            "力量，统治，驱动"
         );
 
         RUNE_BRIGHT_SHIELD = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BRIGHT_SHIELD",
             Skulls.RUNE_Y.getPlayerHead(),
             ThemeType.RUNE,
-            "Bright Shield Rune",
-            "The magic of power, protection and security."
+            "亮盾符文",
+            "力量，保护，安全"
         );
 
         // Artistic
