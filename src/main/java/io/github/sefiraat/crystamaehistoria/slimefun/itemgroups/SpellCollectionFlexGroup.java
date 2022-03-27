@@ -26,7 +26,6 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.text.MessageFormat;
 import java.util.ArrayList;
@@ -231,15 +230,15 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
 
     private ItemStack getMechanismStack() {
         final List<String> lore = Arrays.stream(
-            new String[]{
-                "在液化池中投入魔法水晶",
-                "将其转化为液化魔法水晶",
-                "",
-                "数量最多的3种液化魔法水晶决定法术的类型",
-                "",
-                "投入一个魔法板来制作法术"
-            }
-        ).map(s -> ThemeType.PASSIVE.getColor() + s)
+                new String[]{
+                    "在液化池中投入魔法水晶",
+                    "将其转化为液化魔法水晶",
+                    "",
+                    "数量最多的3种液化魔法水晶决定法术的类型",
+                    "",
+                    "投入一个魔法板来制作法术"
+                }
+            ).map(s -> ThemeType.PASSIVE.getColor() + s)
             .collect(Collectors.toList());
 
         return new CustomItemStack(
