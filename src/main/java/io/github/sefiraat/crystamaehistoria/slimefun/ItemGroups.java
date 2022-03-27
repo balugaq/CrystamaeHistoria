@@ -26,7 +26,7 @@ public final class ItemGroups {
         Keys.newKey("dummy"),
         new CustomItemStack(
             new ItemStack(Material.FIRE_CHARGE),
-            ThemeType.MAIN.getColor() + "魔法水晶编年史 - 不要使用这里的物品"
+            ThemeType.MAIN.getColor() + "魔法水晶编年史 - 占位符 - 不要使用这里的物品"
         )
     );
     public static final MainFlexGroup MAIN = new MainFlexGroup(
@@ -89,7 +89,7 @@ public final class ItemGroups {
         Keys.newKey("runes"),
         new CustomItemStack(
             new ItemStack(Material.ENCHANTING_TABLE),
-            ThemeType.MAIN.getColor() + "Arcane Runes"
+            ThemeType.MAIN.getColor() + "神秘符文"
         )
     );
     public static final DummyItemGroup UNIQUES = new DummyItemGroup(
@@ -124,7 +124,7 @@ public final class ItemGroups {
         Keys.newKey("gilding_collection"),
         new CustomItemStack(
             new ItemStack(Material.KNOWLEDGE_BOOK),
-            ThemeType.MAIN.getColor() + "Gilding Collection"
+            ThemeType.MAIN.getColor() + "镀金集"
         )
     );
 
@@ -257,13 +257,10 @@ public final class ItemGroups {
                 "CRY_GUIDE_NETHER_DRAINING",
                 Skulls.CRYSTAL_CLEAR.getPlayerHead(),
                 ThemeType.GUIDE,
-                "How To: Nether Draining",
-                "When a Mythical Crystal is thrown",
-                "through a Nether Portal the magic",
-                "will be drained out of it leaving",
-                "behind a blank crystal that is able",
-                "to have different forms of magic",
-                "re-inserted."
+                "指南: 下界祛魔",
+                "当神秘魔法水晶穿过下界传送门时",
+                "其中包含的魔法将会丢失变成空白水晶",
+                "可以重新注入魔法能量"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}
@@ -276,16 +273,13 @@ public final class ItemGroups {
                 "CRY_GUIDE_GILDING",
                 new ItemStack(Material.WARPED_FENCE),
                 ThemeType.GUIDE,
-                "How To: Gilding",
-                "The Prismatic Guider takes thrown",
-                "prismatic crystals and will convert",
-                "the energy into wild unbound magic.",
-                "You can then right click the gilder",
-                "with a fully-storied block it will",
-                "be gilded. Requires an amount of",
-                "Prismatic Crysta equal to the block",
-                "tier.",
-                "Gilded Crystals must be broken manually."
+                "指南: 镀金",
+                "向棱镜镀金器投掷棱镜水晶",
+                "可以将棱镜水晶转化为魔法形态",
+                "此时，你可以手持已经完全发掘故事的方块",
+                "右键点击棱镜镀金器即可将方块镀金",
+                "需要的棱镜水晶数量与方块等级一致",
+                "镀金的魔法水晶簇需要手动破坏"
             ),
             DummyGuideOnly.TYPE,
             new ItemStack[]{}

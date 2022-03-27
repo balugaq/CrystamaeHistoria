@@ -4,7 +4,6 @@ import io.github.sefiraat.crystamaehistoria.slimefun.items.artistic.MagicPaintbr
 import io.github.sefiraat.crystamaehistoria.utils.GeneralUtils;
 import io.github.sefiraat.crystamaehistoria.utils.Skulls;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
-import io.github.sefiraat.networks.utils.Theme;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import lombok.experimental.UtilityClass;
@@ -453,7 +452,7 @@ public class CrystaStacks {
         );
 
         // Runes
-        // TODO: 符文翻译
+        // TODO: 符文需要翻译
         RUNE_BEAST = ThemeType.themedSlimefunItemStack(
             "CRY_RUNE_BEAST",
             Skulls.RUNE_A.getPlayerHead(),
@@ -1129,7 +1128,6 @@ public class CrystaStacks {
             MessageFormat.format("{0}Shift+右键点击: {1}应用造型", ThemeType.CLICK_INFO.getColor(), ThemeType.PASSIVE.getColor())
         );
 
-        // TODO: 尊贵类需要补充汉化
         EXALTED_BEACON = ThemeType.themedSlimefunItemStack(
             "CRY_EXALTED_BEACON",
             new ItemStack(Material.BEACON),
@@ -1138,6 +1136,8 @@ public class CrystaStacks {
             "一个信标，内部拥有难以置信的力量",
             "需要放置在尊贵展台上才能使用",
             "",
+            ThemeType.CLICK_INFO.getColor() + "等级: " + ThemeType.PASSIVE.getColor() + "2",
+            "",
             ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
         );
 
@@ -1145,11 +1145,11 @@ public class CrystaStacks {
             "CRY_EXALTED_BAELFIRE",
             new ItemStack(Material.SOUL_CAMPFIRE),
             ThemeType.EXALTED,
-            "Exalted Baelfire",
-            "一个拥有着难以置信的可能性的信标",
+            "尊贵的篝火",
+            "一个信标，内部拥有难以置信的力量",
             "需要放置在尊贵展台上才能使用",
             "",
-            Theme.CLICK_INFO + "Power: " + Theme.PASSIVE + "3",
+            ThemeType.CLICK_INFO.getColor() + "等级: " + ThemeType.PASSIVE.getColor() + "3",
             "",
             ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
         );
@@ -1169,11 +1169,9 @@ public class CrystaStacks {
             "CRY_EXALTED_FERTILITY_TOTEM",
             new ItemStack(Material.EMERALD_BLOCK),
             ThemeType.EXALTED,
-            "Exalted Fertility Totem",
-            "A magical construct able to",
-            "breed nearby animals in a 20x20 area.",
-            "Must be placed on an Exaltation",
-            "Stand to operate.",
+            "尊贵的生产图腾",
+            "一个魔法构造，可以喂养周围20x20范围内的动物",
+            "需要放置在尊贵展台上才能使用",
             "",
             ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
         );
@@ -1193,11 +1191,9 @@ public class CrystaStacks {
             "CRY_EXALTED_AGRONOMIST",
             new ItemStack(Material.DRIED_KELP_BLOCK),
             ThemeType.EXALTED,
-            "Exalted Agronomist",
-            "A magical construct able to",
-            "harvest all crops in a 19x19 area.",
-            "Must be placed on an Exaltation",
-            "Stand to operate.",
+            "尊贵的农学家",
+            "一个魔法构造，可以收获19x19范围内的所有作物",
+            "需要放置在尊贵展台上才能使用",
             "",
             ThemeType.CLICK_INFO.getColor() + "需要: 法术等级 达到 宗师级魔法师"
         );
@@ -1896,15 +1892,13 @@ public class CrystaStacks {
             "法术绑定至法杖"
         );
 
-        // TODO: 新增物品需要汉化
         PRISMATIC_GILDER = ThemeType.themedSlimefunItemStack(
             "CRY_PRISMATIC_GILDER",
             new ItemStack(Material.WARPED_FENCE),
             ThemeType.MECHANISM,
-            "Prismatic Gilder",
-            "Converts Prismatic Crysta into a",
-            "Thin film that can overlay other",
-            "magical items."
+            "棱镜镀金器",
+            "将棱镜水晶转换为薄膜",
+            "可以覆盖在其他魔法物品上"
         );
 
         // Tools
@@ -2152,14 +2146,12 @@ public class CrystaStacks {
             "不会设置重生点."
         );
 
-        // TODO: 需要翻译
         DISPLACED_VOID = ThemeType.themedSlimefunItemStack(
             "CRY_DISPLACED_VOID",
             new ItemStack(Material.COCOA_BEANS),
             ThemeType.TOOL,
-            "Displaced Void",
-            "A Shattered Void displaced into a",
-            "pocket sized and portable form.",
+            "微型虚空裂隙",
+            "只有口袋大小的虚空裂隙",
             "",
             ThemeType.CLICK_INFO.getColor() + "按住Shift捡起附近的物品"
         );
@@ -2274,15 +2266,14 @@ public class CrystaStacks {
             ThemeType.CLICK_INFO.getColor() + "需要: 故事等级 达到 荣誉教授"
         );
 
-        // TODO: 全新等级
         GILDING_TROPHY = ThemeType.themedSlimefunItemStack(
             "CRY_GILDING_TROPHY",
             new ItemStack(Material.PAPER),
             ThemeType.CRAFTING,
-            "传说之证: Gilding Owner",
+            "传说之证: 老板",
             "证明你是最优秀的",
             "",
-            ThemeType.CLICK_INFO.getColor() + "需要: Gilding Rank > Owner"
+            ThemeType.CLICK_INFO.getColor() + "需要: 镀金等级 达到 老板"
         );
 
         CHRISTMAS_TROPHY = ThemeType.themedSlimefunItemStack(
@@ -2364,17 +2355,15 @@ public class CrystaStacks {
             "然后投入魔法板来进行合成"
         );
 
-        // TODO: 全新类型
         RECIPE_TYPE_NETHER_DRAINING = ThemeType.themedItemStack(
             Material.OBSIDIAN,
             ThemeType.RESEARCH,
-            "Nether Draining",
-            "Crysta has a hard time transferring",
-            "to the Nether. If it is in it's Crystal",
-            "form, all the magic will be drained.",
-            "Throw a Mythical Crystal into a nether",
-            "portal to drain it.",
-            "Any Mythical Crystal will work."
+            "下界祛魔",
+            "魔法水晶在穿过下界传送门时",
+            "其中包含的魔法将会完全流失",
+            "将神秘级的魔法水晶丢进下界传送门",
+            "可以让魔法水晶流失魔法",
+            "支持任何神秘级的魔法水晶"
         );
 
         RECIPE_TYPE_REALISATION_ALTAR_NORMAL = ThemeType.themedItemStack(
@@ -2388,13 +2377,12 @@ public class CrystaStacks {
             "可以获得其中包含的不同类型的魔法水晶"
         );
 
-        // TODO: 全新类型
         RECIPE_TYPE_REALISATION_ALTAR_SIGIL = ThemeType.themedItemStack(
             Material.CHISELED_DEEPSLATE,
             ThemeType.MECHANISM,
             "现实祭坛",
-            "Arcane Sigils have a small chance to be",
-            "produced when realising Gilded Items."
+            "神秘印记会有小概率",
+            "在提取镀金物品的故事时生成"
         );
     }
 }
