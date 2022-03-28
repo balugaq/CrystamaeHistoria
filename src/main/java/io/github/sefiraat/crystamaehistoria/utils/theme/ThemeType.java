@@ -51,13 +51,14 @@ public enum ThemeType {
     MOD(ChatColor.of("#bf307f"), "模组"),
     PROP(ChatColor.of("#bf307f"), "特性"),
     SPELL(ChatColor.of("#bf307f"), "法术"),
+    RUNE(ChatColor.of("#32a852"), "符文"),
     MULTIBLOCK(ChatColor.of("#ba12af"), "多方块结构"),
     RARITY_COMMON(ChatColor.of("#dbdbdb"), "普通"),
     RARITY_UNCOMMON(ChatColor.of("#97d16b"), "罕见"),
     RARITY_RARE(ChatColor.of("#d1db5c"), "稀有"),
     RARITY_EPIC(ChatColor.of("#b355d9"), "史诗"),
     RARITY_MYTHICAL(ChatColor.of("#c42336"), "神秘"),
-    RARITY_UNIQUE(ChatColor.of("#b35f12"), "独一无二"),
+    RARITY_UNIQUE(ChatColor.of("#b35f12"), "独特"),
     TYPE_ELEMENTAL(ChatColor.of("#ba0000"), "元素"),
     TYPE_MECHANICAL(ChatColor.of("#ba5d00"), "机械"),
     TYPE_ALCHEMICAL(ChatColor.of("#e5e81a"), "炼金"),
@@ -90,7 +91,15 @@ public enum ThemeType {
     RANK_BLOCK_RESEARCHED(ChatColor.of("#29ff40"), "研究过"),
     RANK_BLOCK_EXPERT_OF(ChatColor.of("#0fff29"), "专家"),
     RANK_BLOCK_MASTER_OF(ChatColor.of("#00db18"), "大师"),
-    RANK_BLOCK_SME(ChatColor.of("#00820e"), "历史见证者");
+    RANK_BLOCK_SME(ChatColor.of("#00820e"), "历史见证者"),
+    RANK_GILDING_NOVICE(ChatColor.of("#a8ffb1"), "新手"),
+    RANK_GILDING_MEMBER(ChatColor.of("#87ff94"), "员工"),
+    RANK_GILDING_SECRETARY(ChatColor.of("#66ff77"), "秘书"),
+    RANK_GILDING_OFFICER(ChatColor.of("#4dff60"), "主管"),
+    RANK_GILDING_EXECUTIVE(ChatColor.of("#29ff40"), "执行官"),
+    RANK_GILDING_CHIEF(ChatColor.of("#0fff29"), "首席执行官"),
+    RANK_GILDING_MANAGER(ChatColor.of("#00db18"), "经理"),
+    RANK_GILDING_OWNER(ChatColor.of("#00820e"), "老板");
 
     /**
      * List of names to be given to ArmourStands, invisible but mods and Minimaps can see them :)

@@ -4614,7 +4614,6 @@ END_STONE_BRICK_WALL:
   elements:
     - CELESTIAL
     - HISTORICAL
-    - CELESTIAL
   story:
     name: Beating down the walls (End Stone Brick)
     type: HISTORICAL
@@ -9908,7 +9907,7 @@ PRISMARINE_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: Rising on up (Diorite)
+    name: Rising on up (Prismarine)
     type: PHILOSOPHICAL
     lore:
       - Every step is either an incline to
@@ -11891,7 +11890,7 @@ STONECUTTER:
     shards: [ 0,2,0,0,0,0,0,0,0 ]
 
 STONE_AXE:
-  tier: 4
+  tier: 2
   elements:
     - HUMAN
     - PHILOSOPHICAL
@@ -12013,7 +12012,7 @@ STONE_PRESSURE_PLATE:
     shards: [ 1,1,0,0,1,0,0,1,0 ]
 
 STONE_SHOVEL:
-  tier: 4
+  tier: 2
   elements:
     - HUMAN
     - ELEMENTAL
