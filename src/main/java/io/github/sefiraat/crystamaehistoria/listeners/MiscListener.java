@@ -29,7 +29,7 @@ public class MiscListener implements Listener {
         ItemStack itemStack = e.getItemInHand();
         if (itemStack.getType() != Material.AIR && StoryUtils.isStoried(itemStack)) {
             final Player player = e.getPlayer();
-            player.sendMessage(ThemeType.WARNING.getColor() + "This block has been saturated with Crysta and can no longer be placed.");
+            player.sendMessage(ThemeType.WARNING.getColor() + "该方块已充满魔法，无法再放置于世界中");
             e.setCancelled(true);
         }
     }
