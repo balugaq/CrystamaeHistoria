@@ -13447,7 +13447,7 @@ WITHER_SKELETON_SKULL:
     author: Seggan
 
 WOODEN_AXE:
-  tier: 4
+  tier: 1
   elements:
     - HUMAN
     - PHILOSOPHICAL
@@ -13489,7 +13489,7 @@ WOODEN_PICKAXE:
     shards: [ 0,0,0,1,2,0,1,0,0 ]
 
 WOODEN_SHOVEL:
-  tier: 4
+  tier: 1
   elements:
     - HUMAN
     - ELEMENTAL

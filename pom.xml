@@ -67,6 +67,10 @@
                             <pattern>de.slikey</pattern>
                             <shadedPattern>io.github.sefiraat.crystamaehistoria.slikey</shadedPattern>
                         </relocation>
+                        <relocation>
+                            <pattern>net.guizhanss.guizhanlib</pattern>
+                            <shadedPattern>io.github.sefiraat.crystamaehistoria.guizhanlib</shadedPattern>
+                        </relocation>
                     </relocations>
                     <filters>
                         <filter>
@@ -120,7 +124,7 @@
         <dependency>
             <groupId>io.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-30</version>
+            <version>020094e</version>
             <scope>provided</scope>
         </dependency>
 
