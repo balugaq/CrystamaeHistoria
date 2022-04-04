@@ -1,2 +1,4 @@
-*.java             @SlimefunGuguProject/code-reviewers
-*                  @ybw0014
+*.java                                  @SlimefunGuguProject/code-reviewers
+src/main/resources/blocks.yml           @StarWishsama
+src/main/resources/generic-stories.yml  @StarWishsama
+*                                       @ybw0014

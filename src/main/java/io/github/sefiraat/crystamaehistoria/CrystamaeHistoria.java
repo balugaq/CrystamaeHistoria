@@ -168,11 +168,6 @@ public class CrystamaeHistoria extends AbstractAddon {
         getAddonCommand().addSub(new OpenSpellCompendium());
         getAddonCommand().addSub(new OpenStoryCompendium());
         getAddonCommand().addSub(new GetRanks());
-
-        if (getConfig().getBoolean("auto-update") &&
-            getDescription().getVersion().startsWith("Build")) {
-            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master", false).start();
-        }
     }
 
     private void setupBstats() {
