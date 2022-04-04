@@ -49,7 +49,7 @@ ACACIA_DOOR:
     name: 门 (金合欢)
     type: HUMAN
     lore:
-      - 每个入口都是出口。
+      - 每个入口都是出口.
       - 门可以保护你免受外部袭击
       - 但是，别让门把你关在里面!
     shards:
@@ -219,7 +219,7 @@ ACACIA_SIGN:
     name: 署名 (金合欢)
     type: PHILOSOPHICAL
     lore:
-      - 充满了作者们的思想
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -235,10 +235,11 @@ ACACIA_SLAB:
   elements:
     - HUMAN
   story:
-    name: 低一截的木头 (金合欢)
+    name: 低一截 (金合欢)
     type: HUMAN
     lore:
-      - 被砍成了两半, 正如一个被撕裂的灵魂.
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -255,7 +256,7 @@ ACACIA_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 崛起 (金合欢)
+    name: 出现 (金合欢)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -466,12 +467,12 @@ ANDESITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (安山岩)
+    name: 一半 (安山岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -488,7 +489,7 @@ ANDESITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (安山岩)
+    name: 步步高升 (安山岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -510,11 +511,11 @@ ANDESITE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (安山岩)
+    name: 推倒墙壁 (安山岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -531,7 +532,7 @@ ANVIL:
     - MECHANICAL
     - HUMAN
   story:
-    name: 铁鎚时间!
+    name: 锤子时间!
     type: MECHANICAL
     lore:
       - 每一个接触过铁砧的
@@ -554,10 +555,10 @@ APPLE:
     - ANIMAL
     - CELESTIAL
   story:
-    name: 一天一个
+    name: 一天一苹果
     type: CELESTIAL
     lore:
-      - 让医生远离!
+      - 医生远离我!
     shards:
       - 0
       - 0
@@ -577,8 +578,8 @@ ARMOR_STAND:
     name: 沸腾的怨恨
     type: VOID
     lore:
-      - 不能移动, 被利用, 被操纵
-      - 并迫使在它的脑袋上装上方块.
+      - 不能移动,
+      - 无法在顶部放置方块.
       - 怨恨不断被累积,
       - 直到它再也无法承受.
     shards:
@@ -600,9 +601,9 @@ ARROW:
     name: 穿透
     type: VOID
     lore:
-      - 在空中飞行的记忆给予
-      - 这个精神带来安慰. 撕裂肉体
-      - 只是另一个额外好处.
+      - 在空中飞行的记忆
+      - 给灵魂来安慰.
+      - 撕裂肉体只是奖励.
     shards:
       - 0
       - 1
@@ -619,12 +620,12 @@ AXOLOTL_BUCKET:
     - HUMAN
     - ANIMAL
   story:
-    name: 小但温馨! (六角恐龙)
+    name: 小但温馨! (美西螈)
     type: ANIMAL
     lore:
       - 尽管大多数生物都
-      - 讨厌被关起来, 但六角恐龙
-      - 喜欢
+      - 讨厌被关起来,
+      - 但美西螈似乎很喜欢
     shards:
       - 1
       - 0
@@ -664,12 +665,11 @@ AZALEA_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (杜鹃丛)
+    name: 树叶的思考 (杜鹃丛)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -707,10 +707,11 @@ BAKED_POTATO:
     - ANIMAL
     - VOID
   story:
-    name: 烤马铃薯, 热马铃薯
+    name: 热土豆，热土豆
     type: VOID
     lore:
-      - 冷意大利面, 冷意大利面
+      - 冷意面，冷意面
+      - (来自一首国外儿歌)
     shards:
       - 0
       - 0
@@ -727,10 +728,10 @@ BAMBOO:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: Jeff的飢饿
+    name: 熊猫的饥饿
     type: ANIMAL
     lore:
-      - Jeff常吃的零食, 丰富且充实
+      - 熊猫爱吃的零食, 丰富且充实
     shards:
       - 1
       - 1
@@ -751,8 +752,8 @@ BARREL:
     type: PHILOSOPHICAL
     lore:
       - 久而久之就变成拿来存鱼
-      - 并且没有去关心与注意,
-      - 它不能忍受这种气味!
+      - 如果没有人关心,
+      - 就会有难闻的气味!
     shards:
       - 0
       - 1
@@ -794,9 +795,8 @@ BEACON:
     name: 带培根(烽火台)回家 (b(e)acon)
     type: ALCHEMICAL
     lore:
-      - 远处的光...
-      - 你基地的气味...
-      - 温暖的恢复II...
+      - 远处的光, 是家的感觉
+      - 生命恢复 II 能给你带来温暖
     shards:
       - 0
       - 2
@@ -818,8 +818,7 @@ BEEF:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -838,9 +837,8 @@ BEEHIVE:
     name: 家, 甜蜜的家
     type: ANIMAL
     lore:
-      - 这个方块内产生了魔法的共鸣
-      - 用于保存里面的
-      - 生命支持.
+      - 这个方块内产生的魔法共鸣
+      - 可以维持其中的生命
     shards:
       - 0
       - 0
@@ -904,8 +902,7 @@ BEETROOT_SOUP:
     type: HUMAN
     lore:
       - 温暖身体与灵魂.
-      - 向饮用它的人推给它
-      - 潜在的水晶.
+      - 向饮用用它的人传递魔法
     shards:
       - 0
       - 0
@@ -925,9 +922,8 @@ BEE_NEST:
     name: 家, 甜蜜的家
     type: ANIMAL
     lore:
-      - 这个方块内产生了魔法的共鸣
-      - 用于保存里面的
-      - 生命支持.
+      - 这个方块内产生的魔法共鸣
+      - 可以维持其中的生命
     shards:
       - 0
       - 0
@@ -965,10 +961,10 @@ BIG_DRIPLEAF:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 努力尝试 (大悬叶草)
+    name: 努力尝试 (大型垂滴叶)
     type: PHILOSOPHICAL
     lore:
-      - 悬叶草总是在尝试保持
+      - 垂滴叶总是在尝试保持
       - 自己不要倾斜,
       - 虽然几乎总是失败.
     shards:
@@ -988,10 +984,11 @@ BIRCH_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 整齐的 (桦木)
+    name: 船 (桦木)
     type: PHILOSOPHICAL
     lore:
-      - 生活在阳光下，在海里游泳， 于狂野的空气中喝酒
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards:
       - 1
       - 0
@@ -1008,10 +1005,10 @@ BIRCH_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (桦木)
+    name: 抑郁 (桦木)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -1028,12 +1025,12 @@ BIRCH_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 出入口 (桦木)
+    name: 门 (桦木)
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -1053,8 +1050,8 @@ BIRCH_FENCE:
     name: 家畜 (桦木)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -1075,8 +1072,8 @@ BIRCH_FENCE_GATE:
     name: 门 (桦木)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -1094,12 +1091,11 @@ BIRCH_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (桦木)
+    name: 树叶的思考 (桦木)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -1116,11 +1112,12 @@ BIRCH_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (桦木)
+    name: 给我原木 (桦木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -1137,11 +1134,10 @@ BIRCH_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 走上木材 (桦木)
+    name: 木板，我们走 (桦木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -1158,11 +1154,10 @@ BIRCH_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (桦木)
+    name: 承受压力 (桦木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -1182,8 +1177,8 @@ BIRCH_SAPLING:
     name: 成长 (桦木)
     type: ELEMENTAL
     lore:
-      - 一个年轻的精神
-      - 有能力成长为一棵大树
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards:
       - 1
       - 0
@@ -1203,8 +1198,7 @@ BIRCH_SIGN:
     name: 署名 (桦木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -1220,11 +1214,11 @@ BIRCH_SLAB:
   elements:
     - HUMAN
   story:
-    name: 切开之下 (桦木)
+    name: 低一截 (桦木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -1244,8 +1238,7 @@ BIRCH_STAIRS:
     name: 出现 (桦木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -1283,11 +1276,12 @@ BIRCH_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得木头 (桦木)
+    name: 给我原木 (桦木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -1307,7 +1301,7 @@ BLACKSTONE:
     name: 黑石
     type: ELEMENTAL
     lore:
-      - 黑石, 还能是甚么呢?
+      - 黑石, 还能是什么呢?
     shards:
       - 1
       - 1
@@ -1325,12 +1319,12 @@ BLACKSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (黑石)
+    name: 一半 (黑石)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -1347,7 +1341,7 @@ BLACKSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (黑石)
+    name: 步步高升 (黑石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -1369,11 +1363,11 @@ BLACKSTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (黑石)
+    name: 推倒墙壁 (黑石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -1390,11 +1384,10 @@ BLACK_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (黑)
+    name: 自由飘扬 (黑)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -1411,12 +1404,12 @@ BLACK_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (黑)
+    name: 晚安 (黑)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -1434,11 +1427,11 @@ BLACK_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (黑)
+    name: 永远发光 (黑)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -1482,8 +1475,7 @@ BLACK_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -1503,10 +1495,10 @@ BLACK_CONCRETE_POWDER:
     name: 自我鉴定 (黑)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -1545,12 +1537,12 @@ BLACK_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (黑)
+    name: 不会黏住 (黑)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -1567,7 +1559,7 @@ BLACK_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (黑)
+    name: 棱镜 (黑)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -1589,7 +1581,7 @@ BLACK_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (黑色玻璃片)
+    name: 棱镜 (黑色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -1721,11 +1713,10 @@ BLUE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (蓝)
+    name: 自由飘扬 (蓝)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -1742,12 +1733,12 @@ BLUE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (蓝)
+    name: 晚安 (蓝)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -1765,11 +1756,11 @@ BLUE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (蓝)
+    name: 永远发光 (蓝)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -1813,8 +1804,7 @@ BLUE_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -1834,10 +1824,10 @@ BLUE_CONCRETE_POWDER:
     name: 自我鉴定 (蓝)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -1876,12 +1866,12 @@ BLUE_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (蓝)
+    name: 不会黏住 (蓝)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -1942,7 +1932,7 @@ BLUE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (蓝)
+    name: 棱镜 (蓝)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -1964,7 +1954,7 @@ BLUE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (蓝色玻璃片)
+    name: 棱镜 (蓝色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -2336,12 +2326,12 @@ BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (红砖)
+    name: 一半 (红砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -2358,7 +2348,7 @@ BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (红砖)
+    name: 步步高升 (红砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -2380,11 +2370,11 @@ BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (红砖)
+    name: 推倒墙壁 (红砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -2401,11 +2391,10 @@ BROWN_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (棕)
+    name: 自由飘扬 (棕)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -2422,12 +2411,12 @@ BROWN_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (棕)
+    name: 晚安 (棕)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -2445,11 +2434,11 @@ BROWN_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (棕)
+    name: 永远发光 (棕)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -2493,8 +2482,7 @@ BROWN_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -2514,10 +2502,10 @@ BROWN_CONCRETE_POWDER:
     name: 自我鉴定 (棕)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -2556,12 +2544,12 @@ BROWN_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (棕)
+    name: 不会黏住 (棕)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -2621,7 +2609,7 @@ BROWN_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (棕)
+    name: 棱镜 (棕)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -2643,7 +2631,7 @@ BROWN_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (棕色玻璃片)
+    name: 棱镜 (棕色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -2883,11 +2871,11 @@ CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力
+    name: 永远发光
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -3193,8 +3181,7 @@ CHICKEN:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -3596,12 +3583,12 @@ COBBLED_DEEPSLATE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (深板岩碎石)
+    name: 一半 (深板岩碎石)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -3618,7 +3605,7 @@ COBBLED_DEEPSLATE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (深板岩碎石)
+    name: 步步高升 (深板岩碎石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -3640,11 +3627,11 @@ COBBLED_DEEPSLATE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (深板岩碎石)
+    name: 推倒墙壁 (深板岩碎石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -3681,12 +3668,12 @@ COBBLESTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (鹅卵石)
+    name: 一半 (鹅卵石)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -3703,7 +3690,7 @@ COBBLESTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (安山岩)
+    name: 步步高升 (安山岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -3725,11 +3712,11 @@ COBBLESTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (鹅卵石)
+    name: 推倒墙壁 (鹅卵石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -3793,8 +3780,7 @@ COD:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -4357,10 +4343,10 @@ CRIMSON_BUTTON:
     - MECHANICAL
     - VOID
   story:
-    name: 郁闷 (绯红)
+    name: 抑郁 (绯红)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -4378,12 +4364,12 @@ CRIMSON_DOOR:
     - MECHANICAL
     - VOID
   story:
-    name: 出入口 (绯红)
+    name: 门 (绯红)
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -4404,8 +4390,8 @@ CRIMSON_FENCE:
     name: 家畜 (绯红)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -4427,8 +4413,8 @@ CRIMSON_FENCE_GATE:
     name: 门 (绯红)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -4514,11 +4500,10 @@ CRIMSON_PLANKS:
     - HUMAN
     - VOID
   story:
-    name: 走上木材 (绯红蕈木)
+    name: 木板，我们走 (绯红蕈木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -4535,11 +4520,10 @@ CRIMSON_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (绯红蕈木)
+    name: 承受压力 (绯红蕈木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -4581,8 +4565,7 @@ CRIMSON_SIGN:
     name: 署名 (绯红蕈木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -4599,11 +4582,11 @@ CRIMSON_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (绯红蕈木)
+    name: 低一截 (绯红蕈木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -4624,8 +4607,7 @@ CRIMSON_STAIRS:
     name: 出现 (绯红蕈木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -4876,11 +4858,10 @@ CYAN_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (青)
+    name: 自由飘扬 (青)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -4897,12 +4878,12 @@ CYAN_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (青)
+    name: 晚安 (青)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -4920,11 +4901,11 @@ CYAN_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (青)
+    name: 永远发光 (青)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -4968,8 +4949,7 @@ CYAN_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -4989,10 +4969,10 @@ CYAN_CONCRETE_POWDER:
     name: 自我鉴定 (青)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -5031,12 +5011,12 @@ CYAN_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (青)
+    name: 不会黏住 (青)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -5053,7 +5033,7 @@ CYAN_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (青)
+    name: 棱镜 (青)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -5075,7 +5055,7 @@ CYAN_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (青色玻璃片)
+    name: 棱镜 (青色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -5186,10 +5166,11 @@ DARK_OAK_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 整齐的 (黑橡木)
+    name: 船 (黑橡木)
     type: PHILOSOPHICAL
     lore:
-      - 生活在阳光下，在海里游泳， 于狂野的空气中喝酒
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards:
       - 1
       - 0
@@ -5206,10 +5187,10 @@ DARK_OAK_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (黑橡木)
+    name: 抑郁 (黑橡木)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -5226,12 +5207,12 @@ DARK_OAK_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 出入口 (黑橡木)
+    name: 门 (黑橡木)
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -5251,8 +5232,8 @@ DARK_OAK_FENCE:
     name: 家畜 (黑橡木)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -5273,8 +5254,8 @@ DARK_OAK_FENCE_GATE:
     name: 门 (黑橡木)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -5292,12 +5273,11 @@ DARK_OAK_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (黑橡木)
+    name: 树叶的思考 (黑橡木)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -5314,11 +5294,12 @@ DARK_OAK_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (黑橡木)
+    name: 给我原木 (黑橡木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -5335,11 +5316,10 @@ DARK_OAK_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 走上木材 (黑橡木)
+    name: 木板，我们走 (黑橡木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -5356,11 +5336,10 @@ DARK_OAK_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (黑橡木)
+    name: 承受压力 (黑橡木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -5380,8 +5359,8 @@ DARK_OAK_SAPLING:
     name: 成长 (黑橡木)
     type: ELEMENTAL
     lore:
-      - 一个年轻的精神
-      - 有能力成长为一棵大树
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards:
       - 1
       - 0
@@ -5401,8 +5380,7 @@ DARK_OAK_SIGN:
     name: 署名 (黑橡木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -5418,11 +5396,11 @@ DARK_OAK_SLAB:
   elements:
     - HUMAN
   story:
-    name: 切开之下 (黑橡木)
+    name: 低一截 (黑橡木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -5439,11 +5417,10 @@ DARK_OAK_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 出现 (黑橡木)
+    name: 步步高升 (黑橡木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -5481,11 +5458,12 @@ DARK_OAK_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (黑橡木)
+    name: 给我原木 (黑橡木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -5524,11 +5502,11 @@ DARK_PRISMARINE_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 切开之下 (暗海磷石)
+    name: 低一截 (暗海磷石)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -5546,7 +5524,7 @@ DARK_PRISMARINE_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 崛起 (暗海磷石)
+    name: 步步高升 (暗海磷石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -5984,11 +5962,11 @@ DEEPSLATE_BRICK_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (深板岩砖)
+    name: 低一截 (深板岩砖)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -6005,7 +5983,7 @@ DEEPSLATE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (深板岩砖)
+    name: 步步高升 (深板岩砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -6027,11 +6005,11 @@ DEEPSLATE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (深板岩砖)
+    name: 推倒墙壁 (深板岩砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -6253,11 +6231,11 @@ DEEPSLATE_TILE_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (深板岩砖瓦)
+    name: 低一截 (深板岩砖瓦)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -6274,7 +6252,7 @@ DEEPSLATE_TILE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (深板岩砖瓦)
+    name: 步步高升 (深板岩砖瓦)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -6296,11 +6274,11 @@ DEEPSLATE_TILE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (深板岩砖瓦)
+    name: 推倒墙壁 (深板岩砖瓦)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -6644,12 +6622,12 @@ DIORITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (闪长岩)
+    name: 一半 (闪长岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -6666,7 +6644,7 @@ DIORITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (闪长岩)
+    name: 步步高升 (闪长岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -6688,11 +6666,11 @@ DIORITE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (闪长岩)
+    name: 推倒墙壁 (闪长岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -7260,11 +7238,11 @@ END_STONE_BRICK_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (终界石砖)
+    name: 低一截 (终界石砖)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -7281,7 +7259,7 @@ END_STONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (终界石砖)
+    name: 步步高升 (终界石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -7303,11 +7281,11 @@ END_STONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (终界石砖)
+    name: 推倒墙壁 (终界石砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -7957,7 +7935,7 @@ GLASS_PANE:
     - HUMAN
     - ALCHEMICAL
   story:
-    name: 透视 (玻璃片)
+    name: 透视 (玻璃板)
     type: PHILOSOPHICAL
     lore:
       - 尽管玻璃很努力，但它无法隐藏
@@ -8525,12 +8503,12 @@ GRANITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (花岗岩)
+    name: 一半 (花岗岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -8547,7 +8525,7 @@ GRANITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (花岗岩)
+    name: 步步高升 (花岗岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -8569,11 +8547,11 @@ GRANITE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (花岗岩)
+    name: 推倒墙壁 (花岗岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -8655,11 +8633,10 @@ GRAY_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (灰)
+    name: 自由飘扬 (灰)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -8676,12 +8653,12 @@ GRAY_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (灰)
+    name: 晚安 (灰)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -8699,11 +8676,11 @@ GRAY_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (灰)
+    name: 永远发光 (灰)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -8747,8 +8724,7 @@ GRAY_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -8768,10 +8744,10 @@ GRAY_CONCRETE_POWDER:
     name: 自我鉴定 (灰)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -8810,12 +8786,12 @@ GRAY_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (灰)
+    name: 不会黏住 (灰)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -8832,7 +8808,7 @@ GRAY_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (灰)
+    name: 棱镜 (灰)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -8854,7 +8830,7 @@ GRAY_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (灰色玻璃片)
+    name: 棱镜 (灰色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -8920,11 +8896,10 @@ GREEN_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (绿)
+    name: 自由飘扬 (绿)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -8941,12 +8916,12 @@ GREEN_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (绿)
+    name: 晚安 (绿)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -8964,11 +8939,11 @@ GREEN_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (绿)
+    name: 永远发光 (绿)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -9012,8 +8987,7 @@ GREEN_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -9033,10 +9007,10 @@ GREEN_CONCRETE_POWDER:
     name: 自我鉴定 (绿)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -9075,12 +9049,12 @@ GREEN_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (绿)
+    name: 不会黏住 (绿)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -9097,7 +9071,7 @@ GREEN_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (绿)
+    name: 棱镜 (绿)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -9119,7 +9093,7 @@ GREEN_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (绿色玻璃片)
+    name: 棱镜 (绿色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -10162,10 +10136,11 @@ JUNGLE_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 整齐的 (丛林木)
+    name: 船 (丛林木)
     type: PHILOSOPHICAL
     lore:
-      - 生活在阳光下，在海里游泳， 于狂野的空气中喝酒
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards:
       - 1
       - 0
@@ -10182,10 +10157,10 @@ JUNGLE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (丛林木)
+    name: 抑郁 (丛林木)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -10202,12 +10177,12 @@ JUNGLE_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 出入口 (丛林木)
+    name: 门 (丛林木)
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -10227,8 +10202,8 @@ JUNGLE_FENCE:
     name: 家畜 (丛林木)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -10249,8 +10224,8 @@ JUNGLE_FENCE_GATE:
     name: 门 (丛林木)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -10268,12 +10243,11 @@ JUNGLE_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (丛林木)
+    name: 树叶的思考 (丛林木)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -10290,11 +10264,12 @@ JUNGLE_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (丛林木)
+    name: 给我原木 (丛林木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -10311,11 +10286,10 @@ JUNGLE_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 走上木材 (丛林木)
+    name: 木板，我们走 (丛林木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -10332,11 +10306,10 @@ JUNGLE_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (丛林木)
+    name: 承受压力 (丛林木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -10356,8 +10329,8 @@ JUNGLE_SAPLING:
     name: 成长 (丛林木)
     type: ELEMENTAL
     lore:
-      - 一个年轻的精神
-      - 有能力成长为一棵大树
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards:
       - 1
       - 0
@@ -10377,8 +10350,7 @@ JUNGLE_SIGN:
     name: 署名 (丛林木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -10394,11 +10366,11 @@ JUNGLE_SLAB:
   elements:
     - HUMAN
   story:
-    name: 切开之下 (丛林木)
+    name: 低一截 (丛林木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -10415,11 +10387,10 @@ JUNGLE_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 出现 (丛林木)
+    name: 步步高升 (丛林木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -10457,11 +10428,12 @@ JUNGLE_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (丛林木)
+    name: 给我原木 (丛林木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -10888,11 +10860,10 @@ LIGHT_BLUE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (浅蓝)
+    name: 自由飘扬 (浅蓝)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -10909,12 +10880,12 @@ LIGHT_BLUE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (浅蓝)
+    name: 晚安 (浅蓝)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -10932,11 +10903,11 @@ LIGHT_BLUE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (浅蓝)
+    name: 永远发光 (浅蓝)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -10980,8 +10951,7 @@ LIGHT_BLUE_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -11001,10 +10971,10 @@ LIGHT_BLUE_CONCRETE_POWDER:
     name: 自我鉴定 (浅蓝)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -11066,7 +11036,7 @@ LIGHT_BLUE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅蓝)
+    name: 棱镜 (浅蓝)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11088,7 +11058,7 @@ LIGHT_BLUE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅蓝色玻璃片)
+    name: 棱镜 (浅蓝色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11154,11 +11124,10 @@ LIGHT_GRAY_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (浅灰)
+    name: 自由飘扬 (浅灰)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -11175,12 +11144,12 @@ LIGHT_GRAY_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (浅灰)
+    name: 晚安 (浅灰)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -11198,11 +11167,11 @@ LIGHT_GRAY_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (浅灰)
+    name: 永远发光 (浅灰)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -11246,8 +11215,7 @@ LIGHT_GRAY_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -11267,10 +11235,10 @@ LIGHT_GRAY_CONCRETE_POWDER:
     name: 自我鉴定 (浅灰)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -11309,12 +11277,12 @@ LIGHT_GRAY_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (浅灰)
+    name: 不会黏住 (浅灰)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -11331,7 +11299,7 @@ LIGHT_GRAY_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅灰)
+    name: 棱镜 (浅灰)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11353,7 +11321,7 @@ LIGHT_GRAY_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅灰色玻璃片)
+    name: 棱镜 (浅灰色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11506,11 +11474,10 @@ LIME_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (浅绿)
+    name: 自由飘扬 (浅绿)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -11527,12 +11494,12 @@ LIME_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (浅绿)
+    name: 晚安 (浅绿)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -11550,11 +11517,11 @@ LIME_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (浅绿)
+    name: 永远发光 (浅绿)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -11598,8 +11565,7 @@ LIME_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -11619,10 +11585,10 @@ LIME_CONCRETE_POWDER:
     name: 自我鉴定 (浅绿)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -11661,12 +11627,12 @@ LIME_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (浅绿)
+    name: 不会黏住 (浅绿)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -11683,7 +11649,7 @@ LIME_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅绿)
+    name: 棱镜 (浅绿)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11705,7 +11671,7 @@ LIME_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (浅绿色玻璃片)
+    name: 棱镜 (浅绿色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11836,11 +11802,10 @@ MAGENTA_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (洋红)
+    name: 自由飘扬 (洋红)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -11857,12 +11822,12 @@ MAGENTA_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (洋红)
+    name: 晚安 (洋红)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -11880,11 +11845,11 @@ MAGENTA_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (洋红)
+    name: 永远发光 (洋红)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -11928,8 +11893,7 @@ MAGENTA_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -11949,10 +11913,10 @@ MAGENTA_CONCRETE_POWDER:
     name: 自我鉴定 (洋红)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -11991,12 +11955,12 @@ MAGENTA_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (洋红)
+    name: 不会黏住 (洋红)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -12013,7 +11977,7 @@ MAGENTA_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (洋红)
+    name: 棱镜 (洋红)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -12035,7 +11999,7 @@ MAGENTA_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (洋红色玻璃片)
+    name: 棱镜 (洋红色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -12340,12 +12304,12 @@ MOSSY_COBBLESTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (青苔鹅卵石)
+    name: 一半 (青苔鹅卵石)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -12362,7 +12326,7 @@ MOSSY_COBBLESTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (青苔鹅卵石)
+    name: 步步高升 (青苔鹅卵石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -12384,11 +12348,11 @@ MOSSY_COBBLESTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (青苔鹅卵石)
+    name: 推倒墙壁 (青苔鹅卵石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -12427,12 +12391,12 @@ MOSSY_STONE_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (青苔石半砖)
+    name: 一半 (青苔石半砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -12449,7 +12413,7 @@ MOSSY_STONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (青苔石半砖)
+    name: 步步高升 (青苔石半砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -12471,11 +12435,11 @@ MOSSY_STONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (青苔石半砖)
+    name: 推倒墙壁 (青苔石半砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -12562,8 +12526,7 @@ MUSHROOM_STEW:
     type: HUMAN
     lore:
       - 温暖身体与灵魂.
-      - 向饮用它的人推给它
-      - 潜在的水晶.
+      - 向饮用用它的人传递魔法
     shards:
       - 0
       - 0
@@ -12884,8 +12847,7 @@ MUTTON:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -13301,8 +13263,8 @@ NETHER_BRICK_FENCE:
     name: 家畜 (地狱)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -13320,12 +13282,12 @@ NETHER_BRICK_SLAB:
     - ELEMENTAL
     - VOID
   story:
-    name: 半品脱 (地狱砖)
+    name: 一半 (地狱砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -13342,7 +13304,7 @@ NETHER_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (地狱砖)
+    name: 步步高升 (地狱砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -13364,11 +13326,11 @@ NETHER_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (地狱砖)
+    name: 推倒墙壁 (地狱砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -13539,10 +13501,11 @@ OAK_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 整齐的 (橡木)
+    name: 船 (橡木)
     type: PHILOSOPHICAL
     lore:
-      - 生活在阳光下，在海里游泳， 于狂野的空气中喝酒
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards:
       - 1
       - 0
@@ -13559,10 +13522,10 @@ OAK_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (橡木)
+    name: 抑郁 (橡木)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -13579,12 +13542,12 @@ OAK_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 出入口
+    name: 门
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -13604,8 +13567,8 @@ OAK_FENCE:
     name: 家畜 (橡木)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -13626,8 +13589,8 @@ OAK_FENCE_GATE:
     name: 门 (橡木)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -13645,12 +13608,11 @@ OAK_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (橡木)
+    name: 树叶的思考 (橡木)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -13667,11 +13629,12 @@ OAK_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (橡木)
+    name: 给我原木 (橡木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -13688,11 +13651,10 @@ OAK_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 走上木材 (橡木)
+    name: 木板，我们走 (橡木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -13709,11 +13671,10 @@ OAK_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (橡木)
+    name: 承受压力 (橡木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -13733,8 +13694,8 @@ OAK_SAPLING:
     name: 成长 (橡木)
     type: ELEMENTAL
     lore:
-      - 一个年轻的精神
-      - 有能力成长为一棵大树
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards:
       - 1
       - 0
@@ -13754,8 +13715,7 @@ OAK_SIGN:
     name: 署名 (橡木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -13771,11 +13731,11 @@ OAK_SLAB:
   elements:
     - HUMAN
   story:
-    name: 切开之下 (橡木)
+    name: 低一截 (橡木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -13792,11 +13752,10 @@ OAK_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 出现 (橡木)
+    name: 步步高升 (橡木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -13834,11 +13793,12 @@ OAK_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (橡木)
+    name: 给我原木 (橡木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -13901,11 +13861,10 @@ ORANGE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (橙)
+    name: 自由飘扬 (橙)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -13922,12 +13881,12 @@ ORANGE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (橙)
+    name: 晚安 (橙)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -13945,11 +13904,11 @@ ORANGE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (橙)
+    name: 永远发光 (橙)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -13993,8 +13952,7 @@ ORANGE_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -14014,10 +13972,10 @@ ORANGE_CONCRETE_POWDER:
     name: 自我鉴定 (橙)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -14056,12 +14014,12 @@ ORANGE_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (橙)
+    name: 不会黏住 (橙)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -14078,7 +14036,7 @@ ORANGE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (橙)
+    name: 棱镜 (橙)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -14100,7 +14058,7 @@ ORANGE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (橙色玻璃片)
+    name: 棱镜 (橙色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -14423,11 +14381,10 @@ PINK_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (粉)
+    name: 自由飘扬 (粉)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -14444,12 +14401,12 @@ PINK_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (粉)
+    name: 晚安 (粉)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -14467,11 +14424,11 @@ PINK_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (粉)
+    name: 永远发光 (粉)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -14515,8 +14472,7 @@ PINK_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -14536,10 +14492,10 @@ PINK_CONCRETE_POWDER:
     name: 自我鉴定 (粉)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -14578,12 +14534,12 @@ PINK_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (粉)
+    name: 不会黏住 (粉)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -14600,7 +14556,7 @@ PINK_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (粉)
+    name: 棱镜 (粉)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -14622,7 +14578,7 @@ PINK_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (粉色玻璃片)
+    name: 棱镜 (粉色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -14841,12 +14797,12 @@ POLISHED_ANDESITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (抛光安山岩)
+    name: 一半 (抛光安山岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -14863,7 +14819,7 @@ POLISHED_ANDESITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光安山岩)
+    name: 步步高升 (抛光安山岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -14951,12 +14907,12 @@ POLISHED_BLACKSTONE_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (抛光黑石砖)
+    name: 一半 (抛光黑石砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -14973,7 +14929,7 @@ POLISHED_BLACKSTONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光黑石砖)
+    name: 步步高升 (抛光黑石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -14995,11 +14951,11 @@ POLISHED_BLACKSTONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (抛光黑石砖)
+    name: 推倒墙壁 (抛光黑石砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -15016,10 +14972,10 @@ POLISHED_BLACKSTONE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (抛光黑石)
+    name: 抑郁 (抛光黑石)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 1
       - 1
@@ -15036,11 +14992,10 @@ POLISHED_BLACKSTONE_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (抛光黑石)
+    name: 承受压力 (抛光黑石)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -15057,12 +15012,12 @@ POLISHED_BLACKSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (抛光黑石)
+    name: 一半 (抛光黑石)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -15079,7 +15034,7 @@ POLISHED_BLACKSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光黑石)
+    name: 步步高升 (抛光黑石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15101,11 +15056,11 @@ POLISHED_BLACKSTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (抛光黑石)
+    name: 推倒墙壁 (抛光黑石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -15144,11 +15099,11 @@ POLISHED_DEEPSLATE_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (抛光深板岩)
+    name: 低一截 (抛光深板岩)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -15165,7 +15120,7 @@ POLISHED_DEEPSLATE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光深板岩)
+    name: 步步高升 (抛光深板岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15187,11 +15142,11 @@ POLISHED_DEEPSLATE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (抛光深板岩)
+    name: 推倒墙壁 (抛光深板岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -15228,12 +15183,12 @@ POLISHED_DIORITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 ( 抛光闪长岩)
+    name: 一半 ( 抛光闪长岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -15250,7 +15205,7 @@ POLISHED_DIORITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光花岗岩)
+    name: 步步高升 (抛光花岗岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15292,12 +15247,12 @@ POLISHED_GRANITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (抛光花岗岩)
+    name: 一半 (抛光花岗岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -15314,7 +15269,7 @@ POLISHED_GRANITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (抛光花岗岩)
+    name: 步步高升 (抛光花岗岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15380,8 +15335,7 @@ PORKCHOP:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -15531,11 +15485,11 @@ PRISMARINE_BRICK_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 切开之下 (海磷石砖)
+    name: 低一截 (海磷石砖)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -15553,7 +15507,7 @@ PRISMARINE_BRICK_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 崛起 (海磷石砖)
+    name: 步步高升 (海磷石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15618,11 +15572,11 @@ PRISMARINE_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 切开之下 (海磷石)
+    name: 低一截 (海磷石)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -15640,7 +15594,7 @@ PRISMARINE_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 崛起 (海磷石)
+    name: 步步高升 (海磷石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15663,11 +15617,11 @@ PRISMARINE_WALL:
     - HISTORICAL
     - ANIMAL
   story:
-    name: 打倒墙壁 (海磷石)
+    name: 推倒墙壁 (海磷石)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -15794,11 +15748,10 @@ PURPLE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (紫)
+    name: 自由飘扬 (紫)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -15815,12 +15768,12 @@ PURPLE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (紫)
+    name: 晚安 (紫)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -15838,11 +15791,11 @@ PURPLE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (紫)
+    name: 永远发光 (紫)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -15886,8 +15839,7 @@ PURPLE_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -15907,10 +15859,10 @@ PURPLE_CONCRETE_POWDER:
     name: 自我鉴定 (紫)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -15949,12 +15901,12 @@ PURPLE_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (紫)
+    name: 不会黏住 (紫)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -15971,7 +15923,7 @@ PURPLE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (紫)
+    name: 棱镜 (紫)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -15993,7 +15945,7 @@ PURPLE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (紫色玻璃片)
+    name: 棱镜 (紫色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -16106,11 +16058,11 @@ PURPUR_SLAB:
     - VOID
     - CELESTIAL
   story:
-    name: 切开之下 (紫珀)
+    name: 低一截 (紫珀)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -16128,7 +16080,7 @@ PURPUR_STAIRS:
     - PHILOSOPHICAL
     - CELESTIAL
   story:
-    name: 崛起 (紫珀)
+    name: 步步高升 (紫珀)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -16239,11 +16191,11 @@ QUARTZ_SLAB:
     - VOID
     - ALCHEMICAL
   story:
-    name: 切开之下 (石英)
+    name: 低一截 (石英)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -16261,7 +16213,7 @@ QUARTZ_STAIRS:
     - PHILOSOPHICAL
     - ALCHEMICAL
   story:
-    name: 崛起 (石英)
+    name: 步步高升 (石英)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -16287,8 +16239,7 @@ RABBIT:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -16352,8 +16303,7 @@ RABBIT_STEW:
     type: HUMAN
     lore:
       - 温暖身体与灵魂.
-      - 向饮用它的人推给它
-      - 潜在的水晶.
+      - 向饮用用它的人传递魔法
     shards:
       - 0
       - 0
@@ -16627,11 +16577,10 @@ RED_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (红)
+    name: 自由飘扬 (红)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -16648,12 +16597,12 @@ RED_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (红)
+    name: 晚安 (红)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -16671,11 +16620,11 @@ RED_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (红)
+    name: 永远发光 (红)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -16719,8 +16668,7 @@ RED_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -16740,10 +16688,10 @@ RED_CONCRETE_POWDER:
     name: 自我鉴定 (红)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -16782,12 +16730,12 @@ RED_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (红)
+    name: 不会黏住 (红)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -16869,12 +16817,12 @@ RED_NETHER_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (红地狱砖)
+    name: 一半 (红地狱砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -16891,7 +16839,7 @@ RED_NETHER_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (红地狱砖)
+    name: 步步高升 (红地狱砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -16913,11 +16861,11 @@ RED_NETHER_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (红地狱砖)
+    name: 推倒墙壁 (红地狱砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -16976,12 +16924,12 @@ RED_SANDSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (红砂岩)
+    name: 一半 (红砂岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -16998,7 +16946,7 @@ RED_SANDSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (红砂岩)
+    name: 步步高升 (红砂岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -17020,11 +16968,11 @@ RED_SANDSTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (红砂岩)
+    name: 推倒墙壁 (红砂岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -17041,7 +16989,7 @@ RED_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (红)
+    name: 棱镜 (红)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -17063,7 +17011,7 @@ RED_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (红色玻璃片)
+    name: 棱镜 (红色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -17283,8 +17231,7 @@ SALMON:
     type: ANIMAL
     lore:
       - 充满了未使用的潜力.
-      - 只渴望有一个好的火,
-      - 而不是别的
+      - 等待着烹饪
     shards:
       - 0
       - 0
@@ -17366,12 +17313,12 @@ SANDSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (砂岩)
+    name: 一半 (砂岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -17388,7 +17335,7 @@ SANDSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (砂岩)
+    name: 步步高升 (砂岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -17410,11 +17357,11 @@ SANDSTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (砂岩)
+    name: 推倒墙壁 (砂岩)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -17849,11 +17796,11 @@ SMOOTH_QUARTZ_SLAB:
     - VOID
     - ALCHEMICAL
   story:
-    name: 切开之下 (平滑石英)
+    name: 低一截 (平滑石英)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -17871,7 +17818,7 @@ SMOOTH_QUARTZ_STAIRS:
     - PHILOSOPHICAL
     - ALCHEMICAL
   story:
-    name: 崛起 (平滑石英)
+    name: 步步高升 (平滑石英)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -17914,12 +17861,12 @@ SMOOTH_RED_SANDSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (平滑红砂岩)
+    name: 一半 (平滑红砂岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -17936,7 +17883,7 @@ SMOOTH_RED_SANDSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (平滑红砂岩)
+    name: 步步高升 (平滑红砂岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -17979,12 +17926,12 @@ SMOOTH_SANDSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (平滑砂岩)
+    name: 一半 (平滑砂岩)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -18001,7 +17948,7 @@ SMOOTH_SANDSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (平滑砂岩)
+    name: 步步高升 (平滑砂岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -18044,12 +17991,12 @@ SMOOTH_STONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (平滑石头)
+    name: 一半 (平滑石头)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -18355,10 +18302,11 @@ SPRUCE_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 整齐的 (杉木)
+    name: 船 (杉木)
     type: PHILOSOPHICAL
     lore:
-      - 生活在阳光下，在海里游泳， 于狂野的空气中喝酒
+      - 沐浴在阳光下
+      - 吹着海风，在海里遨游
     shards:
       - 1
       - 0
@@ -18375,10 +18323,10 @@ SPRUCE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (杉木)
+    name: 抑郁 (杉木)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -18395,12 +18343,12 @@ SPRUCE_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 出入口
+    name: 门
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -18420,8 +18368,8 @@ SPRUCE_FENCE:
     name: 家畜 (杉木)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -18442,8 +18390,8 @@ SPRUCE_FENCE_GATE:
     name: 门 (杉木)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -18461,12 +18409,11 @@ SPRUCE_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 让我独自一片! (杉木)
+    name: 树叶的思考 (杉木)
     type: PHILOSOPHICAL
     lore:
-      - 在凉爽的微风中轻轻轻轻摇曳,
-      - 叶子只想要独自一片
-      - 静静思考.
+      - 在冷风中轻轻地摇曳
+      - 树叶的一生，只是为了归根吗
     shards:
       - 1
       - 0
@@ -18483,11 +18430,12 @@ SPRUCE_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (杉木)
+    name: 给我原木 (杉木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -18504,11 +18452,10 @@ SPRUCE_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 走上木材 (杉木)
+    name: 木板，我们走 (杉木)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -18525,11 +18472,10 @@ SPRUCE_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (杉木)
+    name: 承受压力 (杉木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 2
@@ -18549,8 +18495,8 @@ SPRUCE_SAPLING:
     name: 生长
     type: ELEMENTAL
     lore:
-      - 一个年轻的精神
-      - 有能力成长为一棵大树
+      - 一棵年轻的小树
+      - 终将成长成一棵大树
     shards:
       - 1
       - 0
@@ -18570,8 +18516,7 @@ SPRUCE_SIGN:
     name: 署名 (杉木)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -18587,11 +18532,11 @@ SPRUCE_SLAB:
   elements:
     - HUMAN
   story:
-    name: 切开之下 (杉木)
+    name: 低一截 (杉木)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -18608,11 +18553,10 @@ SPRUCE_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 出现 (杉木)
+    name: 步步高升 (杉木)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -18650,11 +18594,12 @@ SPRUCE_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 敲树以获得原木 (杉木)
+    name: 给我原木 (杉木)
     type: ELEMENTAL
     lore:
-      - 每次的冒险开始都从
-      - 敲一棵好树开始
+      - 每一次冒险
+      - 都以获得原木开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -18822,12 +18767,12 @@ STONE_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (石砖)
+    name: 一半 (石砖)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -18844,7 +18789,7 @@ STONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (石砖)
+    name: 步步高升 (石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -18866,11 +18811,11 @@ STONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 打倒墙壁 (石砖)
+    name: 推倒墙壁 (石砖)
     type: HISTORICAL
     lore:
-      - 保护多年的工作,
-      - 使里面的人得以安全与健全.
+      - 多年以来，一直在保护
+      - 墙内人的安全
     shards:
       - 0
       - 0
@@ -18887,10 +18832,10 @@ STONE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 郁闷 (石头)
+    name: 抑郁 (石头)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 1
       - 1
@@ -18952,11 +18897,10 @@ STONE_PRESSURE_PLATE:
     - VOID
     - ELEMENTAL
   story:
-    name: 在压力之下 (石头)
+    name: 承受压力 (石头)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 1
       - 1
@@ -18995,12 +18939,12 @@ STONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 半品脱 (石头)
+    name: 一半 (石头)
     type: HUMAN
     lore:
-      - 这小家伙只有一半大,
-      - 而且是不被重视的两倍,
-      - 但它一天又一天的保护你免于怪物的侵害.
+      - 这小家伙只有一半大
+      - 没有人会去欣赏它的另一半
+      - 但每天都在保护你免于怪物的侵害.
     shards:
       - 1
       - 1
@@ -19017,7 +18961,7 @@ STONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 崛起 (石头)
+    name: 步步高升 (石头)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -20007,10 +19951,10 @@ WARPED_BUTTON:
     - MECHANICAL
     - VOID
   story:
-    name: 郁闷 (扭曲)
+    name: 抑郁 (扭曲)
     type: HUMAN
     lore:
-      - 容易感到郁闷
+      - 很容易抑郁
     shards:
       - 0
       - 1
@@ -20028,12 +19972,12 @@ WARPED_DOOR:
     - MECHANICAL
     - VOID
   story:
-    name: 出入口
+    name: 门
     type: HUMAN
     lore:
-      - 每一个入口也是一个出口.
-      - 门可以保护外界，但
-      - 不要让它们把你挡在门外!
+      - 每个入口都是出口.
+      - 门可以保护你免受外部袭击
+      - 但是，别让门把你关在里面!
     shards:
       - 0
       - 2
@@ -20053,8 +19997,8 @@ WARPED_FENCE:
     name: 家畜 (扭曲)
     type: ANIMAL
     lore:
-      - 能保护好牲畜的安全,
-      - 是你家的围栏这一生最大的快乐.
+      - 保护好你的家畜的安全
+      - 就是栅栏的职责所在
     shards:
       - 0
       - 0
@@ -20076,8 +20020,8 @@ WARPED_FENCE_GATE:
     name: 门 (扭曲)
     type: MECHANICAL
     lore:
-      - 仍然在转角处可能等待,
-      - 新的路或秘密的门.
+      - 拐角处也许有人在等待
+      - 是新的道路?还是秘密大门?
     shards:
       - 0
       - 2
@@ -20183,11 +20127,10 @@ WARPED_PLANKS:
     - HUMAN
     - VOID
   story:
-    name: 走上木材 (扭曲)
+    name: 木板，我们走 (扭曲)
     type: HUMAN
     lore:
-      - 制作旅程的第一步
-      - 引领着新玩家向前迈进.
+      - 你的第一次合成一定是合成木板吧
     shards:
       - 1
       - 0
@@ -20204,11 +20147,10 @@ WARPED_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 在压力之下 (扭曲蕈木)
+    name: 承受压力 (扭曲蕈木)
     type: VOID
     lore:
-      - 被人走一圈，会
-      - 让它精神崩溃。
+      - 逆来顺受只会令人失望
     shards:
       - 0
       - 1
@@ -20250,8 +20192,7 @@ WARPED_SIGN:
     name: 署名 (扭曲)
     type: PHILOSOPHICAL
     lore:
-      - 充满了那些
-      - authors
+      - 充满了作者的思想
     shards:
       - 0
       - 0
@@ -20268,11 +20209,11 @@ WARPED_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 切开之下 (扭曲)
+    name: 低一截 (扭曲)
     type: HUMAN
     lore:
-      - 撕成两半，与自己分开.
-      - 被撕裂的灵魂
+      - 被砍成了两半
+      - 正如一个被撕裂的灵魂.
     shards:
       - 1
       - 1
@@ -20290,11 +20231,10 @@ WARPED_STAIRS:
     - CELESTIAL
     - VOID
   story:
-    name: 出现 (扭曲)
+    name: 步步高升 (扭曲)
     type: CELESTIAL
     lore:
-      - 活着是为了感受他人
-      - 被提升到新高度的喜悦.
+      - 感受提升到新高度的快乐.
     shards:
       - 0
       - 1
@@ -20909,11 +20849,10 @@ WHITE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (白)
+    name: 自由飘扬 (白)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -20930,12 +20869,12 @@ WHITE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (白)
+    name: 晚安 (白)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -20953,11 +20892,11 @@ WHITE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (白)
+    name: 永远发光 (白)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -21001,8 +20940,7 @@ WHITE_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -21022,10 +20960,10 @@ WHITE_CONCRETE_POWDER:
     name: 自我鉴定 (白)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -21064,12 +21002,12 @@ WHITE_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不黏性 (白)
+    name: 不会黏住 (白)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
       - 与其他方块滑顺的接在一起,
-      - 使釉陶成为电梯建筑中最常见的建材.
+      - 使它成为电梯建筑中最常见的建材.
     shards:
       - 1
       - 0
@@ -21086,7 +21024,7 @@ WHITE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (白)
+    name: 棱镜 (白)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -21108,7 +21046,7 @@ WHITE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (白色玻璃片)
+    name: 棱镜 (白色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -21392,11 +21330,10 @@ YELLOW_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 向自由飘扬 (黄)
+    name: 自由飘扬 (黄)
     type: HISTORICAL
     lore:
-      - 日复一日的在飘扬,
-      - 多年来表现着自豪.
+      - 每天都在风中飘扬
     shards:
       - 0
       - 0
@@ -21413,12 +21350,12 @@ YELLOW_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 美好的晚安 (黄)
+    name: 晚安 (黄)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
-      - 一个人在睡眠时,
-      - 将会把内在的魔法重新充能.
+      - 人体内部的魔法
+      - 会在睡眠时重新充能.
     shards:
       - 0
       - 0
@@ -21436,11 +21373,11 @@ YELLOW_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 恒定的驱动力 (黄)
+    name: 永远发光 (黄)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
-      - 来明亮周围, 以至于经常
+      - 来点亮周围, 以至于经常
       - 觉得自己快要烧坏.
     shards:
       - 1
@@ -21484,8 +21421,7 @@ YELLOW_CONCRETE:
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
-      - 混凝土具有稳定,
-      - 坚固的并且永久的.
+      - 混凝土稳定且坚固
     shards:
       - 0
       - 1
@@ -21505,10 +21441,10 @@ YELLOW_CONCRETE_POWDER:
     name: 自我鉴定 (黄)
     type: HUMAN
     lore:
-      - 作为其他不同的方块混和体,
-      - 会对一个精神造成严重损坏.
-      - 混凝土只渴望一滴水,
-      - 这样它就可以成为自己!
+      - 作为其他不同的方块混和形态,
+      - 会对灵魂造成严重损坏.
+      - 只需要一滴水
+      - 就可以成为混凝土
     shards:
       - 1
       - 0
@@ -21569,7 +21505,7 @@ YELLOW_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (黄)
+    name: 棱镜 (黄)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -21591,7 +21527,7 @@ YELLOW_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱柱 (黄色玻璃片)
+    name: 棱镜 (黄色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
