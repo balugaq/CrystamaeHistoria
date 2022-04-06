@@ -256,7 +256,7 @@ ACACIA_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 出现 (金合欢)
+    name: 步步高升 (金合欢)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -2046,7 +2046,7 @@ BONE_BLOCK:
     name: 发现遗骸
     type: ANIMAL
     lore:
-      - 散落在世界与地狱深处的化石
+      - 散落在世界与下界深处的化石
       - 没人知道它们原来是什么生物.
     shards:
       - 0
@@ -2848,9 +2848,8 @@ CAMPFIRE:
     name: 向前飞越
     type: ELEMENTAL
     lore:
-      - 火的发现导致有
-      - 感知的关键事件, 随之而来的是
-      - 魔法背后的精神
+      - 火的发现引导着感知的关键
+      - 随即带来魔法背后的灵魂
     shards:
       - 2
       - 0
@@ -2891,7 +2890,7 @@ CARROT:
     - ANIMAL
     - CELESTIAL
   story:
-    name: 农夫的喜悦 (甜菜根)
+    name: 农夫的喜悦 (胡萝卜)
     type: HUMAN
     lore:
       - 每一个新芽, 每片叶子和每一个根,
@@ -2932,12 +2931,12 @@ CARTOGRAPHY_TABLE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 绘制的探索
+    name: 绘图探索
     type: PHILOSOPHICAL
     lore:
-      - 梦想看到世界遥远的角落,
-      - 这个方块不得不坐下来,
-      - 通过别人的成就来达成.
+      - 有着走遍世界的梦想,
+      - 但这个方块只能静静地呆在原地,
+      - 帮助别人圆梦.
     shards:
       - 0
       - 0
@@ -2957,10 +2956,10 @@ CARVED_PUMPKIN:
     name: 魔法般的生活
     type: ANIMAL
     lore:
-      - 目前还不清楚位甚么这个方块
-      - 如何或为甚么能够创造生命.
-      - 学者们都知道其中涉及魔法,
-      - 但没有人能看到它是甚么时候干预的.
+      - 目前还不清楚这个方块
+      - 如何创造生命.
+      - 学者们都知道这涉及魔法,
+      - 但没有人能看到它是何时生效的.
     shards:
       - 1
       - 0
@@ -2982,7 +2981,7 @@ CAULDRON:
     type: ALCHEMICAL
     lore:
       - 通常被视为大多数魔法职业的开始.
-      - 锅釜被赋予了比大多数其他物品
+      - 炼药锅被赋予了比大多数其他物品
       - 更多的魔法力量.
     shards:
       - 1
@@ -3026,7 +3025,7 @@ CHAINMAIL_BOOTS:
     lore:
       - 像所有盔甲一样, 靴子只想
       - 保证穿戴者的安全. 但不幸的是,
-      - 它们被其他装备所掩盖.
+      - 它们被其他装备的光芒所掩盖.
     shards:
       - 0
       - 0
@@ -3043,7 +3042,7 @@ CHAINMAIL_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (锁链)
+    name: 伟大的防御 (锁链)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -3136,7 +3135,7 @@ CHEST:
     lore:
       - 在试图保护所持有的
       - 物品安全同时, 箱子失去了
-      - 对其他事物的驱动力.
+      - 做其他事情的动力.
     shards:
       - 0
       - 1
@@ -3156,8 +3155,9 @@ CHEST_MINECART:
     name: 安然无恙... 和开心!
     type: MECHANICAL
     lore:
-      - 以前失去的动力, 在轮子上
-      - 重新点燃了箱子的精神.
+      - 虽然之前失去了动力,
+      - 但在矿车上时,
+      - 箱子的灵魂似乎又被重新点燃了.
     shards:
       - 0
       - 2
@@ -3238,7 +3238,7 @@ CHISELED_NETHER_BRICKS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 工匠 (地狱砖)
+    name: 工匠 (下界砖)
     type: PHILOSOPHICAL
     lore:
       - 工匠不知不觉中将一部分魔法
@@ -3365,12 +3365,12 @@ CHORUS_FLOWER:
     - VOID
     - ANIMAL
   story:
-    name: 阴晴不定...
+    name: 瞬移...
     type: VOID
     lore:
-      - 这些花被古代建设者
-      - 编织到时空结构中,
-      - 这些花看起来... 阴晴不定...
+      - 古代建筑师们制造了这些花,
+      - 这些花看起来...
+      - 有瞬间移动的能力?
     shards:
       - 0
       - 0
@@ -3387,12 +3387,12 @@ CHORUS_FRUIT:
   elements:
     - VOID
   story:
-    name: 传达
+    name: 传送
     type: VOID
     lore:
-      - 这种水果潜在魔力处于
+      - 这种果实的潜在魔力处于
       - 不断的变化状态, 量子连接
-      - 到附近个个的时空点之间.
+      - 到附近各个的时空点之间.
     shards:
       - 0
       - 0
@@ -3409,10 +3409,10 @@ CLAY:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 柔韧 (黏土方块)
+    name: 柔韧 (块)
     type: HUMAN
     lore:
-      - 他正等待被塑造成新的东西
+      - 它正等待被塑造成新的东西
       - 黏土现在很期待它未来的样子
     shards:
       - 1
@@ -3430,10 +3430,10 @@ CLAY_BALL:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 柔韧 (黏土球)
+    name: 柔韧 (球)
     type: HUMAN
     lore:
-      - 他正等待被塑造成新的东西
+      - 它正等待被塑造成新的东西
       - 黏土现在很期待它未来的样子
     shards:
       - 1
@@ -3476,7 +3476,7 @@ COAL:
     name: 肮脏的燃料
     type: ELEMENTAL
     lore:
-      - 你在Slimefun的旅程中几乎都会用到它
+      - 你在粘液科技的旅程中几乎都会用到它
       - 对煤炭的需求几乎都来自
       - 从合成到发电的一切
     shards:
@@ -3498,7 +3498,7 @@ COAL_BLOCK:
     name: 真的很脏的燃料
     type: ELEMENTAL
     lore:
-      - 你在Slimefun的旅程中几乎都会用到它
+      - 你在粘液科技的旅程中几乎都会用到它
       - 对煤炭的需求几乎都来自
       - 从合成到发电的一切
     shards:
@@ -3520,7 +3520,7 @@ COAL_ORE:
     name: 谦虚的灵魂
     type: PHILOSOPHICAL
     lore:
-      - 当你象是煤炭一样受欢迎时,
+      - 当你像煤炭一样受欢迎时,
       - 很难做到谦虚
     shards:
       - 1
@@ -3542,8 +3542,8 @@ COARSE_DIRT:
     name: 无理的污点
     type: VOID
     lore:
-      - 多年来被无视和污秽,
-      - 使这个泥土充满着无理的精神.
+      - 多年来被无视和污染,
+      - 使这种泥土拥有了无理的灵魂.
     shards:
       - 1
       - 0
@@ -3562,7 +3562,7 @@ COBBLED_DEEPSLATE:
     name: 即兴创作 (深板岩)
     type: ELEMENTAL
     lore:
-      - 破碎与支离破碎的, 鹅卵石渴望
+      - 破碎与支离破碎的, 圆石渴望
       - 回到它原本的型态.
     shards:
       - 1
@@ -3647,7 +3647,7 @@ COBBLESTONE:
     name: 即兴创作
     type: ELEMENTAL
     lore:
-      - 破碎与支离破碎的, 鹅卵石渴望
+      - 破碎与支离破碎的, 圆石渴望
       - 回到它原本的型态.
     shards:
       - 1
@@ -3665,7 +3665,7 @@ COBBLESTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (鹅卵石)
+    name: 一半 (圆石)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -3687,7 +3687,7 @@ COBBLESTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (安山岩)
+    name: 步步高升 (圆石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -3709,7 +3709,7 @@ COBBLESTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (鹅卵石)
+    name: 推倒墙壁 (圆石)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -3732,9 +3732,9 @@ COBWEB:
     name: 危险来袭
     type: ANIMAL
     lore:
-      - 虽然对某些人来说很舒服,
-      - 但蜘蛛网还是给大多数人
-      - 来说很恐惧, 因为这表示附近有危险.
+      - 虽然对某些生物来说很舒服,
+      - 但蜘蛛网还是给大多数人带来恐惧,
+      - 因为这表示附近有危险.
     shards:
       - 0
       - 0
@@ -3820,7 +3820,7 @@ COMPARATOR:
     name: 多功能输出
     type: MECHANICAL
     lore:
-      - 这种精神喜欢把无组织的东西
+      - 这种方块喜欢把混乱的东西
       - 整理出来, 从输入到输出.
     shards:
       - 0
@@ -3838,7 +3838,7 @@ COMPASS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 不太真实的北方
+    name: 虚假的北方
     type: ELEMENTAL
     lore:
       - 虽然设计为不断指向北方,
@@ -3860,12 +3860,12 @@ COMPOSTER:
     - MECHANICAL
     - HUMAN
   story:
-    name: 破碎的
+    name: 破碎
     type: HUMAN
     lore:
-      - 正常情况下, 只用于
-      - 分解物质的精神会变小,
-      - 但堆肥却是为它而活!
+      - 正常情况下,
+      - 只进行分解会让物质退化,
+      - 但堆肥桶生来就是为了这种事情的!
     shards:
       - 0
       - 1
@@ -3886,7 +3886,7 @@ CONDUIT:
     name: 我有力量!
     type: ANIMAL
     lore:
-      - 海灵核心是自然界直接
+      - 潮涌核心是自然界直接
       - 使用魔法的罕见例子之一.
       - 虽然它是由人类制造的,
       - 但也是第一个被发现的.
@@ -3906,11 +3906,11 @@ COOKED_BEEF:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质 (牛肉)
+    name: 蛋白质 (牛)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -3927,11 +3927,11 @@ COOKED_CHICKEN:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质 (鸡肉)
+    name: 蛋白质 (鸡)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -3948,11 +3948,11 @@ COOKED_COD:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质 (鳕鱼肉)
+    name: 蛋白质 (鳕鱼)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -3969,11 +3969,11 @@ COOKED_MUTTON:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质 (羊肉)
+    name: 蛋白质 (羊)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -3990,11 +3990,11 @@ COOKED_PORKCHOP:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质(猪肉)
+    name: 蛋白质 (猪)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -4011,11 +4011,11 @@ COOKED_RABBIT:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质(兔肉)
+    name: 蛋白质 (兔)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -4032,11 +4032,11 @@ COOKED_SALMON:
     - ANIMAL
     - HUMAN
   story:
-    name: 蛋白质(鲑鱼)
+    name: 蛋白质 (鲑鱼)
     type: ANIMAL
     lore:
       - Minecraft中的主食,
-      - 你能够在食物中得到幸福
+      - 你能够通过食物感到幸福
     shards:
       - 0
       - 0
@@ -4055,7 +4055,8 @@ COOKIE:
     name: 开端
     type: HISTORICAL
     lore:
-      - 一切都从刚出炉的饼干开始
+      - 一切都从饼干开始
+      - (粘液科技创始人叫饼干)
     shards:
       - 0
       - 0
@@ -4072,10 +4073,10 @@ COPPER_BLOCK:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (铜)
+    name: 更先进的冶炼 (铜)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -4093,7 +4094,7 @@ COPPER_INGOT:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 提炼 (铜)
+    name: 冶炼 (铜)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -4114,13 +4115,12 @@ COPPER_ORE:
     - ELEMENTAL
     - ALCHEMICAL
   story:
-    name: 这个矿或那个矿 (铜)
+    name: 矿石的起源 (铜)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -4163,8 +4163,8 @@ CRACKED_DEEPSLATE_BRICKS:
     lore:
       - 这个方块通过它表面的
       - 裂缝向世界释放它的魔法.
-      - 这往往会导致水晶
-      - 会容易出现地底的.
+      - 这往往会让提取出水晶
+      - 的类型更偏向地心.
     shards:
       - 1
       - 0
@@ -4186,8 +4186,8 @@ CRACKED_DEEPSLATE_TILES:
     lore:
       - 这个方块通过它表面的
       - 裂缝向世界释放它的魔法.
-      - 这往往会导致水晶
-      - 会容易出现地底的.
+      - 这往往会让提取出水晶
+      - 的类型更偏向地心.
     shards:
       - 1
       - 0
@@ -4204,13 +4204,13 @@ CRACKED_NETHER_BRICKS:
     - VOID
     - PHILOSOPHICAL
   story:
-    name: 破裂的 (地狱砖)
+    name: 破裂的 (下界砖)
     type: VOID
     lore:
       - 这个方块通过它表面的
       - 裂缝向世界释放它的魔法.
-      - 这往往会导致水晶
-      - 会容易出现地底的.
+      - 这往往会让提取出水晶
+      - 的类型更偏向地心.
     shards:
       - 1
       - 0
@@ -4232,8 +4232,8 @@ CRACKED_POLISHED_BLACKSTONE_BRICKS:
     lore:
       - 这个方块通过它表面的
       - 裂缝向世界释放它的魔法.
-      - 这往往会导致水晶
-      - 会容易出现地底的.
+      - 这往往会让提取出水晶
+      - 的类型更偏向地心.
     shards:
       - 1
       - 0
@@ -4255,8 +4255,8 @@ CRACKED_STONE_BRICKS:
     lore:
       - 这个方块通过它表面的
       - 裂缝向世界释放它的魔法.
-      - 这往往会导致水晶
-      - 会容易出现地底的.
+      - 这往往会让提取出水晶
+      - 的类型更偏向地心.
     shards:
       - 1
       - 0
@@ -4276,7 +4276,7 @@ CRAFTING_TABLE:
     name: 无限的潜力
     type: HUMAN
     lore:
-      - 这张桌子神奇的使用了最少
+      - 神奇的是, 这张桌子能使用最少
       - 的材料创造出物品. 直至今天,
       - 它的工作原理仍然是个谜.
     shards:
@@ -4452,11 +4452,12 @@ CRIMSON_HYPHAE:
     - HISTORICAL
     - VOID
   story:
-    name: 敲树给我... 蛤? (绯红)
+    name: 给我原木...等等? (绯红)
     type: ELEMENTAL
     lore:
-      - 每次冒险都从
-      - 敲一棵好菌开始
+      - 每一次冒险
+      - 都以获得原木(?)开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -4473,11 +4474,11 @@ CRIMSON_NYLIUM:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 不完全的地狱石 (绯红)
+    name: 不完全的下界石 (绯红)
     type: ELEMENTAL
     lore:
       - 虽然通常是荒凉贫瘠,
-      - 但它给人一种地狱石能够
+      - 但它给人一种下界石能够
       - 成为任何形式的生命的家园,
       - 给人一种伟大使命的感觉.
     shards:
@@ -4497,7 +4498,7 @@ CRIMSON_PLANKS:
     - HUMAN
     - VOID
   story:
-    name: 木板，我们走 (绯红蕈木)
+    name: 木板，我们走 (绯红菌木)
     type: HUMAN
     lore:
       - 你的第一次合成一定是合成木板吧
@@ -4517,7 +4518,7 @@ CRIMSON_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 承受压力 (绯红蕈木)
+    name: 承受压力 (绯红菌木)
     type: VOID
     lore:
       - 逆来顺受只会令人失望
@@ -4537,10 +4538,10 @@ CRIMSON_ROOTS:
     - ANIMAL
     - VOID
   story:
-    name: 决心 (绯红蕈木)
+    name: 决心 (绯红菌木)
     type: ANIMAL
     lore:
-      - 在像地狱这种环境下生长的任何
+      - 在像下界这种环境下生长的任何
       - 东西都应它的决心而受到赞扬.
     shards:
       - 1
@@ -4559,7 +4560,7 @@ CRIMSON_SIGN:
     - PHILOSOPHICAL
     - VOID
   story:
-    name: 署名 (绯红蕈木)
+    name: 署名 (绯红菌木)
     type: PHILOSOPHICAL
     lore:
       - 充满了作者的思想
@@ -4579,7 +4580,7 @@ CRIMSON_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 低一截 (绯红蕈木)
+    name: 低一截 (绯红菌木)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -4601,7 +4602,7 @@ CRIMSON_STAIRS:
     - CELESTIAL
     - VOID
   story:
-    name: 出现 (绯红蕈木)
+    name: 出现 (绯红菌木)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -4622,11 +4623,12 @@ CRIMSON_STEM:
     - HISTORICAL
     - VOID
   story:
-    name: 敲树给我... 蛤? (绯红蕈柄)
+    name: 给我原木...等等? (绯红菌柄)
     type: ELEMENTAL
     lore:
-      - 每次冒险都从
-      - 敲一棵好菌开始
+      - 每一次冒险
+      - 都以获得原木(?)开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -4643,7 +4645,7 @@ CRIMSON_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: 到坑内 (绯红蕈木)
+    name: 到坑内 (绯红菌木)
     type: VOID
     lore:
       - 等待一个完美的时刻
@@ -4668,7 +4670,7 @@ CROSSBOW:
     type: MECHANICAL
     lore:
       - 持续紧张的感觉会
-      - 破坏最强打的心灵.
+      - 破坏最强大的心灵.
       - 弩再也感觉不到任何东西, 但...
     shards:
       - 0
@@ -4689,9 +4691,9 @@ CRYING_OBSIDIAN:
     name: 柔软喵喵叫
     type: PHILOSOPHICAL
     lore:
-      - 这个方块的背包已经代代相传.
-      - 没人知道为甚么,
-      - 它们也甚么都不问.
+      - 这个方块的悲伤已经代代相传.
+      - 没人知道为什么,
+      - 它们也什么都不问.
     shards:
       - 1
       - 0
@@ -5163,7 +5165,7 @@ DARK_OAK_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 船 (黑橡木)
+    name: 船 (深色橡木)
     type: PHILOSOPHICAL
     lore:
       - 沐浴在阳光下
@@ -5184,7 +5186,7 @@ DARK_OAK_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 抑郁 (黑橡木)
+    name: 抑郁 (深色橡木)
     type: HUMAN
     lore:
       - 很容易抑郁
@@ -5204,7 +5206,7 @@ DARK_OAK_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 门 (黑橡木)
+    name: 门 (深色橡木)
     type: HUMAN
     lore:
       - 每个入口都是出口.
@@ -5226,7 +5228,7 @@ DARK_OAK_FENCE:
     - HUMAN
     - ANIMAL
   story:
-    name: 家畜 (黑橡木)
+    name: 家畜 (深色橡木)
     type: ANIMAL
     lore:
       - 保护好你的家畜的安全
@@ -5248,7 +5250,7 @@ DARK_OAK_FENCE_GATE:
     - MECHANICAL
     - ANIMAL
   story:
-    name: 门 (黑橡木)
+    name: 门 (深色橡木)
     type: MECHANICAL
     lore:
       - 拐角处也许有人在等待
@@ -5270,7 +5272,7 @@ DARK_OAK_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 树叶的思考 (黑橡木)
+    name: 树叶的思考 (深色橡木)
     type: PHILOSOPHICAL
     lore:
       - 在冷风中轻轻地摇曳
@@ -5291,7 +5293,7 @@ DARK_OAK_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 给我原木 (黑橡木)
+    name: 给我原木 (深色橡木)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -5313,7 +5315,7 @@ DARK_OAK_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 木板，我们走 (黑橡木)
+    name: 木板，我们走 (深色橡木)
     type: HUMAN
     lore:
       - 你的第一次合成一定是合成木板吧
@@ -5333,7 +5335,7 @@ DARK_OAK_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 承受压力 (黑橡木)
+    name: 承受压力 (深色橡木)
     type: VOID
     lore:
       - 逆来顺受只会令人失望
@@ -5353,7 +5355,7 @@ DARK_OAK_SAPLING:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 成长 (黑橡木)
+    name: 成长 (深色橡木)
     type: ELEMENTAL
     lore:
       - 一棵年轻的小树
@@ -5374,7 +5376,7 @@ DARK_OAK_SIGN:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 署名 (黑橡木)
+    name: 署名 (深色橡木)
     type: PHILOSOPHICAL
     lore:
       - 充满了作者的思想
@@ -5393,7 +5395,7 @@ DARK_OAK_SLAB:
   elements:
     - HUMAN
   story:
-    name: 低一截 (黑橡木)
+    name: 低一截 (深色橡木)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -5414,7 +5416,7 @@ DARK_OAK_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 步步高升 (黑橡木)
+    name: 步步高升 (深色橡木)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -5434,7 +5436,7 @@ DARK_OAK_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: 到坑内 (黑橡木)
+    name: 到坑内 (深色橡木)
     type: VOID
     lore:
       - 等待一个完美的时刻
@@ -5455,7 +5457,7 @@ DARK_OAK_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 给我原木 (黑橡木)
+    name: 给我原木 (深色橡木)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -5480,8 +5482,8 @@ DARK_PRISMARINE:
     type: ANIMAL
     lore:
       - 这些方块被保护在最深处,
-      - 不适合寺庙外的任何人使用.
-      - 所有东西最终都会被回收.
+      - 不适合神殿外的任何人使用.
+      - 一切最终会再生.
     shards:
       - 1
       - 0
@@ -5499,7 +5501,7 @@ DARK_PRISMARINE_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 低一截 (暗海磷石)
+    name: 低一截 (暗海晶石)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -5521,7 +5523,7 @@ DARK_PRISMARINE_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 步步高升 (暗海磷石)
+    name: 步步高升 (暗海晶石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -5697,12 +5699,12 @@ DEAD_BUSH:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 灵魂移除
+    name: 被掏空的灵魂
     type: VOID
     lore:
       - 枯灌木曾经爆发出神奇的潜力.
       - 现在的它很坚固, 但除了一丝虚空
-      - 以外甚么都没有.
+      - 以外什么都没有.
     shards:
       - 0
       - 0
@@ -5917,11 +5919,11 @@ DEEPSLATE:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 坚决不宜 (深板岩)
+    name: 坚决 (深板岩)
     type: ELEMENTAL
     lore:
       - 石头是世界构成的坚定支柱.
-      - 永远存在, 永无止境.
+      - 永存于这个世界中.
     shards:
       - 2
       - 0
@@ -5938,11 +5940,11 @@ DEEPSLATE_BRICKS:
     - HISTORICAL
     - HUMAN
   story:
-    name: 土屋升级 (深板岩)
+    name: 火柴盒升级 (深板岩)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -6026,7 +6028,7 @@ DEEPSLATE_COAL_ORE:
     name: 谦虚的灵魂 (深板岩)
     type: PHILOSOPHICAL
     lore:
-      - 当你象是煤炭一样受欢迎时,
+      - 当你像煤炭一样受欢迎时,
       - 很难做到谦虚
     shards:
       - 1
@@ -6045,13 +6047,12 @@ DEEPSLATE_COPPER_ORE:
     - ELEMENTAL
     - ALCHEMICAL
   story:
-    name: 这个矿或那个矿 (深板岩铜)
+    name: 矿石的起源 (深板岩铜)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -6092,13 +6093,12 @@ DEEPSLATE_EMERALD_ORE:
     - ELEMENTAL
     - VOID
   story:
-    name: 这个矿或那个矿 (深板岩绿宝石)
+    name: 矿石的起源 (深板岩绿宝石)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -6115,13 +6115,12 @@ DEEPSLATE_GOLD_ORE:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 这个矿或那个矿 (深板岩金)
+    name: 矿石的起源 (深板岩金)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -6138,13 +6137,12 @@ DEEPSLATE_IRON_ORE:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 这个矿或那个矿 (深板岩铁)
+    name: 矿石的起源 (深板岩铁)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 1
@@ -6161,13 +6159,12 @@ DEEPSLATE_LAPIS_ORE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 这个矿或那个矿 (深板岩青金石)
+    name: 矿石的起源 (深板岩青金石)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -6184,13 +6181,12 @@ DEEPSLATE_REDSTONE_ORE:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 这个矿或那个矿 (深板岩红石)
+    name: 矿石的起源 (深板岩红石)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 1
@@ -6314,7 +6310,7 @@ DIAMOND:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 提炼 (钻石)
+    name: 冶炼 (钻石)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -6358,10 +6354,10 @@ DIAMOND_BLOCK:
     - MECHANICAL
     - CELESTIAL
   story:
-    name: 更先进的提炼 (钻石)
+    name: 更先进的冶炼 (钻石)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -6401,7 +6397,7 @@ DIAMOND_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (钻石)
+    name: 伟大的防御 (钻石)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -6731,7 +6727,7 @@ DISPENSER:
     type: MECHANICAL
     lore:
       - 被当作武器使用曾经很累,
-      - 但现在没有甚么比向敌人
+      - 但现在没有什么比向敌人
       - 开火更让人满足了.
     shards:
       - 0
@@ -6944,7 +6940,7 @@ EMERALD:
     - MECHANICAL
     - VOID
   story:
-    name: 提炼 (绿宝石)
+    name: 冶炼 (绿宝石)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -6966,10 +6962,10 @@ EMERALD_BLOCK:
     - MECHANICAL
     - VOID
   story:
-    name: 更先进的提炼 (绿宝石)
+    name: 更先进的冶炼 (绿宝石)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -6987,13 +6983,12 @@ EMERALD_ORE:
     - ELEMENTAL
     - VOID
   story:
-    name: 这个矿或那个矿 (绿宝石)
+    name: 矿石的起源 (绿宝石)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -7214,11 +7209,11 @@ END_STONE_BRICKS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 土屋升级 (终界石)
+    name: 火柴盒升级 (终界石)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -7846,7 +7841,7 @@ GHAST_TEAR:
     name: 泪流满面
     type: VOID
     lore:
-      - 地狱幽灵想知道为什
+      - 下界幽灵想知道为什
       - 么每个它遇到的陌生
       - 人最终都让它哭了.
     shards:
@@ -8216,7 +8211,7 @@ GOLDEN_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (金)
+    name: 伟大的防御 (金)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -8391,10 +8386,10 @@ GOLD_BLOCK:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 更先进的提炼 (绿宝石)
+    name: 更先进的冶炼 (绿宝石)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -8413,7 +8408,7 @@ GOLD_INGOT:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 提炼 (金)
+    name: 冶炼 (金)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -8456,13 +8451,12 @@ GOLD_ORE:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 这个矿或那个矿 (金)
+    name: 矿石的起源 (金)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -9532,7 +9526,7 @@ INFESTED_COBBLESTONE:
     - VOID
     - ANIMAL
   story:
-    name: 蛀蚀 (鹅卵石)
+    name: 蛀蚀 (圆石)
     type: VOID
     lore:
       - 迸发着寄居者的潜能。
@@ -9782,7 +9776,7 @@ IRON_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (铁)
+    name: 伟大的防御 (铁)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -9890,7 +9884,7 @@ IRON_INGOT:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 提炼 (绿宝石)
+    name: 冶炼 (绿宝石)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -9955,13 +9949,12 @@ IRON_ORE:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 这个矿或那个矿 (铁)
+    name: 矿石的起源 (铁)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 1
@@ -10511,7 +10504,7 @@ LAPIS_LAZULI:
     - MECHANICAL
     - CELESTIAL
   story:
-    name: 提炼 (青金石)
+    name: 冶炼 (青金石)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -10533,10 +10526,10 @@ LAPIS_BLOCK:
     - MECHANICAL
     - CELESTIAL
   story:
-    name: 更先进的提炼 (青金石)
+    name: 更先进的冶炼 (青金石)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -10554,13 +10547,12 @@ LAPIS_ORE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 这个矿或那个矿 (青金石)
+    name: 矿石的起源 (青金石)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -10707,7 +10699,7 @@ LEATHER_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (皮革)
+    name: 伟大的防御 (皮革)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -12282,7 +12274,7 @@ MOSSY_COBBLESTONE:
     name: 缓慢发育的寄生虫
     type: ELEMENTAL
     lore:
-      - 通过鹅卵石发育的缓慢寄生
+      - 通过圆石发育的缓慢寄生
       - 虫形成了一种共生关系，为
       - 无生命的方块带来了生命。
     shards:
@@ -12301,7 +12293,7 @@ MOSSY_COBBLESTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (青苔鹅卵石)
+    name: 一半 (青苔圆石)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -12323,7 +12315,7 @@ MOSSY_COBBLESTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (青苔鹅卵石)
+    name: 步步高升 (青苔圆石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -12345,7 +12337,7 @@ MOSSY_COBBLESTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (青苔鹅卵石)
+    name: 推倒墙壁 (青苔圆石)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -12367,11 +12359,11 @@ MOSSY_STONE_BRICKS:
     - HUMAN
     - ANIMAL
   story:
-    name: 土屋升级 (青苔石砖)
+    name: 火柴盒升级 (青苔石砖)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -12992,7 +12984,7 @@ NETHERITE_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御者 (狱髓)
+    name: 伟大的防御 (狱髓)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -13058,7 +13050,7 @@ NETHERITE_INGOT:
     - MECHANICAL
     - VOID
   story:
-    name: 提炼 (狱髓)
+    name: 冶炼 (狱髓)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -13192,7 +13184,7 @@ NETHERRACK:
     type: ELEMENTAL
     lore:
       - 不知道这么软的石头怎
-      - 么能支持地狱的结构。
+      - 么能支持下界的结构。
     shards:
       - 1
       - 0
@@ -13209,7 +13201,7 @@ NETHER_BRICK:
     - HISTORICAL
     - HUMAN
   story:
-    name: 在之前 (地狱)
+    name: 在之前 (下界)
     type: HUMAN
     lore:
       - 虽然它本身并不多,
@@ -13233,11 +13225,11 @@ NETHER_BRICKS:
     - HUMAN
     - VOID
   story:
-    name: 土屋升级 (地狱)
+    name: 火柴盒升级 (下界)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -13255,7 +13247,7 @@ NETHER_BRICK_FENCE:
     - ANIMAL
     - VOID
   story:
-    name: 家畜 (地狱)
+    name: 家畜 (下界)
     type: ANIMAL
     lore:
       - 保护好你的家畜的安全
@@ -13277,7 +13269,7 @@ NETHER_BRICK_SLAB:
     - ELEMENTAL
     - VOID
   story:
-    name: 一半 (地狱砖)
+    name: 一半 (下界砖)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -13299,7 +13291,7 @@ NETHER_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (地狱砖)
+    name: 步步高升 (下界砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -13321,7 +13313,7 @@ NETHER_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (地狱砖)
+    name: 推倒墙壁 (下界砖)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -13342,13 +13334,12 @@ NETHER_GOLD_ORE:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 这个矿或那个矿 (地狱金)
+    name: 矿石的起源 (下界金)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -13365,13 +13356,12 @@ NETHER_QUARTZ_ORE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 这个矿或那个矿 (地狱石英)
+    name: 矿石的起源 (下界石英)
     type: ELEMENTAL
     lore:
       - 当矿在石头中形成时,
-      - 它会将地底下潜在的魔法
-      - 吸收到自身之中, 所发现的魔法类型
-      - 决定了将出现的矿物种类.
+      - 它会吸收来自大地的魔法,
+      - 魔法的类型决定了矿石的种类.
     shards:
       - 1
       - 0
@@ -13408,13 +13398,13 @@ NETHER_STAR:
   elements:
     - VOID
   story:
-    name: 水晶地狱
+    name: 水晶下界
     type: VOID
     lore:
       - 并非所有的魔法都符合水
       - 晶的框架，来自凋灵的大
       - 量虚空都属于这种类型。
-      - 地狱之星囊括了这一切。
+      - 下界之星囊括了这一切。
     shards:
       - 1
       - 0
@@ -13435,7 +13425,7 @@ NETHER_WART:
     lore:
       - 众所皆知, 魔法需要水晶作为管道,
       - 对于药水, 它的魔法管道就是
-      - 地狱疙瘩.
+      - 下界疙瘩.
     shards:
       - 0
       - 0
@@ -13456,7 +13446,7 @@ NETHER_WART_BLOCK:
     lore:
       - 众所皆知, 魔法需要水晶作为管道,
       - 对于药水, 它的魔法管道就是
-      - 地狱疙瘩.
+      - 下界疙瘩.
     shards:
       - 0
       - 0
@@ -14162,10 +14152,10 @@ OXIDIZED_COPPER:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (氧化的铜方块)
+    name: 更先进的冶炼 (氧化的铜方块)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -15458,11 +15448,11 @@ PRISMARINE_BRICKS:
     - HUMAN
     - ANIMAL
   story:
-    name: 土屋升级 (海磷石)
+    name: 火柴盒升级 (海晶石)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -15480,7 +15470,7 @@ PRISMARINE_BRICK_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 低一截 (海磷石砖)
+    name: 低一截 (海晶石砖)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -15502,7 +15492,7 @@ PRISMARINE_BRICK_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 步步高升 (海磷石砖)
+    name: 步步高升 (海晶石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15567,7 +15557,7 @@ PRISMARINE_SLAB:
     - VOID
     - ANIMAL
   story:
-    name: 低一截 (海磷石)
+    name: 低一截 (海晶石)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -15589,7 +15579,7 @@ PRISMARINE_STAIRS:
     - PHILOSOPHICAL
     - ANIMAL
   story:
-    name: 步步高升 (海磷石)
+    name: 步步高升 (海晶石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15612,7 +15602,7 @@ PRISMARINE_WALL:
     - HISTORICAL
     - ANIMAL
   story:
-    name: 推倒墙壁 (海磷石)
+    name: 推倒墙壁 (海晶石)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -16098,7 +16088,7 @@ QUARTZ:
     - MECHANICAL
     - HISTORICAL
   story:
-    name: 提炼 (石英)
+    name: 冶炼 (石英)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16120,10 +16110,10 @@ QUARTZ_BLOCK:
     - MECHANICAL
     - HISTORICAL
   story:
-    name: 更先进的提炼 (石英)
+    name: 更先进的冶炼 (石英)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -16142,11 +16132,11 @@ QUARTZ_BRICKS:
     - HUMAN
     - ALCHEMICAL
   story:
-    name: 土屋升级 (石英)
+    name: 火柴盒升级 (石英)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -16337,7 +16327,7 @@ RAW_COPPER:
     - MECHANICAL
     - ALCHEMICAL
   story:
-    name: 提炼 (铜原矿)
+    name: 冶炼 (铜原矿)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16359,10 +16349,10 @@ RAW_COPPER_BLOCK:
     - MECHANICAL
     - ALCHEMICAL
   story:
-    name: 更先进的提炼 (铜原矿)
+    name: 更先进的冶炼 (铜原矿)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -16381,7 +16371,7 @@ RAW_GOLD:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 提炼 (金原矿)
+    name: 冶炼 (金原矿)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16403,10 +16393,10 @@ RAW_GOLD_BLOCK:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 更先进的提炼 (金原矿)
+    name: 更先进的冶炼 (金原矿)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -16424,7 +16414,7 @@ RAW_IRON:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 提炼 (铁原矿)
+    name: 冶炼 (铁原矿)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16445,10 +16435,10 @@ RAW_IRON_BLOCK:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (铁原矿)
+    name: 更先进的冶炼 (铁原矿)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -16466,7 +16456,7 @@ REDSTONE:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 提炼 (红石)
+    name: 冶炼 (红石)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16487,10 +16477,10 @@ REDSTONE_BLOCK:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (红石)
+    name: 更先进的冶炼 (红石)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -16789,11 +16779,11 @@ RED_NETHER_BRICKS:
     - HUMAN
     - VOID
   story:
-    name: 土屋升级 (红地狱)
+    name: 火柴盒升级 (红下界)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -16810,7 +16800,7 @@ RED_NETHER_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (红地狱砖)
+    name: 一半 (红下界砖)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -16832,7 +16822,7 @@ RED_NETHER_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (红地狱砖)
+    name: 步步高升 (红下界砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -16854,7 +16844,7 @@ RED_NETHER_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (红地狱砖)
+    name: 推倒墙壁 (红下界砖)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -18739,11 +18729,11 @@ STONE_BRICKS:
     - HISTORICAL
     - HUMAN
   story:
-    name: 土屋升级 (石头)
+    name: 火柴盒升级 (石头)
     type: HUMAN
     lore:
-      - 砖足够使任何的家变得更象是家,
-      - 并让砖变得更加的现代与舒适.
+      - 让你的房子更像一个家,
+      - 砖可以让家变得更加现代与舒适.
     shards:
       - 0
       - 1
@@ -19127,7 +19117,7 @@ STRIPPED_CRIMSON_STEM:
     - HUMAN
     - VOID
   story:
-    name: 剥皮 (绯红蕈柄)
+    name: 剥皮 (绯红菌柄)
     type: HUMAN
     lore:
       - 由于没有什么可隐藏的，这种
@@ -19148,7 +19138,7 @@ STRIPPED_DARK_OAK_LOG:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (黑橡木原木)
+    name: 剥皮 (深色橡木原木)
     type: HUMAN
     lore:
       - 由于没有什么可隐藏的，这种
@@ -19169,7 +19159,7 @@ STRIPPED_DARK_OAK_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (黑橡木块)
+    name: 剥皮 (深色橡木块)
     type: HUMAN
     lore:
       - 由于没有什么可隐藏的，这种
@@ -19857,7 +19847,7 @@ TURTLE_EGG:
     type: ANIMAL
     lore:
       - 软壳意味着这些比鸡蛋更需要保护.
-      - 不管是甚么原因, 许多具有破坏性
+      - 不管是什么原因, 许多具有破坏性
       - 的怪物都疯狂被这些鸡蛋所吸引.
     shards:
       - 0
@@ -19900,7 +19890,7 @@ TWISTING_VINES:
     name: 攀爬与攀登 (扭曲藤)
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为甚么
+      - 藤蔓不明白为什么
       - 人们一直坚持抓住
       - 它并攀爬. 它只想要
       - 和平与安静.
@@ -19923,7 +19913,7 @@ VINE:
     name: 攀爬与攀登
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为甚么
+      - 藤蔓不明白为什么
       - 人们一直坚持抓住
       - 它并攀爬. 它只想要
       - 和平与安静.
@@ -20075,11 +20065,12 @@ WARPED_HYPHAE:
     - HISTORICAL
     - VOID
   story:
-    name: 敲树给我... 蛤? (扭曲)
+    name: 给我原木...等等? (扭曲)
     type: ELEMENTAL
     lore:
-      - 每次冒险都从
-      - 敲一棵好菌开始
+      - 每一次冒险
+      - 都以获得原木(?)开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -20096,11 +20087,11 @@ WARPED_NYLIUM:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 不完全的地狱石 (扭曲)
+    name: 不完全的下界石 (扭曲)
     type: ELEMENTAL
     lore:
       - 虽然通常是荒凉贫瘠,
-      - 但它给人一种地狱石能够
+      - 但它给人一种下界石能够
       - 成为任何形式的生命的家园,
       - 给人一种伟大使命的感觉.
     shards:
@@ -20163,7 +20154,7 @@ WARPED_ROOTS:
     name: 决心 (扭曲)
     type: ANIMAL
     lore:
-      - 在像地狱这种环境下生长的任何
+      - 在像下界这种环境下生长的任何
       - 东西都应它的决心而受到赞扬.
     shards:
       - 1
@@ -20245,11 +20236,12 @@ WARPED_STEM:
     - HISTORICAL
     - VOID
   story:
-    name: 敲树给我... 蛤? (扭曲蕈柄)
+    name: 给我原木...等等? (扭曲蕈柄)
     type: ELEMENTAL
     lore:
-      - 每次冒险都从
-      - 敲一棵好菌开始
+      - 每一次冒险
+      - 都以获得原木(?)开始
+      - 欲致富，先撸树
     shards:
       - 2
       - 0
@@ -20291,7 +20283,7 @@ WARPED_WART_BLOCK:
     lore:
       - 众所皆知, 魔法需要水晶作为管道,
       - 对于药水, 它的魔法管道就是
-      - 地狱疙瘩.
+      - 下界疙瘩.
     shards:
       - 0
       - 0
@@ -20330,10 +20322,10 @@ WAXED_COPPER_BLOCK:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (上蜡的铜方块)
+    name: 更先进的冶炼 (上蜡的铜方块)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -20414,10 +20406,10 @@ WAXED_EXPOSED_COPPER:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (上蜡的斑驳铜方块)
+    name: 更先进的冶炼 (上蜡的斑驳铜方块)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -20498,10 +20490,10 @@ WAXED_OXIDIZED_COPPER:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (上蜡的氧化铜方块)
+    name: 更先进的冶炼 (上蜡的氧化铜方块)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -20582,10 +20574,10 @@ WAXED_WEATHERED_COPPER:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的提炼 (上蜡的风化铜方块)
+    name: 更先进的冶炼 (上蜡的风化铜方块)
     type: ELEMENTAL
     lore:
-      - 一路提炼到他变成块状为止,
+      - 直到冶炼成方块的形状,
       - 这个方块喜欢和它的同胞们结合.
     shards:
       - 2
@@ -20755,7 +20747,7 @@ WEEPING_VINES:
     name: 攀爬与攀登 (垂泣藤)
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为甚么
+      - 藤蔓不明白为什么
       - 人们一直坚持抓住
       - 它并攀爬. 它只想要
       - 和平与安静.
