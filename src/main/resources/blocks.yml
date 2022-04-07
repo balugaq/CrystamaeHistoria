@@ -3089,7 +3089,7 @@ CHAINMAIL_LEGGINGS:
     name: 无腿的 (锁链)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -4277,7 +4277,7 @@ CRAFTING_TABLE:
     type: HUMAN
     lore:
       - 神奇的是, 这张桌子能使用最少
-      - 的材料创造出物品. 直至今天,
+      - 的材料创造出物品. 等待今天,
       - 它的工作原理仍然是个谜.
     shards:
       - 0
@@ -6070,12 +6070,13 @@ DEEPSLATE_DIAMOND_ORE:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 有吸引力的提议
+    name: 吸引
     type: ELEMENTAL
     lore:
-      - 一个方块无法帮助但
-      - 吸引到其他. 这是一种被禁止,
-      - 挑战与渴望的东西.
+      - 方块本身并没有什么用,
+      - 但可以吸引到其他人.
+      - 这是一种被禁止的东西,
+      - 寻找到它的过程充满了挑战.
     shards:
       - 2
       - 0
@@ -6206,8 +6207,8 @@ DEEPSLATE_TILES:
     name: 摆放整齐
     type: HUMAN
     lore:
-      - 一个奇怪的错误放置的磁砖
-      - 会阻止这个方块的魔法协调.
+      - 一个摆放错误的瓦片会影响
+      - 这个方块的魔法协调.
     shards:
       - 0
       - 1
@@ -6288,12 +6289,12 @@ DETECTOR_RAIL:
     - MECHANICAL
     - HUMAN
   story:
-    name: 该下车了, 该下车了
+    name: 该下车了
     type: MECHANICAL
     lore:
-      - 不断的等待与观察任何过去的
-      - 事情. 每次当这种情况发生时,
-      - 铁轨就会高兴的大叫.
+      - 不断的等待与观察任何经过的矿车.
+      - 每次矿车经过时,
+      - 铁轨就会高兴地大叫.
     shards:
       - 0
       - 2
@@ -6331,12 +6332,12 @@ DIAMOND_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (钻石)
+    name: 斧头事故 (钻石)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -6441,12 +6442,12 @@ DIAMOND_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 直至 (钻石)
+    name: 等待 (钻石)
     type: MECHANICAL
     lore:
-      - 其他农民可能已转
-      - 向到更机械的方法, 但可靠的
-      - 锄头仍然是第一的选择.
+      - 其他农民可能已经采用
+      - 更机械化的方法,
+      - 但可靠的锄头仍然是第一选择.
     shards:
       - 1
       - 1
@@ -6486,7 +6487,7 @@ DIAMOND_LEGGINGS:
     name: 无腿的 (钻石)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -6506,12 +6507,11 @@ DIAMOND_ORE:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 灿烂无上的光彩
+    name: 至高无上的光彩
     type: ELEMENTAL
     lore:
-      - 通过努力, 它可以成为你的,
-      - 但还没有. 保持着比发光鱿鱼
-      - 更发光发亮的潜力
+      - 虽然它还需要加工才能使用,
+      - 但它拥有比发光鱿鱼更明亮的光彩.
     shards:
       - 2
       - 0
@@ -6533,8 +6533,8 @@ DIAMOND_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -6573,11 +6573,12 @@ DIAMOND_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (钻石)
+    name: 是时候出击了 (钻石)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击,
+      - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
       - 0
@@ -6595,7 +6596,7 @@ DIORITE:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 伊斯卡尔最好的
+    name: Iskall最好的朋友
     type: HUMAN
     lore:
       - 被评判和憎恨的生活留下了它的痕迹
@@ -6704,8 +6705,8 @@ DIRT_PATH:
     name: 走遍天下
     type: HUMAN
     lore:
-      - 没有抱怨, 一个精神
-      - 允许自己被踩在脚下,
+      - 这个方块允许自己被踩在脚下,
+      - 没有任何抱怨,
       - 这样它就感觉自己在帮助别人.
     shards:
       - 1
@@ -6723,12 +6724,13 @@ DISPENSER:
     - MECHANICAL
     - HUMAN
   story:
-    name: 火焰!
+    name: 发射!
     type: MECHANICAL
     lore:
-      - 被当作武器使用曾经很累,
+      - 虽然曾经被当作武器使用
+      - 让它感到厌倦,
       - 但现在没有什么比向敌人
-      - 开火更让人满足了.
+      - 开火更让它满足的了.
     shards:
       - 0
       - 2
@@ -6745,7 +6747,7 @@ DRAGON_BREATH:
     - VOID
     - ANIMAL
   story:
-    name: 犯规
+    name: 邪恶
     type: VOID
     lore:
       - 从伤痕累累的灵魂封装的毒素.
@@ -6767,12 +6769,12 @@ DRAGON_EGG:
     - ANIMAL
     - PHILOSOPHICAL
   story:
-    name: 结束
+    name: 终章
     type: VOID
     lore:
-      - 所有事物的终局都
-      - 来自这个蛋中.
-      - 一切都必须结束, 一切都必须回归.
+      - 所有事物的结局都来自这个蛋.
+      - 一切都将结束,
+      - 并回归初始.
     shards:
       - 2
       - 2
@@ -6810,11 +6812,11 @@ DRIED_KELP:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 抛弃的
+    name: 抛弃
     type: CELESTIAL
     lore:
       - 对于许多人来说, 这个简单
-      - 的物品让它们在早期保持活力.
+      - 的物品能让他们在游戏早期活下去.
     shards:
       - 1
       - 0
@@ -6830,12 +6832,12 @@ DRIED_KELP_BLOCK:
   elements:
     - ELEMENTAL
   story:
-    name: 另一种用法
+    name: 另一个用途
     type: ELEMENTAL
     lore:
-      - 这件物品已经失去它的用途,
+      - 这件物品已经失去它的目地,
       - 它只知道它不想被烧毁,
-      - 它的精神渴望有另一种用途.
+      - 它渴望能有另一种用途.
     shards:
       - 1
       - 0
@@ -6852,12 +6854,12 @@ DRIPSTONE_BLOCK:
     - ELEMENTAL
     - VOID
   story:
-    name: 渗透性 (方块)
+    name: 渗透 (方块)
     type: ELEMENTAL
     lore:
-      - 慢慢渗透过这个方块的水
-      - 并将水的魔法传回,
-      - 使得这个方块比
+      - 这个方块中的水缓慢地渗透,
+      - 将魔法来回转移,
+      - 使这个方块比
       - 其他方块更有共鸣.
     shards:
       - 2
@@ -6896,11 +6898,11 @@ EGG:
   elements:
     - ANIMAL
   story:
-    name: 日光面向上
+    name: 透光的部分朝上
     type: ANIMAL
     lore:
-      - 你必须小心有关鸡蛋的双关语,
-      - 他们真的不能吃蛋黄.
+      - 你必须注意有关鸡蛋的双关语,
+      - 它们真的不能拿走蛋黄.
     shards:
       - 1
       - 0
@@ -6920,9 +6922,9 @@ ELYTRA:
     name: 魔法飞行
     type: CELESTIAL
     lore:
-      - 目前还不清楚这些翅膀来
-      - 自什么动物. 这可能是夜
-      - 魅的前身.
+      - 目前还不清楚这些翅膀
+      - 来自什么动物. 这可能是
+      - 幻翼的前身.
     shards:
       - 1
       - 0
@@ -7005,12 +7007,12 @@ ENCHANTED_BOOK:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 学者装置
+    name: 学者的装置
     type: ELEMENTAL
     lore:
       - 以前的魔法操作迭代需要将魔法
-      - 强制写入书面页面. 虽然直截了
-      - 当, 但这种方法仍然有效.
+      - 强制写入书页中. 虽然这种方法
+      - 非常直接, 但仍然有效.
     shards:
       - 2
       - 0
@@ -7030,8 +7032,8 @@ ENCHANTED_GOLDEN_APPLE:
     name: Notch 的所有物
     type: ELEMENTAL
     lore:
-      - 为造物主制作，由造物主制作。这
-      - 苹果拥有最强大的力量。
+      - 由造物主为造物主制作,
+      - 这个苹果拥有最强大的力量.
     shards:
       - 2
       - 1
@@ -7051,9 +7053,9 @@ ENCHANTING_TABLE:
     name: 魔法师的力量
     type: CELESTIAL
     lore:
-      - 灌注了老魔术师的纯正精华。虽
-      - 然不是所有人都可以使用，但那
-      - 些人注定要成为伟大的人。
+      - 灌注了老魔术师的纯粹精华。
+      - 虽然不是所有人都可以使用，
+      - 但有些人注定要伟大.
     shards:
       - 0
       - 0
@@ -7076,8 +7078,8 @@ ENDER_CHEST:
     lore:
       - 如果放置两个这种箱子，
       - 似乎会拥有传送的力量。
-      - 它感觉像一个空洞，但它
-      - 也会被填满。
+      - 它感觉像一个空洞,
+      - 但它也会被填满。
     shards:
       - 0
       - 1
@@ -7099,8 +7101,8 @@ ENDER_EYE:
     name: 守望者的凝视
     type: HISTORICAL
     lore:
-      - 每一颗终界之眼都与它所来
-      - 自的维度有着神奇的联系。
+      - 每一颗末影之眼都与它所来自
+      - 的维度有着神奇的联系。
     shards:
       - 1
       - 0
@@ -7120,10 +7122,10 @@ ENDER_PEARL:
     name: 封装
     type: VOID
     lore:
-      - 终界珍珠的独特构造意味
-      - 着它能够在不改变状态的
-      - 情况下储存魔法。允许灌
-      - 输和镀金形式或存储。
+      - 末影珍珠的独特构造意味着
+      - 它能够在不改变状态的
+      - 情况下储存魔法.
+      - 可进行注入,镀金或者存储.
     shards:
       - 1
       - 0
@@ -7141,12 +7143,12 @@ END_CRYSTAL:
     - CELESTIAL
     - VOID
   story:
-    name: 与虚空相绑
+    name: 与虚空项链
     type: VOID
     lore:
-      - 终界水晶本质上与虚空和终界
-      - 龙息息相关。以至于轻轻一按
-      - 就可以强行撕裂进入太空。
+      - 末影水晶本质上与虚空和末影龙
+      - 息息相关, 以至于轻轻一按
+      - 就可以强行撕裂进入空间.
     shards:
       - 2
       - 1
@@ -7163,11 +7165,11 @@ END_ROD:
     - CELESTIAL
     - VOID
   story:
-    name: 行撕裂进入太空。
+    name: 闪耀
     type: CELESTIAL
     lore:
-      - 似乎是由紫珀工程师创造的，但
-      - 不知道这种光是如何产生的。
+      - 似乎是由紫珀工程师创造的,
+      - 但不知道这种光是如何产生的。
     shards:
       - 0
       - 0
@@ -7188,8 +7190,8 @@ END_STONE:
     name: 未知形式
     type: ELEMENTAL
     lore:
-      - 终界石形成过程不为人知，一
-      - 直笼罩在神秘的阴影之下。
+      - 末地石形成过程不为人知,
+      - 一直笼罩在神秘的阴影之下.
       - 从它身上产生的魔力
       - 与正常频率不符。
     shards:
@@ -7209,7 +7211,7 @@ END_STONE_BRICKS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 火柴盒升级 (终界石)
+    name: 火柴盒升级 (末地石)
     type: HUMAN
     lore:
       - 让你的房子更像一个家,
@@ -7230,7 +7232,7 @@ END_STONE_BRICK_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 低一截 (终界石砖)
+    name: 低一截 (末地石砖)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -7251,7 +7253,7 @@ END_STONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (终界石砖)
+    name: 步步高升 (末地石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -7273,7 +7275,7 @@ END_STONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (终界石砖)
+    name: 推倒墙壁 (末地石砖)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -7294,12 +7296,12 @@ EXPERIENCE_BOTTLE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 瓶装增长
+    name: 瓶装成长
     type: HUMAN
     lore:
-      - 知识在与水晶类似的过程中被液
-      - 化，并装入瓶中供以后使用。这
-      - 些瓶子启发了第一批水晶实验。
+      - 知识在魔法水晶在相似的过程中
+      - 被液化, 装入瓶中供以后使用.
+      - 这些瓶子启发了第一批魔法水晶实验.
     shards:
       - 0
       - 0
@@ -7424,9 +7426,9 @@ FERMENTED_SPIDER_EYE:
     name: 恶魔精华
     type: VOID
     lore:
-      - 发酵蜘蛛眼的过程形成
-      - 了一种恶魔本质的开口
-      - '。正是这种精华使它成'
+      - 发酵蜘蛛眼的过程为
+      - 恶魔精华渗入世界提供了缺口.
+      - 正是这种精华使它成
       - 为一种很好的药水成分。
     shards:
       - 1
@@ -7466,12 +7468,12 @@ FILLED_MAP:
     - HISTORICAL
     - HUMAN
   story:
-    name: 发现时代 (已满)
+    name: 大发现时代 (已满)
     type: HISTORICAL
     lore:
-      - 由于仍有待寻找的角落，
-      - 来自远方的探险者仍在出
-      - 发寻找未知的领域。
+      - 由于仍有需要探索的地方,
+      - 来自远方的探险者仍在
+      - 寻找未知的领域。
     shards:
       - 0
       - 0
@@ -7491,10 +7493,9 @@ FIREWORK_ROCKET:
     name: 炼金的星光
     type: ALCHEMICAL
     lore:
-      - 点燃后的烟花迸发出巨
-      - 大的力量，在片刻间释
-      - 放出所有的能量，使周
-      - 围的水晶疯狂。
+      - 点燃后的烟花迸发出巨大的力量,
+      - 在片刻间释放出所有的能量,
+      - 使周围的魔法水晶陷入狂暴状态.
     shards:
       - 1
       - 0
@@ -7514,9 +7515,8 @@ FIREWORK_STAR:
     name: 节目之星
     type: ALCHEMICAL
     lore:
-      - 这个物品偏向于肤
-      - 浅，喜欢尽可能频
-      - 繁地改变其外观.
+      - 这个物品更倾向于它的表面,
+      - 喜欢经常改变它的外观.
     shards:
       - 1
       - 0
@@ -7535,9 +7535,8 @@ FIRE_CHARGE:
     name: 潜力
     type: ELEMENTAL
     lore:
-      - 在你的手掌中创造
-      - 火焰. 潜在的能量
-      - 直接转化为晶体.
+      - 在你的手掌中创造火焰.
+      - 潜在的能量直接转化为晶体.
     shards:
       - 2
       - 0
@@ -7620,12 +7619,12 @@ FISHING_ROD:
     - HUMAN
     - VOID
   story:
-    name: 去找尼奥吧
+    name: 海底总动员
     type: VOID
     lore:
-      - 尽管没有鱼出现, 但鱼竿仍能
-      - 轻松地找到并钓到鱼. 不知道
-      - 为什么会有这样的效果.
+      - 尽管没有鱼出现,
+      - 但鱼竿仍能轻松地找到并钓到鱼.
+      - 不知道究竟是怎么做到的.
     shards:
       - 0
       - 1
@@ -8145,12 +8144,12 @@ GOLDEN_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (金)
+    name: 斧头事故 (金)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -8255,12 +8254,12 @@ GOLDEN_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 直至 (金)
+    name: 等待 (金)
     type: MECHANICAL
     lore:
-      - 其他农民可能已转
-      - 向到更机械的方法, 但可靠的
-      - 锄头仍然是第一的选择.
+      - 其他农民可能已经采用
+      - 更机械化的方法,
+      - 但可靠的锄头仍然是第一选择.
     shards:
       - 1
       - 1
@@ -8300,7 +8299,7 @@ GOLDEN_LEGGINGS:
     name: 无腿的 (金)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -8323,8 +8322,8 @@ GOLDEN_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -8363,11 +8362,12 @@ GOLDEN_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (金)
+    name: 是时候出击了 (金)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击, 
+      - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
       - 0
@@ -8386,7 +8386,7 @@ GOLD_BLOCK:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 更先进的冶炼 (绿宝石)
+    name: 更先进的冶炼 (金)
     type: ELEMENTAL
     lore:
       - 直到冶炼成方块的形状,
@@ -9687,12 +9687,12 @@ IRON_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (铁)
+    name: 斧头事故 (铁)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -9842,12 +9842,12 @@ IRON_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 直至 (铁)
+    name: 等待 (铁)
     type: MECHANICAL
     lore:
-      - 其他农民可能已转
-      - 向到更机械的方法, 但可靠的
-      - 锄头仍然是第一的选择.
+      - 其他农民可能已经采用
+      - 更机械化的方法,
+      - 但可靠的锄头仍然是第一选择.
     shards:
       - 1
       - 1
@@ -9908,7 +9908,7 @@ IRON_LEGGINGS:
     name: 无腿的 (铁)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -9975,8 +9975,8 @@ IRON_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -10015,11 +10015,12 @@ IRON_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (铁)
+    name: 是时候出击了 (铁)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击, 
+      - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
       - 0
@@ -10766,7 +10767,7 @@ LEATHER_LEGGINGS:
     name: 无腿的 (皮革)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -12098,12 +12099,12 @@ MAP:
     - HISTORICAL
     - HUMAN
   story:
-    name: 发现时代
+    name: 大发现时代
     type: HISTORICAL
     lore:
-      - 由于仍有待寻找的角落，
-      - 来自远方的探险者仍在出
-      - 发寻找未知的领域。
+      - 由于仍有需要探索的地方,
+      - 来自远方的探险者仍在
+      - 寻找未知的领域。
     shards:
       - 0
       - 0
@@ -12917,12 +12918,12 @@ NETHERITE_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (狱髓)
+    name: 斧头事故 (狱髓)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -13074,7 +13075,7 @@ NETHERITE_LEGGINGS:
     name: 无腿的 (狱髓)
     type: CELESTIAL
     lore:
-      - 就象是其他盔甲兄弟一样,
+      - 就像是其他盔甲兄弟一样,
       - 护腿在使用期间从使用者上
       - 吸收极少量的水晶能量.
     shards:
@@ -13097,8 +13098,8 @@ NETHERITE_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -13159,11 +13160,12 @@ NETHERITE_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (狱髓)
+    name: 是时候出击了 (狱髓)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击, 
+      - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
       - 0
@@ -14715,12 +14717,12 @@ POINTED_DRIPSTONE:
     - ELEMENTAL
     - VOID
   story:
-    name: 渗透性
+    name: 渗透
     type: ELEMENTAL
     lore:
-      - 慢慢渗透过这个方块的水
-      - 并将水的魔法传回,
-      - 使得这个方块比
+      - 这个方块中的水缓慢地渗透,
+      - 将魔法来回转移,
+      - 使这个方块比
       - 其他方块更有共鸣.
     shards:
       - 2
@@ -18707,12 +18709,12 @@ STONE_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (石头)
+    name: 斧头事故 (石头)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -18835,12 +18837,12 @@ STONE_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 直至 (石头)
+    name: 等待 (石头)
     type: MECHANICAL
     lore:
-      - 其他农民可能已转
-      - 向到更机械的方法, 但可靠的
-      - 锄头仍然是第一的选择.
+      - 其他农民可能已经采用
+      - 更机械化的方法,
+      - 但可靠的锄头仍然是第一选择.
     shards:
       - 1
       - 1
@@ -18861,8 +18863,8 @@ STONE_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -18966,11 +18968,12 @@ STONE_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (石头)
+    name: 是时候出击了 (石头)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击, 
+      - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
       - 0
@@ -21161,12 +21164,12 @@ WOODEN_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故正等待发生! (木头)
+    name: 斧头事故 (木头)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
-      - 它们最终不小心右键
-      - 点击了它们基地的原木.
+      - 它们不小心右键
+      - 点击了它们基地里的原木.
     shards:
       - 1
       - 0
@@ -21183,12 +21186,12 @@ WOODEN_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 直至 (木头)
+    name: 等待 (木头)
     type: MECHANICAL
     lore:
-      - 其他农民可能已转
-      - 向到更机械的方法, 但可靠的
-      - 锄头仍然是第一的选择.
+      - 其他农民可能已经采用
+      - 更机械化的方法,
+      - 但可靠的锄头仍然是第一选择.
     shards:
       - 1
       - 1
@@ -21209,8 +21212,8 @@ WOODEN_PICKAXE:
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
-      - 玩家武器库中最重要的工具,
-      - 镐在每个方块破坏时都会散发出喜悦.
+      - 玩家背包中最重要的工具,
+      - 镐子在破坏每个方块时都会散发出喜悦.
     shards:
       - 0
       - 0
@@ -21249,11 +21252,12 @@ WOODEN_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 出击时间 (木头)
+    name: 是时候出击了 (木头)
     type: VOID
     lore:
-      - 最终武装起来, 持有者可以选择使用剑
-      - 防御或者攻击, 无论哪种方式,
+      - 剑最终让你武装起来,
+      - 你可以使用剑防御或攻击, 
+      - 无论哪种方式,
       - 剑都可以达到其目的.
     shards:
       - 0
