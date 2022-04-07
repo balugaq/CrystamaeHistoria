@@ -446,7 +446,7 @@ ANDESITE:
     - HUMAN
     - ALCHEMICAL
   story:
-    name: 抛光
+    name: 磨制
     type: HUMAN
     lore:
       - 经常被认为是没什么用的东西,
@@ -3259,7 +3259,7 @@ CHISELED_POLISHED_BLACKSTONE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 工匠 (抛光黑石砖)
+    name: 工匠 (磨制黑石砖)
     type: PHILOSOPHICAL
     lore:
       - 工匠不知不觉中将一部分魔法
@@ -4227,7 +4227,7 @@ CRACKED_POLISHED_BLACKSTONE_BRICKS:
     - VOID
     - PHILOSOPHICAL
   story:
-    name: 破裂的 (抛光黑石砖)
+    name: 破裂的 (磨制黑石砖)
     type: VOID
     lore:
       - 这个方块通过它表面的
@@ -7468,7 +7468,7 @@ FILLED_MAP:
     - HISTORICAL
     - HUMAN
   story:
-    name: 大发现时代 (已满)
+    name: 大发现时代 (已填充)
     type: HISTORICAL
     lore:
       - 由于仍有需要探索的地方,
@@ -7535,8 +7535,8 @@ FIRE_CHARGE:
     name: 潜力
     type: ELEMENTAL
     lore:
-      - 在你的手掌中创造火焰.
-      - 潜在的能量直接转化为晶体.
+      - 用你的手掌创造火焰.
+      - 潜在的能量可以直接转化为魔法水晶.
     shards:
       - 2
       - 0
@@ -7641,12 +7641,12 @@ FLETCHING_TABLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 野生的鲍耶尔
+    name: 荒野弓箭手
     type: HISTORICAL
     lore:
-      - 传说中, 有一个弓箭手在野外生活,
-      - 他只使用他的狩猎和制箭技能来维生
-      - . 他的技能随他的离世而消失.
+      - 传说, 有一个弓箭手在野外生活,
+      - 他什么都不知道, 只靠狩猎和制箭技能
+      - 来维持生活. 这些技能在他去世后便失传了.
     shards:
       - 0
       - 1
@@ -7684,12 +7684,11 @@ FLINT_AND_STEEL:
   elements:
     - ELEMENTAL
   story:
-    name: 增强 (燧石)
+    name: 潜力 (燧石)
     type: ELEMENTAL
     lore:
-      - 在你的手掌中创造
-      - 火焰. 潜在的能量
-      - 直接转化为晶体.
+      - 用你的手掌创造火焰.
+      - 潜在的能量可以直接转化为魔法水晶.
     shards:
       - 2
       - 0
@@ -7709,9 +7708,9 @@ FLOWERING_AZALEA:
     name: 蓬勃发展的灵魂
     type: ELEMENTAL
     lore:
-      - 虽然不是所有的杜鹃花，但那些
-      - 杜鹃花为了疯狂而自由地绽放，
-      - 都会尽可能地吸收魔法能量。
+      - 虽然并不是所有的杜鹃花都会绽放,
+      - 但那些想要绽放的杜鹃花
+      - 都会尽可能地吸收魔法能量.
     shards:
       - 1
       - 0
@@ -7731,8 +7730,8 @@ FLOWERING_AZALEA_LEAVES:
     name: 蓬勃发展的灵魂 (叶子)
     type: ELEMENTAL
     lore:
-      - 虽然不是所有的杜鹃花，但那些
-      - 杜鹃花为了疯狂而自由地绽放，
+      - 虽然并不是所有的杜鹃花都会绽放,
+      - 但那些想要绽放的杜鹃花
       - 都会尽可能地吸收魔法能量.
     shards:
       - 1
@@ -7771,11 +7770,11 @@ FLOWER_POT:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 简单的家
+    name: 简易的家
     type: CELESTIAL
     lore:
-      - 在这个奇妙、临时的家的帮
-      - 助下，一个才刚萌芽的球茎
+      - 在这个奇妙、临时的家的帮助下,
+      - 一个才刚萌芽的球茎
       - 变成了一朵盛开的花朵.
     shards:
       - 1
@@ -7797,8 +7796,8 @@ FURNACE:
     name: 熊熊烈火
     type: ELEMENTAL
     lore:
-      - 熊熊燃烧的火焰，以它
-      - 创造者的创造力为食.
+      - 熊熊燃烧的火焰,
+      - 以厨师的创造力养活大家.
     shards:
       - 1
       - 1
@@ -7818,9 +7817,9 @@ FURNACE_MINECART:
     name: 滚动的矿车… (熔炉)
     type: MECHANICAL
     lore:
-      - '… 没有苔藓.作为创世神'
-      - 技术的最大飞跃，矿车的
-      - 用途比人们想象的要多.
+      - '… 不会生长出苔藓.'
+      - Minecraft科技的重大突破,
+      - 矿车的用途比人们想象的要多.
     shards:
       - 0
       - 2
@@ -7840,9 +7839,9 @@ GHAST_TEAR:
     name: 泪流满面
     type: VOID
     lore:
-      - 下界幽灵想知道为什
-      - 么每个它遇到的陌生
-      - 人最终都让它哭了.
+      - 恶魂想知道为什么
+      - 每个它遇到的陌生人
+      - 最终都让它哭了.
     shards:
       - 0
       - 0
@@ -7862,9 +7861,8 @@ GILDED_BLACKSTONE:
     name: 贵重的外观
     type: PHILOSOPHICAL
     lore:
-      - 一个决心装出一张脸假装成
-      - 某样东西的灵魂，它现在已
-      - 经忘记自己原来的身份。
+      - 一个决心想要包装自己的方块,
+      - 已经忘记了它原来的身份.
     shards:
       - 1
       - 0
@@ -7907,7 +7905,7 @@ GLASS_BOTTLE:
     type: ALCHEMICAL
     lore:
       - 每一个瓶子都梦想着有一天它
-      - 被放置在酿造架上，成为超越
+      - 被放置在酿造台上，成为超越
       - 自己并拥抱魔力的那一天。
     shards:
       - 1
@@ -7950,8 +7948,9 @@ GLISTERING_MELON_SLICE:
     name: 牙疼
     type: HUMAN
     lore:
-      - 它被金子覆盖着… 当你吃
-      - 的时候，你在期望什么？
+      - 它被金子覆盖着…
+      - 当你吃的时候，
+      - 你在期待着什么？
     shards:
       - 1
       - 0
@@ -7988,12 +7987,12 @@ GLOWSTONE:
   elements:
     - ALCHEMICAL
   story:
-    name: 虹彩
+    name: 彩虹
     type: ALCHEMICAL
     lore:
-      - 只在最热的地方发现，
+      - 只在最热的地方发现过，
       - 目前仍不知道这种石头
-      - 是如何或为何发光的。
+      - 是如何发光的。
     shards:
       - 0
       - 0
@@ -8010,12 +8009,12 @@ GLOWSTONE_DUST:
   elements:
     - ALCHEMICAL
   story:
-    name: 虹彩 (灰尘)
+    name: 彩虹 (粉)
     type: ALCHEMICAL
     lore:
-      - 只在最热的地方发现，
+      - 只在最热的地方发现过，
       - 目前仍不知道这种石头
-      - 是如何或为何发光的。
+      - 是如何发光的。
     shards:
       - 0
       - 0
@@ -8036,9 +8035,9 @@ GLOW_BERRIES:
     name: 内在之光 (浆果)
     type: CELESTIAL
     lore:
-      - 不知道怎么做，也不知道为什
-      - 么，但这种精神能够利用当地
-      - 的天体水晶，并将其转化为光。
+      - 不知道它是如何做到的,
+      - 但这种物品能够利用天体水晶
+      - 并将其转化为光.
     shards:
       - 1
       - 0
@@ -8059,8 +8058,8 @@ GLOW_INK_SAC:
     type: CELESTIAL
     lore:
       - 与发光浆果一样，发光鱿鱼
-      - 的灵魂能够吸收并将天体水
-      - 晶如光反射到世界上。
+      - 能够吸收天体水晶
+      - 并将光芒充满这个世界.
     shards:
       - 0
       - 0
@@ -8081,9 +8080,9 @@ GLOW_ITEM_FRAME:
     type: HUMAN
     lore:
       - 与所有事物一样，人类为了
-      - 自己的目的，将美丽的东西
-      - 撕碎。虽然天体水晶还在发
-      - 光，但它已经转化为虚空。
+      - 自己的目的，将美丽的东西撕碎。
+      - 虽然它还是发光的,
+      - 但其中的天体水晶已经转化为虚空。
     shards:
       - 0
       - 1
@@ -8103,9 +8102,9 @@ GLOW_LICHEN:
     name: 内在之光 (地衣)
     type: CELESTIAL
     lore:
-      - 不知道怎么做，也不知道为什
-      - 么，但这种精神能够利用当地
-      - 的天体水晶，并将其转化为光。
+      - 不知道它是如何做到的,
+      - 但这种物品能够利用天体水晶
+      - 并将其转化为光.
     shards:
       - 1
       - 0
@@ -8431,10 +8430,10 @@ GOLD_NUGGET:
     name: 形成 (金)
     type: ELEMENTAL
     lore:
-      - 与发光浆果一样，发光
-      - 乌贼的灵魂能够吸收和
-      - 反映天体的匹配形式，
-      - 但没有影响它的力量。
+      - 与大部分元素魔法一样,
+      - 粒中的魔法水晶渴望找到
+      - 其他同类, 但没有任何办法
+      - 可以帮助到它.
     shards:
       - 1
       - 0
@@ -8562,9 +8561,9 @@ GRASS:
     name: 从哪里开始
     type: ANIMAL
     lore:
-      - 作为大多数食物网的开端，
-      - 草为世界带来了生命，并推
-      - 动它不断向前发展。
+      - 作为大多数食物链的开端，
+      - 草为世界带来了生命，
+      - 并推动它不断向前发展。
     shards:
       - 1
       - 0
@@ -8585,7 +8584,8 @@ GRASS_BLOCK:
     type: ANIMAL
     lore:
       - 食物链的起点,
-      - 草地为这个世界带来了更丰富的生命
+      - 草地为这个世界带来了
+      - 更丰富的生命。
     shards:
       - 1
       - 0
@@ -8605,9 +8605,9 @@ GRAVEL:
     name: 被敲碎
     type: VOID
     lore:
-      - 在下定决心要超越它部分的总和之后
-      - 砾石就只能过着被敲碎然后筛出内容物的生活
-      - 令人不胜唏嘘
+      - 在发现内部的物质比外部多时,
+      - 沙砾只有被敲碎并筛选内部物质的命运,
+      - 真是可悲.
     shards:
       - 1
       - 0
@@ -9151,12 +9151,12 @@ GRINDSTONE:
     - MECHANICAL
     - HUMAN
   story:
-    name: 地沉
+    name: 磨石
     type: MECHANICAL
     lore:
-      - 砂轮喜欢研磨、粉碎和破
-      - 坏它能得到的东西。如果
-      - 可以，它会碾碎世界。
+      - 砂轮喜欢研磨、粉碎和破坏
+      - 它能得到的东西。如果可以，
+      - 它会碾碎世界。
     shards:
       - 0
       - 1
@@ -9219,9 +9219,10 @@ HAY_BLOCK:
     name: 羊驼之恸
     type: ANIMAL
     lore:
-      - 无休止地梦想着被送给
-      - 骆驼，干草块愿意为了
-      - 他人的发展奉献自己。
+      - 一直想象着被送给
+      - 羊驼后的情景.
+      - 干草块愿意为了他人
+      - 的发展奉献自己。
     shards:
       - 1
       - 0
@@ -9326,12 +9327,12 @@ HONEY_BLOCK:
     - ANIMAL
     - ALCHEMICAL
   story:
-    name: 一个棘手的状况 (蜂蜜)
+    name: 黏糊糊的 (蜂蜜)
     type: ALCHEMICAL
     lore:
-      - 渴望不再孤单，这个方块
-      - 将紧紧抓住任何可以抓住
-      - 的东西，不会放手。
+      - 这个方块希望不再孤单,
+      - 会紧紧抓住任何可以抓住
+      - 的东西，不会松手。
     shards:
       - 0
       - 0
@@ -9353,7 +9354,7 @@ HONEY_BOTTLE:
     lore:
       - 蜂蜜具有多种未知的治疗
       - 特性，其未开发的潜力将
-      - 很快显现出来™…
+      - 很快™显现出来…
     shards:
       - 0
       - 0
@@ -9395,9 +9396,9 @@ HOPPER_MINECART:
     name: 滚动的矿车…… (漏斗)
     type: MECHANICAL
     lore:
-      - '…不采集苔藓。作为创世神'
-      - 技术的最大飞跃，矿车的
-      - 用途比人们想象的要多。
+      - '… 不会生长出苔藓.'
+      - Minecraft科技的重大突破,
+      - 矿车的用途比人们想象的要多.
     shards:
       - 0
       - 2
@@ -9483,9 +9484,9 @@ ICE:
     name: 溜滑
     type: ELEMENTAL
     lore:
-      - 在形成的过程中, 这个方块的精神
+      - 在形成的过程中, 这个方块的灵魂
       - 只希望看到人们从它脸上滑下来.
-      - 蓝冰就是从这种虐待狂
+      - 冰就是从这种虐待狂
       - 的欲望中诞生的.
     shards:
       - 1
@@ -9503,13 +9504,13 @@ INFESTED_CHISELED_STONE_BRICKS:
     - VOID
     - ANIMAL
   story:
-    name: 蛀蚀 (浮雕石砖)
+    name: 蛀蚀 (錾制石砖)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9529,10 +9530,10 @@ INFESTED_COBBLESTONE:
     name: 蛀蚀 (圆石)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9552,10 +9553,10 @@ INFESTED_CRACKED_STONE_BRICKS:
     name: 蛀蚀 (裂纹石砖)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9575,10 +9576,10 @@ INFESTED_DEEPSLATE:
     name: 蛀蚀 (深板岩)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9595,13 +9596,13 @@ INFESTED_MOSSY_STONE_BRICKS:
     - VOID
     - ANIMAL
   story:
-    name: 蛀蚀 (青苔石砖)
+    name: 蛀蚀 (苔石砖)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9621,10 +9622,10 @@ INFESTED_STONE:
     name: 蛀蚀 (石头)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9644,10 +9645,10 @@ INFESTED_STONE_BRICKS:
     name: 蛀蚀 (石砖)
     type: VOID
     lore:
-      - 迸发着寄居者的潜能。
+      - 由于其中蛀藏的生物所造成的影响,
       - 这个方块的魔力会随着
-      - 时间的推移被耗尽，以
-      - 满足它的需要。
+      - 时间的推移被耗尽,
+      - 以满足它的需要。
     shards:
       - 0
       - 0
@@ -9664,12 +9665,12 @@ INK_SAC:
     - VOID
     - CELESTIAL
   story:
-    name: 漆黑的虚空
+    name: 墨黑般的虚空
     type: VOID
     lore:
-      - 墨水既是几乎所有书面知
-      - 识的创造者，也是进入最
-      - 深虚空的入口。这种并列
+      - 墨水既是几乎所有书面知识
+      - 的创造者，也是进入最深
+      - 虚空的入口。这种并列
       - 关系本身就很神奇。
     shards:
       - 1
@@ -9714,7 +9715,7 @@ IRON_BARS:
     lore:
       - 专为一个真正的目的而设计,
       - 把那些需要的人关在监狱里.
-      - 保护他人为这个铁提供了目的.
+      - 铁栅栏就是为了保护他人而设计的.
     shards:
       - 0
       - 1
@@ -9735,7 +9736,7 @@ IRON_BLOCK:
     name: 科技奇迹
     type: MECHANICAL
     lore:
-      - 这个方块由地球制作,
+      - 这个方块来自大地,
       - 用于机器与技术的
       - 进一步发展.
     shards:
@@ -9884,7 +9885,7 @@ IRON_INGOT:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 冶炼 (绿宝石)
+    name: 冶炼 (铁)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -9929,10 +9930,10 @@ IRON_NUGGET:
     name: 形成 (铁)
     type: ELEMENTAL
     lore:
-      - 与发光浆果一样，发光
-      - 乌贼的灵魂能够吸收和
-      - 反映天体的匹配形式，
-      - 但没有影响它的力量。
+      - 与大部分元素魔法一样,
+      - 粒中的魔法水晶渴望找到
+      - 其他同类, 但没有任何办法
+      - 可以帮助到它.
     shards:
       - 1
       - 0
@@ -10042,8 +10043,9 @@ IRON_TRAPDOOR:
     name: 送到深渊
     type: VOID
     lore:
-      - 从远处控制，让
-      - 上面的人拥有听
+      - 从远处控制,
+      - 只需一声令下
+      - 就能让上方的生物陷入深渊
     shards:
       - 0
       - 1
@@ -10060,7 +10062,7 @@ ITEM_FRAME:
     - MECHANICAL
     - HUMAN
   story:
-    name: 骄傲的展示
+    name: 自豪的展示
     type: HUMAN
     lore:
       - 一个物品展示框等待它被允许
@@ -10085,7 +10087,7 @@ JACK_O_LANTERN:
     name: 幽灵般的恐怖
     type: VOID
     lore:
-      - 没有什么比雕刻好的杰克灯笼
+      - 没有什么比雕刻好的南瓜灯
       - 更能说明纯粹的恐怖了…对吗？
     shards:
       - 1
@@ -10460,11 +10462,11 @@ LADDER:
   elements:
     - PHILOSOPHICAL
   story:
-    name: 布默在哪里？
+    name: Boomer 在哪里？
     type: PHILOSOPHICAL
     lore:
       - 有需要认领的梯子吗？
-      - 打电话给 BOOMER_1 ，他会直接看到你！
+      - 打电话给 Boomer_1 ，他会直接看到你！
     shards:
       - 0
       - 1
@@ -10486,7 +10488,7 @@ LANTERN:
     lore:
       - 对灯笼来说，对黑暗的
       - 恐惧是一种压迫力。他
-      - 们用尽浑身解数推开黑
+      - 们用尽浑身解数驱散黑
       - 暗，让玩家感到安心。
     shards:
       - 1
@@ -10811,9 +10813,11 @@ LEVER:
     name: 二进制
     type: MECHANICAL
     lore:
-      - 控制杆生活在两种状态之一。
-      - 开或关，有或无。它梦想着第
-      - 三种状态，但这永远不会发生。
+      - 控制杆有10种状态。
+      - 一个是开，另一个也是开。
+      - 哦不对，另一个是关。
+      - 控制杆期盼着拥有11种状态，
+      - 但这根本不可能。
     shards:
       - 0
       - 1
@@ -10832,8 +10836,8 @@ LIGHTNING_ROD:
     name: 吸引
     type: ELEMENTAL
     lore:
-      - 铜渴望着电的触摸，并
-      - 尽其所能地吸引人过来。
+      - 铜渴望着电的触摸，
+      - 并尽其所能地吸引过来。
     shards:
       - 2
       - 0
@@ -10850,7 +10854,7 @@ LIGHT_BLUE_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 自由飘扬 (浅蓝)
+    name: 自由飘扬 (淡蓝)
     type: HISTORICAL
     lore:
       - 每天都在风中飘扬
@@ -10870,7 +10874,7 @@ LIGHT_BLUE_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 晚安 (浅蓝)
+    name: 晚安 (淡蓝)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
@@ -10893,7 +10897,7 @@ LIGHT_BLUE_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 永远发光 (浅蓝)
+    name: 永远发光 (淡蓝)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
@@ -10915,7 +10919,7 @@ LIGHT_BLUE_CARPET:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 被践踏 (浅蓝)
+    name: 被践踏 (淡蓝)
     type: PHILOSOPHICAL
     lore:
       - 地毯每天被践踏着,
@@ -10937,7 +10941,7 @@ LIGHT_BLUE_CONCRETE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 未来的证明 (浅蓝)
+    name: 未来的证明 (淡蓝)
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
@@ -10958,7 +10962,7 @@ LIGHT_BLUE_CONCRETE_POWDER:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 自我鉴定 (浅蓝)
+    name: 自我鉴定 (淡蓝)
     type: HUMAN
     lore:
       - 作为其他不同的方块混和形态,
@@ -10980,7 +10984,7 @@ LIGHT_BLUE_DYE:
   elements:
     - ALCHEMICAL
   story:
-    name: 颜色领域 (浅蓝)
+    name: 颜色领域 (淡蓝)
     type: ALCHEMICAL
     lore:
       - 染料的唯一目的就是为这个
@@ -11006,9 +11010,9 @@ LIGHT_BLUE_GLAZED_TERRACOTTA:
     name: 错误的身份
     type: PHILOSOPHICAL
     lore:
-      - 有些人误以为这
-      - 是一个功率过大
-      - 的发电装置.
+      - 有些人误以为这是个
+      - 大功率的发电装置.
+      - (难道不是么?)
     shards:
       - 0
       - 0
@@ -11026,7 +11030,7 @@ LIGHT_BLUE_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅蓝)
+    name: 棱镜 (淡蓝)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11048,7 +11052,7 @@ LIGHT_BLUE_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅蓝色玻璃板)
+    name: 棱镜 (淡蓝色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11070,7 +11074,7 @@ LIGHT_BLUE_TERRACOTTA:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 雕刻家的喜悦 (浅蓝)
+    name: 雕刻家的喜悦 (淡蓝)
     type: HUMAN
     lore:
       - 可被塑造成任何形式,
@@ -11114,7 +11118,7 @@ LIGHT_GRAY_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 自由飘扬 (浅灰)
+    name: 自由飘扬 (淡灰)
     type: HISTORICAL
     lore:
       - 每天都在风中飘扬
@@ -11134,7 +11138,7 @@ LIGHT_GRAY_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 晚安 (浅灰)
+    name: 晚安 (淡灰)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
@@ -11157,7 +11161,7 @@ LIGHT_GRAY_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 永远发光 (浅灰)
+    name: 永远发光 (淡灰)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
@@ -11179,7 +11183,7 @@ LIGHT_GRAY_CARPET:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 被践踏 (浅灰)
+    name: 被践踏 (淡灰)
     type: PHILOSOPHICAL
     lore:
       - 地毯每天被践踏着,
@@ -11201,7 +11205,7 @@ LIGHT_GRAY_CONCRETE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 未来的证明 (浅灰)
+    name: 未来的证明 (淡灰)
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
@@ -11222,7 +11226,7 @@ LIGHT_GRAY_CONCRETE_POWDER:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 自我鉴定 (浅灰)
+    name: 自我鉴定 (淡灰)
     type: HUMAN
     lore:
       - 作为其他不同的方块混和形态,
@@ -11244,7 +11248,7 @@ LIGHT_GRAY_DYE:
   elements:
     - ALCHEMICAL
   story:
-    name: 颜色领域 (浅灰)
+    name: 颜色领域 (淡灰)
     type: ALCHEMICAL
     lore:
       - 染料的唯一目的就是为这个
@@ -11267,7 +11271,7 @@ LIGHT_GRAY_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不会黏住 (浅灰)
+    name: 不会黏住 (淡灰)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
@@ -11289,7 +11293,7 @@ LIGHT_GRAY_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅灰)
+    name: 棱镜 (淡灰)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11311,7 +11315,7 @@ LIGHT_GRAY_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅灰色玻璃板)
+    name: 棱镜 (淡灰色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11333,7 +11337,7 @@ LIGHT_GRAY_TERRACOTTA:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 雕刻家的喜悦 (浅灰)
+    name: 雕刻家的喜悦 (淡灰)
     type: HUMAN
     lore:
       - 可被塑造成任何形式,
@@ -11383,7 +11387,7 @@ LIGHT_WEIGHTED_PRESSURE_PLATE:
     lore:
       - 唯一比被人走来走去更
       - 糟糕的事情是什么? 就
-      - 是同时被称为⌈重质⌋.
+      - 是同时被称为⌈轻质⌋.
     shards:
       - 0
       - 1
@@ -11400,7 +11404,7 @@ LILAC:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 甜甜的气味 (紫丁香)
+    name: 甜甜的气味 (丁香)
     type: ANIMAL
     lore:
       - 飘散的芬芳最能平息
@@ -11442,12 +11446,12 @@ LILY_PAD:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 沼泽装置
+    name: 沼泽特产
     type: ANIMAL
     lore:
-      - 荷叶除了在沼泽中无所事事之外
-      - 什么都不做. 相比起别人的欲望
-      - ', 荷叶对自己的现况很满足.'
+      - 除了在沼泽中无所事事之外
+      - 睡莲什么都不做. 相比起别人的欲望,
+      - 睡莲对自己的现况很满足.
     shards:
       - 1
       - 0
@@ -11464,7 +11468,7 @@ LIME_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 自由飘扬 (浅绿)
+    name: 自由飘扬 (黄绿)
     type: HISTORICAL
     lore:
       - 每天都在风中飘扬
@@ -11484,7 +11488,7 @@ LIME_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 晚安 (浅绿)
+    name: 晚安 (黄绿)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
@@ -11507,7 +11511,7 @@ LIME_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 永远发光 (浅绿)
+    name: 永远发光 (黄绿)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
@@ -11529,7 +11533,7 @@ LIME_CARPET:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 被践踏 (浅绿)
+    name: 被践踏 (黄绿)
     type: PHILOSOPHICAL
     lore:
       - 地毯每天被践踏着,
@@ -11551,7 +11555,7 @@ LIME_CONCRETE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 未来的证明 (浅绿)
+    name: 未来的证明 (黄绿)
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
@@ -11572,7 +11576,7 @@ LIME_CONCRETE_POWDER:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 自我鉴定 (浅绿)
+    name: 自我鉴定 (黄绿)
     type: HUMAN
     lore:
       - 作为其他不同的方块混和形态,
@@ -11594,7 +11598,7 @@ LIME_DYE:
   elements:
     - ALCHEMICAL
   story:
-    name: 颜色领域 (浅绿)
+    name: 颜色领域 (黄绿)
     type: ALCHEMICAL
     lore:
       - 染料的唯一目的就是为这个
@@ -11617,7 +11621,7 @@ LIME_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不会黏住 (浅绿)
+    name: 不会黏住 (黄绿)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
@@ -11639,7 +11643,7 @@ LIME_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅绿)
+    name: 棱镜 (黄绿)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11661,7 +11665,7 @@ LIME_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (浅绿色玻璃板)
+    name: 棱镜 (黄绿色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11683,7 +11687,7 @@ LIME_TERRACOTTA:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 雕刻家的喜悦 (浅绿)
+    name: 雕刻家的喜悦 (黄绿)
     type: HUMAN
     lore:
       - 可被塑造成任何形式,
@@ -11731,7 +11735,7 @@ LINGERING_POTION:
     name: 不受欢迎的客人
     type: ALCHEMICAL
     lore:
-      - 客人 和鱼一样，三天后开始发臭。
+      - 客人和鱼一样，三天后开始发臭。
       - 没有人喜欢拖得太久的东西。
     shards:
       - 1
@@ -11749,12 +11753,12 @@ LODESTONE:
     - VOID
     - CELESTIAL
   story:
-    name: 不自然的拉力
+    name: 非自然的拉力
     type: VOID
     lore:
-      - 结合天体水晶和虚空水晶会使
-      - 这个区块不断地拉动与魔法有
-      - 关的物品，而不受距离限制。
+      - 结合天体水晶和虚空水晶,
+      - 这个方块可以不断地拉动通过
+      - 魔法相连的物品，且不受距离限制。
     shards:
       - 0
       - 1
@@ -11774,8 +11778,8 @@ LOOM:
     type: HUMAN
     lore:
       - 每条线与织品被
-      - 赋予了制作者的创造力和
-      - 当时存在的魔法.
+      - 赋予了制作者的创造力
+      - 以及当时存在的魔法.
     shards:
       - 0
       - 0
@@ -11792,7 +11796,7 @@ MAGENTA_BANNER:
     - HISTORICAL
     - HUMAN
   story:
-    name: 自由飘扬 (洋红)
+    name: 自由飘扬 (品红)
     type: HISTORICAL
     lore:
       - 每天都在风中飘扬
@@ -11812,7 +11816,7 @@ MAGENTA_BED:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 晚安 (洋红)
+    name: 晚安 (品红)
     type: PHILOSOPHICAL
     lore:
       - 人们普遍认为,
@@ -11835,7 +11839,7 @@ MAGENTA_CANDLE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 永远发光 (洋红)
+    name: 永远发光 (品红)
     type: HUMAN
     lore:
       - 蜡烛尽可能的长时间燃烧
@@ -11857,7 +11861,7 @@ MAGENTA_CARPET:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 被践踏 (洋红)
+    name: 被践踏 (品红)
     type: PHILOSOPHICAL
     lore:
       - 地毯每天被践踏着,
@@ -11879,7 +11883,7 @@ MAGENTA_CONCRETE:
     - HUMAN
     - HISTORICAL
   story:
-    name: 未来的证明 (洋红)
+    name: 未来的证明 (品红)
     type: HISTORICAL
     lore:
       - 经过时间考验的方块.
@@ -11900,7 +11904,7 @@ MAGENTA_CONCRETE_POWDER:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 自我鉴定 (洋红)
+    name: 自我鉴定 (品红)
     type: HUMAN
     lore:
       - 作为其他不同的方块混和形态,
@@ -11922,7 +11926,7 @@ MAGENTA_DYE:
   elements:
     - ALCHEMICAL
   story:
-    name: 颜色领域 (洋红)
+    name: 颜色领域 (品红)
     type: ALCHEMICAL
     lore:
       - 染料的唯一目的就是为这个
@@ -11945,7 +11949,7 @@ MAGENTA_GLAZED_TERRACOTTA:
     - HUMAN
     - CELESTIAL
   story:
-    name: 不会黏住 (洋红)
+    name: 不会黏住 (品红)
     type: HUMAN
     lore:
       - 复杂的成份使该方块可以轻松
@@ -11967,7 +11971,7 @@ MAGENTA_STAINED_GLASS:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (洋红)
+    name: 棱镜 (品红)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -11989,7 +11993,7 @@ MAGENTA_STAINED_GLASS_PANE:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 棱镜 (洋红色玻璃板)
+    name: 棱镜 (品红色玻璃板)
     type: CELESTIAL
     lore:
       - 虽然这个方块并没有
@@ -12011,7 +12015,7 @@ MAGENTA_TERRACOTTA:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 雕刻家的喜悦 (洋红)
+    name: 雕刻家的喜悦 (品红)
     type: HUMAN
     lore:
       - 可被塑造成任何形式,
@@ -12233,9 +12237,9 @@ MINECART:
     name: 滚动的矿车……
     type: MECHANICAL
     lore:
-      - '… 不采集苔藓。作为创世神'
-      - 技术的最大飞跃，矿车的
-      - 用途比人们想象的要多。
+      - '… 不会生长出苔藓.'
+      - Minecraft科技的重大突破,
+      - 矿车的用途比人们想象的要多.
     shards:
       - 0
       - 2
@@ -12294,7 +12298,7 @@ MOSSY_COBBLESTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (青苔圆石)
+    name: 一半 (苔石)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -12316,7 +12320,7 @@ MOSSY_COBBLESTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (青苔圆石)
+    name: 步步高升 (苔石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -12338,7 +12342,7 @@ MOSSY_COBBLESTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (青苔圆石)
+    name: 推倒墙壁 (苔石)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -12360,7 +12364,7 @@ MOSSY_STONE_BRICKS:
     - HUMAN
     - ANIMAL
   story:
-    name: 火柴盒升级 (青苔石砖)
+    name: 火柴盒升级 (苔石砖)
     type: HUMAN
     lore:
       - 让你的房子更像一个家,
@@ -12381,7 +12385,7 @@ MOSSY_STONE_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (青苔石半砖)
+    name: 一半 (苔石半砖)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -12403,7 +12407,7 @@ MOSSY_STONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (青苔石半砖)
+    name: 步步高升 (苔石半砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -12425,7 +12429,7 @@ MOSSY_STONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (青苔石半砖)
+    name: 推倒墙壁 (苔石半砖)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -12534,10 +12538,10 @@ MUSIC_DISC_11:
     name: 引起共鸣 (11)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12557,10 +12561,10 @@ MUSIC_DISC_13:
     name: 引起共鸣 (13)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12577,13 +12581,13 @@ MUSIC_DISC_BLOCKS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 引起共鸣 (方块)
+    name: 引起共鸣 (Blocks)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12600,13 +12604,13 @@ MUSIC_DISC_CAT:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 引起共鸣 (猫)
+    name: 引起共鸣 (Cat)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12626,10 +12630,10 @@ MUSIC_DISC_CHIRP:
     name: 引起共鸣 (Chirp)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12649,10 +12653,10 @@ MUSIC_DISC_FAR:
     name: 引起共鸣 (Far)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12672,10 +12676,10 @@ MUSIC_DISC_MALL:
     name: 引起共鸣 (Mall)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12695,10 +12699,10 @@ MUSIC_DISC_MELLOHI:
     name: 引起共鸣 (Mellohi)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12719,10 +12723,10 @@ MUSIC_DISC_PIGSTEP:
     name: 引起共鸣 (Pigstep)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12742,10 +12746,10 @@ MUSIC_DISC_STAL:
     name: 引起共鸣 (Stal)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12765,10 +12769,10 @@ MUSIC_DISC_STRAD:
     name: 引起共鸣 (Strad)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12788,10 +12792,10 @@ MUSIC_DISC_WAIT:
     name: 引起共鸣 (Wait)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12811,10 +12815,10 @@ MUSIC_DISC_WARD:
     name: 引起共鸣 (Ward)
     type: PHILOSOPHICAL
     lore:
-      - 音乐光盘不只是记录声
-      - 音，它还记录了录音时
-      - 空气中的共鸣魔力，每
-      - 次重放时都会释放出来。
+      - 唱片不只是记录声音，
+      - 它还记录了录音时
+      - 空气中的共鸣魔力，
+      - 每次播放时都会释放出来。
     shards:
       - 0
       - 1
@@ -12852,11 +12856,11 @@ MYCELIUM:
     - ELEMENTAL
     - VOID
   story:
-    name: 远古的诺言
+    name: 远古的承诺
     type: VOID
     lore:
       - 在古代孢子的触动下，菌丝从虚空中
-      - 汲取营养，成为新的和黑暗的东西。
+      - 汲取营养，成为新的黑暗的东西。
     shards:
       - 1
       - 0
@@ -12876,9 +12880,9 @@ NAME_TAG:
     name: 识别
     type: HUMAN
     lore:
-      - 一个无名的东西终于有了自己的
-      - 身份，而且…Dinnerbone是什么
-      - 东西，为什么世界是颠倒的？
+      - 无名的东西终于有了自己的名字.
+      - 但是… Dinnerbone是什么?
+      - 为什么世界是颠倒的？
     shards:
       - 0
       - 0
@@ -12895,13 +12899,13 @@ NAUTILUS_SHELL:
     - HISTORICAL
     - VOID
   story:
-    name: 一个未使用的家
+    name: 未使用的家
     type: HISTORICAL
     lore:
-      - 鹦鹉螺号虽然来自最
-      - 深处，但一个也看不
-      - 见。不知道沉尸从哪
-      - 里找到这些贝壳。
+      - 鹦鹉螺壳虽然来自最深处，
+      - 但是没有人看得到它们。
+      - 不知道溺尸从哪里
+      - 找到的这些贝壳。
     shards:
       - 0
       - 0
@@ -12918,7 +12922,7 @@ NETHERITE_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故 (狱髓)
+    name: 斧头事故 (下界合金)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
@@ -12943,9 +12947,9 @@ NETHERITE_BLOCK:
     name: 炫耀
     type: HUMAN
     lore:
-      - 一个只为炫耀疯狂的财富而制造
-      - 的方块。在第一个被制造出来后
-      - '，它引发了战争、背叛和欺骗。'
+      - 一个只为炫耀疯狂财富而制造的方块。
+      - 在第一个被制造出来后，
+      - 它引发了战争、背叛和欺骗。
     shards:
       - 0
       - 0
@@ -12963,7 +12967,7 @@ NETHERITE_BOOTS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 格雷夫 - 格瑞夫 (狱髓)
+    name: 格雷夫 - 格瑞夫 (下界合金)
     type: PHILOSOPHICAL
     lore:
       - 像所有盔甲一样, 靴子只想
@@ -12985,7 +12989,7 @@ NETHERITE_CHESTPLATE:
     - HUMAN
     - CELESTIAL
   story:
-    name: 伟大的防御 (狱髓)
+    name: 伟大的防御 (下界合金)
     type: HUMAN
     lore:
       - 被胸甲挡住的每次击打, 刮擦和
@@ -13007,7 +13011,7 @@ NETHERITE_HELMET:
     - HUMAN
     - VOID
   story:
-    name: 高于它人 (狱髓)
+    name: 高于它人 (下界合金)
     type: VOID
     lore:
       - 魔法师最重要的工具是他们的思想,
@@ -13051,7 +13055,7 @@ NETHERITE_INGOT:
     - MECHANICAL
     - VOID
   story:
-    name: 冶炼 (狱髓)
+    name: 冶炼 (下界合金)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -13072,7 +13076,7 @@ NETHERITE_LEGGINGS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 无腿的 (狱髓)
+    name: 无腿的 (下界合金)
     type: CELESTIAL
     lore:
       - 就像是其他盔甲兄弟一样,
@@ -13094,7 +13098,7 @@ NETHERITE_PICKAXE:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 捡-捡-捡-捡起一个镐子 (狱髓)
+    name: 捡-捡-捡-捡起一个镐子 (下界合金)
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
@@ -13116,12 +13120,11 @@ NETHERITE_SCRAP:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 古老得难以估量
+    name: 无法寻迹的古老工艺
     type: HISTORICAL
     lore:
-      - 狱髓碎片的正确精炼工艺
-      - 随着时间推移而回荡. 从一开始
-      - 是目前最广为人知的方法。
+      - 下界合金的正确冶炼工艺早已失传
+      - 但人们都知道，应该从碎片开始。
     shards:
       - 1
       - 0
@@ -13138,7 +13141,7 @@ NETHERITE_SHOVEL:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 你能挖它吗? (狱髓)
+    name: 你能挖它吗? (下界合金)
     type: ELEMENTAL
     lore:
       - 铲子的发明是人类
@@ -13160,7 +13163,7 @@ NETHERITE_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 是时候出击了 (狱髓)
+    name: 是时候出击了 (下界合金)
     type: VOID
     lore:
       - 剑最终让你武装起来,
@@ -13182,11 +13185,11 @@ NETHERRACK:
   elements:
     - ELEMENTAL
   story:
-    name: 不稳定性
+    name: 不稳定
     type: ELEMENTAL
     lore:
-      - 不知道这么软的石头怎
-      - 么能支持下界的结构。
+      - 不知道这么软的石头是如何
+      - 支撑下界的结构的。
     shards:
       - 1
       - 0
@@ -13400,7 +13403,7 @@ NETHER_STAR:
   elements:
     - VOID
   story:
-    name: 水晶下界
+    name: 下界之星
     type: VOID
     lore:
       - 并非所有的魔法都符合水
@@ -13425,9 +13428,8 @@ NETHER_WART:
     name: 炼金术传导
     type: ALCHEMICAL
     lore:
-      - 众所皆知, 魔法需要水晶作为管道,
-      - 对于药水, 它的魔法管道就是
-      - 下界疙瘩.
+      - 众所周知, 魔法需要水晶,
+      - 但对于药水, 它则需要下界疣。
     shards:
       - 0
       - 0
@@ -13446,9 +13448,8 @@ NETHER_WART_BLOCK:
     name: 炼金术传导 (方块)
     type: ALCHEMICAL
     lore:
-      - 众所皆知, 魔法需要水晶作为管道,
-      - 对于药水, 它的魔法管道就是
-      - 下界疙瘩.
+      - 众所周知, 魔法需要水晶,
+      - 但对于药水, 它则需要下界疣。
     shards:
       - 0
       - 0
@@ -13466,7 +13467,7 @@ NOTE_BLOCK:
     - CELESTIAL
     - PHILOSOPHICAL
   story:
-    name: 无
+    name: 音符
     type: PHILOSOPHICAL
     lore:
       - 没有音乐的生活
@@ -13808,7 +13809,7 @@ OBSERVER:
     lore:
       - 观察者一直在观察，等着让你知道
       - 它看到的事情发生的那一刻。遗憾
-      - 的是，它只能看到前方一个方块…
+      - 的是，它只能看到正前方的方块…
     shards:
       - 0
       - 2
@@ -14154,7 +14155,7 @@ OXIDIZED_COPPER:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的冶炼 (氧化的铜方块)
+    name: 更先进的冶炼 (氧化的铜块)
     type: ELEMENTAL
     lore:
       - 直到冶炼成方块的形状,
@@ -14175,7 +14176,7 @@ OXIDIZED_CUT_COPPER:
     - MECHANICAL
     - HUMAN
   story:
-    name: 上面的切口 (氧化的铜方块)
+    name: 上面的切口 (氧化的铜块)
     type: MECHANICAL
     lore:
       - 这个方块从不抱怨,
@@ -14238,12 +14239,12 @@ PACKED_ICE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 溜滑 (冰砖)
+    name: 溜滑 (浮冰)
     type: ELEMENTAL
     lore:
-      - 在形成的过程中, 这个方块的精神
+      - 在形成的过程中, 这个方块的灵魂
       - 只希望看到人们从它脸上滑下来.
-      - 蓝冰就是从这种虐待狂
+      - 浮冰就是从这种虐待狂
       - 的欲望中诞生的.
     shards:
       - 2
@@ -14265,8 +14266,8 @@ PAINTING:
     type: PHILOSOPHICAL
     lore:
       - 虽然它不是毕加索的作品，
-      - 但每幅画都被赋予了来自艺
-      - 术家创造力的魔力。
+      - 但每幅画都被赋予了来自
+      - 艺术家创造力的魔力。
     shards:
       - 0
       - 0
@@ -14283,12 +14284,11 @@ PAPER:
     - HUMAN
     - CELESTIAL
   story:
-    name: 一个干净的石板
+    name: 一块干净的板
     type: CELESTIAL
     lore:
-      - 每一件作品都是一个新
-      - 的开始，一张白纸，每
-      - 件作品的潜力都很大。
+      - 每一张纸都是全新的开始，
+      - 每一张纸都蕴含着巨大的潜力.
     shards:
       - 0
       - 1
@@ -14328,7 +14328,7 @@ PHANTOM_MEMBRANE:
     name: 比空气更轻
     type: VOID
     lore:
-      - 如果驾驭得当，夜魅皮膜
+      - 如果驾驭得当，幻翼膜
       - 其实比空气更轻，并能将
       - 这种特性传递给其他物品。
     shards:
@@ -14347,7 +14347,7 @@ PIGLIN_BANNER_PATTERN:
     - HUMAN
     - ANIMAL
   story:
-    name: 星光闪耀 (猪布林)
+    name: 星光闪耀 (猪灵)
     type: HUMAN
     lore:
       - 吸收观察者们的
@@ -14609,7 +14609,7 @@ PINK_TULIP:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 甜甜的气味 (粉红色郁金香)
+    name: 甜甜的气味 (粉色郁金香)
     type: ANIMAL
     lore:
       - 飘散的芬芳最能平息
@@ -14652,12 +14652,11 @@ PISTON:
     - MECHANICAL
     - HUMAN
   story:
-    name: 变得爱出风头
+    name: 爱出风头
     type: MECHANICAL
     lore:
       - 活塞试图保持冷静，
-      - 但它很容易触发并轻
-      - 松飞离手柄。
+      - 但它很容易触发。
     shards:
       - 0
       - 2
@@ -14698,7 +14697,7 @@ PODZOL:
     name: 吸血
     type: ELEMENTAL
     lore:
-      - 灰壤因其吸收的铁而具有
+      - 灰化土因其吸收的铁而具有
       - 魔法饱和度。这种魔力会
       - 随着时间的推移慢慢转化。
     shards:
@@ -14740,13 +14739,12 @@ POISONOUS_POTATO:
     - HUMAN
     - ANIMAL
   story:
-    name: 一个不那么受欢迎的惊喜
+    name: 不受欢迎的惊喜
     type: ANIMAL
     lore:
-      - 当一个物品的内部水晶
-      - 变坏时，其机制会完全
-      - 改变。毒马铃薯就是这
-      - 个过程的一个结果。
+      - 当一个物品的内部水晶结构
+      - 变坏时，其机制会完全改变。
+      - 毒马铃薯就是最好的例子。
     shards:
       - 0
       - 0
@@ -14784,7 +14782,7 @@ POLISHED_ANDESITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (抛光安山岩)
+    name: 一半 (磨制安山岩)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -14806,7 +14804,7 @@ POLISHED_ANDESITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光安山岩)
+    name: 步步高升 (磨制安山岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -14872,7 +14870,7 @@ POLISHED_BLACKSTONE_BRICKS:
     - MECHANICAL
     - HUMAN
   story:
-    name: 时间的微光 (抛光黑石)
+    name: 时间的微光 (磨制黑石)
     type: HUMAN
     lore:
       - 只要有一点爱，任何方块都可以
@@ -14894,7 +14892,7 @@ POLISHED_BLACKSTONE_BRICK_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (抛光黑石砖)
+    name: 一半 (磨制黑石砖)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -14916,7 +14914,7 @@ POLISHED_BLACKSTONE_BRICK_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光黑石砖)
+    name: 步步高升 (磨制黑石砖)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -14938,7 +14936,7 @@ POLISHED_BLACKSTONE_BRICK_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (抛光黑石砖)
+    name: 推倒墙壁 (磨制黑石砖)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -14959,7 +14957,7 @@ POLISHED_BLACKSTONE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 抑郁 (抛光黑石)
+    name: 抑郁 (磨制黑石)
     type: HUMAN
     lore:
       - 很容易抑郁
@@ -14979,7 +14977,7 @@ POLISHED_BLACKSTONE_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 承受压力 (抛光黑石)
+    name: 承受压力 (磨制黑石)
     type: VOID
     lore:
       - 逆来顺受只会令人失望
@@ -14999,7 +14997,7 @@ POLISHED_BLACKSTONE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (抛光黑石)
+    name: 一半 (磨制黑石)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -15021,7 +15019,7 @@ POLISHED_BLACKSTONE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光黑石)
+    name: 步步高升 (磨制黑石)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15043,7 +15041,7 @@ POLISHED_BLACKSTONE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (抛光黑石)
+    name: 推倒墙壁 (磨制黑石)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -15086,7 +15084,7 @@ POLISHED_DEEPSLATE_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 低一截 (抛光深板岩)
+    name: 低一截 (磨制深板岩)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -15107,7 +15105,7 @@ POLISHED_DEEPSLATE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光深板岩)
+    name: 步步高升 (磨制深板岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15129,7 +15127,7 @@ POLISHED_DEEPSLATE_WALL:
     - CELESTIAL
     - HISTORICAL
   story:
-    name: 推倒墙壁 (抛光深板岩)
+    name: 推倒墙壁 (磨制深板岩)
     type: HISTORICAL
     lore:
       - 多年以来，一直在保护
@@ -15150,7 +15148,7 @@ POLISHED_DIORITE:
     - HUMAN
     - ALCHEMICAL
   story:
-    name: 抛光
+    name: 磨制
     type: HUMAN
     lore:
       - 所以你真的可以擦亮粪便吗？
@@ -15170,7 +15168,7 @@ POLISHED_DIORITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 ( 抛光闪长岩)
+    name: 一半 (磨制闪长岩)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -15192,7 +15190,7 @@ POLISHED_DIORITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光花岗岩)
+    name: 步步高升 (磨制花岗岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15234,7 +15232,7 @@ POLISHED_GRANITE_SLAB:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 一半 (抛光花岗岩)
+    name: 一半 (磨制花岗岩)
     type: HUMAN
     lore:
       - 这小家伙只有一半大
@@ -15256,7 +15254,7 @@ POLISHED_GRANITE_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 步步高升 (抛光花岗岩)
+    name: 步步高升 (磨制花岗岩)
     type: PHILOSOPHICAL
     lore:
       - 每一步都是通往未来的荣耀,
@@ -15280,7 +15278,8 @@ POPPED_CHORUS_FRUIT:
     name: 失败
     type: VOID
     lore:
-      - 烘烤歌莱果会停止流动状态，并使所有的量子连接失效。
+      - 烘烤紫颂果会停止内部能量的流动,
+      - 并使所有的量子连接失效。
     shards:
       - 0
       - 0
@@ -15297,7 +15296,7 @@ POPPY:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 甜甜的气味 (罂粟)
+    name: 甜甜的气味 (虞美人)
     type: ANIMAL
     lore:
       - 飘散的芬芳最能平息
@@ -15364,8 +15363,8 @@ POTION:
     type: ALCHEMICAL
     lore:
       - 在发现水晶和其他深奥的
-      - 魔法之前，药水是进入外
-      - 域获取力量的唯一途径。
+      - 魔法之前，药水是
+      - 获取力量的唯一途径。
     shards:
       - 1
       - 0
@@ -15383,7 +15382,7 @@ POWDER_SNOW_BUCKET:
     - VOID
     - CELESTIAL
   story:
-    name: 坚固 (雪)
+    name: 坚固 (细雪)
     type: HUMAN
     lore:
       - 持续且恒定,
@@ -15407,10 +15406,10 @@ POWERED_RAIL:
     name: 升级
     type: MECHANICAL
     lore:
-      - 当米尼斯坦博士不小心
-      - 将一些红石掉在铁路上
-      - 时，他突然发现了下一
-      - 个经济实惠的交通工具。
+      - 当麦因斯坦博士不小心
+      - 将一些红石掉在铁轨上时，
+      - 他突然发现了下一代
+      - 经济实惠的交通工具。
     shards:
       - 0
       - 1
@@ -15431,8 +15430,8 @@ PRISMARINE:
     type: ANIMAL
     lore:
       - 这些方块被保护在最深处,
-      - 不适合寺庙外的任何人使用.
-      - 所有东西最终都会被回收.
+      - 不适合神殿外的任何人使用.
+      - 一切最终会再生.
     shards:
       - 1
       - 0
@@ -15520,7 +15519,7 @@ PRISMARINE_CRYSTALS:
     type: CELESTIAL
     lore:
       - 这个物品从附近的天体水晶中吸取
-      - 力量，发出淡淡的光和颜色。
+      - 力量，发出淡淡的光。
     shards:
       - 0
       - 0
@@ -15541,7 +15540,7 @@ PRISMARINE_SHARD:
     type: CELESTIAL
     lore:
       - 这个物品从附近的天体水晶中吸取
-      - 力量，发出淡淡的光和颜色。
+      - 力量，发出淡淡的光。
     shards:
       - 0
       - 0
@@ -15625,11 +15624,11 @@ PUFFERFISH:
     - ANIMAL
     - PHILOSOPHICAL
   story:
-    name: 气喘吁吁
+    name: 膨胀
     type: ANIMAL
     lore:
-      - 河豚是出了名的暴躁，它
-      - 会对靠近它的玩家发火。
+      - 河豚是出了名的暴躁，
+      - 它会对靠近它的玩家发火。
     shards:
       - 0
       - 0
@@ -15690,13 +15689,12 @@ PUMPKIN_PIE:
   elements:
     - HUMAN
   story:
-    name: 烤过
+    name: 烘培
     type: HUMAN
     lore:
-      - 面包师对食物的热
-      - 爱赋予食物少量的
-      - 魔力。魔法越多，
-      - 结果就越好。
+      - 面包师对食物的热爱
+      - 赋予食物少量的魔力。
+      - 魔法越多，结果就越好。
     shards:
       - 0
       - 0
@@ -16002,8 +16000,7 @@ PURPUR_BLOCK:
     name: 远古遗迹
     type: HISTORICAL
     lore:
-      - 这是创造它的久
-      - 违的古代建造者
+      - 这是创造它的古代建筑师
       - 留下的唯一证据
     shards:
       - 0
@@ -16025,9 +16022,8 @@ PURPUR_PILLAR:
     name: 社会支柱 (紫珀)
     type: PHILOSOPHICAL
     lore:
-      - 撑起那些需要帮助
-      - 的人，紫珀柱的目
-      - 的被愉快地实现了。
+      - 撑起那些需要帮助的人，
+      - 紫珀柱的目的被愉快地实现了。
     shards:
       - 0
       - 1
@@ -16158,9 +16154,8 @@ QUARTZ_PILLAR:
     name: 社会支柱 (石英)
     type: PHILOSOPHICAL
     lore:
-      - 撑起那些需要帮助
-      - 的人，紫珀柱的目
-      - 的被愉快地实现了。
+      - 撑起那些需要帮助的人，
+      - 石英柱的目的被愉快地实现了。
     shards:
       - 0
       - 1
@@ -16311,7 +16306,7 @@ RAIL:
     type: HUMAN
     lore:
       - 将远点连接在一起会给
-      - 铁路带来由衷的满足。
+      - 铁轨带来由衷的满足。
     shards:
       - 0
       - 2
@@ -16329,7 +16324,7 @@ RAW_COPPER:
     - MECHANICAL
     - ALCHEMICAL
   story:
-    name: 冶炼 (铜原矿)
+    name: 冶炼 (粗铜)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16351,7 +16346,7 @@ RAW_COPPER_BLOCK:
     - MECHANICAL
     - ALCHEMICAL
   story:
-    name: 更先进的冶炼 (铜原矿)
+    name: 更先进的冶炼 (粗铜)
     type: ELEMENTAL
     lore:
       - 直到冶炼成方块的形状,
@@ -16373,7 +16368,7 @@ RAW_GOLD:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 冶炼 (金原矿)
+    name: 冶炼 (粗金)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16395,7 +16390,7 @@ RAW_GOLD_BLOCK:
     - MECHANICAL
     - PHILOSOPHICAL
   story:
-    name: 更先进的冶炼 (金原矿)
+    name: 更先进的冶炼 (粗金)
     type: ELEMENTAL
     lore:
       - 直到冶炼成方块的形状,
@@ -16416,7 +16411,7 @@ RAW_IRON:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 冶炼 (铁原矿)
+    name: 冶炼 (粗铁)
     type: ELEMENTAL
     lore:
       - 除去所有的炉渣和渣滓
@@ -16437,7 +16432,7 @@ RAW_IRON_BLOCK:
     - ELEMENTAL
     - MECHANICAL
   story:
-    name: 更先进的冶炼 (铁原矿)
+    name: 更先进的冶炼 (粗铁)
     type: ELEMENTAL
     lore:
       - 直到冶炼成方块的形状,
@@ -16500,7 +16495,7 @@ REDSTONE_LAMP:
     - MECHANICAL
     - HUMAN
   story:
-    name: 非魔法
+    name: 不是魔法
     type: MECHANICAL
     lore:
       - 红石灯无需使用水晶或其他
@@ -16524,9 +16519,9 @@ REDSTONE_ORE:
     name: 新时代
     type: ELEMENTAL
     lore:
-      - 首次发现时。人类历史彻底
-      - 改变，使得创造电路、机器
-      - 和电力的诞生成为可能
+      - 首次发现时，人类历史彻底改变，
+      - 创造电路、机器以及
+      - 电力的诞生成为可能
     shards:
       - 2
       - 1
@@ -16543,11 +16538,11 @@ REDSTONE_TORCH:
   elements:
     - MECHANICAL
   story:
-    name: 简式信号
+    name: 简但信号
     type: MECHANICAL
     lore:
-      - 红石是一种奇妙的非魔法系统
-      - '，它以某种方式传递力量'
+      - 红石是一种奇妙的非魔法系统，
+      - 它以某种方式传递力量
     shards:
       - 0
       - 1
@@ -17108,10 +17103,10 @@ RESPAWN_ANCHOR:
     name: 轮回
     type: VOID
     lore:
-      - 重生之锚的核心不会让你重生。
+      - 重生之锚不会让你重生。
       - 你的身体被重新创造，你的思想
-      - 通过虚空神奇地传送到新的容器
-      - 中。你不再是你了。
+      - 通过虚空神奇地传送到新的躯体中。
+      - 你不再是你了。
     shards:
       - 2
       - 1
@@ -17173,8 +17168,8 @@ ROTTEN_FLESH:
     name: 亵渎契约
     type: VOID
     lore:
-      - 僵尸被严重误判了。他
-      - 们总是很高兴能吃了你!
+      - 僵尸被严重误判了。
+      - 它们想要吃掉你的脑子!
     shards:
       - 0
       - 0
@@ -17193,8 +17188,8 @@ SADDLE:
     name: 驯服不可驯服之物
     type: ANIMAL
     lore:
-      - 狂野的灵魂被强大的灵魂所驯
-      - 服。虽然冒险，但结果是人与
+      - 狂野的灵魂被强大的灵魂所驯服。
+      - 虽然冒险，但结果是人与
       - 野兽之间产生共鸣的和谐。
     shards:
       - 0
@@ -17366,9 +17361,9 @@ SCAFFOLDING:
     name: 抵达新的高度
     type: MECHANICAL
     lore:
-      - 竖立支柱是过去的事了!
-      - 有了鹰架，你可以简单地
-      - '…呃…用柱子…起来…嗯。'
+      - 搭方块柱子是过去的事了!
+      - 有了脚手架，你可以简单地...
+      - 呃...向上爬...没错。
     shards:
       - 0
       - 1
@@ -17427,12 +17422,12 @@ SEA_LANTERN:
     - CELESTIAL
     - ANIMAL
   story:
-    name: 湾岸
+    name: 海湾
     type: CELESTIAL
     lore:
       - 从稜镜水晶中聚集的
       - 天体水晶发出明亮的
-      - '、永远存在的光。'
+      - 永远存在的光。
     shards:
       - 1
       - 0
@@ -17455,7 +17450,7 @@ SEA_PICKLE:
       - 与其他发光物品不同，
       - 这个物品并不从天体水
       - 晶中提取，因此不知道
-      - 海鞘是如何形成的。
+      - 海泡菜是如何形成的。
     shards:
       - 0
       - 0
@@ -17472,11 +17467,11 @@ SHEARS:
     - ANIMAL
     - HUMAN
   story:
-    name: 简式技术
+    name: 简单的技术
     type: HUMAN
     lore:
-      - 一个向前的飞跃，这些发
-      - 明只不过是纯粹的才智。
+      - 一个向前的飞跃，
+      - 这些发明只不过是纯粹的才智。
     shards:
       - 0
       - 1
@@ -17497,8 +17492,8 @@ SHIELD:
     type: PHILOSOPHICAL
     lore:
       - 不管有多大的危险或风险，
-      - '⌈盾牌⌋都会不顾一切地将自'
-      - 己置于危险之中以保护用户。
+      - 盾牌都会不顾一切地将自
+      - 己置于危险之中以保护使用者。
     shards:
       - 0
       - 0
@@ -17519,8 +17514,8 @@ SHROOMLIGHT:
     type: VOID
     lore:
       - 虽然并非闻所未闻，但从虚空中
-      - 汲取光线是一件棘手的事情。被
-      - 动地做到这一点确实很罕见。
+      - 汲取光线是一件棘手的事情。
+      - 被动地做到这一点确实很罕见。
       - 这个方块也有一个关于最
       - 礼貌的奶制品的记忆。
     shards:
@@ -17626,12 +17621,12 @@ SLIME_BLOCK:
     - ANIMAL
     - ALCHEMICAL
   story:
-    name: 一个棘手的状况 (史莱姆)
+    name: 黏糊糊的 (史莱姆)
     type: ALCHEMICAL
     lore:
-      - 渴望不再孤单，这个方块
-      - 将紧紧抓住任何可以抓住
-      - 的东西，不会放手。
+      - 这个方块希望不再孤单,
+      - 会紧紧抓住任何可以抓住
+      - 的东西，不会松手。
     shards:
       - 0
       - 0
@@ -19588,9 +19583,9 @@ TNT_MINECART:
     name: 滚动的矿车... (TNT)
     type: MECHANICAL
     lore:
-      - '… 不采集苔藓。作为创世神'
-      - 技术的最大飞跃，矿车的
-      - 用途比人们想象的要多。
+      - '… 不会生长出苔藓.'
+      - Minecraft科技的重大突破,
+      - 矿车的用途比人们想象的要多.
     shards:
       - 0
       - 2
