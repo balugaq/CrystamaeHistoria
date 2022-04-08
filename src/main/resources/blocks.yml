@@ -8365,7 +8365,7 @@ GOLDEN_SWORD:
     type: VOID
     lore:
       - 剑最终让你武装起来,
-      - 你可以使用剑防御或攻击, 
+      - 你可以使用剑防御或攻击,
       - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
@@ -10020,7 +10020,7 @@ IRON_SWORD:
     type: VOID
     lore:
       - 剑最终让你武装起来,
-      - 你可以使用剑防御或攻击, 
+      - 你可以使用剑防御或攻击,
       - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
@@ -13167,7 +13167,7 @@ NETHERITE_SWORD:
     type: VOID
     lore:
       - 剑最终让你武装起来,
-      - 你可以使用剑防御或攻击, 
+      - 你可以使用剑防御或攻击,
       - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
@@ -13445,7 +13445,7 @@ NETHER_WART_BLOCK:
   elements:
     - ALCHEMICAL
   story:
-    name: 炼金术传导 (方块)
+    name: 炼金术传导 (块)
     type: ALCHEMICAL
     lore:
       - 众所周知, 魔法需要水晶,
@@ -17535,10 +17535,10 @@ SHULKER_SHELL:
     - ANIMAL
     - VOID
   story:
-    name: 坚韧的外表
+    name: 坚韧的外壳
     type: ANIMAL
     lore:
-      - 界伏蚌坚硬的外表是由几丁质
+      - 潜影贝坚硬的外表是由几丁质
       - 和魔法的压缩层形成的，形成
       - 了一个几乎无法穿透的外壳。
     shards:
@@ -17560,8 +17560,8 @@ SKELETON_SKULL:
     type: VOID
     lore:
       - 虽然目前处于休眠状态，
-      - 但只需一个单位的虚空水
-      - 晶，就能使骷髅头颅复活。
+      - 但只需一个单位的虚空水晶，
+      - 就能让骷髅头颅复活。
     shards:
       - 0
       - 0
@@ -17665,10 +17665,10 @@ SMALL_DRIPLEAF:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 努力尝试 (小悬叶草)
+    name: 努力尝试 (小垂滴叶)
     type: PHILOSOPHICAL
     lore:
-      - 悬叶草总是在尝试保持
+      - 垂滴叶总是在尝试保持
       - 自己不要倾斜,
       - 虽然几乎总是失败.
     shards:
@@ -17711,12 +17711,11 @@ SMOKER:
     - HUMAN
     - ANIMAL
   story:
-    name: 被烟燻吧
+    name: 烟熏
     type: MECHANICAL
     lore:
-      - 一个熔炉日复一日的
-      - 梦想着被提拔. 烟燻炉
-      - 是熔炉的梦想.
+      - 熔炉每天都想着被提升
+      - 烟熏炉便是熔炉的梦想
     shards:
       - 0
       - 1
@@ -17733,11 +17732,10 @@ SMOOTH_BASALT:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 一个有魅力的喜悦 (玄武岩)
+    name: 平滑的喜悦 (玄武岩)
     type: ELEMENTAL
     lore:
-      - 这么顺利应该是
-      - 犯罪!
+      - 这么平滑应该是有问题的吧
     shards:
       - 1
       - 0
@@ -17754,11 +17752,10 @@ SMOOTH_QUARTZ:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 一个有魅力的喜悦 (石英)
+    name: 平滑的喜悦 (石英)
     type: ELEMENTAL
     lore:
-      - 这么顺利应该是
-      - 犯罪!
+      - 这么平滑应该是有问题的吧
     shards:
       - 1
       - 0
@@ -17820,11 +17817,10 @@ SMOOTH_RED_SANDSTONE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 一个有魅力的喜悦 (红砂岩)
+    name: 平滑的喜悦 (红砂岩)
     type: ELEMENTAL
     lore:
-      - 这么顺利应该是
-      - 犯罪!
+      - 这么平滑应该是有问题的吧
     shards:
       - 1
       - 0
@@ -17885,11 +17881,10 @@ SMOOTH_SANDSTONE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 一个有魅力的喜悦 (砂岩)
+    name: 平滑的喜悦 (砂岩)
     type: ELEMENTAL
     lore:
-      - 这么顺利应该是
-      - 犯罪!
+      - 这么平滑应该是有问题的吧
     shards:
       - 1
       - 0
@@ -17950,11 +17945,10 @@ SMOOTH_STONE:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 一个有魅力的喜悦 (石头)
+    name: 平滑的喜悦 (石头)
     type: ELEMENTAL
     lore:
-      - 这么顺利应该是
-      - 犯罪!
+      - 这么平滑应该是有问题的吧
     shards:
       - 1
       - 0
@@ -17993,10 +17987,10 @@ SNOW:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 结晶的 (层)
+    name: 结晶 (层)
     type: ELEMENTAL
     lore:
-      - 由空气中的水晶制成,
+      - 由空气中的魔法水晶形成,
       - 这种奇妙的材料只能
       - 在最冷的地方找到
     shards:
@@ -18016,10 +18010,10 @@ SNOWBALL:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 结晶的 (球)
+    name: 结晶 (球)
     type: ELEMENTAL
     lore:
-      - 由空气中的水晶制成,
+      - 由空气中的魔法水晶形成,
       - 这种奇妙的材料只能
       - 在最冷的地方找到
     shards:
@@ -18039,10 +18033,10 @@ SNOW_BLOCK:
     - ELEMENTAL
     - CELESTIAL
   story:
-    name: 结晶的 (方块)
+    name: 结晶 (块)
     type: ELEMENTAL
     lore:
-      - 由空气中的水晶制成,
+      - 由空气中的魔法水晶形成,
       - 这种奇妙的材料只能
       - 在最冷的地方找到
     shards:
@@ -18066,7 +18060,7 @@ SOUL_CAMPFIRE:
     type: VOID
     lore:
       - 这个营火燃烧着虚空水晶
-      - 内的灵魂沙来产生光源.
+      - 内的灵魂来产生光源.
     shards:
       - 1
       - 0
@@ -18087,7 +18081,7 @@ SOUL_LANTERN:
     type: VOID
     lore:
       - 这个灯笼燃烧着虚空水晶
-      - 内的灵魂沙来产生光源.
+      - 内的灵魂来产生光源.
     shards:
       - 1
       - 0
@@ -18108,7 +18102,7 @@ SOUL_SAND:
     type: HISTORICAL
     lore:
       - 在你之前的那些人的灵魂，也许是
-      - 从神秘的古代建造者那里扯来的？
+      - 从神秘的古代建筑师那里扯来的？
     shards:
       - 1
       - 0
@@ -18130,7 +18124,7 @@ SOUL_SOIL:
     type: HISTORICAL
     lore:
       - 在你之前的那些人的灵魂，也许是
-      - 从神秘的古代建造者那里扯来的？
+      - 从神秘的古代建筑师那里扯来的？
     shards:
       - 1
       - 0
@@ -18152,7 +18146,7 @@ SOUL_TORCH:
     type: VOID
     lore:
       - 这个火把燃烧着虚空水晶
-      - 内的灵魂沙来产生光源.
+      - 内的灵魂来产生光源.
     shards:
       - 1
       - 0
@@ -18173,10 +18167,10 @@ SPAWNER:
     name: 天使酒吧
     type: CELESTIAL
     lore:
-      - 生怪砖的真正性质已经被天体
-      - 时间推移而回荡. 它不是怪物的生成器, 它是
-      - 水晶制成的维度监狱所迷惑，
-      - 请尽可能地将它们束之高阁。
+      - 刷怪笼的本性已经被时间消磨掉了。
+      - 它不是怪物的生成器,
+      - 它是天体水晶制成的维度监狱，
+      - 尽量把它们放远一点。
     shards:
       - 0
       - 0
@@ -18193,7 +18187,7 @@ SPECTRAL_ARROW:
     - HUMAN
     - CELESTIAL
   story:
-    name: 闪闪发光的
+    name: 闪耀
     type: HUMAN
     lore:
       - 覆盖着珍贵的萤石粉，
@@ -18219,8 +18213,9 @@ SPIDER_EYE:
     name: 备用？
     type: VOID
     lore:
-      - 每只蜘蛛有 8 个，肯定会保留一个
-      - 每只蜘蛛有 8 只眼，放过一只
+      - 每只蜘蛛有8只眼睛,
+      - 应该会留一个备用的吧
+      - 我拿走一个不过分吧
     shards:
       - 0
       - 0
@@ -18236,12 +18231,12 @@ SPLASH_POTION:
   elements:
     - ALCHEMICAL
   story:
-    name: 肯定不会有太大的影响，对吗？
+    name: 简单的补品 (喷溅型)
     type: ALCHEMICAL
     lore:
       - 在发现水晶和其他深奥的
-      - 魔法之前，药水是进入外
-      - 域获取力量的唯一途径。
+      - 魔法之前，药水是
+      - 获取力量的唯一途径。
     shards:
       - 1
       - 0
@@ -18258,11 +18253,11 @@ SPONGE:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 吸水性 (干的)
+    name: 吸水 (干)
     type: ANIMAL
     lore:
       - 人们经常忘记海绵
-      - 既是动物又是活着的.
+      - 是活着的动物.
       - 它们会从水中尽可能
       - 的吸收营养与魔法.
     shards:
@@ -18282,7 +18277,7 @@ SPRUCE_BOAT:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 船 (杉木)
+    name: 船 (云杉木)
     type: PHILOSOPHICAL
     lore:
       - 沐浴在阳光下
@@ -18303,7 +18298,7 @@ SPRUCE_BUTTON:
     - HUMAN
     - MECHANICAL
   story:
-    name: 抑郁 (杉木)
+    name: 抑郁 (云杉木)
     type: HUMAN
     lore:
       - 很容易抑郁
@@ -18323,7 +18318,7 @@ SPRUCE_DOOR:
     - HUMAN
     - MECHANICAL
   story:
-    name: 门
+    name: 门 (云杉木)
     type: HUMAN
     lore:
       - 每个入口都是出口.
@@ -18345,7 +18340,7 @@ SPRUCE_FENCE:
     - HUMAN
     - ANIMAL
   story:
-    name: 家畜 (杉木)
+    name: 家畜 (云杉木)
     type: ANIMAL
     lore:
       - 保护好你的家畜的安全
@@ -18367,7 +18362,7 @@ SPRUCE_FENCE_GATE:
     - MECHANICAL
     - ANIMAL
   story:
-    name: 门 (杉木)
+    name: 门 (云杉木)
     type: MECHANICAL
     lore:
       - 拐角处也许有人在等待
@@ -18389,7 +18384,7 @@ SPRUCE_LEAVES:
     - ELEMENTAL
     - PHILOSOPHICAL
   story:
-    name: 树叶的思考 (杉木)
+    name: 树叶的思考 (云杉木)
     type: PHILOSOPHICAL
     lore:
       - 在冷风中轻轻地摇曳
@@ -18410,7 +18405,7 @@ SPRUCE_LOG:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 给我原木 (杉木)
+    name: 给我原木 (云杉木)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -18432,7 +18427,7 @@ SPRUCE_PLANKS:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 木板，我们走 (杉木)
+    name: 木板，我们走 (云杉木)
     type: HUMAN
     lore:
       - 你的第一次合成一定是合成木板吧
@@ -18452,7 +18447,7 @@ SPRUCE_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 承受压力 (杉木)
+    name: 承受压力 (云杉木)
     type: VOID
     lore:
       - 逆来顺受只会令人失望
@@ -18472,7 +18467,7 @@ SPRUCE_SAPLING:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 生长
+    name: 成长 (云杉木)
     type: ELEMENTAL
     lore:
       - 一棵年轻的小树
@@ -18493,7 +18488,7 @@ SPRUCE_SIGN:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 署名 (杉木)
+    name: 署名 (云杉木)
     type: PHILOSOPHICAL
     lore:
       - 充满了作者的思想
@@ -18512,7 +18507,7 @@ SPRUCE_SLAB:
   elements:
     - HUMAN
   story:
-    name: 低一截 (杉木)
+    name: 低一截 (云杉木)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -18533,7 +18528,7 @@ SPRUCE_STAIRS:
     - HUMAN
     - CELESTIAL
   story:
-    name: 步步高升 (杉木)
+    name: 步步高升 (云杉木)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -18553,7 +18548,7 @@ SPRUCE_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: 到坑内 (杉木)
+    name: 到坑内 (云杉木)
     type: VOID
     lore:
       - 等待一个完美的时刻
@@ -18574,7 +18569,7 @@ SPRUCE_WOOD:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 给我原木 (杉木)
+    name: 给我原木 (云杉木)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -18599,7 +18594,7 @@ SPYGLASS:
     name: 海盗
     type: PHILOSOPHICAL
     lore:
-      - 一个简单的工具，但
+      - 一个简单的工具，
       - 它鼓励调查和探索。
       - 是新发现的驱动力。
     shards:
@@ -18617,7 +18612,7 @@ STICK:
   elements:
     - HUMAN
   story:
-    name: 这是一个开始
+    name: 这是个开始
     type: HUMAN
     lore:
       - 一个简单的物品，但其
@@ -18662,7 +18657,7 @@ STONE:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 坚决不宜
+    name: 坚决
     type: ELEMENTAL
     lore:
       - 石头是世界构成的坚定支柱.
@@ -18682,11 +18677,11 @@ STONECUTTER:
   elements:
     - MECHANICAL
   story:
-    name: 危险装置
+    name: 危险的设备
     type: MECHANICAL
     lore:
       - 站在靠近仙人掌的地方，
-      - 你会死得很快。站在这个
+      - 你会死得很快。但站在这个
       - 上面，你就会没事？嗯？
     shards:
       - 0
@@ -18704,7 +18699,7 @@ STONE_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故 (石头)
+    name: 斧头事故 (石)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
@@ -18726,7 +18721,7 @@ STONE_BRICKS:
     - HISTORICAL
     - HUMAN
   story:
-    name: 火柴盒升级 (石头)
+    name: 火柴盒升级 (石)
     type: HUMAN
     lore:
       - 让你的房子更像一个家,
@@ -18967,7 +18962,7 @@ STONE_SWORD:
     type: VOID
     lore:
       - 剑最终让你武装起来,
-      - 你可以使用剑防御或攻击, 
+      - 你可以使用剑防御或攻击,
       - 无论哪种方式,
       - 剑都可以达到其目的
     shards:
@@ -18986,10 +18981,10 @@ STRING:
     - ANIMAL
     - VOID
   story:
-    name: 捆绑式服务
+    name: 都绑起来
     type: ANIMAL
     lore:
-      - 这游丝的力量，不仅仅是
+      - 这蛛网的力量，不仅仅是
       - 自然的手段。蜘蛛的虚空
       - 精华极大地增强了它的力量。
     shards:
@@ -19008,11 +19003,11 @@ STRIPPED_ACACIA_LOG:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (相思木原木)
+    name: 剥皮 (金合欢原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19029,11 +19024,11 @@ STRIPPED_ACACIA_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (相思木块)
+    name: 剥皮 (金合欢木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19053,8 +19048,8 @@ STRIPPED_BIRCH_LOG:
     name: 剥皮 (桦木原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19071,11 +19066,11 @@ STRIPPED_BIRCH_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (桦木块)
+    name: 剥皮 (桦木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19093,11 +19088,11 @@ STRIPPED_CRIMSON_HYPHAE:
     - HUMAN
     - VOID
   story:
-    name: 剥皮 (绯红菌丝体)
+    name: 剥皮 (绯红菌核)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19118,8 +19113,8 @@ STRIPPED_CRIMSON_STEM:
     name: 剥皮 (绯红菌柄)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19139,8 +19134,8 @@ STRIPPED_DARK_OAK_LOG:
     name: 剥皮 (深色橡木原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19157,11 +19152,11 @@ STRIPPED_DARK_OAK_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (深色橡木块)
+    name: 剥皮 (深色橡木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19181,8 +19176,8 @@ STRIPPED_JUNGLE_LOG:
     name: 剥皮 (丛林木原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19199,11 +19194,11 @@ STRIPPED_JUNGLE_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (丛林木块)
+    name: 剥皮 (丛林木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19223,8 +19218,8 @@ STRIPPED_OAK_LOG:
     name: 剥皮 (橡木原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19241,11 +19236,11 @@ STRIPPED_OAK_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (橡木块)
+    name: 剥皮 (橡木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19262,11 +19257,11 @@ STRIPPED_SPRUCE_LOG:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (杉木原木)
+    name: 剥皮 (云杉木原木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19283,11 +19278,11 @@ STRIPPED_SPRUCE_WOOD:
     - ELEMENTAL
     - HUMAN
   story:
-    name: 剥皮 (杉木块)
+    name: 剥皮 (云杉木)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19305,11 +19300,11 @@ STRIPPED_WARPED_HYPHAE:
     - HUMAN
     - VOID
   story:
-    name: 剥皮 (扭曲菌丝体)
+    name: 剥皮 (诡异菌核)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19327,11 +19322,11 @@ STRIPPED_WARPED_STEM:
     - HUMAN
     - VOID
   story:
-    name: 剥皮 (扭曲蕈柄)
+    name: 剥皮 (诡异菌柄)
     type: HUMAN
     lore:
-      - 由于没有什么可隐藏的，这种
-      - 精神允许自己更加开放和自由。
+      - 由于没有什么可隐藏的，
+      - 这个方块精神冉哥自己更加开放和自由。
     shards:
       - 1
       - 1
@@ -19408,11 +19403,11 @@ SUSPICIOUS_STEW:
   elements:
     - HUMAN
   story:
-    name: 没-那-么-丰-盛
+    name: 不可描述的食物
     type: HUMAN
     lore:
-      - 一种不稳定的精神，在消
-      - 耗时能释放出大量的魔法。
+      - 你不知道这里面到底有什么,
+      - 使用时能释放出大量的魔法.
     shards:
       - 0
       - 0
@@ -19430,7 +19425,7 @@ SWEET_BERRIES:
     - ANIMAL
     - CELESTIAL
   story:
-    name: 农夫的喜悦 (甜莓)
+    name: 农夫的喜悦 (甜浆果)
     type: HUMAN
     lore:
       - 每一个新芽, 每片叶子和每一个根,
@@ -19453,7 +19448,7 @@ TALL_GRASS:
     name: 屏障
     type: ELEMENTAL
     lore:
-      - 还有什么比芒草
+      - 还有什么比高草丛
       - 更令人讨厌的？
     shards:
       - 1
@@ -19518,9 +19513,9 @@ TINTED_GLASS:
     name: 黑暗
     type: VOID
     lore:
-      - 被不纯的水晶石腐蚀
-      - 后，这块玻璃永远注
-      - 定无法实现其目的。
+      - 被不纯的魔法水晶腐蚀后，
+      - 这块玻璃永远
+      - 无法实现其目的。
     shards:
       - 1
       - 0
@@ -19537,12 +19532,12 @@ TIPPED_ARROW:
   elements:
     - ALCHEMICAL
   story:
-    name: 简单的补品 (箭尖)
+    name: 简单的补品 (箭)
     type: ALCHEMICAL
     lore:
       - 在发现水晶和其他深奥的
-      - 魔法之前，药水是进入外
-      - 域获取力量的唯一途径。
+      - 魔法之前，药水是
+      - 获取力量的唯一途径。
     shards:
       - 1
       - 0
@@ -19605,8 +19600,8 @@ TORCH:
     name: 照亮道路
     type: HUMAN
     lore:
-      - 从最早的时候开始，就照亮了道路，
-      - 保护人们免受看不见的敌人的攻击。
+      - 从最早的时候开始，它照亮了道路，
+      - 保护人们免受黑暗中敌人的攻击。
     shards:
       - 1
       - 1
@@ -19628,7 +19623,7 @@ TOTEM_OF_UNDYING:
     lore:
       - 不知道图腾中的什么东西能保护
       - 持有者，但当它被触发时，大量
-      - 的天体水晶会被释放到外域。
+      - 的天体水晶会被释放出来。
     shards:
       - 0
       - 0
@@ -19647,9 +19642,9 @@ TRAPPED_CHEST:
     name: 诡异的装置
     type: MECHANICAL
     lore:
-      - 陷阱储物箱专门躺在那里
-      - 等待，只想让别人的惊喜
-      - 和 (希望) 变成痛苦。
+      - 陷阱箱在不断等待,
+      - 只想给别人一些惊喜,
+      - 并希望带去痛苦。
     shards:
       - 0
       - 2
@@ -19666,7 +19661,7 @@ TRIDENT:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 海洋的召唤者
+    name: 海神的召唤
     type: ELEMENTAL
     lore:
       - 由于与周围的元素水晶
@@ -19691,7 +19686,7 @@ TRIPWIRE_HOOK:
     name: 绊倒
     type: MECHANICAL
     lore:
-      - 当 Minestein 博士发明
+      - 当麦因斯坦博士发明
       - 绊线钩时，他被绊倒了，
       - 于是产生了量子力学的想法。
     shards:
@@ -19821,7 +19816,7 @@ TUFF:
     - ELEMENTAL
     - HISTORICAL
   story:
-    name: 坚决不宜 (凝灰岩)
+    name: 坚决 (凝灰岩)
     type: ELEMENTAL
     lore:
       - 石头是世界构成的坚定支柱.
@@ -19841,12 +19836,12 @@ TURTLE_EGG:
   elements:
     - ANIMAL
   story:
-    name: 软壳
+    name: 软外壳
     type: ANIMAL
     lore:
-      - 软壳意味着这些比鸡蛋更需要保护.
-      - 不管是什么原因, 许多具有破坏性
-      - 的怪物都疯狂被这些鸡蛋所吸引.
+      - 软的外壳意味着它比鸡蛋更需要保护.
+      - 不知为何，许多攻击性怪物
+      - 都疯狂被这些蛋所吸引.
     shards:
       - 0
       - 0
@@ -19885,13 +19880,12 @@ TWISTING_VINES:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 攀爬与攀登 (扭曲藤)
+    name: 攀爬 (缠怨藤)
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为什么
-      - 人们一直坚持抓住
-      - 它并攀爬. 它只想要
-      - 和平与安静.
+      - 藤蔓不明白为什么人们
+      - 一直抓住它来攀爬.
+      - 它只想要过平静的生活.
     shards:
       - 1
       - 0
@@ -19908,13 +19902,12 @@ VINE:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 攀爬与攀登
+    name: 攀爬
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为什么
-      - 人们一直坚持抓住
-      - 它并攀爬. 它只想要
-      - 和平与安静.
+      - 藤蔓不明白为什么人们
+      - 一直抓住它来攀爬.
+      - 它只想要过平静的生活.
     shards:
       - 1
       - 0
@@ -19932,7 +19925,7 @@ WARPED_BUTTON:
     - MECHANICAL
     - VOID
   story:
-    name: 抑郁 (扭曲)
+    name: 抑郁 (诡异菌)
     type: HUMAN
     lore:
       - 很容易抑郁
@@ -19953,7 +19946,7 @@ WARPED_DOOR:
     - MECHANICAL
     - VOID
   story:
-    name: 门
+    name: 门 (诡异菌)
     type: HUMAN
     lore:
       - 每个入口都是出口.
@@ -19975,7 +19968,7 @@ WARPED_FENCE:
     - HUMAN
     - ANIMAL
   story:
-    name: 家畜 (扭曲)
+    name: 家畜 (诡异菌)
     type: ANIMAL
     lore:
       - 保护好你的家畜的安全
@@ -19998,7 +19991,7 @@ WARPED_FENCE_GATE:
     - ANIMAL
     - VOID
   story:
-    name: 门 (扭曲)
+    name: 门 (诡异菌)
     type: MECHANICAL
     lore:
       - 拐角处也许有人在等待
@@ -20020,7 +20013,7 @@ WARPED_FUNGUS:
     - ANIMAL
     - VOID
   story:
-    name: 真菌节俭 (红)
+    name: 真菌节俭 (诡异)
     type: ANIMAL
     lore:
       - 虽然生长很慢,
@@ -20041,7 +20034,7 @@ WARPED_FUNGUS_ON_A_STICK:
   elements:
     - ANIMAL
   story:
-    name: 巨大的鼓励 (扭曲蕈菇)
+    name: 巨大的鼓励 (诡异菌)
     type: ANIMAL
     lore:
       - 慢慢从这个物品所
@@ -20063,7 +20056,7 @@ WARPED_HYPHAE:
     - HISTORICAL
     - VOID
   story:
-    name: 给我原木...等等? (扭曲)
+    name: 给我原木...等等? (诡异菌)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -20085,7 +20078,7 @@ WARPED_NYLIUM:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 不完全的下界石 (扭曲)
+    name: 不完全的下界石 (诡异菌)
     type: ELEMENTAL
     lore:
       - 虽然通常是荒凉贫瘠,
@@ -20109,7 +20102,7 @@ WARPED_PLANKS:
     - HUMAN
     - VOID
   story:
-    name: 木板，我们走 (扭曲)
+    name: 木板，我们走 (诡异菌)
     type: HUMAN
     lore:
       - 你的第一次合成一定是合成木板吧
@@ -20129,7 +20122,7 @@ WARPED_PRESSURE_PLATE:
     - MECHANICAL
     - VOID
   story:
-    name: 承受压力 (扭曲蕈木)
+    name: 承受压力 (诡异菌)
     type: VOID
     lore:
       - 逆来顺受只会令人失望
@@ -20149,7 +20142,7 @@ WARPED_ROOTS:
     - ANIMAL
     - VOID
   story:
-    name: 决心 (扭曲)
+    name: 决心 (诡异菌)
     type: ANIMAL
     lore:
       - 在像下界这种环境下生长的任何
@@ -20171,7 +20164,7 @@ WARPED_SIGN:
     - PHILOSOPHICAL
     - VOID
   story:
-    name: 署名 (扭曲)
+    name: 署名 (诡异菌)
     type: PHILOSOPHICAL
     lore:
       - 充满了作者的思想
@@ -20191,7 +20184,7 @@ WARPED_SLAB:
     - HUMAN
     - VOID
   story:
-    name: 低一截 (扭曲)
+    name: 低一截 (诡异菌)
     type: HUMAN
     lore:
       - 被砍成了两半
@@ -20213,7 +20206,7 @@ WARPED_STAIRS:
     - CELESTIAL
     - VOID
   story:
-    name: 步步高升 (扭曲)
+    name: 步步高升 (诡异菌)
     type: CELESTIAL
     lore:
       - 感受提升到新高度的快乐.
@@ -20234,7 +20227,7 @@ WARPED_STEM:
     - HISTORICAL
     - VOID
   story:
-    name: 给我原木...等等? (扭曲蕈柄)
+    name: 给我原木...等等? (诡异菌柄)
     type: ELEMENTAL
     lore:
       - 每一次冒险
@@ -20256,7 +20249,7 @@ WARPED_TRAPDOOR:
     - HUMAN
     - VOID
   story:
-    name: 到坑内 (扭曲)
+    name: 到坑内 (诡异菌)
     type: VOID
     lore:
       - 等待一个完美的时刻
@@ -20276,12 +20269,11 @@ WARPED_WART_BLOCK:
   elements:
     - ALCHEMICAL
   story:
-    name: 炼金术传导 (扭曲)
+    name: 炼金术传导 (诡异菌)
     type: ALCHEMICAL
     lore:
-      - 众所皆知, 魔法需要水晶作为管道,
-      - 对于药水, 它的魔法管道就是
-      - 下界疙瘩.
+      - 众所周知, 魔法需要水晶,
+      - 但对于药水, 它则需要下界疣。
     shards:
       - 0
       - 0
@@ -20635,10 +20627,11 @@ WAXED_WEATHERED_CUT_COPPER_STAIRS:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 好大的一口气!
+    name: 好长的一口气!
     type: HUMAN
     lore:
-      - 你可以在一口气内说完嘛!?
+      - 你可以在一口气内说完
+      - 这个物品的名字吗!?
     shards:
       - 0
       - 1
@@ -20742,13 +20735,12 @@ WEEPING_VINES:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 攀爬与攀登 (垂泣藤)
+    name: 攀爬 (垂泪藤)
     type: ELEMENTAL
     lore:
-      - 藤蔓不明白为什么
-      - 人们一直坚持抓住
-      - 它并攀爬. 它只想要
-      - 和平与安静.
+      - 藤蔓不明白为什么人们
+      - 一直抓住它来攀爬.
+      - 它只想要过平静的生活.
     shards:
       - 1
       - 0
@@ -20765,11 +20757,11 @@ WET_SPONGE:
     - ELEMENTAL
     - ANIMAL
   story:
-    name: 吸水性 (湿的)
+    name: 吸水 (湿)
     type: ANIMAL
     lore:
       - 人们经常忘记海绵
-      - 既是动物又是活着的.
+      - 是活着的动物.
       - 它们会从水中尽可能
       - 的吸收营养与魔法.
     shards:
@@ -21140,8 +21132,7 @@ WITHER_SKELETON_SKULL:
     type: VOID
     lore:
       - 不幸的是, 由于版权法,
-      - 我不能使用完整的
-      - 进度
+      - 我不能使用完整的名字
     shards:
       - 0
       - 0
@@ -21159,7 +21150,7 @@ WOODEN_AXE:
     - HUMAN
     - PHILOSOPHICAL
   story:
-    name: 斧头事故 (木头)
+    name: 斧头事故 (木)
     type: PHILOSOPHICAL
     lore:
       - 每个人都害怕有一天,
@@ -21181,7 +21172,7 @@ WOODEN_HOE:
     - HUMAN
     - MECHANICAL
   story:
-    name: 等待 (木头)
+    name: 等待 (木)
     type: MECHANICAL
     lore:
       - 其他农民可能已经采用
@@ -21203,7 +21194,7 @@ WOODEN_PICKAXE:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 捡-捡-捡-捡起一个镐子 (木头)
+    name: 捡-捡-捡-捡起一个镐子 (木)
     type: CELESTIAL
     lore:
       - 可以说是所有 Minecraft
@@ -21225,7 +21216,7 @@ WOODEN_SHOVEL:
     - HUMAN
     - ELEMENTAL
   story:
-    name: 你能挖它吗? (木头)
+    name: 你能挖它吗? (木)
     type: ELEMENTAL
     lore:
       - 铲子的发明是人类
@@ -21247,11 +21238,11 @@ WOODEN_SWORD:
     - HUMAN
     - VOID
   story:
-    name: 是时候出击了 (木头)
+    name: 是时候出击了 (木)
     type: VOID
     lore:
       - 剑最终让你武装起来,
-      - 你可以使用剑防御或攻击, 
+      - 你可以使用剑防御或攻击,
       - 无论哪种方式,
       - 剑都可以达到其目的.
     shards:
@@ -21270,11 +21261,10 @@ WRITABLE_BOOK:
     - PHILOSOPHICAL
     - HUMAN
   story:
-    name: 新闻界 (未完成)
+    name: 新闻 (未完成)
     type: PHILOSOPHICAL
     lore:
-      - 哦, 从人类发明
-      - 文字的那一天!
+      - 从人类发明文字的那一天起!
     shards:
       - 0
       - 0
@@ -21292,11 +21282,10 @@ WRITTEN_BOOK:
     - PHILOSOPHICAL
     - HUMAN
   story:
-    name: 新闻界 (完成的)
+    name: 新闻 (完成的)
     type: PHILOSOPHICAL
     lore:
-      - 哦, 从人类发明
-      - 文字的那一天!
+      - 从人类发明文字的那一天起!
     shards:
       - 0
       - 0
