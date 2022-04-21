@@ -52,7 +52,7 @@ public class CrystamageSatchel extends UnplaceableBlock {
             final ItemStack itemStack = event.getItem();
 
             if (itemStack.getAmount() > 1) {
-                event.getPlayer().sendMessage(ThemeType.WARNING.getColor() + "You have stacked Crystamae Satchels. They will not work until unstacked.");
+                event.getPlayer().sendMessage(ThemeType.WARNING.getColor() + "你拥有堆叠的水晶收纳袋, 需要将他们分开才可以正常使用.");
                 return;
             }
 

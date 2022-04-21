@@ -41,7 +41,7 @@ public class SatchelListener implements Listener {
                     final CrystamageSatchel crystamageSatchel = (CrystamageSatchel) satchelSfItem;
 
                     if (possibleSatchel.getAmount() > 1) {
-                        player.sendMessage(ThemeType.WARNING.getColor() + "You have stacked Crystamae Satchels. They will not work until unstacked.");
+                        player.sendMessage(ThemeType.WARNING.getColor() + "你拥有堆叠的水晶收纳袋, 需要将他们分开才可以正常使用.");
                         return;
                     }
 
@@ -55,7 +55,7 @@ public class SatchelListener implements Listener {
                         e.setCancelled(true);
                         return;
                     } else {
-                        player.sendMessage(ThemeType.WARNING.getColor() + "You have a Crystamae Satchel that has not yet been setup. Open the satchel first.");
+                        player.sendMessage(ThemeType.WARNING.getColor() + "你的水晶收纳袋还没有初始化, 需要打开一次.");
                     }
                 }
             }
