@@ -23,6 +23,7 @@ import net.guizhanss.minecraft.crystamaehistoria.utils.GuiItems;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -167,7 +168,7 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
             ChestMenuUtils.getBackButton(
                 p,
                 "",
-                ChatColor.GRAY + Slimefun.getLocalization().getMessage(player, "guide.back.guide")
+                ChatColor.GRAY + Slimefun.getLocalization().getMessage(p, "guide.back.guide")
             )
         );
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
