@@ -8,6 +8,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.ItemGroups;
 import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
+import io.github.sefiraat.crystamaehistoria.utils.TextUtils;
 import io.github.sefiraat.crystamaehistoria.utils.theme.GuiElements;
 import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import io.github.thebusybiscuit.slimefun4.api.items.groups.FlexItemGroup;
@@ -110,8 +111,18 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
 
         reapplyFooter(player, profile, mode, menu, page, totalPages);
 
+        // Sound
+        menu.addMenuOpeningHandler((p) -> p.playSound(p.getLocation(), Sound.ITEM_BOOK_PAGE_TURN, 1.0F, 1.0F));
+
         // Back
-        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(player));
+        menu.replaceExistingItem(
+            GUIDE_BACK,
+            ChestMenuUtils.getBackButton(
+                player,
+                "",
+                ChatColor.GRAY + Slimefun.getLocalization().getMessage(player, "guide.back.guide")
+            )
+        );
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             SlimefunGuide.openItemGroup(profile, ItemGroups.MAIN, mode, 1);
             return false;
@@ -147,8 +158,18 @@ public class StoryCollectionFlexGroup extends FlexItemGroup {
 
     @ParametersAreNonnullByDefault
     private void displayDefinition(Player p, PlayerProfile profile, SlimefunGuideMode mode, ChestMenu menu, int returnPage, BlockDefinition definition) {
-        // Back Button
-        menu.replaceExistingItem(GUIDE_BACK, GuiItems.getBackButton(p));
+        // Sound
+        menu.addMenuOpeningHandler((player) -> player.playSound(p.getLocation(), Sound.ITEM_BOOK_PAGE_TURN, 1.0F, 1.0F));
+
+        // Back
+        menu.replaceExistingItem(
+            GUIDE_BACK,
+            ChestMenuUtils.getBackButton(
+                p,
+                "",
+                ChatColor.GRAY + Slimefun.getLocalization().getMessage(player, "guide.back.guide")
+            )
+        );
         menu.addMenuClickHandler(GUIDE_BACK, (player1, slot, itemStack, clickAction) -> {
             setupPage(player1, profile, mode, menu, returnPage);
             return false;
