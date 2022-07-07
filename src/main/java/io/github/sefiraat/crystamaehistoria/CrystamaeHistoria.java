@@ -26,6 +26,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.Gadgets;
 import io.github.sefiraat.crystamaehistoria.slimefun.ItemGroups;
 import io.github.sefiraat.crystamaehistoria.slimefun.Materials;
 import io.github.sefiraat.crystamaehistoria.slimefun.Mechanisms;
+import io.github.sefiraat.crystamaehistoria.slimefun.NetheoPlants;
 import io.github.sefiraat.crystamaehistoria.slimefun.Runes;
 import io.github.sefiraat.crystamaehistoria.slimefun.Tools;
 import io.github.sefiraat.crystamaehistoria.slimefun.Uniques;
@@ -34,6 +35,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.chronicler
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
 import org.bukkit.plugin.PluginManager;
@@ -172,6 +174,10 @@ public class CrystamaeHistoria extends AbstractAddon {
             return;
         }
 
+        if (getConfig().getBoolean("auto-update") && getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master", false, "zh-CN").start();
+        }
+
         this.configManager = new ConfigManager();
         this.storiesManager = new StoriesManager();
         this.listenerManager = new ListenerManager();
@@ -262,5 +268,12 @@ public class CrystamaeHistoria extends AbstractAddon {
         Exalted.setup();
         Uniques.setup();
         Runes.setup();
+        if (supportedPluginManager.isNetheopoiesis()){
+            try {
+                NetheoPlants.setup();
+            } catch (NoClassDefFoundError e) {
+                getLogger().severe("你必须更新下界乌托邦才能让魔法水晶编年史添加相关功能.");
+            }
+        }
     }
 }
