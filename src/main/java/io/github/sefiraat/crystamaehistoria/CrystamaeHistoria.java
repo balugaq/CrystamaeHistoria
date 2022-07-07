@@ -269,7 +269,7 @@ public class CrystamaeHistoria extends AbstractAddon {
             try {
                 NetheoPlants.setup();
             } catch (NoClassDefFoundError e) {
-                getLogger().severe("Netheopoiesis must be updated to meet Crystamaes requirements.");
+                getLogger().severe("你必须更新下界乌托邦才能让魔法水晶编年史添加相关功能.");
             }
         }
     }
