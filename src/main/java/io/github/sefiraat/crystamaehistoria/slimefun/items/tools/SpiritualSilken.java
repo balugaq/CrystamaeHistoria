@@ -77,7 +77,7 @@ public class SpiritualSilken extends RefillableUseItem {
                 final Material material = block.getType();
                 final ItemSetting<Boolean> setting = settings.get(material);
                 if (!Slimefun.getProtectionManager().hasPermission(e.getPlayer(), block, Interaction.BREAK_BLOCK)) {
-                    e.getPlayer().sendMessage(ChatColor.RED + "You do not have permission!");
+                    e.getPlayer().sendMessage(ChatColor.RED + "你没有权限!");
                     return;
                 }
                 
