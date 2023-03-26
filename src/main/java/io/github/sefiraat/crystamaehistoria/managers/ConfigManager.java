@@ -1,5 +1,6 @@
 package io.github.sefiraat.crystamaehistoria.managers;
 
+import com.google.common.base.Charsets;
 import io.github.sefiraat.crystamaehistoria.CrystamaeHistoria;
 import io.github.sefiraat.crystamaehistoria.magic.SpellType;
 import io.github.sefiraat.crystamaehistoria.magic.spells.core.Spell;
@@ -63,7 +64,7 @@ public class ConfigManager {
     @ParametersAreNonnullByDefault
     private void updateConfig(FileConfiguration config, File file, String fileName) throws IOException {
         final InputStream inputStream = CrystamaeHistoria.getInstance().getResource(fileName);
-        final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+        final BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, Charsets.UTF_8));
         final YamlConfiguration defaults = YamlConfiguration.loadConfiguration(reader);
         config.addDefaults(defaults);
         config.options().copyDefaults(true);
