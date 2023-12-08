@@ -35,8 +35,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.chronicler
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
-import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
-import net.guizhanss.guizhanlibplugin.updater.GuizhanBuildsUpdaterWrapper;
+import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
 import org.bukkit.plugin.PluginManager;
@@ -176,7 +175,7 @@ public class CrystamaeHistoria extends AbstractAddon {
         }
 
         if (getConfig().getBoolean("auto-update") && getDescription().getVersion().startsWith("Build")) {
-            GuizhanBuildsUpdaterWrapper.start(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master", false);
+            GuizhanUpdater.start(this, getFile(), "SlimefunGuguProject", "CrystamaeHistoria", "master");
         }
 
         this.configManager = new ConfigManager();

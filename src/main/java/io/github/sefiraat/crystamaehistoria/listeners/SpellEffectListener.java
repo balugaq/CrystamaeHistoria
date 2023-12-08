@@ -111,6 +111,9 @@ public class SpellEffectListener implements Listener {
     }
 
     private boolean entityHitAllowed(CastInformation castInformation, Entity hitEntity) {
+        if (hitEntity == null) {
+            return false;
+        }
         final Player player = Bukkit.getPlayer(castInformation.getCaster());
         final Interaction interaction = hitEntity instanceof Player ? Interaction.ATTACK_PLAYER : Interaction.ATTACK_ENTITY;
         if (player != null && GeneralUtils.hasPermission(player, hitEntity.getLocation(), interaction)) {
