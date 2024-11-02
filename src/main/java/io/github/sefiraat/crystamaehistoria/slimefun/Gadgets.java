@@ -27,11 +27,9 @@ import io.github.sefiraat.crystamaehistoria.utils.CrystaTag;
 import io.github.sefiraat.crystamaehistoria.utils.ParticleUtils;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedEntityType;
 import io.github.thebusybiscuit.slimefun4.utils.tags.SlimefunTag;
 import lombok.Getter;
 import lombok.experimental.UtilityClass;
-import net.guizhanss.crystamaehistoria.utils.compatibility.VersionedParticleX;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -281,7 +279,7 @@ public class Gadgets {
         final List<EntityType> soulfilledSoilSpawns = new ArrayList<>();
 
         soulfilledSoilSpawns.add(EntityType.COW);
-        soulfilledSoilSpawns.add(VersionedEntityType.MOOSHROOM);
+        soulfilledSoilSpawns.add(EntityType.MUSHROOM_COW);
         soulfilledSoilSpawns.add(EntityType.CHICKEN);
         soulfilledSoilSpawns.add(EntityType.PIG);
         soulfilledSoilSpawns.add(EntityType.SHEEP);
@@ -555,7 +553,7 @@ public class Gadgets {
             15,
             block -> ParticleUtils.displayParticleEffect(
                 block.getLocation().add(0.5, 0.5, 0.5),
-                VersionedParticleX.SPLASH,
+                Particle.WATER_SPLASH,
                 0.5,
                 3
             )
