@@ -52,7 +52,7 @@ public class HealingMist extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "恢复光环";
+        return "疗伤迷雾";
     }
 
     @Nonnull

@@ -61,7 +61,7 @@ public class Shroud extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "阴阳布";
+        return "暗影护罩";
     }
     
     @Nonnull
