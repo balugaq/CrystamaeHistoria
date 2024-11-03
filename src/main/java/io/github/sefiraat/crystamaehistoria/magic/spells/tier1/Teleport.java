@@ -80,7 +80,7 @@ public class Teleport extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "传送门";
+        return "传送";
     }
     
     @Nonnull

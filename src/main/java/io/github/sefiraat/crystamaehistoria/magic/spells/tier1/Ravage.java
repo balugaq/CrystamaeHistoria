@@ -71,15 +71,15 @@ public class Ravage extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "掠夺队长";
+        return "掠袭凶兽";
     }
     
     @Nonnull
     @Override
     public String[] getLore() {
         return new String[]{
-            "召唤一只驯服的掠夺者到你身边",
-            "该法术的效果会作用于掠夺者",
+            "召唤一只驯服的掠夺兽到你身边",
+            "该法术的效果会作用于掠夺兽",
             "而不是施法者"
         };
     }

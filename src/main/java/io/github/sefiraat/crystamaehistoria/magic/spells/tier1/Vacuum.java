@@ -65,7 +65,7 @@ public class Vacuum extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "量子力学";
+        return "真空";
     }
     
     @Nonnull

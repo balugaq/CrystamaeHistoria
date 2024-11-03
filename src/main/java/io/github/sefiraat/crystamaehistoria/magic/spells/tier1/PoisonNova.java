@@ -90,7 +90,7 @@ public class PoisonNova extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "毒药新星";
+        return "剧毒新星";
     }
     
     @Nonnull

@@ -70,16 +70,16 @@ public class PhantomsFlight extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "幻翼飞行";
+        return "幻影飞行";
     }
     
     @Nonnull
     @Override
     public String[] getLore() {
         return new String[]{
-            "召唤一只幻翼坐骑",
-            "当你从幻翼背上下来的时候",
-            "幻翼将会飞走"
+            "召唤一只\"幻\"翼坐骑",
+            "当你从\"幻\"翼背上下来的时候",
+            "\"幻\"翼将会飞走"
         };
     }
 

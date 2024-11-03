@@ -62,7 +62,7 @@ public class Push extends Spell {
     @Nonnull
     @Override
     public String getName() {
-        return "心理学家";
+        return "推力";
     }
     
     @Nonnull
