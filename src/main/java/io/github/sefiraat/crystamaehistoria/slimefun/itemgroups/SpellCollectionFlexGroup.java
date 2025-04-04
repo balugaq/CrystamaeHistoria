@@ -18,7 +18,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
-import net.guizhanss.guizhanlib.minecraft.helper.potion.PotionEffectTypeHelper;
+import net.guizhanss.minecraft.guizhanlib.gugu.minecraft.helpers.potion.PotionEffectTypeHelper;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -138,7 +138,7 @@ public class SpellCollectionFlexGroup extends FlexItemGroup {
                 final boolean researched = PlayerStatistics.hasUnlockedSpell(player, spellType);
 
                 if (mode == SlimefunGuideMode.CHEAT_MODE || researched) {
-                    menu.replaceExistingItem(slot, new ItemStack(spellType.getSpell().getThemedStack()));
+                    menu.replaceExistingItem(slot, spellType.getSpell().getThemedStack());
                     menu.addMenuClickHandler(slot, (player1, i1, itemStack1, clickAction) -> {
                         displayDefinition(player1, profile, mode, menu, page, spellType);
                         return false;
