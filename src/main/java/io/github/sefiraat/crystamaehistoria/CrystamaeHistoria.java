@@ -35,7 +35,7 @@ import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.chronicler
 import io.github.sefiraat.crystamaehistoria.stories.BlockDefinition;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.collections.Pair;
 import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
-import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
+import net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.AdvancedPie;
 import org.bukkit.plugin.PluginManager;
