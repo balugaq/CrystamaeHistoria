@@ -9,10 +9,9 @@ import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
 import io.github.sefiraat.crystamaehistoria.utils.ParticleUtils;
 import io.github.sefiraat.crystamaehistoria.utils.SpellUtils;
 import io.github.sefiraat.crystamaehistoria.utils.mobgoals.RidableGroundGoal;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedPotionEffectType;
-import net.guizhanss.crystamaehistoria.utils.compatibility.VersionedParticleX;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.entity.EntityType;
 import org.bukkit.potion.PotionEffectType;
 
@@ -27,8 +26,8 @@ public class Ravage extends Spell {
         SpellCoreBuilder spellCoreBuilder = new SpellCoreBuilder(5, true, 0, false, 25, true)
             .makeInstantSpell(this::cast)
             .makeEffectingSpell(true, false)
-            .addPositiveEffect(VersionedPotionEffectType.RESISTANCE, 1, 300)
-            .addPositiveEffect(VersionedPotionEffectType.STRENGTH, 1, 300)
+            .addPositiveEffect(PotionEffectType.DAMAGE_RESISTANCE, 1, 300)
+            .addPositiveEffect(PotionEffectType.INCREASE_DAMAGE, 1, 300)
             .addPositiveEffect(PotionEffectType.ABSORPTION, 1, 300);
         setSpellCore(spellCoreBuilder.build());
     }
@@ -55,7 +54,7 @@ public class Ravage extends Spell {
 
     @ParametersAreNonnullByDefault
     public void onTick(MagicSummon magicSummon) {
-        ParticleUtils.displayParticleEffect(magicSummon.getMob(), VersionedParticleX.ANGRY_VILLAGER, 1, 2);
+        ParticleUtils.displayParticleEffect(magicSummon.getMob(), Particle.VILLAGER_ANGRY, 1, 2);
     }
 
     @Nonnull
